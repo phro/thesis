@@ -170,7 +170,15 @@ We now are ready to compute the generating function for the trace.
 \end{proof}
 
 \section{Implementing the trace in Mathematica™}
+Currently, the implementation in Mathematica™ expects the generating functions
+it receives to be the exponential of a quadratic expression in $y$ and $x$ when
+$a$ and $b$ are held fixed. Since we have a nested exponential at the $ϵ=0$
+case, we must extend the program to handle this non-Gaußian case.
 \subsection{Comparing by-hand computations with what is implemented}
+When truncating the trace to finite-degree, we can use the finite zip component
+of the Mathematica™ program to verify the program. So far, the results are
+rather similar, though not identical. I attribute this to small errors in my
+graphical computation of the contractions.
 \subsection{Modifying the program to handle $(β_i,\msc A_i)$-terms}
 
 \section{Further directions}
