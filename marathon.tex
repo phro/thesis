@@ -1,14 +1,30 @@
 \documentclass{article}
 \usepackage{math}
-\title{Jesse's Thesis Summary (Marathon Edition)}
+\title{Computing the generating function of a coinvariants map}
 \author{Jesse Frohlich}
 
 \ProvideDocumentCommand{\Alg}{}{\Sl_{2+}^0}
 \ProvideDocumentCommand{\CU}{}{\uea{\Alg}}
+\ProvideDocumentCommand{\fa}{}{\mfk{a}}
 \DeclarePairedDelimiterXPP{\Gen}[1]{\msc G}\lparen\rparen{}{#1}
 
 \begin{document}
 \maketitle
+
+\section{Introduction}
+
+In \cite{BNV}, Bar-Natan and Van der Veen define an invariant of tangles which
+takes values in tensor powers of a (completed) universal enveloping algebra of a
+Drinfeld double $D\fa$. Their work expresses the algebra operations as
+cleverly-arranged generating functions to take advantage of computational
+shortcuts.
+
+To extend this invariant to one on links, one would need to define a trace
+operator on $D\fa$. The first natural place to look is at the coinvariants
+$\uea{D\fa}_{D\fa}$. In this article, we compute the coinvariants of
+$\uea{D\fa}$ as well as the corresponding generating function. 
+
+\section{The algebra $\fa$ and the Drinfel'd double construction}
 
 \section{Using generating functions to encode morphisms}
 \subsection{The $\otimes$-$\hom$-adjunction on polynomial rings}
