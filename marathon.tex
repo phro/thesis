@@ -22,9 +22,21 @@ shortcuts.
 To extend this invariant to one on links, one would need to define a trace
 operator on $D\fa$. The first natural place to look is at the coinvariants
 $\uea{D\fa}_{D\fa}$. In this article, we compute the coinvariants of
-$\uea{D\fa}$ as well as the corresponding generating function. 
+$\uea{D\fa}$ as well as the corresponding generating function.
 
 \section{The algebra $\fa$ and the Drinfel'd double construction}
+
+\begin{definition}
+        Denote by $\fa$ the non-commutative $2$-dimensional cocommutative Lie
+        bialgebra spanned by $a$ and $x$ with relation $\liebk{a}{x} = x$.
+\end{definition}
+
+Recall from \cite{ES} that the Drinfeld double construction gives rise to a
+quasitriangular Lie bialgebra $D\fa$ in the following way: As a vector space,
+$D\fa = \fa \oplus \dual\fa$. Given $u \in \fa$ and $v\in \dual \fa$, we have
+$\liebk{u}{v}_{D\fa} \defeq \dual\ad_u(v) - \dual\ad_v(u)$, extended bilinearly
+and anticommutatively. The cobracket is given by
+$δ_{D\fa} \defeq δ_\fa - δ_{\dual\fa}$.
 
 \section{Using generating functions to encode morphisms}
 \subsection{The $\otimes$-$\hom$-adjunction on polynomial rings}
