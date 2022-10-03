@@ -47,7 +47,13 @@ Additionally, the cobracket on $D\fa$ has values $δ(y) = y \wedge b$ and $δ(b)
 In what follows, we will denote by $\fg$ the double $D\fa$, and by $U$ its
 universal enveloping algebra $\uea{\fg} = \uea{D\fa}$.
 
-\section{Computing the coinvariants of $U$}
+\section{The coinvariants of $U$}
+
+\begin{theorem}
+        The space of coinvariants of $U$, $U_U = U_\fg$ is equal to 
+        $\Span\set{y^n a^k x^n}_{n, k\ge 0}$
+\end{theorem}
+\begin{proof}
 Given a polynomial (respectively, power series) $f$, we have the following two
 relations in $U$, (respectively, $\widehat U$)
 \begin{align}
@@ -55,8 +61,6 @@ relations in $U$, (respectively, $\widehat U$)
         x^rf(a) &= f(a-r)x^r 
 \end{align}
 Using these relations, we can compute the adjoint actions of $y$, $a$, and $x$
-(where $\nabla$ denotes the backwards difference operator $\nabla[f](x) \defeq
-f(x) - f(x-1)$ and again $f$ denotes a polynomial):
 \begin{align}
   \ad_a f(x) &= xf'(x)&
   \ad_a f(y) &= -yf'(y)\label{eq:ada}\\
@@ -65,6 +69,11 @@ f(x) - f(x-1)$ and again $f$ denotes a polynomial):
   \ad_y f(x) &= -bf'(x) &
   \ad_y f(a) &= y\nabla[f](a)\label{eq:ady}
 \end{align}
+Here, $\nabla$ denotes the backwards difference operator $\nabla[f](x) \defeq
+f(x) - f(x-1)$.
+        
+\end{proof}
+
 \subsection{Deriving a basis of $\CU_{\Alg}$}
 Using the above commutation relations, we find a basis for $\CU_{\Alg}$ by
 determining $\liebk[\big]\CU\CU$. Observe for any $n$, $m$, $k$, and polynomial
