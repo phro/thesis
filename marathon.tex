@@ -44,35 +44,15 @@ have the relations $\liebk{a}{y}=-y$, $\liebk{x}{y}=b$, and $\liebk{b}{}=0$.
 Additionally, the cobracket on $D\fa$ has values $δ(y) = y \wedge b$ and $δ(b) =
 δ(a) = δ(x) = 0$.
 
-\section{Using generating functions to encode morphisms}
-\subsection{The $\otimes$-$\hom$-adjunction on polynomial rings}
-\subsection{Summary of \cite{bv}.}
+In what follows, we will denote by $\fg$ the double $D\fa$, and by $U$ its
+universal enveloping algebra $\uea{\fg} = \uea{D\fa}$.
 
-\section{Computing the coinvariants of $\CU$}
-\begin{definition}[The algebra $\CU$]
-       We define the Lie algebra
-       \begin{equation}
-               \Alg \defeq
-               \Span\setbuilder*{y, b, a, x}{
-                       \liebk{a}{x}=x,
-                       \liebk{a}{y}=-y,
-                       \liebk{x}{y}=b,
-                       \liebk{b}{}=0
-               }
-       \end{equation}
-       and denote by $\CU$ its (completed) universal enveloping algebra.
-\end{definition}
-
-\subsection{Commutation relations in $\CU$}
-Commutation relations for higher powers of these relations are as follows (where
-$f$ denotes a polynomial):
+\section{Computing the coinvariants of $U$}
+Given a polynomial (respectively, power series) $f$, we have the following two
+relations in $U$, (respectively, $\widehat U$)
 \begin{align}
-        a^ky^r &= y^r(a-r)^{k} &
-        x^ra^{k} &= (a-r)^kx^r &
-        xy &= yx + b
-        \\
         f(a)y^r &= y^rf(a-r) &
-        x^rf(a) &= f(a-r)x^r &
+        x^rf(a) &= f(a-r)x^r 
 \end{align}
 Using these relations, we can compute the adjoint actions of $y$, $a$, and $x$
 (where $\nabla$ denotes the backwards difference operator $\nabla[f](x) \defeq
@@ -202,6 +182,10 @@ We now are ready to compute the generating function for the trace.
         \end{aligned}
         \end{equation}
 \end{proof}
+
+\section{Using generating functions to encode morphisms}
+\subsection{The $\otimes$-$\hom$-adjunction on polynomial rings}
+\subsection{Summary of \cite{bv}.}
 
 \section{Implementing the trace in Mathematica™}
 Currently, the implementation in Mathematica™ expects the generating functions
