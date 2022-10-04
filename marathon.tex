@@ -107,6 +107,25 @@ that a basis for $\CU_{\Alg}$ is given by:
 $\set[\big]{y^n a^k x^n}_{k, n \ge 0}$.
 \end{proof}
 
+\section{Generating functions on polynomial vector spaces}
+
+\ProvideDocumentCommand{\nn}{}{\mbf{n}}
+
+For $A$ and $B$ finite sets, consider the set $\hom(\polyring{\Q}{z_A},
+\polyring{\Q}{z_B})$ of linear maps between multivariable polynomial rings. Such
+a map is determined by its values on the monomials $z_A^\nn$ for each
+$\nn \in \N^A$.
+
+\begin{definition}[Exponential generating function]
+        The \defi{exponential generating function} of a map
+        $\map {f} {\polyring{\Q}{z_A}} {\polyring{\Q}{z_B}}$ between polynomial
+        spaces is
+        \begin{equation}
+                \Gen{f} \defeq
+                \Sum[\nn\in\N^A] \frac{f(z_A^{\nn})}{\nn!}ζ_A^{\nn}
+        \end{equation}
+\end{definition}
+
 \section{Deriving a formula for the trace}
 Using the $(a, t)$-formulation of the space of coinvariants, we therefore have
 the following trace map:
