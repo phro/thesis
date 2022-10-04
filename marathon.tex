@@ -6,6 +6,8 @@
 \ProvideDocumentCommand{\fa}{}{\mfk{a}}
 \ProvideDocumentCommand{\Alg}{}{\fg}
 \ProvideDocumentCommand{\CU}{}{U}
+\ProvideDocumentCommand{\nn}{}{\mathbf{n}}
+\ProvideDocumentCommand{\Order}{}{\mathbb O}
 \DeclarePairedDelimiterXPP{\Gen}[1]{\msc G}\lparen\rparen{}{#1}
 
 \begin{document}
@@ -109,7 +111,9 @@ $\set[\big]{y^n a^k x^n}_{k, n \ge 0}$.
 
 \section{Generating functions on polynomial vector spaces}
 
-\ProvideDocumentCommand{\nn}{}{\mbf{n}}
+When defining a morphism-valued tangle invariant, one needs a compact way of
+encoding the morphism. In \cite{BV} this is achieved through the use of
+generating functions.
 
 For $A$ and $B$ finite sets, consider the set $\hom(\polyring{\Q}{z_A},
 \polyring{\Q}{z_B})$ of linear maps between multivariable polynomial rings. Such
@@ -122,10 +126,23 @@ $\nn \in \N^A$.
         spaces is
         \begin{equation}
                 \Gen{f} \defeq
-                \Sum[\nn\in\N^A] \frac{f(z_A^{\nn})}{\nn!}ζ_A^{\nn}
+                \Sum[\nn\in\N^A] \frac{f(z_A^\nn)}{\nn!}ζ_A^\nn
         \end{equation}
 \end{definition}
 
+By the PBW theorem, we know that $\CU$ is isomorphic as a vector space to the
+polynomial ring $\polyring{\Q}{y, b, a, x}$ via the ordering map:
+\begin{equation}
+        \mapdef {\Order} {\polyring{\Q}{y, b, a, x}} [\toiso] {\CU}
+        {y^{n_1}b^{n_2}a^{n_3}x^{n_4}} {y^{n_1}b^{n_2}a^{n_3}x^{n_4}}
+\end{equation}
+
+Similarly, we define another isomorphism from the space of coinvariants to a
+polynomial space
+\begin{equation}
+        \mapdef {ϕ} {\polyring{\Q}{a, z}} [\toiso] {\CU_\CU}
+        {a^{n_2}z^{n_1}} {y^{n_1}a^{n_2}x^{n_1}} 
+\end{equation}
 \section{Deriving a formula for the trace}
 Using the $(a, t)$-formulation of the space of coinvariants, we therefore have
 the following trace map:
