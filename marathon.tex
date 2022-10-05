@@ -132,14 +132,24 @@ $\nn \in \N^A$.
 
 \begin{definition}[Exponential generating function]
         The \defi{exponential generating function} of a map
-        $\map {f} {\polyring{\Q}{z_A}} {\polyring{\Q}{z_B}}$ between polynomial
+        $\map {Φ} {\polyring{\Q}{z_A}} {\polyring{\Q}{z_B}}$ between polynomial
         spaces is
         \begin{equation}
-                \Gen{f} \defeq
-                \Sum[\nn\in\N^A] \frac{f(z_A^\nn)}{\nn!}ζ_A^\nn
+                \Gen{Φ} \defeq
+                \Sum[\nn\in\N^A] \frac{Φ(z_A^\nn)}{\nn!}ζ_A^\nn
                 \in \powerseries{\polyring{\Q}{z_B}}{ζ_A}
         \end{equation}
 \end{definition}
+\begin{remark}
+        Extending the definition of $Φ$ to
+        $\powerseries{\polyring{\Q}{z_B}}{ζ_A}$ by the identity along $ζ_A$
+        gives us an equivalent formulation:
+        \begin{equation}
+                \Gen{Φ}
+                = Φ\pn*{\Sum[\nn\in\N^A] \frac{(z_Aζ_A)^\nn}{\nn!}}
+                = Φ\pn*{\Gen[\big]{\id_{\polyring{\Q}{z_A}}}}
+        \end{equation}
+\end{remark}
 
 By the PBW theorem, we know that $\CU$ is isomorphic as a vector space to the
 polynomial ring $\polyring{\Q}{y, b, a, x}$ via the ordering map:
