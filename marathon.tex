@@ -202,11 +202,12 @@ $\nabla^n[\Exp{αa}](a)
 We now are ready to compute the generating function for the trace.
 \begin{theorem}[Generating function for the trace of $\CU$]
 \begin{equation}
-        \Gen\trace = \Exp{αa+\pn*{ηξ+β(1-\Exp{-α})}t}
+        \Gen\trace = \Exp{αa+\pn*{ηξ+β(1-\Exp{-α})}z}
 \end{equation}
 \end{theorem}
 \begin{proof}
-        Using \cref{eq:findiffexp}, we see
+        Using \cref{eq:findiffexp} and the extension of $\trace$ to
+        $\powerseries{\polyring{\Q}{y, b, a, x}}{η, β, α, ξ}$, we see
         \begin{equation}
         \begin{aligned}
                 \trace\pn{\Exp{η y} \Exp{β b} \Exp{α a} \Exp{ξ x}}
@@ -216,13 +217,13 @@ We now are ready to compute the generating function for the trace.
                         \Exp{α a}
                         \frac{(ξ x)^k}{k!}
                 }\\
-                &=\Sum[i, j, k]\frac{η^i β^j ξ^k}{i! j! k!}
-                        \trace\pn*{ y^i b^j \Exp{α a} x^k }\\
-                &=\Sum[i, j, k]\frac{η^i β^j ξ^k}{i! j! k!}
-                        δ_{ik}i!\nabla^j[\Exp{αa}](a)t^{i+j}\\
+                % &=\Sum[i, j, k]\frac{η^i β^j ξ^k}{i! j! k!}
+                        % \trace\pn*{ y^i b^j \Exp{α a} x^k }\\
+                % &=\Sum[i, j, k]\frac{η^i β^j ξ^k}{i! j! k!}
+                        % δ_{ik}i!\nabla^j[\Exp{αa}](a)t^{i+j}\\
                 &=\Sum[i, j]\frac{η^i β^j ξ^i}{i! j!}
-                        (1-\Exp{-α})^j\Exp{αa}t^{i+j}\\
-                &=\Exp{αa+\pn*{ηξ+β(1-\Exp{-α})}t}\qedhere
+                        (1-\Exp{-α})^j\Exp{αa}z^{i+j}
+                =\Exp{αa+\pn*{ηξ+β(1-\Exp{-α})}z}\qedhere
         \end{aligned}
         \end{equation}
 \end{proof}
