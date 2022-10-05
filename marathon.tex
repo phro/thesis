@@ -1,5 +1,8 @@
 \documentclass{article}
 \usepackage{math}
+\usepackage[backend=biber]{biblatex}
+\addbibresource{\jobname.bib}
+
 \title{Computing the generating function of a coinvariants map}
 \author{Jesse Frohlich}
 
@@ -25,7 +28,7 @@
 
 \section{Introduction}
 
-In \cite{BNV}, Bar-Natan and Van der Veen define an invariant of tangles which
+In \cite{BV}, Bar-Natan and Van der Veen define an invariant of tangles which
 takes values in tensor powers of a (completed) universal enveloping algebra of a
 Drinfeld double $D\fa$. Their work expresses the algebra operations as
 cleverly-arranged generating functions to take advantage of computational
@@ -227,6 +230,8 @@ We now are ready to compute the generating function for the trace.
         \end{aligned}
         \end{equation}
 \end{proof}
+
+\printbibliography
 
 \section{Using generating functions to encode morphisms}
 \subsection{The $\otimes$-$\hom$-adjunction on polynomial rings}
