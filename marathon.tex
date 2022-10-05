@@ -152,8 +152,27 @@ Similarly, we define another isomorphism from the space of coinvariants to a
 polynomial space
 \begin{equation}
         \mapdef {ϕ} {\polyring{\Q}{a, z}} [\toiso] {\CU_\CU}
-        {a^{n_2}z^{n_1}} {y^{n_1}a^{n_2}x^{n_1}} 
+        {a^{n_2}z^{n_1}} {n_1!y^{n_1}a^{n_2}x^{n_1}}
 \end{equation}
+
+From here, we seek to fill in the commutative square
+\begin{equation}
+\begin{tikzcd}
+        \CU
+                \rar["\trace"]
+        & \CU_\CU \\
+        \polyring{\Q}{y, b, a, x}
+                \uar["\Order"]
+                \rar["τ"]
+        &
+        \polyring{\Q}{a, z}
+                \uar["ϕ"]
+\end{tikzcd}
+\end{equation}
+
+As $τ = \Order \then \trace \then ϕ$ is a linear map between vector spaces, we
+seek to compute its generating function.
+
 \section{Deriving a formula for the trace}
 Using the $(a, t)$-formulation of the space of coinvariants, we therefore have
 the following trace map:
