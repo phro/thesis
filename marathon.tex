@@ -181,27 +181,14 @@ From here, we seek to fill in the commutative square
 \end{equation}
 
 As $τ = \Order \then \trace \then ϕ$ is a linear map between vector spaces, we
-seek to compute its generating function.
-
-\section{Deriving a formula for the trace}
-Using the $(a, t)$-formulation of the space of coinvariants, we therefore have
-the following trace map:
-\begin{equation}
-        \mapdef {\trace} {\CU} {\CU_{\Alg}}
-                {y^n b^m f(a) x^k}
-                {δ_{nk}{n!}\nabla^m[f](a)t^{n+m}}
-\end{equation}
-
-We name these basis elements in the following way: $a^k t^n \defeq n!y^n a^k x^n$.
-\subsection{Iterated forward differences on $\Gen\id$}
-Our goal is to compute a generating function for this trace map. This comes down
-to computing $\trace\pn*{\Gen\id}= \trace\pn{\Exp{η y + β b + α a + ξ x}}$. To
-do this, we begin with a result on finite differences:
+seek to compute its generating function. This comes down to computing
+$\trace\pn*{\Gen\id}= \trace\pn{\Exp{η y + β b + α a + ξ x}}$. To do this, we
+begin with a result on finite differences:
 \begin{lemma}\label{eq:findiffexp}
         The finite difference operator acts in the following way on
         exponentials:
         \begin{equation}
-                \nabla^n[\Exp{αa}](a) = (1-\Exp{-α})^n\Exp{αa}
+                \nabla_a^n[\Exp{αa}](a) = (1-\Exp{-α})^n\Exp{αa}
         \end{equation}
 \end{lemma}
 \begin{proof}
