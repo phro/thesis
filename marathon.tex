@@ -31,36 +31,33 @@
 \section{Introduction}
 
 In \cite{BV}, Bar-Natan and Van der Veen define an invariant of tangles which
-takes values in tensor powers of a (completed) universal enveloping algebra of a
-Drinfeld double $D\fa$. Their work expresses the algebra operations as
-cleverly-arranged generating functions to take advantage of computational
-shortcuts.
+takes values in tensor powers of a certain Hopf algebra $\CU$. Their work
+expresses the algebra operations as perturbed Gaußian generating functions to
+produce a strong polynomial-time tangle invariant.
 
 To extend this invariant to one on links, one would need to define a trace
-operator on $D\fa$. The first natural place to look is at the coinvariants
-$\uea{D\fa}_{D\fa}$. In this article, we compute the coinvariants of
-$\uea{D\fa}$ as well as the corresponding generating function.
+operator on $\CU$. The first natural place to look is at the coinvariants,
+$\CU_\CU$. In this article, we compute $\CU_\CU$ as well as the corresponding
+generating function of the map $\map {\trace} {\CU} {\CU_\CU}$.
 
+We begin by defining the algebra $\CU$:
 \begin{definition}
         Denote by $\fa$ the non-commutative $2$-dimensional cocommutative Lie
         bialgebra spanned by $a$ and $x$ with relation $\liebk{a}{x} = x$.
         (This is also a Borel subalgebra of $\Sl_2$.)
 \end{definition}
+Next, we use the Drinfeld double construction (outlined in \cite{ES}) to obtain
+a quasitriangular Lie algebra $\fg$: as a vector space,
+$\fg = \fa \oplus \dual\fa$; given $u \in \fa$ and $v\in \dual \fa$, we have
+$\liebk{u}{v}_{\fg} \defeq \dual\ad_u(v) - \dual\ad_v(u)$, extended bilinearly
+and anticommutatively to all of $\fg$.
+The algebra $\CU$ is defined to be the universal enveloping algebra
+$\uea{\fg}$.
 
-Recall from \cite{ES} that the Drinfeld double construction gives rise to a
-quasitriangular Lie bialgebra $D\fa$ in the following way: As a vector space,
-$D\fa = \fa \oplus \dual\fa$. Given $u \in \fa$ and $v\in \dual \fa$, we have
-$\liebk{u}{v}_{D\fa} \defeq \dual\ad_u(v) - \dual\ad_v(u)$, extended bilinearly
-and anticommutatively. The cobracket is given by
-$δ_{D\fa} \defeq δ_\fa - δ_{\dual\fa}$.
+For convenience, we define $b \defeq \dual a \in \dual\fa$ and $y \defeq \dual x
+\in \dual\fa$, which satisfy the relations $\liebk{a}{y}=-y$, $\liebk{x}{y}=b$,
+with $b$ central.
 
-Defining $b \defeq \dual a \in \dual\fa$ and $y \defeq \dual x \in \dual\fa$, we
-have the relations $\liebk{a}{y}=-y$, $\liebk{x}{y}=b$, and $\liebk{b}{}=0$.
-(The cobracket on $D\fa$ has values $δ(y) = y \wedge b$ and $δ(b) =
-δ(a) = δ(x) = 0$, though this will not play a role in this article.)
-
-In what follows, we will denote by $\fg$ the double $D\fa$, and by $U$ its
-universal enveloping algebra $\uea{\fg} = \uea{D\fa}$.
 
 \section{The coinvariants of $U$}
 
