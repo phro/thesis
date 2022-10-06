@@ -64,14 +64,24 @@ universal enveloping algebra $\uea{\fg} = \uea{D\fa}$.
 
 \section{The coinvariants of $U$}
 
+\begin{lemma}
+        Let $\fg$ be a Lie algebra. Then $\uea{\fg}_{\uea{\fg}} =
+        \uea{\fg}_\fg$.
+\end{lemma}
+\begin{proof}
+        First, observe that for any $u$, $v$,
+        $f\in\uea{\fg}$,  $\ad_{uv}(f) = \ad_u(vf) + \ad_v(fu)$. Proceeding
+        inductively, by the linearity of $\ad$, any element of
+        $\liebk*{\uea{\fg}}{\uea{\fg}}$ is a linear combination of elements of
+        $\liebk*{\fg}{\uea{\fg}}$, hence
+        $\liebk*{\uea{\fg}}{\uea{\fg}} = \liebk*{\fg}{\uea{\fg}}$.
+\end{proof}
+
 \begin{theorem}
         The space of coinvariants of $U$, $U_U$, is equal to
         $\Span\set{y^n a^k x^n}_{n, k\ge 0}$
 \end{theorem}
 \begin{proof}
-First, observe that for any $u$, $v$, $f\in\CU$,
-$\ad_{uv}(f) = \ad_u(vf) + \ad_v(fu)$. From this equation, we conclude that
-$\CU_\CU = \CU_\Alg$, the latter of which we turn our attention to next.
 
 Given a polynomial (respectively, power series) $f$, we have the following two
 relations in $U$, (respectively, $\widehat U$)
