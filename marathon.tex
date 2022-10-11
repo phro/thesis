@@ -183,7 +183,7 @@ From here, we seek to fill in the commutative square
 
 As $τ = \Order \then {\trace} \then {\inv{ϕ}}$ is a linear map between vector spaces, we
 seek to compute its generating function. This comes down to computing
-$\trace\pn*{\Gen\id}= \trace\pn{\Exp{η y + β b + α a + ξ x}}$. To do this, we
+$τ\pn*{\Gen\id}= τ\pn{\Exp{η y + β b + α a + ξ x}}$. To do this, we
 begin with a result on finite differences:
 \begin{lemma}\label{eq:findiffexp}
         The finite difference operator acts in the following way on
@@ -207,12 +207,13 @@ We now are ready to compute the generating function for the trace.
 \end{equation}
 \end{theorem}
 \begin{proof}
-        Using \cref{eq:findiffexp} and the extension of $\trace$ to
-        $\powerseries{\polyring{\Q}{y, b, a, x}}{η, β, α, ξ}$, we see
+        Using \cref{eq:findiffexp} and the extension of scalars of $\trace$ to
+        $\powerseries{\Q}{η, β, α, ξ}$, we see
         \begin{equation}
         \begin{aligned}
-                \trace\pn{\Exp{η y} \Exp{β b} \Exp{α a} \Exp{ξ x}}
-                &=\Sum[i, j, k]\trace\pn*{
+                &\Gen{\Order \then {\trace} \then {\inv{ϕ}}}
+                = \trace\pn{\Exp{η y} \Exp{β b} \Exp{α a} \Exp{ξ x}}
+                = \Sum[i, j, k]\trace\pn*{
                         \frac{(η y)^i}{i!}
                         \frac{(β b)^j}{j!}
                         \Exp{α a}
