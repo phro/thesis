@@ -6,3 +6,7 @@
 *.pdf
 *.pre
 *.gz
+*.bbl
+*.bcf
+*.blg
+*.run.xml
