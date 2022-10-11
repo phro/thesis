@@ -163,13 +163,14 @@ are accounted for, this set is also a basis.
 
 In order to define a generating function, we need to choose an appropriate basis
 for the space of coinvariants. We define an isomorphism from the space of
-coinvariants to a polynomial space
+coinvariants to a polynomial space:
 \begin{equation}
         \mapdef {ϕ} {\polyring{\Q}{a, z}} [\toiso] {\CU_\CU}
         {a^{n}z^{k}} {k!y^{k}a^{n}x^{k}}
 \end{equation}
 
-From here, we seek to fill in the commutative square
+This defines a commutative square upon whose bottom edge we compute the
+generating function:
 \begin{equation}
 \begin{tikzcd}
         \CU
@@ -184,10 +185,10 @@ From here, we seek to fill in the commutative square
 \end{tikzcd}
 \end{equation}
 
-As $τ = \Order \then {\trace} \then {\inv{ϕ}}$ is a linear map between vector spaces, we
-seek to compute its generating function. This comes down to computing
-$τ\pn*{\Gen\id}= τ\pn{\Exp{η y + β b + α a + ξ x}}$. To do this, we
-begin with a result on finite differences:
+Given $τ = \Order \then {\trace} \then {\inv{ϕ}}$ is a linear map between vector
+spaces, this comes down to computing
+$τ\pn*{\Gen\id}= τ\pn{\Exp{η y + β b + α a + ξ x}}$. We begin with a result on
+finite differences:
 \begin{lemma}\label{eq:findiffexp}
         The finite difference operator acts in the following way on
         exponentials:
