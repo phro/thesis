@@ -53,6 +53,46 @@ For convenience, we define $b \defeq \dual a \in \dual\fa$ and $y \defeq \dual x
 \in \dual\fa$, which satisfy the relations $\liebk{a}{y}=-y$, $\liebk{x}{y}=b$,
 with $b$ central.
 
+\subsection{Expressing morphisms as generating functions}
+
+When defining a morphism-valued tangle invariant, one needs a compact way of
+encoding the morphism. In \cite{BV} this is achieved through the use of
+generating functions.
+
+For $A$ and $B$ finite sets, consider the set $\hom(\polyring{\Q}{z_A},
+\polyring{\Q}{z_B})$ of linear maps between multivariable polynomial rings. Such
+a map is determined by its values on the monomials $z_A^\nn$ for each
+$\nn \in \N^A$.
+
+\begin{definition}[Exponential generating function]
+        The \defi{exponential generating function} of a map
+        $\map {Φ} {\polyring{\Q}{z_A}} {\polyring{\Q}{z_B}}$ between polynomial
+        spaces is
+        \begin{equation}
+                \Gen{Φ} \defeq
+                \Sum[\nn\in\N^A] \frac{Φ(z_A^\nn)}{\nn!}ζ_A^\nn
+                \in \powerseries{\polyring{\Q}{z_B}}{ζ_A}
+        \end{equation}
+\end{definition}
+\begin{remark}
+        Extending the definition of $Φ$ to
+        $\powerseries{\polyring{\Q}{z_B}}{ζ_A}$ by the identity along $ζ_A$
+        gives us an equivalent formulation:
+        \begin{equation}
+                \Gen{Φ}
+                = Φ\pn*{\Sum[\nn\in\N^A] \frac{(z_Aζ_A)^\nn}{\nn!}}
+                = Φ\pn*{\Gen[\big]{\id_{\polyring{\Q}{z_A}}}}
+        \end{equation}
+\end{remark}
+
+By the PBW theorem, we know that $\CU$ is isomorphic as a vector space to the
+polynomial ring $\polyring{\Q}{y, b, a, x}$ via the ordering map:
+\begin{equation}
+        \mapdef {\Order} {\polyring{\Q}{y, b, a, x}} [\toiso] {\CU}
+        {y^{n_1}b^{n_2}a^{n_3}x^{n_4}} {y^{n_1}b^{n_2}a^{n_3}x^{n_4}}
+\end{equation}
+
+
 To extend this invariant to one on links, one would need to define a trace
 operator on $\CU$. The first natural place to look is at the coinvariants,
 $\CU_\CU$. In this article, we compute $\CU_\CU$ as well as the corresponding
@@ -116,47 +156,11 @@ So $\CU_{\Alg} = \Span\set[\big]{y^n a^k x^n}_{k, n \ge 0}$. Since all relations
 are accounted for, this set is also a basis.
 \end{proof}
 
-\section{Generating function for the coinvariants map}
+\subsection{Defining a generating function for the coinvariants}
 
-When defining a morphism-valued tangle invariant, one needs a compact way of
-encoding the morphism. In \cite{BV} this is achieved through the use of
-generating functions.
-
-For $A$ and $B$ finite sets, consider the set $\hom(\polyring{\Q}{z_A},
-\polyring{\Q}{z_B})$ of linear maps between multivariable polynomial rings. Such
-a map is determined by its values on the monomials $z_A^\nn$ for each
-$\nn \in \N^A$.
-
-\begin{definition}[Exponential generating function]
-        The \defi{exponential generating function} of a map
-        $\map {Φ} {\polyring{\Q}{z_A}} {\polyring{\Q}{z_B}}$ between polynomial
-        spaces is
-        \begin{equation}
-                \Gen{Φ} \defeq
-                \Sum[\nn\in\N^A] \frac{Φ(z_A^\nn)}{\nn!}ζ_A^\nn
-                \in \powerseries{\polyring{\Q}{z_B}}{ζ_A}
-        \end{equation}
-\end{definition}
-\begin{remark}
-        Extending the definition of $Φ$ to
-        $\powerseries{\polyring{\Q}{z_B}}{ζ_A}$ by the identity along $ζ_A$
-        gives us an equivalent formulation:
-        \begin{equation}
-                \Gen{Φ}
-                = Φ\pn*{\Sum[\nn\in\N^A] \frac{(z_Aζ_A)^\nn}{\nn!}}
-                = Φ\pn*{\Gen[\big]{\id_{\polyring{\Q}{z_A}}}}
-        \end{equation}
-\end{remark}
-
-By the PBW theorem, we know that $\CU$ is isomorphic as a vector space to the
-polynomial ring $\polyring{\Q}{y, b, a, x}$ via the ordering map:
-\begin{equation}
-        \mapdef {\Order} {\polyring{\Q}{y, b, a, x}} [\toiso] {\CU}
-        {y^{n_1}b^{n_2}a^{n_3}x^{n_4}} {y^{n_1}b^{n_2}a^{n_3}x^{n_4}}
-\end{equation}
-
-Similarly, we define another isomorphism from the space of coinvariants to a
-polynomial space
+In order to define a generating function, we need to choose an appropriate basis
+for the space of coinvariants. We define an isomorphism from the space of
+coinvariants to a polynomial space
 \begin{equation}
         \mapdef {ϕ} {\polyring{\Q}{a, z}} [\toiso] {\CU_\CU}
         {a^{n_2}z^{n_1}} {n_1!y^{n_1}a^{n_2}x^{n_1}}
