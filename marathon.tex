@@ -175,11 +175,12 @@ we have a basis.
 
 \subsection{A generating function for the coinvariants}
 
+\ProvideDocumentCommand{\COrder}{}{\Order}
 In order to define a generating function, we need to choose an appropriate basis
 for the space of coinvariants. We define an isomorphism from the space of
 coinvariants to a polynomial space, tweaking the earlier-defined basis by scalar
-multiples:
-\ProvideDocumentCommand{\COrder}{}{ϕ}
+multiples. Since it plays the role of the ordering map, we also name it
+$\COrder$.
 \begin{equation}
         \mapdef {\COrder} {\polyring{\Q}{a, z}} [\toiso] {\CU_\CU}
         {a^{n}z^{k}} {\frac{1}{k!}y^{k}a^{n}x^{k} \\
