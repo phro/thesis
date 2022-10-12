@@ -233,8 +233,9 @@ We now are ready to compute the generating function for the trace:
         \begin{equation}
         \begin{aligned}
                 &\Gen[\big]{\Order \then {\trace} \then {\inv{\COrder}}}
-                = \trace\pn[\big]{\Exp{η y} \Exp{β b} \Exp{α a} \Exp{ξ x}}
-                = \Sum[i, j, k]\trace\pn*{
+                = \pn[\big]{\Exp{η y} \Exp{β b} \Exp{α a} \Exp{ξ x}} \then
+                        {\trace} \then {\inv\COrder}\\
+                &= \inv\COrder\Sum[i, j, k]\trace\pn*{
                         \frac{(η y)^i}{i!}
                         \frac{(β b)^j}{j!}
                         \Exp{α a}
