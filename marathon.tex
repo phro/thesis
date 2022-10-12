@@ -44,12 +44,22 @@ a quasitriangular Lie algebra $\fg$. As a vector space,
 $\fg = \fa \oplus \dual\fa$. Given $u \in \fa$ and $v\in \dual \fa$, we have
 $\liebk{u}{v}_{\fg} \defeq \dual\ad_u(v) - \dual\ad_v(u)$, extended bilinearly
 and anticommutatively to all of $\fg$.
-The algebra $\CU$ is defined to be the universal enveloping algebra
+Then the algebra $\CU$ is defined to be the universal enveloping algebra
 $\uea{\fg}$.
 
-For convenience, we define $b \defeq \dual a \in \dual\fa$ and $y \defeq \dual x
-\in \dual\fa$, which satisfy the relations $\liebk{a}{y}=-y$, $\liebk{x}{y}=b$,
-with $b$ central.
+\begin{remark}
+        For convenience, we define $b \defeq \dual a \in \dual\fa$ and
+        $y \defeq \dual x \in \dual\fa$, so that
+        \begin{equation}
+                U = \genbuilder*{y, b, a, x}{
+                        \liebk{a}{x} = x,
+                        \liebk{a}{y} = -y,
+                        \liebk{x}{y} = b,
+                        \liebk{b}{ } = 0
+                }
+        \end{equation}
+        as an algebra.
+\end{remark}
 
 \subsection{Expressing morphisms as generating functions}
 
