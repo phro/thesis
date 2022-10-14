@@ -264,7 +264,7 @@ A typical value for a tangle invariant that arises is of the form:
 Here, $c$, $α$, and $β$ denotes a constant with respect to the variables $y_i$,
 $b_i$, $a_i$, and $x_i$ (collectively referred to as \enquote{$v_i$}s), while
 $ξ$, $η$, and $λ$ are potentially $b_i$-dependent, and $P$ is a polynomial in
-the $v_i$'s.
+$y_i$, $b_i$, and $x_i$.
 
 Let us compute the trace of \cref{eq:sample_GDO}. For clarity, we will put bars
 over the coinvariants variables $a_i$ and $z_i$, as they do not play a role in
@@ -278,16 +278,21 @@ the contraction.
                 \trace^i
         }_{v_i}\\
         &= \contraction{
-                P(y_i, b_i, a_i, x_i)
+                P(y_i, b_i, x_i)
                 \Exp{c + β b_i + ξ(b_i) x_i + η(b_i)y_i + λ(b_i)x_i y_i
                 +η_iξ_i\bz_i+β_i(1-\Exp{-α_i})\bz_i}
                 \Exp{α a_i + α_i\ba_i}
         }_{v_i}\\
-        &= \contraction{
-                P(y_i, b_i, a_i+\ba_i, x_i)
-                \Exp{c + β b_i + ξ(b_i) x_i + η(b_i)y_i + λ(b_i)x_i y_i
-                +η_iξ_i\bz_i+β_i(1-\Exp{-α_i-α})\bz_i}
-                \Exp{α\ba_i}
+        &= \Exp{α\ba_i}\contraction{
+                P(y_i, b_i, x_i)
+                \Exp{c + ξ(b_i) x_i + η(b_i)y_i + λ(b_i)x_i y_i
+                +η_iξ_i\bz_i}
+                \Exp{β b_i +β_i(1-\Exp{-α})\bz_i}
+        }_{v_i}\\
+        &= \Exp{c+α\ba_i+β(1-\Exp{-α})\bz_i}\contraction{
+                P(y_i, (1-\Exp{-α})\bz_i, x_i)
+                \Exp{ξ((1-\Exp{-α})\bz_i) x_i + η((1-\Exp{-α})\bz_i)y_i + λ((1-\Exp{-α})\bz_i)x_i y_i
+                +η_iξ_i\bz_i}
         }_{v_i}\\
 \end{aligned}\end{equation}
 
