@@ -13,6 +13,14 @@
 \ProvideDocumentCommand{\Order}{}{\mathbb O}
 \DeclarePairedDelimiterXPP{\Gen}[1]{\msc G}\lparen\rparen{}{#1}
 \DeclarePairedDelimiter{\contraction}\langle\rangle
+\newcommand{\alignedintertext}[1]{%
+  \noalign{%
+    \vskip\belowdisplayshortskip
+    \vtop{\hsize=\linewidth#1\par
+    \expandafter}%
+    \expandafter\prevdepth\the\prevdepth
+  }%
+}
 
 \begin{document}
 \maketitle
@@ -263,8 +271,8 @@ A typical value for a tangle invariant that arises is of the form:
 \end{equation}
 Here, $c$, $α$, and $β$ denotes a constant with respect to the variables $y_i$,
 $b_i$, $a_i$, and $x_i$ (collectively referred to as \enquote{$v_i$}s), while
-$ξ$, $η$, and $λ$ are potentially $b_i$-dependent, and $P$ is a polynomial in
-$y_i$, $b_i$, and $x_i$.
+$ξ$, $η$, and $λ$ are potentially $b_i$-dependent, and $P$ is a (rational)
+function in (the square root of) $B_i$.
 
 Let us compute the trace of \cref{eq:sample_GDO}. For clarity, we will put bars
 over the coinvariants variables $a_i$ and $z_i$, as they do not play a role in
@@ -273,25 +281,25 @@ the contraction.
 \ProvideDocumentCommand{\bz}{}{\bar{z}}
 \begin{equation}\begin{aligned}
         &\contraction{
-                P(y_i, b_i, x_i)
+                P(B_i)
                 \Exp{c + α a_i + β b_i + ξ(b_i) x_i + η(b_i)y_i + λ(b_i)x_i y_i}
                 \trace^i
         }_{v_i}\\
         &= \contraction{
-                P(y_i, b_i, x_i)
+                P(B_i)
                 \Exp{c + β b_i + ξ(b_i) x_i + η(b_i)y_i + λ(b_i)x_i y_i
                 +η_iξ_i\bz_i+β_i(1-\Exp{-α_i})\bz_i}
                 \Exp{α a_i + α_i\ba_i}
         }_{v_i}\\
         &= \Exp{α\ba_i}\contraction{
-                P(y_i, b_i, x_i)
+                P(B_i)
                 \Exp{c + ξ(b_i) x_i + η(b_i)y_i + λ(b_i)x_i y_i
                 +η_iξ_i\bz_i}
                 \Exp{β b_i +β_i(1-\Exp{-α})\bz_i}
         }_{v_i}\\
-        &= \Exp{c+α\ba_i+β(1-\Exp{-α})\bz_i}\contraction{
-                P(y_i, (1-\Exp{-α})\bz_i, x_i)
-                \Exp{ξ((1-\Exp{-α})\bz_i) x_i + η((1-\Exp{-α})\bz_i)y_i + λ((1-\Exp{-α})\bz_i)x_i y_i
+        \alignedintertext{In what follows, we let $μ\defeq (1-\Exp{-α})\bz_i$:}
+        &= \Exp{c+α\ba_i+βμ}P(\Exp{-μ})\contraction{
+                \Exp{ξ(μ) x_i + η(μ)y_i + λ(μ)x_i y_i
                 +η_iξ_i\bz_i}
         }_{v_i}\\
 \end{aligned}\end{equation}
