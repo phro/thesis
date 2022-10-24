@@ -296,12 +296,17 @@ the contraction.
                 \Exp{c + ξ(b_i) x_i + η(b_i)y_i + λ(b_i)x_i y_i
                 +η_iξ_i\bz_i}
                 \Exp{β b_i +β_i(1-\Exp{-α})\bz_i}
-        }_{v_i}\\
+        }_{b_i, x_i, y_i}\\
         \alignedintertext{In what follows, we let $μ\defeq (1-\Exp{-α})\bz_i$:}
         &= \Exp{c+α\ba_i+βμ}P(\Exp{-μ})\contraction{
-                \Exp{ξ(μ) x_i + η(μ)y_i + λ(μ)x_i y_i
-                +η_iξ_i\bz_i}
-        }_{v_i}\\
+                \Exp{η(μ)y_i}
+                \Exp{(ξ(μ) + λ(μ)y_i)x_i + ξ_iη_i\bz_i}
+        }_{x_i, y_i}\\
+        &= \Exp{c+α\ba_i+βμ}P(\Exp{-μ})\contraction{
+                \Exp{η(μ)y_i+ξ(μ)\bz_iη_i + λ(μ)\bz_iη_iy_i}
+        }_{y_i}\\
+        &= \frac{P(\Exp{-μ})\Exp{c+α\ba_i+βμ+\frac{η(μ)ξ(μ)\bz_i}{1-λ(μ)\bz_i}}}
+                {1-λ(μ)\bz_i}
 \end{aligned}\end{equation}
 
 \section{Further work}
