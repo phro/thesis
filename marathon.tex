@@ -345,6 +345,14 @@ statement:
 Bar-Natan and Van der Veen develop an algorithm to convert a classical long knot
 into an \ac{RVT}. As we are interested in links, we must extend this algorithm
 to include so-called \enquote{long links}, which we outline below:
+\begin{verbatim}
+        1. Pass a front over the beginning of the open strand.
+        2. Progressively absorb the leftmost crossings 
+                2a. As crossings are absorbed,
+                    take into account any rotations of arcs.
+        3. If an arc passes through the front twice, absorb it,
+           taking into account any rotations of that arc as a result.
+\end{verbatim}
 
 \section{Comparison with the Multivariable Alexander polynomial}
 
