@@ -312,6 +312,18 @@ the contraction.
 
 \section{Generating \acp{RVT} for links}
 
+\begin{definition}[\ac{RVT}]
+        \Iac{RVT} is an equivalence class of virtual tangle diagrams subject to
+        the following so-called rotational Reidemeister moves:
+        \ProvideDocumentCommand{\Reid}{sm}{\mathrm{R}\IfBooleanT{#1}{'}_{#2}}
+        \begin{equation}
+                \Reid1, \Reid2, \Reid3, \text{Wh}
+        \end{equation}
+\end{definition}
+
+Given a classical link, there is a unique \ac{RVL} corresponding to it. Given a
+classical link diagram, however, there is not a unique \ac{RVL} diagram.
+
 \section{Comparison with the Multivariable Alexander polynomial}
 
 On all two-component links with at most $11$ crossings (a collection of size
@@ -329,6 +341,9 @@ into the established framework, or to suitably extend the framework.
         \acro{RVT}{Rotational Virtual Tangle}
         \acro{RVK}{Rotational Virtual Knot}
         \acro{RVL}{Rotational Virtual Link}
+        \acroindefinite{RVT}{an}{a}
+        \acroindefinite{RVK}{an}{a}
+        \acroindefinite{RVL}{an}{a}
 \end{acronym}
 
 \printbibliography
