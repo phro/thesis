@@ -3,6 +3,8 @@
 \usepackage[backend=biber]{biblatex}
 \addbibresource{\jobname.bib}
 \usepackage{acronym}
+\usepackage{listings}
+        \lstset{basicstyle=\ttfamily}
 
 \title{Computing the generating function of a coinvariants map}
 \author{Jesse Frohlich}
@@ -403,6 +405,21 @@ the same structure. Further work is needed to either implement this operation
 into the established framework, or to suitably extend the framework.
 
 \appendix
+
+\section{Code implementation}
+
+\subsection{Implementation of $Z$ invariant (from \cite{BV})}
+
+This is a Mathematica™ implementation by Bar-Natan and van der Veen, modified by
+the author.
+
+\subsection{Implementation of $\trace$}
+
+This is a Mathematica™ implementation.
+
+\subsection{Implementation of \lstinline|toRVT|}
+
+This is a Haskell implementation.
 
 \section{Acronyms}
 \begin{acronym}
