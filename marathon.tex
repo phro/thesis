@@ -392,7 +392,13 @@ to include so-called \enquote{long links}, which we outline below:
            taking into account any rotations of that arc as a result.
 \end{verbatim}
 
-\section{Comparison with the Multivariable Alexander polynomial}
+\section{Comparison with the \ac{MVA}}
+
+Given that the long knot (i.e. one-component) case of this invariant
+encodes the Alexander Polynomial, it was suspected that the invariant on long
+links (i.e. multiple components, one of which is long) formed by adding the
+trace would encode the \ac{MVA}. However, there are links which the \ac{MVA}
+separates which this invariant does not.
 
 On all two-component links with at most $11$ crossings (a collection of size
 $914$), the trace map attains $878$ distinct values, while the MVA attains only
@@ -429,6 +435,7 @@ This is a Haskell implementation.
         \acroindefinite{RVT}{an}{a}
         \acroindefinite{RVK}{an}{a}
         \acroindefinite{RVL}{an}{a}
+        \acro{MVA}{Multivariable Alexander polynomial}
 \end{acronym}
 
 \printbibliography
