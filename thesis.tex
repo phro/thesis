@@ -130,8 +130,70 @@ the arrows in \cref{eq:cd_mult,eq:cd_unit}:
 \end{equation}
 \end{multicols}
 
+If a vector space $B$ satisfies both definitions of an algebra and a coalgebra,
+we introduce a definition for when the structures are compatible with each other
+in the following way:
+
+\begin{definition}[Bialgebra]
+A \defi{bialgebra} is an algebra $(A,\mult,\unit)$ and a coalgebra
+$(A,\comult,\counit)$, such that $\comult$ and $\counit$ are algebra morphisms.
+\end{definition}
+
+\begin{multicols}{2}\noindent
+\begin{equation}\label{eq:cd_mult_comult}
+\begin{tikzcd}
+B^{\otimes2}
+        \rar["\mult"]
+        \dar["\comult^{\otimes2}"']
+&B
+        \dar["\comult"] \\
+B^{\otimes4}
+        \rar["\mult^{\otimes2}"]
+&B^{\otimes2}
+\end{tikzcd}
+\end{equation}\begin{equation}\label{eq:cd_unit_comult}
+\begin{tikzcd}[row sep=tiny]
+&B
+        \ar[dd,"\comult"] \\
+\k
+        \urar["\unit"]
+        \drar["\unit^{\otimes2}"']\\
+&B^{\otimes2}
+\end{tikzcd}
+\end{equation}
+\columnbreak
+\begin{equation}\label{eq:cd_mult_counit}
+\begin{tikzcd}[column sep=tiny]
+B^{\otimes2}
+        \ar[rr,"m"]
+        \drar["\counit^{\otimes2}"']
+&&B
+        \dlar["\counit"] \\
+&\k
+\end{tikzcd}
+\end{equation}
+\begin{equation}\label{eq:cd_unit_counit}
+\begin{tikzcd}
+\k
+        \rar["\unit"]
+        \drar["\id"']
+&B
+        \dar["\counit"] \\
+&\k
+\end{tikzcd}
+\end{equation}
+\end{multicols}
+\begin{remark}
+        The conditions for $\comult$ being an algebra morphism are presented in
+        \cref{eq:cd_mult_comult,eq:cd_unit_comult}, while those for $\counit$
+        are in \cref{eq:cd_mult_counit,eq:cd_unit_counit}. Observing invariance
+        under arrow reversal, it may not come as a surprise that
+        \cref{eq:cd_mult_comult,eq:cd_mult_counit} also are the conditions for
+        $\mult$ being a coalgebra morphism, and
+        \cref{eq:cd_unit_comult,eq:cd_unit_counit} tell us that $\unit$ is as
+        well.
+\end{remark}
 % TODO:
-% bialgebra
 % Hopf algebra
 % braided categories
 % ribbon categories
