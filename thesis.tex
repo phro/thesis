@@ -202,8 +202,59 @@ $\lift\mult0 = \lift\unit0 = \lift\comult0 = \lift\counit0 = \id$.
         \cref{eq:cd_unit_comult,eq:cd_unit_counit} tell us that $\unit$ is as
         well.
 \end{remark}
+
+Finally, we introduce the invertibility condition we would expect on a quantum
+group.
+\begin{definition}[Hopf algebra]
+A \defi{Hopf algebra} is a bialgebra $H$ together with a map $\map {\antipode} {H}
+{H}$ called the \defi{antipode}, which satisfies for all $h\in H$,
+$h_{(1)}\antipode(h_{(2)}) = \counit(h) = \antipode(h_{(1)})h_{(2)}$. As a
+commutative diagram, this looks like \cref{eq:cd_antipode}
+\begin{equation}
+\begin{tikzcd}[column sep=small]\label{eq:cd_antipode}
+&& \k
+        \arrow[rrd, "\unit"]
+\\
+H
+        \arrow[rru, "\counit"] \arrow[rd, "\comult"']
+&&&& H \\
+& H\otimes H
+        \arrow[rr, "\id\otimes\antipode", shift left]
+        \arrow[rr, "\antipode\otimes\id"', shift right]
+&& H\otimes H
+        \arrow[ru, "\mult"']
+\end{tikzcd}
+\end{equation}
+\begin{equation}
+\begin{tikzcd}[column sep=tiny]\label{eq:cd_antipode}
+H
+        \arrow[rr, "\counit"] \arrow[rd, "\comult"']
+&& \k
+        \arrow[rr, "\unit"]
+&& H \\
+& H\otimes H
+        \arrow[rr, "\id\otimes\antipode", shift left]
+        \arrow[rr, "\antipode\otimes\id"', shift right]
+&& H\otimes H \arrow[ru, "\mult"']
+\end{tikzcd}
+\end{equation}
+\begin{equation}
+\begin{tikzcd}\label{eq:cd_antipode}
+&& \k
+        \arrow[rrd, "\unit", bend left=15]
+\\
+H
+        \arrow[rru, "\counit", bend left=15] \arrow[r, "\comult"']
+& H\otimes H
+        \arrow[rr, "\id\otimes\antipode", shift left]
+        \arrow[rr, "\antipode\otimes\id"', shift right]
+&& H\otimes H
+        \arrow[r, "\mult"']
+& H
+\end{tikzcd}
+\end{equation}
+\end{definition}
 % TODO:
-% Hopf algebra
 % braided categories
 % ribbon categories
 
