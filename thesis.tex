@@ -34,7 +34,7 @@
 
 \begin{abstract}
         A well-known source of strong link invariants comes from quantum groups.
-        Typically, one uses a representation of a quantum group to build a 
+        Typically, one uses a representation of a quantum group to build a
         computable invariant, though these computations require exponential time
         in the number of crossings. Recent work has allowed for direct and
         efficient computations within the quantum groups themselves, through the
@@ -63,7 +63,7 @@ context we will work with:
   An \defi{algebra} is a vector space $A$ over a field $k$ together with an
   associative multiplication $\map {m} {A \otimes A} {A}$, and a multiplicative
   unit $\one\in A$. It is more natural to think of the unit as a  map
-  $\map{\unit}{k}{A}$ by linearly extending the assignment $\unit(1) = \one$. 
+  $\map{\unit}{k}{A}$ by linearly extending the assignment $\unit(1) = \one$.
 \end{definition}
 
 \begin{multicols}{2}\noindent
@@ -125,7 +125,7 @@ the arrows in \cref{eq:cd_mult,eq:cd_unit}:
     \lar["\counit\otimes\id", shift left]\\
     &C
     \ular["\id", bend left=10]
-    \uar["\comult"'] 
+    \uar["\comult"']
   \end{tikzcd}
 \end{equation}
 \end{multicols}
@@ -581,7 +581,7 @@ into an \ac{RVT}. As we are interested in links, we must extend this algorithm
 to include so-called \enquote{long links}, which we outline below:
 \begin{verbatim}
         1. Pass a front over the beginning of the open strand.
-        2. Progressively absorb the leftmost crossings 
+        2. Progressively absorb the leftmost crossings
                 2a. As crossings are absorbed,
                     take into account any rotations of arcs.
         3. If an arc passes through the front twice, absorb it,
