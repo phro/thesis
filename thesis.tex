@@ -67,7 +67,7 @@ context we will work with:
 \end{definition}
 
 \begin{multicols}{2}\noindent
-\begin{equation}
+\begin{equation}\label{eq:cd_mult}
   \begin{tikzcd}
     A^{\otimes3}
       \rar["\mult\otimes\id"]
@@ -80,7 +80,7 @@ context we will work with:
   \end{tikzcd}
 \end{equation}
 \columnbreak
-\begin{equation}
+\begin{equation}\label{eq:cd_unit}
 \begin{tikzcd}[column sep=large]
     A
     \rar["\id\otimes\unit", shift left]
@@ -93,8 +93,44 @@ context we will work with:
 \end{equation}
 \end{multicols}
 
+There is also the dual notion of a \emph{coalgebra}, which arises by reversing
+the arrows in \cref{eq:cd_mult,eq:cd_unit}:
+
+\begin{definition}[Coalgebra]
+  A \defi{colagebra} is a vector space $C$ over a field $\k$ with a
+  \defi{comultiplication} $\map {\comult} {C} {C\otimes C}$ which is
+  \defi{coassociative} \eqref{eq:cd_comult} and a \defi{counit}, which is a
+  map $\counit\colon A\to k$ satisfying \eqref{eq:cd_counit}.
+\end{definition}
+\nopagebreak
+\begin{multicols}{2}\noindent
+  \begin{equation}\label{eq:cd_comult}
+  \begin{tikzcd}
+    C^{\otimes3}
+    &C^{\otimes2}
+      \lar["\comult\otimes\id"'] \\
+    C^{\otimes2}
+      \uar["\id\otimes\comult"]
+    &C
+      \lar["\comult"']
+      \uar["\comult"']
+  \end{tikzcd}
+\end{equation}
+\columnbreak
+  \begin{equation}\label{eq:cd_counit}
+  \begin{tikzcd}
+    C
+    &C^{\otimes2}
+    \lar["\id\otimes\counit"', shift right]
+    \lar["\counit\otimes\id", shift left]\\
+    &C
+    \ular["\id", bend left=10]
+    \uar["\comult"'] 
+  \end{tikzcd}
+\end{equation}
+\end{multicols}
+
 % TODO:
-% coalgebra
 % bialgebra
 % Hopf algebra
 % braided categories
