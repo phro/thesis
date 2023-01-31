@@ -358,9 +358,39 @@ the contraction.
         &= \Exp{c+α\ba_i+βμ}P(\Exp{-μ})\contraction{
                 \Exp{η(μ)y_i+ξ(μ)\bz_iη_i + λ(μ)\bz_iη_iy_i}
         }_{y_i}\\
-        &= \frac{P(\Exp{-μ})\Exp{c+α\ba_i+βμ+\frac{η(μ)ξ(μ)\bz_i}{1-λ(μ)\bz_i}}}
-                {1-λ(μ)\bz_i}
+        &= \frac{P(\Exp{-μ})}
+                {1-λ(μ)\bz_i}\Exp{c+α\ba_i+βμ+\frac{η(μ)ξ(μ)\bz_i}{1-λ(μ)\bz_i}}
 \end{aligned}\end{equation}
+
+\subsection{Computational examples}
+
+Using the formula given in \cref{eq:trace_on_gaussian}, let us do some
+preliminary examples:
+
+\begin{align}
+        \trace^i(R_{ij}) &= 1\label{eq:trR}\\
+        \trace^j(R_{ij}) &= \Exp{b_i\ba_j}\label{eq:trR2}\\
+        \begin{split}\label{eq:trHopf}
+                \trace^2\pn[\Big]{\sqrt{B_2}\Exp{
+                                -a_2 b_1-a_1 b_2 +
+                                \frac{(B_1-1) x_2 y_1}{b_1 B_1}+
+                        \frac{(B_2-1) x_1 y_2}{b_2 B_2}}
+                } &= \\
+                \Exp{
+                        \frac{a_1 (\bz_2-B_1 \bz_2)}{B_1}-b_1 \ba_2+
+                        \frac{e^{B_1 \bz_2}
+                        (x_1 y_1 e^{\inv{B_1} \bz_2}-x_1 y_1 e^{\bz_2})}{b_1}+
+                        \frac{1}{2} \inv{B_1} \bz_2-\frac{\bz_2}{2}
+                }&%\\
+        \end{split}
+        % \trace^i(
+                % P\Exp{c + α a_i + β b_i + ξ(b_i) x_i + η(b_i)y_i + λ(b_i)x_i y_i}
+        % )
+\end{align}
+
+\Cref{eq:trR,eq:trR2} are the values one obtains for the two (virtual)
+one-crossing, two-component link, while \cref{eq:trHopf} is the value of the
+invariant on the Hopf link.
 
 \subsection{Limitations of this definition}
 For some inputs to the trace, expressions involving the Lambert $W$-function
