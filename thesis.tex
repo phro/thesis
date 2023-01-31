@@ -135,20 +135,22 @@ we introduce a definition for when the structures are compatible with each other
 in the following way:
 
 \begin{definition}[bialgebra]
-A \defi{bialgebra} is an algebra $(A,\mult,\unit)$ and a coalgebra
-$(A,\comult,\counit)$, such that $\comult$ and $\counit$ are algebra morphisms.
+A \defi{bialgebra} is an algebra $(B,\mult,\unit)$ and a coalgebra
+$(B,\comult,\counit)$, such that $\comult$ and $\counit$ are algebra morphisms.
 \end{definition}
+
+\ProvideDocumentCommand{\lift}{mm}{\curryIsolated{#1}^{(#2)}}
 
 \begin{multicols}{2}\noindent
 \begin{equation}\label{eq:cd_mult_comult}
 \begin{tikzcd}
 B^{\otimes2}
         \rar["\mult"]
-        \dar["\comult^{\otimes2}"']
+        \dar["\lift\comult2"']
 &B
         \dar["\comult"] \\
 B^{\otimes4}
-        \rar["\mult^{\otimes2}"]
+        \rar["\lift\mult2"]
 &B^{\otimes2}
 \end{tikzcd}
 \end{equation}\begin{equation}\label{eq:cd_unit_comult}
@@ -157,7 +159,7 @@ B^{\otimes4}
         \ar[dd,"\comult"] \\
 \k
         \urar["\unit"]
-        \drar["\unit^{\otimes2}"']\\
+        \drar["\lift\unit2"']\\
 &B^{\otimes2}
 \end{tikzcd}
 \end{equation}
@@ -166,7 +168,7 @@ B^{\otimes4}
 \begin{tikzcd}[column sep=tiny]
 B^{\otimes2}
         \ar[rr,"m"]
-        \drar["\counit^{\otimes2}"']
+        \drar["\lift\counit2"']
 &&B
         \dlar["\counit"] \\
 &\k
@@ -183,6 +185,13 @@ B^{\otimes2}
 \end{tikzcd}
 \end{equation}
 \end{multicols}
+Here, the $\lift{}n$ denotes the inherited (co)algebra structure on
+$B^{\otimes n}$, given by component-wise operations. For instance, in
+the case of multiplication, this means
+$\lift\mult2\pn[\big]{(a_1\otimes b_1) \otimes (a_2 \otimes b_2)} =
+a_1a_2 \otimes b_1 b_2$. The bialgebra structure on $\k$ is given by
+$\lift\mult0 = \lift\unit0 = \lift\comult0 = \lift\counit0 = \id$.
+
 \begin{remark}
         The conditions for $\comult$ being an algebra morphism are presented in
         \cref{eq:cd_mult_comult,eq:cd_unit_comult}, while those for $\counit$
