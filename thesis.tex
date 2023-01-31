@@ -17,6 +17,7 @@
 \ProvideDocumentCommand{\CU}{}{U}
 \ProvideDocumentCommand{\nn}{}{\mathbf{n}}
 \ProvideDocumentCommand{\Order}{}{\mathbb O}
+\RenewDocumentCommand{\k}{}{\mbf k}
 \DeclarePairedDelimiterXPP{\Gen}[1]{\msc G}\lparen\rparen{}{#1}
 \DeclarePairedDelimiter{\contraction}\langle\rangle
 \newcommand{\alignedintertext}[1]{%
@@ -55,10 +56,51 @@
 Here we describe the use of quantum groups in knot theory, and the role they and
 their representations play in building a knot invariant.
 
-One defines braided categories, ribbon categories, and associates to the
-fundamental operations (evaluation, coevaluation, the braiding (and its
-inverse), the identity map) a graphical calculus which matches the behaviour of
-framed tangles (that is, embeddings up to isotopy).
+Following Majid's in \cite{SM}, we give a brief introduction to the algebraic
+context we will work with:
+
+\begin{definition}[Algebra]
+  An \defi{algebra} is a vector space $A$ over a field $k$ together with an
+  associative multiplication $\map {m} {A \otimes A} {A}$, and a multiplicative
+  unit $\one\in A$. It is more natural to think of the unit as a  map
+  $\map{\unit}{k}{A}$ by linearly extending the assignment $\unit(1) = \one$. 
+\end{definition}
+
+\begin{multicols}{2}\noindent
+\begin{equation}
+  \begin{tikzcd}
+    A^{\otimes3}
+      \rar["\mult\otimes\id"]
+      \dar["\id\otimes \mult"']
+    &A^{\otimes2}
+      \dar["\mult"] \\
+    A^{\otimes2}
+      \rar["\mult"]
+    &A
+  \end{tikzcd}
+\end{equation}
+\columnbreak
+\begin{equation}
+\begin{tikzcd}[column sep=large]
+    A
+    \rar["\id\otimes\unit", shift left]
+    \rar["\unit\otimes\id"', shift right]
+    \drar["\id"', bend right=10]
+    &A^{\otimes2}
+    \dar["\mult"] \\
+    &A
+  \end{tikzcd}
+\end{equation}
+\end{multicols}
+
+% TODO:
+% coalgebra
+% bialgebra
+% Hopf algebra
+% braided categories
+% ribbon categories
+
+% define graphical calculus
 
 \begin{remark}
         By insisting that the ends of all strands in the diagram point up, and
