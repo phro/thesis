@@ -12,6 +12,7 @@
 \title{Computing the generating function of a coinvariants map}
 \author{Jesse Frohlich}
 
+\ProvideDocumentCommand{\Rmati}{}{\overline\Rmat}
 \ProvideDocumentCommand{\fa}{}{\mfk{a}}
 \ProvideDocumentCommand{\Alg}{}{\fg}
 \ProvideDocumentCommand{\CU}{}{U}
@@ -253,6 +254,24 @@ H
 & H
 \end{tikzcd}
 \end{equation}
+\end{definition}
+
+In order to do knot theory, we need an algebraic way to represent a crossing of
+two strands. This is accomplished by the so-called $\Rmat$-matrix:
+
+\begin{definition}[quasitriangular Hopf algebra]
+A \defi{quasitriangular Hopf algebra} is a Hopf algebra $H$, together with an
+invertible element $\Rmat \in H\otimes H$, called the \defi{$\Rmat$-matrix},
+which satisfies the following properties: (we will denote the inverse by
+$\Rmati$)
+\begin{align}
+        \label{eq:Rmat_overstrand}
+        \Rmat_{12}\then\comult^{2}_{23}&=\Rmat_{a2}\Rmat_{b3}\then\mult^{ab}_1\\
+        \Rmat_{13}\then\comult^{1}_{12}&=\Rmat_{1b}\Rmat_{2a}\then\mult^{ab}_3\\
+        \comult^{1}_{21} &= 
+                \comult^{1}_{12} \Rmat_{2_i,1_i}\Rmati_{2_f,1_f}\then
+                \mult^{1_i,1,1_f}_{1}\then \mult^{2_i,2,2_f}_{2}
+\end{align}
 \end{definition}
 % TODO:
 % braided categories
