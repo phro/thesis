@@ -101,6 +101,60 @@ arbitrary finite set $S$ disjoint from the $j_k$'s and the $i_k$'s:
 \end{itemize}
 \end{remark}
 
+\subsubsection{Notation extension to meta-monoidal categories}
+
+Some of the monoidal categories we will work with are best suited to their
+factors being labelled by finite sets. For the purpose of representing them
+clearly, we introduce a definition put forth by Bar-Natan:
+
+\begin{definition}[meta-monoidal category]
+        A \defi{meta-monoidal category} is a category $\msc C$ such that:
+        \begin{itemize}
+                \item Objects are sets $\msc C_S$ for each finite set $S$. Given
+                        a morphism $ϕ$ in $\msc C$, its domain and codomain are
+                        thereby completely determined by two finite sets, say
+                        $D$ and $S$, respectively. Such morphisms will be
+                        denoted by $ϕ^D_C$.
+                \item There is a bifunctor (the \enquote{monoidal product})
+                        $\map {\otimes} {\msc C \times \msc C}{\msc C}$ with
+                        $\msc C_S \otimes \msc C_X = \msc C_{S \sqcup X}$. Given
+                        morphisms $ϕ^{D_1}_{C_1}$ and $ψ^{D_2}_{C_2}$, we have
+                        $\map {ϕ \otimes ψ} {D_1 \sqcup D_2} {C_1\sqcup
+                        C_2}$.\footnote{This encodes the data of
+                                a strict monoidal category, albeit with
+                        arbitrarily indexed factors.} We will write such
+                        products with concatenation:
+                        $ϕ^{D_1}_{C_1}ψ^{D_2}_{C_2}$
+        \end{itemize}
+\end{definition}
+
+Given a morphism $ϕ^D_C$ and a finite set $S$, there is an extension of $ϕ^D_C$
+to a morphism $\map {\overline{ϕ}} {D\otimes S} {C \sqcup S}$ given by
+$ϕ^D_C \otimes \id^S_S$. Using this extension, we may generalize the
+concatenation notation to include composition of morphisms:
+
+\begin{definition}[concatenation in a meta-monoidal category]
+        Let $\msc C$ be a meta-monoidal category, $D_1$, $D_2$, $C_1$, $C_2$,
+        and $S$ be pairwise disjoint finite sets, and $ϕ^{D_1}_{C_1\sqcup S}$ and
+        $ψ^{D_2\sqcup S}_{C_2}$ be morphisms in $\msc C$. We define their
+        concatenation by:\footnote{To better complement reading direction, we
+        use the left-to-right composition symbol $f \then g \defeq g \circ f$.}
+        \begin{equation}\label{eq:concat}
+                ϕ^{D_1}_{C_1\sqcup S}ψ^{D_2\sqcup S}_{C_2}
+                \defeq
+                \pn[\big]{ϕ^{D_1}_{C_1\sqcup S}\otimes \id^{D_2}_{D_2}} \then
+                \pn[\big]{ψ^{D_2\sqcup S}_{C_2} \otimes \id^{C_1}_{C_1}}
+        \end{equation}
+\end{definition}
+The two extreme cases of this definition are:
+\begin{itemize}
+        \item When $S = \emptyset$, bifunctoriality of $\otimes$ reduces
+                \cref{eq:concat} to the monoidal product
+                $ϕ^{D_1}_{C_1} \otimes ψ^{D_2}_{C_2}$.
+        \item When $C_1 = \emptyset = D_2$, \cref{eq:concat} becomes the
+                composition $ϕ^{D_1}_{S}\then ψ^{S}_{C_2}$.
+\end{itemize}
+
 \subsection{Quantum link invariants}
 Here we describe the use of quantum groups in knot theory, and the role they and
 their representations play in building a knot invariant.
