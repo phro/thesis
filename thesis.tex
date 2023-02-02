@@ -145,6 +145,14 @@ concatenation notation to include composition of morphisms:
                 \pn[\big]{ϕ^{D_1}_{C_1\sqcup S}\otimes \id^{D_2}_{D_2}} \then
                 \pn[\big]{ψ^{D_2\sqcup S}_{C_2} \otimes \id^{C_1}_{C_1}}
         \end{equation}
+        \begin{equation}\label{eq:concat2} % todo: choose concat or concat2
+                ϕ^{D_1}_{C_1}ψ^{D_2}_{C_2}
+                \defeq
+                \pn[\big]{ϕ^{D_1}_{C_1}
+                        \otimes \id^{D_2\setminus C_1}_{D_2\setminus C_1}} \then
+                \pn[\big]{ψ^{D_2}_{C_2}
+                        \otimes \id^{C_1\setminus D_2}_{C_1\setminus D_2}}
+        \end{equation}
 \end{definition}
 The two extreme cases of this definition are:
 \begin{itemize}
@@ -153,6 +161,14 @@ The two extreme cases of this definition are:
                 $ϕ^{D_1}_{C_1} \otimes ψ^{D_2}_{C_2}$.
         \item When $C_1 = \emptyset = D_2$, \cref{eq:concat} becomes the
                 composition $ϕ^{D_1}_{S}\then ψ^{S}_{C_2}$.
+\end{itemize}
+The two extreme cases of this definition are:
+\begin{itemize}
+        \item When $C_1 \cap D_2 = \emptyset$, bifunctoriality of $\otimes$ reduces
+                \cref{eq:concat2} to the monoidal product
+                $ϕ^{D_1}_{C_1} \otimes ψ^{D_2}_{C_2}$.
+        \item When $C_1 = D_2$, \cref{eq:concat2} becomes the
+                composition $ϕ^{D_1}_{C_1}\then ψ^{D_2}_{C_2}$.
 \end{itemize}
 
 \subsection{Quantum link invariants}
