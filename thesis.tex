@@ -53,6 +53,32 @@
 
 \section{Introduction}
 
+\subsection{Tensor product notation}
+In this paper we will extensively use tensor products, and more generally
+monoidal categories. As all our examples will involve trivial associators, it
+will be more convenient to label tensor factors with elements of a finite set
+rather than by their position in a linear order. We will put the label as a
+subscript on each factor. For a finite set $S = \set{i_1, \dots, i_n}$:
+\begin{equation}
+        V^{\otimes S} \defeq V_{i_1}\otimes V_{i_2}\otimes\dots\otimes V_{{i_n}}
+        \iso V^{\otimes n}
+\end{equation}
+
+Next, let
+$\map {T} {V^{\otimes\set{j_1,\dots,j_s}}} {V^{\otimes\set{i_1,\dots,i_r}}}$ be
+a map between tensor powers of $V$. We denote $T$ by
+$T^{j_1,\dots,j_s}_{i_1,\dots, i_r}$ (noting the order of the indices matters).
+Furthermore, this same symbol will denote extensions by the identity to any
+arbitrary finite set $S$ disjoint from the $j_k$'s and the $i_k$'s:
+\begin{equation}
+        \mapdef {T^{j_1,\dots,j_s}_{i_1,\dots, i_r}}
+                {V^{\otimes\set{j_1,\dots,j_s}\sqcup S}}
+                {V^{\otimes\set{i_1,\dots,i_r}\sqcup S}}
+                {v_{j_1,\dots,j_s}\otimes w_S} 
+                {(Tv_{j_1,\dots,j_s})\otimes w_S} 
+\end{equation}
+
+
 \subsection{Quantum link invariants}
 Here we describe the use of quantum groups in knot theory, and the role they and
 their representations play in building a knot invariant.
