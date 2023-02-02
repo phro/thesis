@@ -54,7 +54,7 @@
 \section{Introduction}
 
 \subsection{Tensor product notation}
-In this paper we will extensively use tensor products, and more generally
+In what follows, we will extensively use tensor products, and more generally
 monoidal categories. As all our examples will involve trivial associators, it
 will be more convenient to label tensor factors with elements of a finite set
 rather than by their position in a linear order. We will put the label as a
@@ -63,14 +63,20 @@ subscript on each factor. For a finite set $S = \set{i_1, \dots, i_n}$:
         V^{\otimes S} \defeq V_{i_1}\otimes V_{i_2}\otimes\dots\otimes V_{{i_n}}
         \iso V^{\otimes n}
 \end{equation}
+Pure tensors in this notation will be written with subscripts and the $\otimes$
+will be suppressed:
+$(v_1)_{i_1}(v_2)_{i_2}\cdots(v_n)_{i_n} \in V^{\otimes\set{i_1,\dots,i_n}}$.
+Observe that with labelled factors, the order the factors are written in does
+not matter: In $V^{\otimes{1,2}}$, we have $x_1y_2 = y_2x_1$.
 
-Next, let
-$\map {T} {V^{\otimes\set{j_1,\dots,j_s}}} {V^{\otimes\set{i_1,\dots,i_r}}}$ be
-a map between tensor powers of $V$. We denote $T$ by
-$T^{j_1,\dots,j_s}_{i_1,\dots, i_r}$ (noting the order of the indices matters).
+Next, given a map
+$\map {T} {V^{\otimes\set{j_1,\dots,j_s}}} {V^{\otimes\set{i_1,\dots,i_r}}}$
+between tensor powers of $V$, we denote $T$ by
+$T^{j_1,\dots,j_s}_{i_1,\dots, i_r}$. It is important to note that the order of
+the indices in this notation matters for nonsymmetric tensors.
 Furthermore, this same symbol will denote extensions by the identity to any
 arbitrary finite set $S$ disjoint from the $j_k$'s and the $i_k$'s:
-\begin{equation}
+\begin{equation}\label{eq:tensor_extend}
         \mapdef {T^{j_1,\dots,j_s}_{i_1,\dots, i_r}}
                 {V^{\otimes\set{j_1,\dots,j_s}\sqcup S}}
                 {V^{\otimes\set{i_1,\dots,i_r}\sqcup S}}
@@ -78,6 +84,22 @@ arbitrary finite set $S$ disjoint from the $j_k$'s and the $i_k$'s:
                 {(Tv_{j_1,\dots,j_s})\otimes w_S} 
 \end{equation}
 
+\begin{remark}
+        There are two special cases with this notation:
+        \begin{itemize}
+                \item We denote (multi)linear functionals with only superscripts:
+                        $\map {ϕ} {V^{\otimes S}} {\k \iso V^{\otimes
+                        \emptyset}}$ will be written $ϕ^S$ (with a linear order
+                        put on $S$).
+                \item Elements $v\in V^{\otimes S}$ will be interpreted as a map
+                        $\map {v} {\k} {V^{\otimes S}}$ written with a (linearly
+                        ordered) subscript: $v_S$ to denote which factors the
+                        element lives in. Following \cref{eq:tensor_extend},
+                        this notation allows us to embed $v$ into higher tensor
+                        powers: $v_S \in V^{\otimes S\sqcup X}$ for a $X$ finite
+                        set.
+\end{itemize}
+\end{remark}
 
 \subsection{Quantum link invariants}
 Here we describe the use of quantum groups in knot theory, and the role they and
