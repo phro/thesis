@@ -145,14 +145,6 @@ concatenation notation to include composition of morphisms:
                 \pn[\big]{ϕ^{D_1}_{C_1\sqcup S}\otimes \id^{D_2}_{D_2}} \then
                 \pn[\big]{ψ^{D_2\sqcup S}_{C_2} \otimes \id^{C_1}_{C_1}}
         \end{equation}
-        \begin{equation}\label{eq:concat2} % todo: choose concat or concat2
-                ϕ^{D_1}_{C_1}ψ^{D_2}_{C_2}
-                \defeq
-                \pn[\big]{ϕ^{D_1}_{C_1}
-                        \otimes \id^{D_2\setminus C_1}_{D_2\setminus C_1}} \then
-                \pn[\big]{ψ^{D_2}_{C_2}
-                        \otimes \id^{C_1\setminus D_2}_{C_1\setminus D_2}}
-        \end{equation}
 \end{definition}
 The two extreme cases of this definition are:
 \begin{itemize}
@@ -162,6 +154,22 @@ The two extreme cases of this definition are:
         \item When $C_1 = \emptyset = D_2$, \cref{eq:concat} becomes the
                 composition $ϕ^{D_1}_{S}\then ψ^{S}_{C_2}$.
 \end{itemize}
+
+\begin{definition}[concatenation in a meta-monoidal category] % todo: choose 1
+        Let $\msc C$ be a meta-monoidal category, $D_1$, $D_2$, $C_1$, and $C_2$
+        be pairwise disjoint finite sets, and $ϕ^{D_1}_{C_1\sqcup S}$ and
+        $ψ^{D_2\sqcup S}_{C_2}$ be morphisms in $\msc C$. We define their
+        concatenation by:\footnote{To better complement reading direction, we
+        use the left-to-right composition symbol $f \then g \defeq g \circ f$.}
+        \begin{equation}\label{eq:concat2} % todo: choose concat or concat2
+                ϕ^{D_1}_{C_1}ψ^{D_2}_{C_2}
+                \defeq
+                \pn[\big]{ϕ^{D_1}_{C_1}
+                        \otimes \id^{D_2\setminus C_1}_{D_2\setminus C_1}} \then
+                \pn[\big]{ψ^{D_2}_{C_2}
+                        \otimes \id^{C_1\setminus D_2}_{C_1\setminus D_2}}
+        \end{equation}
+\end{definition}
 The two extreme cases of this definition are:
 \begin{itemize}
         \item When $C_1 \cap D_2 = \emptyset$, bifunctoriality of $\otimes$ reduces
