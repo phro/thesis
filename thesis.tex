@@ -179,6 +179,81 @@ The two extreme cases of this definition are:
                 composition $ϕ^{D_1}_{C_1}\then ψ^{D_2}_{C_2}$.
 \end{itemize}
 
+\begin{lemma}[associativity of concatenation]
+        The concatenation operator of morphisms in a meta-monoidal category is
+        associative, assuming all concatenations are well-defined.
+\end{lemma}
+\begin{proof}
+        Let $(ϕ_1)^{D_1}_{C_1}, (ϕ_2)^{D_2}_{C_2}, (ϕ_3)^{D_3}_{C_3}$ be
+        morphisms. We wish to show that:
+        \begin{equation}
+                \pn*{(ϕ_1)^{D_1}_{C_1} (ϕ_2)^{D_2}_{C_2}} (ϕ_3)^{D_3}_{C_3}
+                = (ϕ_1)^{D_1}_{C_1} \pn*{(ϕ_2)^{D_2}_{C_2} (ϕ_3)^{D_3}_{C_3}}
+        \end{equation}
+        Observe
+        \begin{equation}
+        \begin{aligned}
+                &\pn*{(ϕ_1)^{D_1}_{C_1} (ϕ_2)^{D_2}_{C_2}} (ϕ_3)^{D_3}_{C_3}\\
+                &=\pn*{
+                        \pn[\big]{
+                                (ϕ_1)^{D_1}_{C_1}
+                                \otimes \id^{D_2\setminus C_1}_{D_2\setminus C_1}
+                        } \then
+                        \pn[\big]{
+                                (ϕ_2)^{D_2}_{C_2}
+                                \otimes \id^{C_1\setminus D_2}_{C_1\setminus D_2}
+                        }
+                }^{D_1\cup (D_2\setminus C_1)}_{C_2 \cup (C_1 \setminus D_2)}
+                (ϕ_3)^{D_3}_{C_3}\\
+                &=\pn*{\pn*{
+                        \pn[\big]{
+                                (ϕ_1)^{D_1}_{C_1}
+                                \otimes \id^{D_2\setminus C_1}_{D_2\setminus C_1}
+                        } \then
+                        \pn[\big]{
+                                (ϕ_2)^{D_2}_{C_2}
+                                \otimes \id^{C_1\setminus D_2}_{C_1\setminus D_2}
+                        }
+                }^{D_1\cup (D_2\setminus C_1)}_{C_2 \cup (C_1 \setminus D_2)}
+                \otimes \id
+                        ^{D_3\setminus (C_2 \cup (C_1 \setminus D_2))}
+                        _{D_3\setminus (C_2 \cup (C_1 \setminus D_2))}
+                }\\
+                &\then
+                \pn*{
+                        (ϕ_3)^{D_3}_{C_3}
+                        \otimes \id
+                                ^{(C_2 \cup (C_1 \setminus D_2))\setminus D_3}
+                                _{(C_2 \cup (C_1 \setminus D_2))\setminus D_3}
+                }\\
+                &=\pn*{
+                        \pn[\big]{
+                                (ϕ_1)^{D_1}_{C_1}
+                                \otimes \Id
+                                {D_2\setminus C_1 \cup
+                                        (D_3\setminus (C_2 \cup (C_1 \setminus D_2)))}
+                } \then
+        \pn[\big]{
+                (ϕ_2)^{D_2}_{C_2}
+                \otimes \Id{(C_1\setminus D_2) \cup (D_3 \setminus C_2)}
+        }
+}
+^{D_1 \cup (D_2 \setminus C_1) \cup (D_3 \setminus (C_2 \cup (C_1 \setminus D_2)))}
+_{(C_1 \setminus D_2) \cup C_2 \cup (D_3 \setminus C_2)}\\
+                &\then
+                \pn*{
+                        (ϕ_3)^{D_3}_{C_3}
+                        \otimes \id
+                                ^{(C_2 \cup (C_1 \setminus D_2))\setminus D_3}
+                                _{(C_2 \cup (C_1 \setminus D_2))\setminus D_3}
+                }\\
+        \end{aligned}
+        \end{equation}
+\end{proof}
+
+% TODO: prove associativity of the concatenation map (This is true, and actually
+% is implemented in Dror's program as the (//) operator!)
+
 \subsection{Quantum link invariants}
 Here we describe the use of quantum groups in knot theory, and the role they and
 their representations play in building a knot invariant.
