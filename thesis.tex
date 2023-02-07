@@ -12,6 +12,7 @@
 \title{Computing the generating function of a coinvariants map}
 \author{Jesse Frohlich}
 
+\ProvideDocumentCommand{\Id}{m}{\id^{#1}_{#1}}
 \ProvideDocumentCommand{\Rmati}{}{\overline\Rmat}
 \ProvideDocumentCommand{\fa}{}{\mfk{a}}
 \ProvideDocumentCommand{\Alg}{}{\fg}
@@ -157,10 +158,16 @@ The two extreme cases of this definition are:
 
 \begin{definition}[concatenation in a meta-monoidal category] % todo: choose 1
         Let $\msc C$ be a meta-monoidal category, $D_1$, $D_2$, $C_1$, and $C_2$
-        be pairwise disjoint finite sets, and $ϕ^{D_1}_{C_1\sqcup S}$ and
-        $ψ^{D_2\sqcup S}_{C_2}$ be morphisms in $\msc C$. We define their
-        concatenation by:\footnote{To better complement reading direction, we
-        use the left-to-right composition symbol $f \then g \defeq g \circ f$.}
+        be pairwise disjoint finite sets satisfying:
+        \begin{align}
+                \label{eq:}
+                C_2 \cap (C_1 \setminus D_2) &= \emptyset \\
+                D_1 \cap (D_2 \setminus C_1) &= \emptyset
+        \end{align}
+        and $ϕ^{D_1}_{C_1}$ and $ψ^{D_2}_{C_2}$ be morphisms in $\msc C$. We
+        define their concatenation by:\footnote{To better complement reading
+                direction, we use the left-to-right composition symbol $f \then
+        g \defeq g \circ f$.}
         \begin{equation}\label{eq:concat2} % todo: choose concat or concat2
                 ϕ^{D_1}_{C_1}ψ^{D_2}_{C_2}
                 \defeq
