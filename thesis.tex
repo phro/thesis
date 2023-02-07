@@ -111,151 +111,58 @@ clearly, we introduce a definition put forth by Bar-Natan:
 \begin{definition}[meta-monoidal category]
         A \defi{meta-monoidal category} is a category $\msc C$ such that:
         \begin{itemize}
-                \item Objects are sets $\msc C_S$ for each finite set $S$. Given
-                        a morphism $ϕ$ in $\msc C$, its domain and codomain are
-                        thereby completely determined by two finite sets, say
-                        $D$ and $S$, respectively. Such morphisms will be
+                \item Objects are sets $\msc C_S$ indexed by finite sets $S$.
+                \item Given a morphism $ϕ$ in $\msc C$, its domain and codomain
+                        are thereby completely determined by two finite sets,
+                        say $D$ and $S$, respectively. Such morphisms will be
                         denoted by $ϕ^D_C$.
+                \item Composition of morphisms $ϕ^{D_1}_{C_1}$ and
+                        $ψ^{D_2}_{C_2}$ is defined when $D_2 = C_1$, and is
+                        written with the following concatenation operator: 
+                        $\map{ϕ^{D_1}_{C_1}\then ψ^{D_2}_{C_2}}{\msc
+                        C_{D_1}}{\msc C_{C_2}}$.
                 \item There is a bifunctor (the \enquote{monoidal product})
                         $\map {\otimes} {\msc C \times \msc C}{\msc C}$ with
                         $\msc C_S \otimes \msc C_X = \msc C_{S \sqcup X}$. Given
-                        morphisms $ϕ^{D_1}_{C_1}$ and $ψ^{D_2}_{C_2}$, we have
-                        $\map {ϕ \otimes ψ} {D_1 \sqcup D_2} {C_1\sqcup
-                        C_2}$.\footnote{This encodes the data of
-                                a strict monoidal category, albeit with
-                        arbitrarily indexed factors.} We will write such
-                        products with concatenation:
-                        $ϕ^{D_1}_{C_1}ψ^{D_2}_{C_2}$
+                        morphisms $ϕ^{D_1}_{C_1}$ and $ψ^{D_2}_{C_2}$ with $D_1
+                        \cap D_2 = \emptyset = C_1 \cap C_2$, we have
+                        $\map {ϕ \otimes ψ} {\msc C_{D_1 \sqcup D_2}}
+                        {\msc C_{C_1\sqcup C_2}}$.\footnote{This encodes the
+                                data of a strict monoidal category with the
+                                linear order of factors replaces with indices
+                                from a finite set.
+                        } We will write such products with concatenation:
+                        $ϕ^{D_1}_{C_1}ψ^{D_2}_{C_2}$.
         \end{itemize}
 \end{definition}
 
-Given a morphism $ϕ^D_C$ and a finite set $S$, there is an extension of $ϕ^D_C$
-to a morphism $\map {\overline{ϕ}} {D\otimes S} {C \sqcup S}$ given by
-$ϕ^D_C \otimes \id^S_S$. Using this extension, we may generalize the
-concatenation notation to include composition of morphisms:
-
-\begin{definition}[concatenation in a meta-monoidal category]
-        Let $\msc C$ be a meta-monoidal category, $D_1$, $D_2$, $C_1$, $C_2$,
-        and $S$ be pairwise disjoint finite sets, and $ϕ^{D_1}_{C_1\sqcup S}$ and
-        $ψ^{D_2\sqcup S}_{C_2}$ be morphisms in $\msc C$. We define their
-        concatenation by:\footnote{To better complement reading direction, we
-        use the left-to-right composition symbol $f \then g \defeq g \circ f$.}
-        \begin{equation}\label{eq:concat}
-                ϕ^{D_1}_{C_1\sqcup S}ψ^{D_2\sqcup S}_{C_2}
-                \defeq
-                \pn[\big]{ϕ^{D_1}_{C_1\sqcup S}\otimes \id^{D_2}_{D_2}} \then
-                \pn[\big]{ψ^{D_2\sqcup S}_{C_2} \otimes \id^{C_1}_{C_1}}
+\begin{remark}
+        Given a morphism $ϕ^D_C$ and a finite set $S$, there is an extension of $ϕ^D_C$
+        to a morphism
+        $\map {\overline{ϕ}} {\msc C_{D\sqcup S}} {\msc C_{C \sqcup S}}$ given
+        by $ϕ^D_C \id^S_S$. To make expressions easier to read, in this paper we
+        will introduce this extension implicitly in the following context: given
+        morphisms $ϕ^{D_1}_{C_1}$ and $ψ^{D_2}_{C_2}$ such that
+        $D_2 \subseteq C_1$ and $C_2 \cap (C_1\setminus D_2)=\emptyset$, we
+        define:
+        \begin{equation}\label{eq:composition_extension}
+                ϕ^{D_1}_{C_1} \then ψ^{D_2}_{C_2}
+                \defeq 
+                        ϕ^{D_1}_{C_1} \then
+                        \pn*{ψ^{D_2}_{C_2}\Id{C_1\setminus D_2}}
         \end{equation}
-\end{definition}
-The two extreme cases of this definition are:
-\begin{itemize}
-        \item When $S = \emptyset$, the bifunctoriality of $\otimes$ reduces
-                \cref{eq:concat} to the monoidal product
-                $ϕ^{D_1}_{C_1} \otimes ψ^{D_2}_{C_2}$.
-        \item When $C_1 = \emptyset = D_2$, \cref{eq:concat} becomes the
-                composition $ϕ^{D_1}_{S}\then ψ^{S}_{C_2}$.
-\end{itemize}
-
-\begin{definition}[concatenation in a meta-monoidal category] % todo: choose 1
-        Let $\msc C$ be a meta-monoidal category, $D_1$, $D_2$, $C_1$, and $C_2$
-        be pairwise disjoint finite sets satisfying:
-        \begin{align}
-                \label{eq:}
-                C_2 \cap (C_1 \setminus D_2) &= \emptyset \\
-                D_1 \cap (D_2 \setminus C_1) &= \emptyset
-        \end{align}
-        and $ϕ^{D_1}_{C_1}$ and $ψ^{D_2}_{C_2}$ be morphisms in $\msc C$. We
-        define their concatenation by:\footnote{To better complement reading
-                direction, we use the left-to-right composition symbol $f \then
-        g \defeq g \circ f$.}
-        \begin{equation}\label{eq:concat2} % todo: choose concat or concat2
-                ϕ^{D_1}_{C_1}ψ^{D_2}_{C_2}
-                \defeq
-                \pn[\big]{ϕ^{D_1}_{C_1}
-                        \otimes \id^{D_2\setminus C_1}_{D_2\setminus C_1}} \then
-                \pn[\big]{ψ^{D_2}_{C_2}
-                        \otimes \id^{C_1\setminus D_2}_{C_1\setminus D_2}}
-        \end{equation}
-\end{definition}
+\end{remark}
 The two extreme cases of this definition are:
 \begin{itemize}
         \item When $C_1 \cap D_2 = \emptyset$, the bifunctoriality of $\otimes$ reduces
-                \cref{eq:concat2} to the monoidal product
-                $ϕ^{D_1}_{C_1} \otimes ψ^{D_2}_{C_2}$.
-        \item When $C_1 = D_2$, \cref{eq:concat2} becomes the
-                composition $ϕ^{D_1}_{C_1}\then ψ^{D_2}_{C_2}$.
+                \cref{eq:composition_extension} to the monoidal product
+                $ϕ^{D_1}_{C_1}ψ^{D_2}_{C_2}$ (here written with concatenation).
+        \item When $C_1 = D_2$, \cref{eq:composition_extension} becomes the
+                composition $ϕ^{D_1}_{C_1}\then ψ^{D_2}_{C_2}$ exactly.
 \end{itemize}
 
-\begin{lemma}[associativity of concatenation]
-        The concatenation operator of morphisms in a meta-monoidal category is
-        associative, assuming all concatenations are well-defined.
-\end{lemma}
-\begin{proof}
-        Let $(ϕ_1)^{D_1}_{C_1}, (ϕ_2)^{D_2}_{C_2}, (ϕ_3)^{D_3}_{C_3}$ be
-        morphisms. We wish to show that:
-        \begin{equation}
-                \pn*{(ϕ_1)^{D_1}_{C_1} (ϕ_2)^{D_2}_{C_2}} (ϕ_3)^{D_3}_{C_3}
-                = (ϕ_1)^{D_1}_{C_1} \pn*{(ϕ_2)^{D_2}_{C_2} (ϕ_3)^{D_3}_{C_3}}
-        \end{equation}
-        Observe
-        \begin{equation}
-        \begin{aligned}
-                &\pn*{(ϕ_1)^{D_1}_{C_1} (ϕ_2)^{D_2}_{C_2}} (ϕ_3)^{D_3}_{C_3}\\
-                &=\pn*{
-                        \pn[\big]{
-                                (ϕ_1)^{D_1}_{C_1}
-                                \otimes \id^{D_2\setminus C_1}_{D_2\setminus C_1}
-                        } \then
-                        \pn[\big]{
-                                (ϕ_2)^{D_2}_{C_2}
-                                \otimes \id^{C_1\setminus D_2}_{C_1\setminus D_2}
-                        }
-                }^{D_1\cup (D_2\setminus C_1)}_{C_2 \cup (C_1 \setminus D_2)}
-                (ϕ_3)^{D_3}_{C_3}\\
-                &=\pn*{\pn*{
-                        \pn[\big]{
-                                (ϕ_1)^{D_1}_{C_1}
-                                \otimes \id^{D_2\setminus C_1}_{D_2\setminus C_1}
-                        } \then
-                        \pn[\big]{
-                                (ϕ_2)^{D_2}_{C_2}
-                                \otimes \id^{C_1\setminus D_2}_{C_1\setminus D_2}
-                        }
-                }^{D_1\cup (D_2\setminus C_1)}_{C_2 \cup (C_1 \setminus D_2)}
-                \otimes \id
-                        ^{D_3\setminus (C_2 \cup (C_1 \setminus D_2))}
-                        _{D_3\setminus (C_2 \cup (C_1 \setminus D_2))}
-                }\\
-                &\phantom{{}={}}\then
-                \pn*{
-                        (ϕ_3)^{D_3}_{C_3}
-                        \otimes \id
-                                ^{(C_2 \cup (C_1 \setminus D_2))\setminus D_3}
-                                _{(C_2 \cup (C_1 \setminus D_2))\setminus D_3}
-                }\\
-                &= \pn[\big]{
-                        (ϕ_1)^{D_1}_{C_1}
-                        \otimes \Id
-                        {D_2\setminus C_1 \cup
-                        (D_3\setminus (C_2 \cup (C_1 \setminus D_2)))}
-                } \then
-                \pn[\big]{
-                        (ϕ_2)^{D_2}_{C_2}
-                        \otimes \Id{(C_1\setminus D_2) \cup (D_3 \setminus C_2)}
-                } \\
-                &\phantom{{}={}}\then
-                \pn*{
-                        (ϕ_3)^{D_3}_{C_3}
-                        \otimes \id
-                                ^{(C_2 \cup (C_1 \setminus D_2))\setminus D_3}
-                                _{(C_2 \cup (C_1 \setminus D_2))\setminus D_3}
-                }\\
-        \end{aligned}
-        \end{equation}
-\end{proof}
-
-% TODO: prove associativity of the concatenation map (This is true, and actually
-% is implemented in Dror's program as the (//) operator!)
+The $\then$ operator will be left-associative: $ϕ_1\then ϕ_2\thenϕ_3
+\defeq(ϕ_1\thenϕ_2)\thenϕ_3$.
 
 \subsection{Quantum link invariants}
 Here we describe the use of quantum groups in knot theory, and the role they and
