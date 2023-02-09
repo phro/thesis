@@ -174,38 +174,46 @@ context we will work with:
 
 \begin{definition}[algebra]
         An \defi{algebra} is a vector space $A$ over a field $k$ together with
-        an associative multiplication $\map {m} {A \otimes A} {A}$, and a
+        an associative multiplication $\map {m^{i,j}_{k}} {A_{\set{i,j}}}
+        {A_{\set{k}}}$, and a
         multiplicative unit $\one\in A$. It is more natural to think of the unit
-        as a  map $\map{\unit}{k}{A}$ by linearly extending the assignment
-        $\unit(1) = \one$.
+        as a  map $\map{\unit_{1}}{A_{\emptyset}}{A_{\set{i}}}$ by linearly
+        extending the assignment $\unit_{i}(1) = \one_{i}$.
 \end{definition}
 
 \begin{multicols}{2}\noindent
 \begin{equation}\label{eq:cd_mult}
 \begin{tikzcd}
-        A^{\otimes3}
-                \rar["\mult\otimes\id"]
-                \dar["\id\otimes \mult"']
-        &A^{\otimes2}
-                \dar["\mult"] \\
-        A^{\otimes2}
-                \rar["\mult"]
-        &A
+        A_{\set{1,2,3}}
+                \rar["\mult^{1,2}_{1}"]
+                \dar["\mult^{2,3}_{2}"']
+        &A_{\set{1,3}}
+                \dar["\mult^{1,3}_{1}"] \\
+        A_{\set{1,2}}
+                \rar["\mult^{1,2}_{1}"']
+        &A_{\set{1}}
 \end{tikzcd}
 \end{equation}
 \columnbreak
 \begin{equation}\label{eq:cd_unit}
 \begin{tikzcd}[column sep=large]
-        A
-                \rar["\id\otimes\unit", shift left]
-                \rar["\unit\otimes\id"', shift right]
-                \drar["\id"', bend right=10]
-        &A^{\otimes2}
-                \dar["\mult"] \\
-        &A
+        A_{\set{1}}
+                \rar["\unit_{2}"]
+                \drar["\id"']
+        &A_{\set{1,2}}
+                \dar["\mult^{1,2}_{1}", shift left]
+                \dar["\mult^{2,1}_{1}"', shift right] \\
+        &A_{\set{1}}
 \end{tikzcd}
 \end{equation}
 \end{multicols}
+
+\begin{remark}
+        From now on, we will denote repeated multiplication as in
+        \cref{eq:cd_mult} by using extra indices. For instance:
+        $\mult^{i,j, k}_{\ell} \defeq \mult^{i,j}_{r}\then\mult^{r, k}_{\ell}
+        = \mult^{j, k}_{s}\then\mult^{i, s}_{\ell}$.
+\end{remark}
 
 There is also the dual notion of a \emph{coalgebra}, which arises by reversing
 the arrows in \cref{eq:cd_mult,eq:cd_unit}:
@@ -220,29 +228,37 @@ the arrows in \cref{eq:cd_mult,eq:cd_unit}:
 \begin{multicols}{2}\noindent
 \begin{equation}\label{eq:cd_comult}
 \begin{tikzcd}
-        C^{\otimes3}
-        &C^{\otimes2}
-                \lar["\comult\otimes\id"'] \\
-        C^{\otimes2}
-                \uar["\id\otimes\comult"]
-        &C
-                \lar["\comult"']
-                \uar["\comult"']
+        C_{\set{1,2,3}}
+        &C_{\set{2,3}}
+                \lar["\comult^{1}_{{1,2}}"'] \\
+        C_{\set{1,2}}
+                \uar["\comult^{2}_{2,3}"]
+        &C_{\set{1}}
+                \lar["\comult^{1}_{1,2}"]
+                \uar["\comult^{1}_{1,3}"']
 \end{tikzcd}
 \end{equation}
 \columnbreak
 \begin{equation}\label{eq:cd_counit}
 \begin{tikzcd}
-        C
-        &C^{\otimes2}
-                \lar["\id\otimes\counit"', shift right]
-                \lar["\counit\otimes\id", shift left]\\
-        &C
-                \ular["\id", bend left=10]
-                \uar["\comult"']
+        C_{\set{1}}
+        &C_{\set{1,2}}
+                \lar["\counit^{2}"']\\
+        &C_{\set{1}}
+                \ular["\id", shift left]
+                \uar["\comult^{1}_{1,2}", shift left]
+                \uar["\comult^{1}_{2,1}"', shift right] \\
 \end{tikzcd}
 \end{equation}
 \end{multicols}
+
+\begin{remark}
+        From now on, we will denote repeated comultiplication as in
+        \cref{eq:cd_comult} by using extra indices. For instance:
+        $\comult^{i}_{j, k, \ell}
+        \defeq \comult^{i}_{j,r}\then\comult^{r}_{k, \ell}
+        = \comult^{i}_{s,\ell}\then\comult^{s}_{j, j}$.
+\end{remark}
 
 If a vector space $B$ satisfies both definitions of an algebra and a coalgebra,
 we introduce a definition for when the structures are compatible with each other
@@ -251,67 +267,73 @@ in the following way:
 \begin{definition}[bialgebra]
         A \defi{bialgebra} is an algebra $(B,\mult,\unit)$ and a coalgebra
         $(B,\comult,\counit)$, such that $\comult$ and $\counit$ are algebra
-        morphisms.
+        morphisms.\footnote{
+                $B^{\otimes n}$ inherits a (co)algebra structure
+                from $B$, given by
+                component-wise operations. For instance, in the case of
+                multiplication, this
+                means $\mult\pn[\big]{(a_1\otimes b_1) \otimes (a_2 \otimes
+                b_2)} = a_1a_2 \otimes b_1 b_2$. The bialgebra structure on
+                $B_{\emptyset}$ is given by
+                $\mult = \unit = \comult = \counit = \id$.
+        }
 \end{definition}
 
 \ProvideDocumentCommand{\lift}{mm}{\curryIsolated{#1}^{(#2)}}
 
 \begin{multicols}{2}\noindent
 \begin{equation}\label{eq:cd_mult_comult}
-\begin{tikzcd}
-        B^{\otimes2}
-                \rar["\mult"]
-                \dar["\lift\comult2"']
-        &B
-                \dar["\comult"] \\
-        B^{\otimes4}
-                \rar["\lift\mult2"]
-        &B^{\otimes2}
+\begin{tikzcd}[column sep=large]
+        B_{\set{1,3}}
+                \rar["\mult^{1,3}_{1}"]
+                \dar["\comult^{1}_{1,2}\then\comult^{3}_{3,4}"']
+        &B_{\set{1}}
+                \dar["\comult^{1}_{1,2}"] \\
+        B_{\set{1,2,3,4}}
+                \rar["\mult^{1,3}_{1}\then\mult^{2,4}_{2}"']
+        &B_{\set{1,2}}
 \end{tikzcd}
 \end{equation}\begin{equation}\label{eq:cd_unit_comult}
 \begin{tikzcd}[row sep=tiny]
-        &B
-                \ar[dd,"\comult"] \\
-        \k
-                \urar["\unit"]
-                \drar["\lift\unit2"']\\
-        &B^{\otimes2}
+        &B_{\set{1}}
+                \ar[dd,"\comult^{1}_{1,2}"] \\
+        B_{\emptyset}
+                \urar["\unit_{1}"]
+                \drar["\unit_{1}\then\unit_{2}"',near end]\\
+        &B_{\set{1,2}}
 \end{tikzcd}
 \end{equation}
 \columnbreak
 \begin{equation}\label{eq:cd_mult_counit}
 \begin{tikzcd}[column sep=tiny]
-        B^{\otimes2}
-                \ar[rr,"m"]
-                \drar["\lift\counit2"']
-        &&B
-                \dlar["\counit"] \\
-        &\k
+        B_{\set{1,2}}
+                \ar[rr,"\mult^{1,2}_{1}"]
+                \drar["\counit^{1}\then\counit^{2}"']
+        &&B_{\set{1}}
+                \dlar["\counit^{1}"] \\
+        &B_{\emptyset}
 \end{tikzcd}
 \end{equation}
 \begin{equation}\label{eq:cd_unit_counit}
 \begin{tikzcd}
-        \k
-                \rar["\unit"]
+        B_{\emptyset}
+                \rar["\unit_{1}"]
                 \drar["\id"']
-        &B
-                \dar["\counit"] \\
-        &\k
+        &B_{\set{1}}
+                \dar["\counit^{1}"] \\
+        &B_{\emptyset}
 \end{tikzcd}
 \end{equation}
 \end{multicols}
-Here, the $\lift{}n$ denotes the inherited (co)algebra structure on
-$B^{\otimes n}$, given by component-wise operations. For instance, in
-the case of multiplication, this means
-$\lift\mult2\pn[\big]{(a_1\otimes b_1) \otimes (a_2 \otimes b_2)} =
-a_1a_2 \otimes b_1 b_2$. The bialgebra structure on $\k$ is given by
-$\lift\mult0 = \lift\unit0 = \lift\comult0 = \lift\counit0 = \id$.
 
 \begin{remark}
         The conditions for $\comult$ being an algebra morphism are presented in
         \cref{eq:cd_mult_comult,eq:cd_unit_comult}, while those for $\counit$
-        are in \cref{eq:cd_mult_counit,eq:cd_unit_counit}. Observing invariance
-        under arrow reversal, it may not come as a surprise that
+        are in \cref{eq:cd_mult_counit,eq:cd_unit_counit}.\footnote{While
+        notation explicitly naming each tensor factor appears cumbersome in
+        these diagrams, it will prove invaluable later, so we leave it as is for
+        the sake of consistency.} Observing invariance under arrow reversal, it
+        may not come as a surprise that
         \cref{eq:cd_mult_comult,eq:cd_mult_counit} also are the conditions for
         $\mult$ being a coalgebra morphism, and
         \cref{eq:cd_unit_comult,eq:cd_unit_counit} tell us that $\unit$ is as
@@ -323,49 +345,52 @@ group.
 \begin{definition}[Hopf algebra]
 A \defi{Hopf algebra} is a bialgebra $H$ together with a map $\map {\antipode} {H}
 {H}$ called the \defi{antipode}, which satisfies for all $h\in H$,
-$h_{(1)}\antipode(h_{(2)}) = \counit(h) = \antipode(h_{(1)})h_{(2)}$. As a
-commutative diagram, this looks like \cref{eq:cd_antipode}
+$\comult^{1}_{1,2}\then \antipode^1_1 \then \mult^{1,2}_1 =
+\counit^{1}\then\unit_{1} = 
+\comult^{1}_{1,2}\then \antipode^2_2 \then \mult^{1,2}_1$.
+As a commutative diagram, this looks like \cref{eq:cd_antipode}
 \begin{equation}
 \begin{tikzcd}[column sep=small]\label{eq:cd_antipode}
-        && \k
-                \arrow[rrd, "\unit"]
+        && H_{\emptyset}
+                \arrow[rrd, "\unit_{1}"]
         \\
-        H
-                \arrow[rru, "\counit"] \arrow[rd, "\comult"']
-        &&&& H \\
-        & H\otimes H
-                \arrow[rr, "\id\otimes\antipode", shift left]
-                \arrow[rr, "\antipode\otimes\id"', shift right]
-        && H\otimes H
-                \arrow[ru, "\mult"']
+        H_{\set{1}}
+                \arrow[rru, "\counit^{1}"] \arrow[rd, "\comult^{1}_{1,2}"']
+        &&&& H_{\set{1}} \\
+        & H_{\set{1,2}}
+                \arrow[rr, "\antipode^{2}_{2}", shift left]
+                \arrow[rr, "\antipode^{1}_{1}"', shift right]
+        && H_{\set{1,2}}
+                \arrow[ru, "\mult^{1,2}_{1}"']
 \end{tikzcd}
 \end{equation}
 \begin{equation}
 \begin{tikzcd}[column sep=tiny]\label{eq:cd_antipode}
-        H
-                \arrow[rr, "\counit"] \arrow[rd, "\comult"']
-        && \k
-                \arrow[rr, "\unit"]
-        && H \\
-        & H\otimes H
-                \arrow[rr, "\id\otimes\antipode", shift left]
-                \arrow[rr, "\antipode\otimes\id"', shift right]
-        && H\otimes H \arrow[ru, "\mult"']
+        H_{\set{1}}
+                \arrow[rr, "\counit^{1}"] \arrow[rd, "\comult^{1}_{1,2}"']
+        && H_{\emptyset}
+                \arrow[rr, "\unit_{1}"]
+        && H_{\set{1}} \\
+        & H_{\set{1,2}}
+                \arrow[rr, "\antipode^{2}_{2}", shift left]
+                \arrow[rr, "\antipode^{1}_{1}"', shift right]
+        && H_{\set{1,2}} \arrow[ru, "\mult^{1,2}_{1}"']
 \end{tikzcd}
 \end{equation}
 \begin{equation}
 \begin{tikzcd}\label{eq:cd_antipode}
-        && \k
-                \arrow[rrd, "\unit", bend left=15]
+        && H_{\emptyset}
+                \arrow[rrd, "\unit_{1}", bend left=15]
         \\
-        H
-                \arrow[rru, "\counit", bend left=15] \arrow[r, "\comult"']
-        & H\otimes H
-                \arrow[rr, "\id\otimes\antipode", shift left]
-                \arrow[rr, "\antipode\otimes\id"', shift right]
-        && H\otimes H
-                \arrow[r, "\mult"']
-        & H
+        H_{\set{1}}
+                \arrow[rru, "\counit^{1}", bend left=15]
+                \arrow[r, "\comult^{1}_{1,2}"']
+        & H_{\set{1,2}}
+                \arrow[rr, "\antipode^{2}_{2}", shift left]
+                \arrow[rr, "\antipode^{1}_{1}"', shift right]
+        && H_{\set{1,2}}
+                \arrow[r, "\mult^{1,2}_{1}"']
+        & H_{\set{1}}
 \end{tikzcd}
 \end{equation}
 \end{definition}
