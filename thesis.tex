@@ -172,36 +172,37 @@ Following Majid's in \cite{SM}, we give a brief introduction to the algebraic
 context we will work with:
 
 \begin{definition}[algebra]
-  An \defi{algebra} is a vector space $A$ over a field $k$ together with an
-  associative multiplication $\map {m} {A \otimes A} {A}$, and a multiplicative
-  unit $\one\in A$. It is more natural to think of the unit as a  map
-  $\map{\unit}{k}{A}$ by linearly extending the assignment $\unit(1) = \one$.
+        An \defi{algebra} is a vector space $A$ over a field $k$ together with
+        an associative multiplication $\map {m} {A \otimes A} {A}$, and a
+        multiplicative unit $\one\in A$. It is more natural to think of the unit
+        as a  map $\map{\unit}{k}{A}$ by linearly extending the assignment
+        $\unit(1) = \one$.
 \end{definition}
 
 \begin{multicols}{2}\noindent
 \begin{equation}\label{eq:cd_mult}
-  \begin{tikzcd}
-    A^{\otimes3}
-      \rar["\mult\otimes\id"]
-      \dar["\id\otimes \mult"']
-    &A^{\otimes2}
-      \dar["\mult"] \\
-    A^{\otimes2}
-      \rar["\mult"]
-    &A
-  \end{tikzcd}
+\begin{tikzcd}
+        A^{\otimes3}
+                \rar["\mult\otimes\id"]
+                \dar["\id\otimes \mult"']
+        &A^{\otimes2}
+                \dar["\mult"] \\
+        A^{\otimes2}
+                \rar["\mult"]
+        &A
+\end{tikzcd}
 \end{equation}
 \columnbreak
 \begin{equation}\label{eq:cd_unit}
 \begin{tikzcd}[column sep=large]
-    A
-    \rar["\id\otimes\unit", shift left]
-    \rar["\unit\otimes\id"', shift right]
-    \drar["\id"', bend right=10]
-    &A^{\otimes2}
-    \dar["\mult"] \\
-    &A
-  \end{tikzcd}
+        A
+                \rar["\id\otimes\unit", shift left]
+                \rar["\unit\otimes\id"', shift right]
+                \drar["\id"', bend right=10]
+        &A^{\otimes2}
+                \dar["\mult"] \\
+        &A
+\end{tikzcd}
 \end{equation}
 \end{multicols}
 
@@ -209,36 +210,36 @@ There is also the dual notion of a \emph{coalgebra}, which arises by reversing
 the arrows in \cref{eq:cd_mult,eq:cd_unit}:
 
 \begin{definition}[coalgebra]
-  A \defi{colagebra} is a vector space $C$ over a field $\k$ with a
-  \defi{comultiplication} $\map {\comult} {C} {C\otimes C}$ which is
-  \defi{coassociative} \eqref{eq:cd_comult} and a \defi{counit}, which is a
-  map $\counit\colon A\to k$ satisfying \eqref{eq:cd_counit}.
+        A \defi{colagebra} is a vector space $C$ over a field $\k$ with a
+        \defi{comultiplication} $\map {\comult} {C} {C\otimes C}$ which is
+        \defi{coassociative} \eqref{eq:cd_comult} and a \defi{counit}, which is
+        a map $\counit\colon A\to k$ satisfying \eqref{eq:cd_counit}.
 \end{definition}
 \nopagebreak
 \begin{multicols}{2}\noindent
-  \begin{equation}\label{eq:cd_comult}
-  \begin{tikzcd}
-    C^{\otimes3}
-    &C^{\otimes2}
-      \lar["\comult\otimes\id"'] \\
-    C^{\otimes2}
-      \uar["\id\otimes\comult"]
-    &C
-      \lar["\comult"']
-      \uar["\comult"']
-  \end{tikzcd}
+\begin{equation}\label{eq:cd_comult}
+\begin{tikzcd}
+        C^{\otimes3}
+        &C^{\otimes2}
+                \lar["\comult\otimes\id"'] \\
+        C^{\otimes2}
+                \uar["\id\otimes\comult"]
+        &C
+                \lar["\comult"']
+                \uar["\comult"']
+\end{tikzcd}
 \end{equation}
 \columnbreak
-  \begin{equation}\label{eq:cd_counit}
-  \begin{tikzcd}
-    C
-    &C^{\otimes2}
-    \lar["\id\otimes\counit"', shift right]
-    \lar["\counit\otimes\id", shift left]\\
-    &C
-    \ular["\id", bend left=10]
-    \uar["\comult"']
-  \end{tikzcd}
+\begin{equation}\label{eq:cd_counit}
+\begin{tikzcd}
+        C
+        &C^{\otimes2}
+                \lar["\id\otimes\counit"', shift right]
+                \lar["\counit\otimes\id", shift left]\\
+        &C
+                \ular["\id", bend left=10]
+                \uar["\comult"']
+\end{tikzcd}
 \end{equation}
 \end{multicols}
 
@@ -247,8 +248,9 @@ we introduce a definition for when the structures are compatible with each other
 in the following way:
 
 \begin{definition}[bialgebra]
-A \defi{bialgebra} is an algebra $(B,\mult,\unit)$ and a coalgebra
-$(B,\comult,\counit)$, such that $\comult$ and $\counit$ are algebra morphisms.
+        A \defi{bialgebra} is an algebra $(B,\mult,\unit)$ and a coalgebra
+        $(B,\comult,\counit)$, such that $\comult$ and $\counit$ are algebra
+        morphisms.
 \end{definition}
 
 \ProvideDocumentCommand{\lift}{mm}{\curryIsolated{#1}^{(#2)}}
@@ -256,44 +258,44 @@ $(B,\comult,\counit)$, such that $\comult$ and $\counit$ are algebra morphisms.
 \begin{multicols}{2}\noindent
 \begin{equation}\label{eq:cd_mult_comult}
 \begin{tikzcd}
-B^{\otimes2}
-        \rar["\mult"]
-        \dar["\lift\comult2"']
-&B
-        \dar["\comult"] \\
-B^{\otimes4}
-        \rar["\lift\mult2"]
-&B^{\otimes2}
+        B^{\otimes2}
+                \rar["\mult"]
+                \dar["\lift\comult2"']
+        &B
+                \dar["\comult"] \\
+        B^{\otimes4}
+                \rar["\lift\mult2"]
+        &B^{\otimes2}
 \end{tikzcd}
 \end{equation}\begin{equation}\label{eq:cd_unit_comult}
 \begin{tikzcd}[row sep=tiny]
-&B
-        \ar[dd,"\comult"] \\
-\k
-        \urar["\unit"]
-        \drar["\lift\unit2"']\\
-&B^{\otimes2}
+        &B
+                \ar[dd,"\comult"] \\
+        \k
+                \urar["\unit"]
+                \drar["\lift\unit2"']\\
+        &B^{\otimes2}
 \end{tikzcd}
 \end{equation}
 \columnbreak
 \begin{equation}\label{eq:cd_mult_counit}
 \begin{tikzcd}[column sep=tiny]
-B^{\otimes2}
-        \ar[rr,"m"]
-        \drar["\lift\counit2"']
-&&B
-        \dlar["\counit"] \\
-&\k
+        B^{\otimes2}
+                \ar[rr,"m"]
+                \drar["\lift\counit2"']
+        &&B
+                \dlar["\counit"] \\
+        &\k
 \end{tikzcd}
 \end{equation}
 \begin{equation}\label{eq:cd_unit_counit}
 \begin{tikzcd}
-\k
-        \rar["\unit"]
-        \drar["\id"']
-&B
-        \dar["\counit"] \\
-&\k
+        \k
+                \rar["\unit"]
+                \drar["\id"']
+        &B
+                \dar["\counit"] \\
+        &\k
 \end{tikzcd}
 \end{equation}
 \end{multicols}
@@ -324,45 +326,45 @@ $h_{(1)}\antipode(h_{(2)}) = \counit(h) = \antipode(h_{(1)})h_{(2)}$. As a
 commutative diagram, this looks like \cref{eq:cd_antipode}
 \begin{equation}
 \begin{tikzcd}[column sep=small]\label{eq:cd_antipode}
-&& \k
-        \arrow[rrd, "\unit"]
-\\
-H
-        \arrow[rru, "\counit"] \arrow[rd, "\comult"']
-&&&& H \\
-& H\otimes H
-        \arrow[rr, "\id\otimes\antipode", shift left]
-        \arrow[rr, "\antipode\otimes\id"', shift right]
-&& H\otimes H
-        \arrow[ru, "\mult"']
+        && \k
+                \arrow[rrd, "\unit"]
+        \\
+        H
+                \arrow[rru, "\counit"] \arrow[rd, "\comult"']
+        &&&& H \\
+        & H\otimes H
+                \arrow[rr, "\id\otimes\antipode", shift left]
+                \arrow[rr, "\antipode\otimes\id"', shift right]
+        && H\otimes H
+                \arrow[ru, "\mult"']
 \end{tikzcd}
 \end{equation}
 \begin{equation}
 \begin{tikzcd}[column sep=tiny]\label{eq:cd_antipode}
-H
-        \arrow[rr, "\counit"] \arrow[rd, "\comult"']
-&& \k
-        \arrow[rr, "\unit"]
-&& H \\
-& H\otimes H
-        \arrow[rr, "\id\otimes\antipode", shift left]
-        \arrow[rr, "\antipode\otimes\id"', shift right]
-&& H\otimes H \arrow[ru, "\mult"']
+        H
+                \arrow[rr, "\counit"] \arrow[rd, "\comult"']
+        && \k
+                \arrow[rr, "\unit"]
+        && H \\
+        & H\otimes H
+                \arrow[rr, "\id\otimes\antipode", shift left]
+                \arrow[rr, "\antipode\otimes\id"', shift right]
+        && H\otimes H \arrow[ru, "\mult"']
 \end{tikzcd}
 \end{equation}
 \begin{equation}
 \begin{tikzcd}\label{eq:cd_antipode}
-&& \k
-        \arrow[rrd, "\unit", bend left=15]
-\\
-H
-        \arrow[rru, "\counit", bend left=15] \arrow[r, "\comult"']
-& H\otimes H
-        \arrow[rr, "\id\otimes\antipode", shift left]
-        \arrow[rr, "\antipode\otimes\id"', shift right]
-&& H\otimes H
-        \arrow[r, "\mult"']
-& H
+        && \k
+                \arrow[rrd, "\unit", bend left=15]
+        \\
+        H
+                \arrow[rru, "\counit", bend left=15] \arrow[r, "\comult"']
+        & H\otimes H
+                \arrow[rr, "\id\otimes\antipode", shift left]
+                \arrow[rr, "\antipode\otimes\id"', shift right]
+        && H\otimes H
+                \arrow[r, "\mult"']
+        & H
 \end{tikzcd}
 \end{equation}
 \end{definition}
