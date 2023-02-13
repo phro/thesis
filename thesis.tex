@@ -488,6 +488,11 @@ $\Rmati$)
         $\spin$, then it must have the other as well, given by the formula:
         $\spin_1 \ribbon_2 \then \mult^{12} = \dfe$.
 \end{lemma}
+
+Both the ribbon and the spinner element relevant have topological
+interpretations in the context of tangles, which are outlined in
+\cref{sec:topological_interpretations}.
+
 % TODO:
 % braided categories
 
@@ -584,6 +589,19 @@ $\CU_\CU = \fracl{\CU}{\liebk{\CU}{\CU}}$. In what follows, we will compute
 $\CU_\CU$, determine a vector space isomorphism to a suitable polynomial ring,
 and compute the corresponding generating function of the quotient map $\map
 {\trace} {\CU} {\CU_\CU}$.
+
+\subsection{Pure tangles as a tensor Hopf-algebra object}
+\label{sec:topological_interpretations}
+
+Tangled objects also have the structure of a tensor Hopf-algebra object.
+
+\begin{definition}[pure tangle]
+        A \defi{pure tangle} is an embedding of line segments (called
+        \defi{strands}) into the thickened unit disk $D \times [-1,1]$ such that
+        the endpoints of the line segments are fixed along $\del D \times
+        \set0$. Two pure tangles are considered equivalent if there exists an
+        isotopy of the embedding which fixes the endpoints of the strands.
+\end{definition}
 
 \subsection{Rotational tangle invariants from a ribbon Hopf algebra}
 Here we describe the morphism from the category of pure rotational virtual
