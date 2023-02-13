@@ -12,8 +12,14 @@
 \title{Computing the generating function of a coinvariants map}
 \author{Jesse Frohlich}
 
+\ProvideDocumentCommand{\invb}{m}{\overline{#1}}
+
 \ProvideDocumentCommand{\Id}{m}{\id^{#1}_{#1}}
-\ProvideDocumentCommand{\Rmati}{}{\overline\Rmat}
+\ProvideDocumentCommand{\Rmati}{}{\invb\Rmat}
+\ProvideDocumentCommand{\spin}{}{C}
+\ProvideDocumentCommand{\ribbon}{}{ν}
+\ProvideDocumentCommand{\dfe}{}{\mfk u}
+\ProvideDocumentCommand{\monodromy}{}{Q}
 \ProvideDocumentCommand{\fa}{}{\mfk{a}}
 \ProvideDocumentCommand{\Alg}{}{\fg}
 \ProvideDocumentCommand{\CU}{}{U}
