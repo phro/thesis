@@ -423,6 +423,34 @@ $\Rmati$)
                 \mult^{1_i,1,1_f}_{1}\then \mult^{2_i,2,2_f}_{2}
 \end{align}
 \end{definition}
+
+\begin{definition}[Drinfeld element]
+        In a quasitriangular Hopf algebra $H$, the \defi{Drinfeld element},
+        $\dfe \in H$ is given by:
+        \begin{equation}
+                \dfe \defeq \Rmat_{21}\then\antipode^2_2 \then \mult^{12}
+        \end{equation}
+\end{definition}
+
+\begin{definition}[monodromy]
+        The \defi{monodromy}
+        $\monodromy_{12} \defeq
+        \Rmat_{12}\Rmat_{34}\then\mult^{14}_{1}\then\mult^{23}_{2}$. It's
+        inverse will be denoted
+        $\invb\monodromy =
+        \Rmati_{12}\Rmati_{34}\then\mult^{14}_{1}\then\mult^{23}_{2}$.
+\end{definition}
+
+\begin{lemma}
+        The Drinfeld element $\dfe$ satisfies for all $h\in H$:
+        \begin{align}
+                \dfe_{1}h_2\dfe_{3} \then \mult^{1,2,3}
+                &= h \then S \then S\\
+                \dfe \then \comult_{12} 
+                &= \dfe_1\dfe_2\invb\monodromy_{34}
+                \then\mult^{13}_{1}\then\mult^{24}_2
+        \end{align}
+\end{lemma}
 % TODO:
 % braided categories
 % ribbon categories
