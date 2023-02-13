@@ -451,9 +451,45 @@ $\Rmati$)
                 \then\mult^{13}_{1}\then\mult^{24}_2
         \end{align}
 \end{lemma}
+
+\begin{definition}[ribbon Hopf algebra]
+        A quasitriangular Hopf algebra $H$ is called \defi{ribbon} if it has an
+        element $\ribbon\in \centre(H)$ such that:
+        \begin{align}
+                \ribbon_1\ribbon_2\then\mult^{12}
+                &= \dfe_1 \dfe_2 \then \antipode^{2}_{2} \then \mult^{12}\\
+                \ribbon_1 \then \comult^1_{12}
+                &=      \ribbon_1\ribbon_2
+                        \then\invb\monodromy_{34}
+                        \then\mult^{13}_{1}
+                        \then\mult^{24}_{2} \\
+                \ribbon \then \antipode &= \ribbon\\
+                \ribbon \then \counit &= \unit \then \counit = 1
+        \end{align}
+\end{definition}
+
+\begin{definition}[distinguished grouplike element (spinner)]
+        A \defi{distinguished grouplike element} (or \defi{spinner}) in a
+        quasitriangular Hopf algebra $H$ is an invertible element $\spin\in H$
+        (with inverse $\invb\spin$) such that for all $x\in H$:
+        \begin{align}
+                \spin_1\ribbon_2\spin_3 \then \antipode^2_2 \then \mult^{123} &=
+                \ribbon\\
+                \spin_1\then\comult^{1}_{12} &=\spin_1\spin_2\\
+                \spin \then\antipode &= \invb\spin\\
+                \spin_{1}x_2\invb\spin_{3}\then\mult^{1,2,3} &=
+                x \then \antipode \then \antipode\\
+                \spin \then \counit &= \unit \then \counit = 1
+        \end{align}
+\end{definition}
+
+\begin{lemma}[spinners and ribbon Hopf algebras]
+        If a Hopf algebra has either a ribbon element $\ribbon$ or a spinner
+        $\spin$, then it must have the other as well, given by the formula:
+        $\spin_1 \ribbon_2 \then \mult^{12} = \dfe$.
+\end{lemma}
 % TODO:
 % braided categories
-% ribbon categories
 
 % define graphical calculus
 
