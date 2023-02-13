@@ -108,20 +108,19 @@ arbitrary finite set $S$ disjoint from the $j_k$'s and the $i_k$'s:
 \end{itemize}
 \end{remark}
 
-\subsubsection{Notation extension to meta-monoidal categories}
+\subsubsection{Notation extension to monoidal objects in other categories}
 
 Some of the monoidal categories we will work with are best suited to their
 factors being labelled by finite sets. For the purpose of representing them
 clearly, we introduce a definition put forth by Bar-Natan:
 
-\begin{definition}[meta-monoidal category]
-        A \defi{meta-monoidal category} is a category $\msc C$ such that:
+\begin{definition}[tensor algebra-object]
+        A \defi{tensor algebra-object} in a category $\msc C$ is a subcategory
+        $\msc T$ of $\msc C$ such that:
         \begin{itemize}
-                \item Objects are sets $\msc C_S$ indexed by finite sets $S$.
-                \item Given a morphism $ϕ$ in $\msc C$, its domain and codomain
-                        are thereby completely determined by two finite sets,
-                        say $D$ and $S$, respectively. Such morphisms will be
-                        denoted by $ϕ^D_C$.
+                \item Objects of $\msc T$ are $\msc C_S$ are indexed by finite sets $S$.
+                \item Homsets in $\msc T$, are indexed by pairs of finite sets
+                        $D$, $C$. Such morphisms will be denoted by $ϕ^D_C$.
                 \item Composition of morphisms $ϕ^{D_1}_{C_1}$ and
                         $ψ^{D_2}_{C_2}$ is defined when $D_2 = C_1$, and is
                         written with the following concatenation operator: 
