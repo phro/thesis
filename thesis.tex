@@ -175,8 +175,13 @@ The two extreme cases of this definition are:
                 composition $ϕ^{D_1}_{C_1}\then ψ^{D_2}_{C_2}$ exactly.
 \end{itemize}
 
-The $\then$ operator will be left-associative: $ϕ_1\then ϕ_2\thenϕ_3
-\defeq(ϕ_1\thenϕ_2)\thenϕ_3$.
+\begin{remark}
+        While the $\then$ operator is associative, care must be taken that the
+        compositions are well-defined in the presence of duplicated indices.
+        While it is sufficient for all the finite sets in a composition to be
+        pairwise disjoint, this condition will prove too restrictive for clear
+        communication of formulae.
+\end{remark}
 
 \subsection{Quantum link invariants}
 Here we describe the use of quantum groups in knot theory, and the role they and
