@@ -115,38 +115,40 @@ arbitrary finite set $S$ disjoint from the $j_k$'s and the $i_k$'s:
 \end{itemize}
 \end{remark}
 
-\subsubsection{Notation extension to monoidal objects in other categories}
+\subsubsection{Notation extension to monoid objects in general monoidal
+categories}
+
+\ProvideDocumentCommand{\CC}{}{\msc C}
+\ProvideDocumentCommand{\MM}{}{A}
 
 Some of the monoidal categories we will work with are best suited to their
 factors being labelled by finite sets. For the purpose of representing them
-clearly, we introduce a definition put forth by Bar-Natan:
-
-\begin{definition}[tensor algebra-object]
-        A \defi{tensor algebra-object} in a category $\msc C$ is a subcategory
-        $\msc T$ of $\msc C$ such that:
-        \begin{itemize}
-                \item Objects of $\msc T$ are $\msc C_S$ are indexed by finite sets $S$.
-                \item Homsets in $\msc T$, are indexed by pairs of finite sets
-                        $D$, $C$. Such morphisms will be denoted by $ϕ^D_C$.
-                \item Composition of morphisms $ϕ^{D_1}_{C_1}$ and
-                        $ψ^{D_2}_{C_2}$ is defined when $D_2 = C_1$, and is
-                        written with the following concatenation operator: 
-                        $\map{ϕ^{D_1}_{C_1}\then ψ^{D_2}_{C_2}}{\msc
-                        C_{D_1}}{\msc C_{C_2}}$.
-                \item There is a bifunctor (the \enquote{monoidal product})
-                        $\map {\otimes} {\msc C \times \msc C}{\msc C}$ with
-                        $\msc C_S \otimes \msc C_X = \msc C_{S \sqcup X}$. Given
-                        morphisms $ϕ^{D_1}_{C_1}$ and $ψ^{D_2}_{C_2}$ with $D_1
-                        \cap D_2 = \emptyset = C_1 \cap C_2$, we have
-                        $\map {ϕ \otimes ψ} {\msc C_{D_1 \sqcup D_2}}
-                        {\msc C_{C_1\sqcup C_2}}$.\footnote{This encodes the
-                                data of a strict monoidal category with the
-                                linear order of factors replaces with indices
-                                from a finite set.
-                        } We will write such products with concatenation:
-                        $ϕ^{D_1}_{C_1}ψ^{D_2}_{C_2}$.
-        \end{itemize}
-\end{definition}
+clearly, we introduce a notation put forth by Bar-Natan: consider an object
+$\MM$ in a monoidal category $\CC$. Then:
+\begin{itemize}
+        \item Monoidal powers of $\MM$ are indexed by finite sets $S$, and
+                are to be written $\MM_S$.
+        \item Homsets in $\CC$ between monoidal powers of $\MM$ are indexed by
+                pairs of finite sets $D$, $C$. Morphisms in these homsets will
+                be denoted by $\map{ϕ^D_C}{\MM_D}{\MM_C}$.
+        \item Composition of morphisms $ϕ^{D_1}_{C_1}$ and
+                $ψ^{D_2}_{C_2}$ is defined when $D_2 = C_1$, and is
+                written with the following concatenation operator: 
+                $\map{ϕ^{D_1}_{C_1}\then ψ^{D_2}_{C_2}}{\msc
+                C_{D_1}}{\CC_{C_2}}$.
+        \item The monoidal product
+                $\map {\otimes} {\CC \times \CC}{\CC}$ satisfies
+                $\MM_{S} \otimes \MM_{T} = \MM_{S \sqcup T}$. Given
+                morphisms $ϕ^{D_1}_{C_1}$ and $ψ^{D_2}_{C_2}$ such that
+                $D_1 \cap D_2 = \emptyset = C_1 \cap C_2$, we have a product
+                morphism $\map {ϕ \otimes ψ} {\CC_{D_1 \sqcup D_2}}
+                {\CC_{C_1\sqcup C_2}}$.\footnote{This encodes the
+                        data of a strict monoidal category with the
+                        linear order of factors replaces with indices
+                        from a finite set.
+                } We will write such products with concatenation:
+                $ϕ^{D_1}_{C_1}ψ^{D_2}_{C_2}$.
+\end{itemize}
 
 \begin{remark}
         Given a morphism $ϕ^D_C$ and a finite set $S$, there is an extension of $ϕ^D_C$
