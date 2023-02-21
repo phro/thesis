@@ -116,14 +116,16 @@ arbitrary finite set $S$ disjoint from the $j_k$'s and the $i_k$'s:
 \end{remark}
 
 \subsubsection{Notation extension to non-Cartesian monoidal categories}
+\label{sec:monoidal_notation}
 
 \ProvideDocumentCommand{\CC}{}{\msc C}
 \ProvideDocumentCommand{\MM}{}{A}
 
-Some of the monoidal categories are not Cartesian. Additionally, the ones we
-will work with are best suited to their factors being labelled by finite sets.
-For the purpose of representing them clearly, we introduce a notation put forth
-by Bar-Natan: consider an object $\MM$ in a monoidal category $\CC$. Then:
+Some of the monoidal categories we will work with are not Cartesian.
+Additionally, the ones we will work with are best suited to their factors being
+labelled by finite sets. For the purpose of representing them clearly, we
+introduce a notation put forth by Bar-Natan: consider an object $\MM$ in a
+monoidal category $\CC$. Then:
 \begin{itemize}
         \item Monoidal powers of $\MM$ are indexed by finite sets $S$, and
                 are to be written $\MM_S$.
@@ -156,12 +158,13 @@ by Bar-Natan: consider an object $\MM$ in a monoidal category $\CC$. Then:
         by $ϕ^D_C \id^S_S$. To make expressions easier to read, in this paper we
         will introduce this extension implicitly in the following context: given
         morphisms $ϕ^{D_1}_{C_1}$ and $ψ^{D_2}_{C_2}$ such that
-        $D_2 \subseteq C_1$ and $C_2 \cap (C_1\setminus D_2)=\emptyset$, we
+        $D_2 \subseteq C_1$ and
+        $C_2 \cap (C_1\setminus D_2)=\emptyset=D_1\cap(\D_2 \setminus C_1)$, we
         define:
         \begin{equation}\label{eq:composition_extension}
                 ϕ^{D_1}_{C_1} \then ψ^{D_2}_{C_2}
                 \defeq 
-                        ϕ^{D_1}_{C_1} \then
+                        \pn*{\Id{{D_2\setminus C_1}}ϕ^{D_1}_{C_1}} \then
                         \pn*{ψ^{D_2}_{C_2}\Id{C_1\setminus D_2}}
         \end{equation}
 \end{remark}
