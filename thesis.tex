@@ -14,6 +14,8 @@
 
 \ProvideDocumentCommand{\invb}{m}{\overline{#1}}
 
+\ProvideDocumentCommand{\tangle}{}{\msc T}
+
 \ProvideDocumentCommand{\Id}{m}{\id^{#1}_{#1}}
 \ProvideDocumentCommand{\Rmati}{}{\invb\Rmat}
 \ProvideDocumentCommand{\spin}{}{C}
@@ -583,10 +585,10 @@ $\CU_\CU$, determine a vector space isomorphism to a suitable polynomial ring,
 and compute the corresponding generating function of the quotient map $\map
 {\trace} {\CU} {\CU_\CU}$.
 
-\subsection{Pure tangles as a tensor Hopf-algebra object}
+\subsection{Pure tangles as a meta-Hopf algebra}
 \label{sec:topological_interpretations}
 
-Tangled objects also have the structure of a tensor Hopf-algebra object.
+Tangled objects also have the structure of a meta-Hopf algebra.
 
 \begin{definition}[pure tangle]
         A \defi{pure tangle} is an embedding of line segments (called
