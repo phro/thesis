@@ -632,9 +632,32 @@ Here we describe the morphism from the category of pure rotational virtual
 tangles to a ribbon Hopf algebra.
 
 \section{Extending a pure tangle invariant to links and general tangles}
-To build define a invariant on tangles with potentially closed components, we
-need a notion of trace which is cyclic under stitching of strands. Here is a
-description of such a trace algebraically and topologically:
+Thus far, the algebraic setting we have defined allows us to describe invariants
+of tangles with no closed components. We now extend the notion of a meta-Hopf
+algebra to include closed components.
+
+\begin{definition}[traced meta-algebra]
+        A \defi{traced meta-algebra} is a category with objects indexed by pairs
+        of disjoint finite sets $(S, L)$.\footnote{These sets index the
+        \enquote{strands} $S$ and the \enquote{loops} $L$.} We will write the
+        objects as $A_{S, L}$. The multiplication map $\mult^{i,j}_k$ then
+        takes the form:
+        \begin{equation}
+                \map {\mult^{i,j}_k}
+                        {A_{\set{i,j}\sqcup S, L}}
+                        {A_{\set{k}\sqcup S, L}} 
+        \end{equation}
+        for $i,j$ disjoint from both $S$ and $L$.
+
+        Furthermore, there exists a \defi{trace} $\map {\trace^i}
+        {A_{\set{i}\sqcup S, L}} {A_{S,\set{i}\sqcup L}}$ which satisfies the
+        cyclic property:
+        \begin{equation}
+                \mult^{i,j}_{k}\then\trace^k
+                =
+                \mult^{j,i}_{k}\then\trace^k
+        \end{equation}
+\end{definition}
 
 \subsection{Algebraic trace}
 Here we talk about coinvariant maps, and (maybe) traced monoidal categories.
@@ -911,7 +934,7 @@ statement:
         See \cite{BV}.
 \end{proof}
 
-Bar-Natan and Van der Veen develop an algorithm to convert a classical long knot
+Bar-Natan and van der Veen develop an algorithm to convert a classical long knot
 into an \ac{RVT}. As we are interested in links, we must extend this algorithm
 to include so-called \enquote{long links}, which we outline below:
 \begin{verbatim}
