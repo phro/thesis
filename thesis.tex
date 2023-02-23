@@ -385,21 +385,6 @@ $\comult^{1}_{1,2}\then \antipode^1_1 \then \mult^{1,2}_1 =
 \comult^{1}_{1,2}\then \antipode^2_2 \then \mult^{1,2}_1$.
 As a commutative diagram, this looks like \cref{eq:cd_antipode}
 \begin{equation}
-\begin{tikzcd}[column sep=small]\label{eq:cd_antipode}
-        && H_{\emptyset}
-                \arrow[rrd, "\unit_{1}"]
-        \\
-        H_{\set{1}}
-                \arrow[rru, "\counit^{1}"] \arrow[rd, "\comult^{1}_{1,2}"']
-        &&&& H_{\set{1}} \\
-        & H_{\set{1,2}}
-                \arrow[rr, "\antipode^{2}_{2}", shift left]
-                \arrow[rr, "\antipode^{1}_{1}"', shift right]
-        && H_{\set{1,2}}
-                \arrow[ru, "\mult^{1,2}_{1}"']
-\end{tikzcd}
-\end{equation}
-\begin{equation}
 \begin{tikzcd}[column sep=tiny]\label{eq:cd_antipode}
         H_{\set{1}}
                 \arrow[rr, "\counit^{1}"] \arrow[rd, "\comult^{1}_{1,2}"']
@@ -410,22 +395,6 @@ As a commutative diagram, this looks like \cref{eq:cd_antipode}
                 \arrow[rr, "\antipode^{2}_{2}", shift left]
                 \arrow[rr, "\antipode^{1}_{1}"', shift right]
         && H_{\set{1,2}} \arrow[ru, "\mult^{1,2}_{1}"']
-\end{tikzcd}
-\end{equation}
-\begin{equation}
-\begin{tikzcd}\label{eq:cd_antipode}
-        && H_{\emptyset}
-                \arrow[rrd, "\unit_{1}", bend left=15]
-        \\
-        H_{\set{1}}
-                \arrow[rru, "\counit^{1}", bend left=15]
-                \arrow[r, "\comult^{1}_{1,2}"']
-        & H_{\set{1,2}}
-                \arrow[rr, "\antipode^{2}_{2}", shift left]
-                \arrow[rr, "\antipode^{1}_{1}"', shift right]
-        && H_{\set{1,2}}
-                \arrow[r, "\mult^{1,2}_{1}"']
-        & H_{\set{1}}
 \end{tikzcd}
 \end{equation}
 \end{definition}
