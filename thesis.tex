@@ -600,10 +600,27 @@ we follow the definitions laid out by Bar-Natan and van der Veen in \cite{BV}.
         fixes the endpoints of the strands.
 \end{definition}
 
-\begin{theorem}[pure tangles are planar diagrams]\label{thm:pure_tangle}
-        The set of pure tangles on $n$ strands is realised combinatorially as
-        the set of planar tangle diagrams in a disk, all of whose strands
-        connect to the boundary circle.
+To work with pure tangles, we define an equivalent notion with a combinatorial
+flair:
+
+\begin{definition}[pure tangle diagram]
+        A \defi{pure tangle diagram} is a finite planar graph with distinguished
+        circles called \defi{boundary circles}. The remainder of the edges are
+        contained inside the boundary circles, either meeting a boundary circle
+        at a trivalent vertex, or meeting other internal edges at a tetravalent
+        vertex (called a \defi{crossing}). Each crossing is marked with a
+        sign---positive or negative. Collections of edges which meet at
+        opposite sides of an edge are called \defi{strands}. Each strand must
+        meet a boundary circle twice (that is, strands may not form loops).
+        Two pure tangle diagrams are equivalent if one can be transformed into
+        the other by a sequence of Reidemeister moves on the crossings.
+\end{definition}
+
+\begin{theorem}[pure tangles are tangle diagrams]\label{thm:pure_tangle}
+        To each pure tangle one associates exactly one pure tangle diagram
+        equivalence class. Further, a generic projection of a pure tangle to the
+        flattened disks $\Dunion D\times\set0$ allows one to construct a tangle
+        diagram corresponding to it.
 \end{theorem}
 \begin{proof}
         %TODO
