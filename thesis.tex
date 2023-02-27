@@ -669,7 +669,17 @@ The first example we give is that of impure tangles.
         algebra, with trace map given by closing a strand into a loop.
 \end{lemma}
 \begin{proof}
-        %TODO
+        When $L = \emptyset$, the situation is exactly the case of
+        \cref{thm:pure_tangle}, so $\tangle(S,\emptyset) = \tangle(S)$ is a
+        meta-Hopf algebra. Furthermore, since the Reidemeister moves are local
+        operations, the presence of closed components does not affect our
+        ability to verify the identities on the Hopf-algebra operations.
+
+        The last point to verify is that closing a strand into a loop is a
+        cyclic operation. Given two strands, we must verify that stitching one
+        end together, then tracing the other yields the same diagram as
+        stitching the other ends together, then taking the trace. However, by
+        definition of trace, these two actions yield identical diagrams.
 \end{proof}
 
 \begin{lemma}[coinvariants as a trace map]
