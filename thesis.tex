@@ -690,7 +690,22 @@ The first example we give is that of impure tangles.
         {(A_A)_j}$.
 \end{lemma}
 \begin{proof}
-       %TODO 
+       Observe that for any choice of $L$, extending morphisms by the identity
+       yield an isomorphism of traced meta-Hopf algebras:
+       \begin{equation}
+               \map {ϕ}
+                       {\set[\big]{A^{\otimes S}}_S} [\toiso]
+                       {\set[\big]{A^{\otimes S}\otimes A_A^{\otimes L}}_S}
+       \end{equation}
+       Next, we wish to show that the two maps with shape
+       $\map {f}
+               {A^{\otimes \set {i, j} \sqcup S}\otimes A_A^{\otimes L}}
+               {A^{\otimes S}\otimes A_A^{\otimes \set k \sqcup L}}$
+       are equivalent. This amounts to showing that, given $u, v\in A$, that
+       $\overline{uv} = \overline{vu} \in A_A$.
+       However, by the construction of the coinvariants,
+       $\overline{uv}-\overline{vu} = \overline{uv-vu} = \overline{0} \in A$,
+       and we are done.
 \end{proof}
 
 \section{The coinvariants of $U$}
