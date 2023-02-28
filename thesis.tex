@@ -603,7 +603,7 @@ we follow the definitions laid out by Bar-Natan and van der Veen in \cite{BV}.
 To work with pure tangles, we define an equivalent notion with a combinatorial
 flair:
 
-\begin{definition}[pure tangle diagram]
+\begin{definition}[pure tangle diagram]\label{def:pure_tangle_diagram}
         A \defi{pure tangle diagram} is a finite planar graph with distinguished
         circles called \defi{boundary circles}. The remainder of the edges are
         contained inside the boundary circles, either meeting a boundary circle
@@ -642,10 +642,11 @@ flair:
         Reidemeister's theorem to objects of this form is straightforward.
 \end{proof}
 
-We extend this definition by dropping the planarity condition.
-\begin{definition}[virtual tangles]
-        A \defi{virtual tangle} is a diagram satisfying all conditions laid out
-        in \cref{thm:pure_tangle} except planarity.
+For the sake of algebraic closure, the notion of virtual tangles will be useful:
+\begin{definition}[virtual tangle diagram]
+        A \defi{virtual tangle diagram} is a diagram satisfying all conditions
+        laid out in \cref{def:pure_tangle_diagram} except planarity, taken again
+        up to a sequence of Reidemeister moves.
 \end{definition}
 
 \begin{theorem}[virtual tangles are just crossings]
