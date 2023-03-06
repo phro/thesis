@@ -205,16 +205,17 @@ tangle invariant. These definitions follow those given by Majid in \cite{SM},
 although the ones presented below will be in an arbitrary monoidal category
 $\CC$ following the notation outlined above.%in \cref{sec:monoidal_notation}.
 
-\begin{definition}[monoid]
-        A \defi{monoid} is an object $A\in\CC$ together with an associative
+\begin{definition}[algebra]
+        A \defi{algebra} is an object $A\in\CC$ together with an associative
         multiplication $\map {\mult^{i,j}_{k}} {A_{\set{i,j}}}
         {A_{\set{k}}}$ (satisfying \cref{eq:cd_mult}), and a unit
         $\map{\unit_{i}}{A_{\emptyset}}{A_{\set{i}}}$ satisfying
         \cref{eq:cd_unit}.\footnote{
-                When $\CC = \Vect$, this is the definition of an \defi{algebra}.
-                When $A_\emptyset$ is a field, and it is more common think of
-                the unit as an element $\one\in A$. The unit map is then defined
-                by linearly extending the assignment $\unit_{i}(1) = \one_{i}$.
+                When $\CC = \Vect$, this is becomes the more familiar definition
+                of an \defi{algebra}. When $A_\emptyset$ is a field, and it is
+                more common think of the unit as an element $\one\in A$. The
+                unit map is then defined by linearly extending the assignment
+                $\unit_{i}(1) = \one_{i}$.
         }
 \end{definition}
 
