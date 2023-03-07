@@ -739,7 +739,9 @@ For the sake of algebraic closure, the notion of virtual tangles will be useful:
 \begin{definition}[virtual tangle diagram]
         A \defi{virtual tangle diagram} is a diagram satisfying all conditions
         laid out in \cref{def:pure_tangle_diagram} except planarity, taken again
-        up to a sequence of Reidemeister moves.
+        up to a sequence of Reidemeister moves. We denote by $\tangle_S$ the
+        collection of virtual tangle diagrams with strands indexed by the finite
+        set $S$.
 \end{definition}
 
 \begin{theorem}[virtual tangles are just crossings]
@@ -754,6 +756,29 @@ For the sake of algebraic closure, the notion of virtual tangles will be useful:
 \begin{proof}
         
 \end{proof}
+
+\begin{theorem}[virtual tangles form a meta-Hopf algebra]
+        The collection $\tangle_S$ forms a meta-Hopf algebra with the following
+        operations:
+        \begin{itemize}
+                \item multiplication $\mult^{ij}_{k}[S]$ takes a tangle with
+                        strands $S\sqcup\set{i,j}$ and glues the end of strand
+                        $i$ to strand $j$, labelling the resulting strand $k$.
+                \item the unit $\unit_{i}[S]$ takes a tangle diagram with
+                        strands $S$ and introduces a new strand $i$ which does
+                        not touch any of the other strands.
+                \item the comultiplication $\comult^{i}_{jk}[S]$ takes a tangle
+                        with strands $S\sqcup \set{i}$ and doubles strand $i$,
+                        separating the two strands along the framing of strand
+                        $i$, calling the two resulting strands $j$ and $k$.
+                %todo: counit
+                %todo: antipode
+        \end{itemize}
+\end{theorem}
+\begin{proof}
+        % todo
+\end{proof}
+
 
 \subsection{Rotational tangle invariants from a ribbon Hopf algebra}
 Here we describe the morphism from the category of pure rotational virtual
