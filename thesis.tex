@@ -15,6 +15,7 @@
 \ProvideDocumentCommand{\invb}{m}{\overline{#1}}
 
 \ProvideDocumentCommand{\tangle}{}{\msc T}
+\ProvideDocumentCommand{\RVT}{}{\msc{T}^{\text{rv}}}
 
 \ProvideDocumentCommand{\Id}{m}{\id^{#1}_{#1}}
 \ProvideDocumentCommand{\Rmati}{}{\invb\Rmat}
@@ -758,6 +759,7 @@ For the sake of algebraic closure, the notion of virtual tangles will be useful:
 \end{proof}
 
 \begin{theorem}[virtual tangles form a quasitriangular meta-Hopf algebra]
+        \label{thm:vt_qtmha}
         The collection $\tangle_X$ forms a quasitriangular meta-Hopf algebra
         with the following operations:
         \begin{itemize}
@@ -804,7 +806,27 @@ these additional data:
         Additionally, we must take care that framed Reidemeister 1 and the
         cyclic Reidemeister 2 include appropriate rotation numbers on their
         arcs. %todo: add picture of situation
+        The set of \acp{RVT} with strands indexed by a set $X$ will be denoted
+        $\RVT_X$.
 \end{definition}
+
+\begin{theorem}[\acp{RVT} form a meta-ribbon Hopf algebra]
+        The collections $\RVT_X$ form a meta-ribbon Hopf algebra, with the same
+        definitions as in \cref{thm:vt_qtmha}, except:
+        \begin{itemize}
+                \item the antipode $\antipode^{i}_{j}[X]$ takes a tangle with
+                        strands labelled by $X \sqcup \set{i}$ and reverses the
+                        direction of strand $i$, then adds a counter-clockwise
+                        cap to the new beginning, and a clockwise cup to the
+                        end. This new strand is called $j$.
+                \item the spinner $\spin_i[X]$ takes a tangle in $\RVT_X$ and
+                        adds a new strand with rotation number $1$ which has no
+                        interactions with any other strands.
+        \end{itemize}
+\end{theorem}
+\begin{proof}
+        % todo
+\end{proof}
 
 \subsection{Rotational tangle invariants from a ribbon Hopf algebra}
 Here we describe the morphism from the category of pure rotational virtual
