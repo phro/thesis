@@ -838,21 +838,22 @@ of tangles with no closed components. We now extend the notion of a meta-Hopf
 algebra to include closed components.
 
 \begin{definition}[traced meta-algebra]
-        A \defi{traced meta-algebra} is a category with objects indexed by pairs
-        of disjoint finite sets $(S, L)$.\footnote{These sets index the
-        \enquote{strands} $S$ and the \enquote{loops} $L$.} We will write the
-        objects as $A_{S, L}$. The multiplication map $\mult^{i,j}_k$ then
-        takes the form:
+        A \defi{traced meta-algebra} is a family of meta-algebras: for each
+        finite set $L$, we assign one meta-algebra $\set{A_{L,
+        S}}_S$.\footnote{These sets index the \enquote{strands} $S$ and the
+        \enquote{loops} $L$.} The multiplication maps $\mult^{i,j}_k[L]$ then
+        take the form:
         \begin{equation}
-                \map {\mult^{i,j}_k}
+                \map {\mult^{i,j}_k[L][S]}
                         {A_{\set{i,j}\sqcup S, L}}
                         {A_{\set{k}\sqcup S, L}} 
         \end{equation}
         for $i$, $j$, $k$ disjoint from both $S$ and $L$.
 
-        Furthermore, there exists a \defi{trace} $\map {\trace^i}
-        {A_{\set{i}\sqcup S, L}} {A_{S,\set{i}\sqcup L}}$ which satisfies the
-        cyclic property:
+        The compatibility of the families of meta-algebras is governed by a
+        \defi{trace}
+        $\map {\trace^i} {A_{\set{i}\sqcup S, L}} {A_{S,\set{i}\sqcup L}}$ which
+        satisfies the cyclic property:
         \begin{equation}
                 \mult^{i,j}_{k}\then\trace^k
                 =
@@ -865,7 +866,7 @@ algebra to include closed components.
 The first example we give is that of impure tangles.
 
 \begin{definition}[Impure Rotational Virtual Tangles]
-        Let $\tangle(S, L)$ be the set of rotational virtual tangles with open
+        Let $\RVT_{L, S}$ be the set of rotational virtual tangles with open
         strands indexed by $S$ and closed strands indexed by $L$.
 \end{definition}
 
