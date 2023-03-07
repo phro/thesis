@@ -900,9 +900,13 @@ The first example we give is that of impure tangles.
        Observe that for any choice of $L$, extending morphisms by the identity
        yield an isomorphism of traced meta-Hopf algebras:
        \begin{equation}
-               \map {ϕ}
+               \mapdef {ϕ_L}
                        {\set[\big]{A^{\otimes S}}_S} [\toiso]
                        {\set[\big]{A^{\otimes S}\otimes A_A^{\otimes L}}_S}
+                       {A^{\otimes S}}
+                       {A^{\otimes S}\otimes A_A^{\otimes L} \\
+                       f &\mapsto f \otimes \id_{A_A}^{\otimes L}
+               }
        \end{equation}
        Next, we wish to show that the two maps with shape
        $\map {f}
