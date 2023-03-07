@@ -757,26 +757,31 @@ For the sake of algebraic closure, the notion of virtual tangles will be useful:
         
 \end{proof}
 
-\begin{theorem}[virtual tangles form a meta-Hopf algebra]
-        The collection $\tangle_S$ forms a meta-Hopf algebra with the following
-        operations:
+\begin{theorem}[virtual tangles form a quasitriangular meta-Hopf algebra]
+        The collection $\tangle_X$ forms a quasitriangular meta-Hopf algebra
+        with the following operations:
         \begin{itemize}
-                \item multiplication $\mult^{ij}_{k}[S]$ takes a tangle with
-                        strands $S\sqcup\set{i,j}$ and glues the end of strand
+                \item multiplication $\mult^{ij}_{k}[X]$ takes a tangle with
+                        strands $X\sqcup\set{i,j}$ and glues the end of strand
                         $i$ to strand $j$, labelling the resulting strand $k$.
-                \item the unit $\unit_{i}[S]$ takes a tangle diagram with
-                        strands $S$ and introduces a new strand $i$ which does
+                \item the unit $\unit_{i}[X]$ takes a tangle diagram with
+                        strands $X$ and introduces a new strand $i$ which does
                         not touch any of the other strands.
-                \item the comultiplication $\comult^{i}_{jk}[S]$ takes a tangle
-                        with strands $S\sqcup \set{i}$ and doubles strand $i$,
+                \item the comultiplication $\comult^{i}_{jk}[X]$ takes a tangle
+                        with strands $X\sqcup \set{i}$ and doubles strand $i$,
                         separating the two strands along the framing of strand
                         $i$, calling the two resulting strands $j$ and $k$.
-                %todo: counit
-                %todo: antipode
+                \item the counit $\counit^{i}[X]$ takes a tangle with strands
+                        indexed by $X\sqcup \set{i}$ and returns the tangle with
+                        strand labelled by $i$ deleted.
+                \item the antipode $\antipode^{i}_{j}[X]$ takes a tangle with
+                        strands labelled by $X \sqcup \set{i}$ and reverses the
+                        direction of strand $i$ (calling the new strand $j$).
         \end{itemize}
 \end{theorem}
 \begin{proof}
-        % todo
+        % todo: prove
+        % todo: does the antipode work for non-rotational tangles?
 \end{proof}
 
 
