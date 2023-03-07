@@ -871,12 +871,12 @@ The first example we give is that of impure tangles.
 \end{definition}
 
 \begin{lemma}[tangles as a traced algebra]
-        The collection of all $\tangle(S, L)$ is a traced ribbon meta-Hopf
+        The collection of all $\RVT_{L, S}$ is a traced ribbon meta-Hopf
         algebra, with trace map given by closing a strand into a loop.
 \end{lemma}
 \begin{proof}
         When $L = \emptyset$, the situation is exactly the case of
-        \cref{thm:pure_tangle}, so $\tangle(S,\emptyset) = \tangle(S)$ is a
+        \cref{thm:pure_tangle}, so $\RVT_{\emptyset, S} = \tangle_S$ is a
         meta-Hopf algebra. Furthermore, since the Reidemeister moves are local
         operations, the presence of closed components does not affect our
         ability to verify the identities on the Hopf-algebra operations.
@@ -885,7 +885,8 @@ The first example we give is that of impure tangles.
         cyclic operation. Given two strands, we must verify that stitching one
         end together, then tracing the other yields the same diagram as
         stitching the other ends together, then taking the trace. However, by
-        definition of trace, these two actions yield identical diagrams.
+        definition of trace, these two actions yield identical diagrams, the two
+        strands replaced by the same closed loop.
 \end{proof}
 
 \begin{lemma}[coinvariants as a trace map]
