@@ -784,6 +784,24 @@ For the sake of algebraic closure, the notion of virtual tangles will be useful:
         % todo: does the antipode work for non-rotational tangles?
 \end{proof}
 
+The invariants we deal with keep track not only of crossing data, but also
+rotation of strands between crossings. We introduce an object which monitors
+these additional data:
+\begin{definition}[\acf{RVT} diagrams]
+        A \defi{\acf{RVT} diagram} is a virtual tangle diagram, together with an
+        assignment of an integer to each arc, called the \defi{rotation number}
+        of the arc. This is visualised by requiring that each strand's
+        intersection with the boundary is pointing upwards, and that each
+        crossing is between curves whose tangent deviates less than $π/2$ from
+        the vertical direction.
+
+        Equivalence between \ac{RVT} diagrams is determined by extending the
+        traditional Reidemeister moves with the whirling relation: any crossing
+        may be rotated by full rotations. This amounts to increasing both
+        outgoing strands' rotation number by some $n\in\Z$, and adding $-n$ to
+        the rotation number of the incoming strands.
+        %todo: add picture of whirling relation
+\end{definition}
 
 \subsection{Rotational tangle invariants from a ribbon Hopf algebra}
 Here we describe the morphism from the category of pure rotational virtual
