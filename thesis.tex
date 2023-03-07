@@ -796,8 +796,44 @@ For the sake of algebraic closure, the notion of virtual tangles will be useful:
         \end{itemize}
 \end{theorem}
 \begin{proof}
-        % todo: prove
-        % todo: does the antipode work for non-rotational tangles?
+        Associativity of multiplication (\cref{eq:cd_mult}) follows from the
+        fact that stitching strands together amounts to concatenating the order
+        of the crossings each strand interacts with. Since list concatenation is
+        an associative operation, associativity follows in this case as well.
+
+        Adding a non-interacting strand to a diagram, then stitching it to an
+        existing strand (\cref{eq:cd_unit}) does not change any of the
+        combinatorial data in the diagram, and results in identical diagrams.
+
+        Establishing coassociativity (\cref{eq:cd_comult}) amount to the same
+        argument that cutting a piece of paper into three strips does not depend
+        on the order of cutting.
+
+        The counit identity (\cref{eq:cd_counit}) states deleting a strand
+        is the same operation as first doubling it, then deleting both resulting
+        strands.
+
+        The meta-bialgebra axioms we verify next:
+        \Cref{eq:cd_mult_comult} states that if two strands are stitched
+        together, then the resulting strand is doubled, this could have
+        equivalently been achieved by doubling each of the original strands,
+        then performing a stitching on both resulting pairs of strands.
+
+        \Cref{eq:cd_mult_counit} simply states that stitching two strands
+        together, then removing the resulting strand could have equally been
+        achieved by removing both of the original strands without stitching them
+        first.
+
+        \Cref{eq:cd_unit_counit} states that introducing a strand, then
+        immediately removing it is the identity operation.
+
+        \Cref{eq:cd_unit_comult} says that doubling a newly-introduced (and
+        therefore free of crossings) strand is the same operation as introducing
+        two strands separately. (Recall that in the virtual case, proximity of
+        strands is not accounted for)
+
+        % todo: antipode (does the antipode work for non-rotational tangles?)
+        % todo: QT axioms
 \end{proof}
 
 The invariants we deal with keep track not only of crossing data, but also
