@@ -783,7 +783,14 @@ For the sake of algebraic closure, the notion of virtual tangles will be useful:
                 \item the comultiplication $\comult^{i}_{jk}[X]$ takes a tangle
                         with strands $X\sqcup \set{i}$ and doubles strand $i$,
                         separating the two strands along the framing of strand
-                        $i$, calling the two resulting strands $j$ and $k$.
+                        $i$, calling the right strand $j$ and the left one
+                        $k$.\footnote{While this convention appears unfortunate,
+                        we follow the notation laid out in \cite{BV} so that the
+                        antipode and spinner have a more memorable
+                        representation, namely looking like the letters they are
+                        represented by (see \cref{thm:rvt_metaHopf} for more
+                        details).
+                }
                 \item the counit $\counit^{i}[X]$ takes a tangle with strands
                         indexed by $X\sqcup \set{i}$ and returns the tangle with
                         strand labelled by $i$ deleted.
@@ -887,17 +894,21 @@ these additional data:
 \end{definition}
 
 \begin{theorem}[\acp{RVT} form a meta-ribbon Hopf algebra]
+        \label{thm:rvt_metaHopf}
         The collections $\RVT_X$ form a meta-ribbon Hopf algebra, with the same
         definitions as in \cref{thm:vt_qtmha}, except:
         \begin{itemize}
-                \item the antipode $\antipode^{i}_{j}[X]$ takes a tangle with
+                \item The antipode $\antipode^{i}_{j}[X]$ takes a tangle with
                         strands labelled by $X \sqcup \set{i}$ and reverses the
                         direction of strand $i$, then adds a counter-clockwise
                         cap to the new beginning, and a clockwise cup to the
-                        end. This new strand is called $j$.
-                \item the spinner $\spin_i[X]$ takes a tangle in $\RVT_X$ and
+                        end. This new strand is called $j$. When applied to a
+                        single vertical strand, the resulting tangle looks like
+                        the letter \enquote{S}.
+                \item The spinner $\spin_i[X]$ takes a tangle in $\RVT_X$ and
                         adds a new strand with rotation number $1$ which has no
-                        interactions with any other strands.
+                        interactions with any other strands. This new strand
+                        looks like the letter \enquote{C}.
         \end{itemize}
 \end{theorem}
 \begin{proof}
