@@ -832,7 +832,14 @@ For the sake of algebraic closure, the notion of virtual tangles will be useful:
         two strands separately. (Recall that in the virtual case, proximity of
         strands is not accounted for)
 
-        % todo: antipode (does the antipode work for non-rotational tangles?)
+        \Cref{eq:cd_antipode} states that when a strand is doubled, then one of
+        the two strands is reversed, multiplying the two strands together
+        results in a strand which can be rearranged to not interact with any of
+        the other strands. This can be readily seen, as this newly-created
+        strand looks like a snake weaving through the tangle diagram. One can
+        remove the snake by applying a series of Reidemeister 2 moves, resulting
+        in a strand disjoint from the rest of the diagram. This is the same as
+        deleting the original strand, then introducing a new disjoint one.
         % todo: QT axioms
 \end{proof}
 
@@ -909,8 +916,6 @@ algebra to include closed components.
                 =
                 \mult^{j,i}_{k}\then\trace^k
         \end{equation}
-        Further, for each fixed $L$, the collection $\set{A_{S, L}}_S$ must be a
-        meta-algebra.
 \end{definition}
 
 The first example we give is that of impure tangles.
