@@ -507,7 +507,9 @@ $\Rmati$)
 \begin{align}
         \label{eq:Rmat_overstrand}
         \Rmat_{12}\then\comult^{2}_{23}&=\Rmat_{a2}\Rmat_{b3}\then\mult^{ab}_1\\
+        \label{eq:Rmat_understrand}
         \Rmat_{13}\then\comult^{1}_{12}&=\Rmat_{1b}\Rmat_{2a}\then\mult^{ab}_3\\
+        \label{eq:Rmat_comult}
         \comult^{1}_{21} &= 
                 \comult^{1}_{12} \Rmat_{2_i,1_i}\Rmati_{2_f,1_f}\then
                 \mult^{1_i,1,1_f}_{1}\then \mult^{2_i,2,2_f}_{2}
@@ -840,7 +842,18 @@ For the sake of algebraic closure, the notion of virtual tangles will be useful:
         remove the snake by applying a series of Reidemeister 2 moves, resulting
         in a strand disjoint from the rest of the diagram. This is the same as
         deleting the original strand, then introducing a new disjoint one.
-        % todo: QT axioms
+        
+        The quasitriangular axioms are equalities of pairs of three-strand
+        tangles:
+        \begin{itemize}
+                \item \Cref{eq:Rmat_overstrand,eq:Rmat_understrand} tell us that
+                        doubling a strand involved in a single crossing can also
+                        be built by adjoining two crossings together.
+                \item \Cref{eq:Rmat_comult} tells us that we can swap the order
+                        of a doubled strand by adding crossings to either end
+                        (reminiscent of a Reidemeister 2 move)
+        \end{itemize}
+        The Reidemeister 3 move follows from these properties alone.
 \end{proof}
 
 The invariants we deal with keep track not only of crossing data, but also
