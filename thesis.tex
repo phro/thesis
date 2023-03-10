@@ -572,17 +572,22 @@ $\Rmati$)
         quasitriangular Hopf algebra $H$ is an invertible element $\spin\in H$
         (with inverse $\invb\spin$) such that for all $x\in H$:
         \begin{align}
+                \label{eq:spinner_ribbon}
                 \spin_1\ribbon_2\spin_3 \then \antipode^2_2 \then \mult^{123} &=
                 \ribbon\\
+                \label{eq:spinner_comult}
                 \spin_1\then\comult^{1}_{12} &=\spin_1\spin_2\\
+                \label{eq:spinner_antipode}
                 \spin \then\antipode &= \invb\spin\\
+                \label{eq:spinner_conjugate}
                 \spin_{1}x_2\invb\spin_{3}\then\mult^{1,2,3} &=
                 x \then \antipode \then \antipode\\
+                \label{eq:spinner_counit}
                 \spin \then \counit &= \unit \then \counit = 1
         \end{align}
 \end{definition}
 
-\begin{lemma}[spinners and ribbon Hopf algebras]
+\begin{lemma}[spinners and ribbon Hopf algebras]\label{lem:spinner_ribbon}
         If a Hopf algebra has either a ribbon element $\ribbon$ or a spinner
         $\spin$, then it must have the other as well, given by the formula:
         $\spin_1 \ribbon_2 \then \mult^{12} = \dfe$.
@@ -912,7 +917,20 @@ these additional data:
         \end{itemize}
 \end{theorem}
 \begin{proof}
-        % todo
+        This proof follows that of \cref{thm:vt_qtmha} almost exactly. We need
+        only take note of the modifications:
+        
+        The antipode now has corrections to the ends of the strands so that all
+        components continue pointing upwards. The same argument of generating a
+        snake in \cref{eq:cd_antipode}, then sliding it out of the diagram with
+        Reidemeister 2 moves still applies (though more care must be taken with
+        the rotation numbers of the involved arcs).
+
+        Using \cref{lem:spinner_ribbon}, it is enough to verify the spinner
+        axioms
+        (\cref{eq:spinner_ribbon,eq:spinner_comult,eq:spinner_antipode,eq:spinner_conjugate,eq:spinner_counit}).
+        All these axioms have corresponding pictures one can draw, keeping in
+        mind the orientations in the definitions of the relevant operations.
 \end{proof}
 
 \subsection{Rotational tangle invariants from a ribbon Hopf algebra}
