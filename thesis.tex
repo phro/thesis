@@ -6,8 +6,7 @@
 ]{biblatex}
 \addbibresource{\jobname.bib}
 \usepackage{acronym}
-\usepackage{listings}
-        \lstset{basicstyle=\ttfamily}
+\DisableLigatures[<,>]{encoding=T1,family=tt*}
 \usepackage[langlinenos=true]{minted}
 \setminted{breaklines=true,linenos=true}
 \usemintedstyle[wolfram]{mathematica}
@@ -1330,7 +1329,7 @@ the author.
 
 This is a Mathematica™ implementation.
 
-\subsection{Implementation of \lstinline|toRVT|}
+\subsection{Implementation of \hs{toRVT}}
 
 This is a Haskell implementation of the algorithm which takes a classical tangle
 and produces a rotational tangle by computing a compatible choice of rotation
