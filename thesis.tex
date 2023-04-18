@@ -34,7 +34,8 @@
 \ProvideDocumentCommand{\nn}{}{\mathbf{n}}
 \ProvideDocumentCommand{\Order}{}{\mathbb O}
 \RenewDocumentCommand{\k}{}{\mbf k}
-\DeclarePairedDelimiterXPP{\Gen}[1]{\msc G}\lparen\rparen{}{#1}
+\DeclareMathOperator{\GenMap}{\msc G} 
+\DeclarePairedDelimiterXPP{\Gen}[1]{\GenMap}\lparen\rparen{}{#1}
 \DeclarePairedDelimiter{\contraction}\langle\rangle
 \newcommand{\alignedintertext}[1]{%
   \noalign{%
@@ -665,7 +666,7 @@ multi-index $\nn \in \N^A$.
         The \defi{exponential generating function} of a map
         $\map {Φ} {\polyring{\Q}{z_A}} {\polyring{\Q}{z_B}}$ between polynomial
         spaces is
-        \begin{equation}
+        \begin{equation}\label{eq:genfunc}
                 \Gen{Φ} \defeq
                 \Sum[\nn\in\N^A] \frac{Φ(z_A^\nn)}{\nn!}ζ_A^\nn
                 \in \powerseries{\polyring{\Q}{z_B}}{ζ_A}
@@ -685,7 +686,7 @@ multi-index $\nn \in \N^A$.
 By the PBW theorem, we know that $\CU$ is isomorphic as a vector space to the
 polynomial ring $\polyring{\Q}{y, b, a, x}$ by choosing an ordering of the
 generators (following \cite{BV}, we use $(y, b, a, x)$):
-\begin{equation}
+\begin{equation}\label{eq:order_map}
         \mapdef {\Order} {\polyring{\Q}{y, b, a, x}} [\toiso] {\CU}
         {y^{n_1}b^{n_2}a^{n_3}x^{n_4}} {y^{n_1}b^{n_2}a^{n_3}x^{n_4}}
 \end{equation}
@@ -940,7 +941,36 @@ these additional data:
 
 \subsection{Rotational tangle invariants from a ribbon Hopf algebra}
 Here we describe the morphism from the category of pure rotational virtual
-tangles to a ribbon Hopf algebra.
+tangles to a ribbon Hopf algebra, as outlined by Bar-Natan and van der Veen in
+\cite{BV}.
+
+We define the morphism of meta-ribbon Hopf algebras in two steps:
+\begin{enumerate}
+        \item Given a pure tangle, we write out a sequence of meta-ribbon Hopf
+                algebra operations which produce the tangle. Each operation is
+                then mapped to the corresponding operation on the algebra, with
+                a sequence of operations mapped to composition.
+        \item Since computing compositions of operations is an essential
+                component to this invariant, we then define an equivalent
+                category which allows for the more efficient computation. This
+                is done by replacing morphisms 
+\end{enumerate}
+
+\ProvideDocumentCommand{\UMaps}{}{\mcl{U}}
+\ProvideDocumentCommand{\LinMaps}{}{\mcl{H}}
+\ProvideDocumentCommand{\GenFunc}{}{\mcl{C}}
+To properly describe $\k$-linear maps between tensor powers of the algebra $U$, 
+we define categories $\UMaps$, $\LinMaps$, and $\GenFunc$ with objects finite
+sets and morphisms:
+\begin{align}
+        \Hom[\UMaps]JK &\defeq \Hom[\k]{U^{\otimes J}}{U^{\otimes K}}\\
+        \Hom[\LinMaps]JK &\defeq \Hom[\k]{\polyring\Q{z_J}}{\polyring\Q{z_K}}\\
+        \Hom[\GenFunc]JK &\defeq \powerseries{\polyring\Q{z_K}}{ζ_J}
+\end{align}
+
+There exist monoidal isomorphisms between these categories, namely $\map
+{\Order} {\LinMaps} [\toiso] {\UMaps}$ and $\map {\GenMap} {\LinMaps} [\toiso]
+{\GenFunc}$ as introduced in \cref{eq:order_map,eq:genfunc}.
 
 \section{Extending a pure tangle invariant to links and general tangles}
 Thus far, the algebraic setting we have defined allows us to describe invariants
