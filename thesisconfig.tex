@@ -1,0 +1,149 @@
+% This is the file where all your settings, packages, newcommands, ... should go
+
+\PassOptionsToPackage{utf8}{inputenc}
+  \usepackage{inputenc}
+
+\PassOptionsToPackage{T1}{fontenc}
+  \usepackage{fontenc}
+
+% Configure classicthesis for your needs here.
+% (see ClassicThesis.pdf for more information)
+\PassOptionsToPackage{
+  drafting=false,    % print version information on the bottom of the pages
+  tocaligned=false, % the left column of the toc will be aligned (no indentation)
+  dottedtoc=true,  % page numbers in ToC flushed right
+  eulerchapternumbers=true, % use AMS Euler for chapter font (otherwise Palatino)
+  linedheaders=false,       % chaper headers will have line above and beneath
+  floatperchapter=true,     % numbering per chapter for all floats (i.e., Figure 1.1)
+  eulermath=false,  % use awesome Euler fonts for mathematical formulae (only with pdfLaTeX)
+  beramono=true,    % toggle a nice monospaced font (w/ bold)
+  palatino=true,    % deactivate standard font for loading another one, see the last section at the end of this file for suggestions
+  parts=false,
+  style=classicthesis
+}{classicthesis}
+
+% Personal data (insert your own data here)
+\newcommand{\myTitle}{A Remarkable Theorem\xspace}
+\newcommand{\myName}{Carl Friedrich Gau\ss\xspace}
+\newcommand{\myDegree}{Doctor of Philosophy\xspace}
+\newcommand{\myDepartment}{Graduate Department of Mathematics\xspace}
+\newcommand{\myUni}{University of Toronto\xspace}
+\newcommand{\myTime}{1827\xspace}
+
+% Load all the packages you want here
+% Probably you will need the following
+\PassOptionsToPackage{english}{babel}
+\usepackage{babel} % language support
+\usepackage{enumitem} % for better itemize and enumerate
+\usepackage{amsmath,amsthm,amssymb} % because math
+\usepackage{thmtools} % for correct autorefs
+\usepackage[onehalfspacing]{setspace} % as required by SGS
+\usepackage{graphicx} % to include graphics
+\usepackage{xspace} % to get the spacing after macros right
+\usepackage{calc} % to allow adding lengths
+
+% Her Majesty herself
+\usepackage{classicthesis}
+
+% Fine-tune hyperreferences (hyperref should be called last)
+\hypersetup{%
+  %draft, % hyperref's draft mode, for printing see below
+  colorlinks=true, linktocpage=true, pdfstartpage=3, pdfstartview=FitV,%
+  % uncomment the following line if you want to have black links (e.g., for printing)
+  %colorlinks=false, linktocpage=false, pdfstartpage=3, pdfstartview=FitV, pdfborder={0 0 0},%
+  breaklinks=true, pageanchor=true,%
+  pdfpagemode=UseNone, %
+  % pdfpagemode=UseOutlines,%
+  plainpages=false, bookmarksnumbered, bookmarksopen=true, bookmarksopenlevel=1,%
+  hypertexnames=true, pdfhighlight=/O,%nesting=true,%frenchlinks,%
+  urlcolor=CTurl, linkcolor=CTlink, citecolor=CTcitation, %pagecolor=RoyalBlue,%
+  %urlcolor=Black, linkcolor=Black, citecolor=Black, %pagecolor=Black,%
+  pdftitle={\myTitle},%
+  pdfauthor={\textcopyright\ \myName, \myDepartment, \myUni},%
+  pdfsubject={},%
+  pdfkeywords={},%
+  pdfcreator={pdfLaTeX},%
+  pdfproducer={LaTeX with hyperref and classicthesis}%
+}
+
+% Setup autoreferences (hyperref and babel)
+% In the document, don't use \ref{...}
+% Instead, use \autoref{...}
+% That changes the reference from "3.1" to "Definition 3.1"
+\makeatletter
+\@ifpackageloaded{babel}%
+  {%
+    \addto\extrasenglish{%
+      \renewcommand*{\figureautorefname}{Figure}%
+      \renewcommand*{\tableautorefname}{Table}%
+      \renewcommand*{\partautorefname}{Part}%
+      \renewcommand*{\chapterautorefname}{Chapter}%
+      \renewcommand*{\sectionautorefname}{Section}%
+      \renewcommand*{\subsectionautorefname}{Section}%
+      \renewcommand*{\subsubsectionautorefname}{Section}%
+      \renewcommand*{\theoremautorefname}{Theorem}%
+      \renewcommand*{\lemmaautorefname}{Lemma}%
+      \renewcommand*{\conjectureautorefname}{Conjecture}%
+      \renewcommand*{\corollaryautorefname}{Corollary}%
+      \renewcommand*{\definitionautorefname}{Definition}%
+      \renewcommand*{\methodautorefname}{Method}%
+      \renewcommand*{\factautorefname}{Fact}%
+      \renewcommand*{\problemautorefname}{Problem}%
+      \renewcommand*{\questionautorefname}{Question}%
+      \renewcommand*{\exampleautorefname}{Example}%
+      \renewcommand*{\remarkautorefname}{Remark}%    
+    }%
+    }{\relax}
+\makeatother
+
+% This changes the regular classicthesis chapter header to one that is a bit larger and uses red as a colour
+\makeatletter
+\ifthenelse{\boolean{ct@linedheaders}}%
+{% lines above and below, number right
+    \titleformat{\chapter}[display]%
+    {\relax}{\raggedleft{\color{CTsemi}\chapterNumber\thechapter} \\ }{0pt}%
+    {\titlerule\vspace*{.9\baselineskip}\raggedright\Large\color{CTtitle}\spacedallcaps}[\normalsize\vspace*{.8\baselineskip}\titlerule]%
+}{% something like Bringhurst
+    \titleformat{\chapter}[display]%
+    {\relax}{\mbox{}\oldmarginpar{\vspace*{-3\baselineskip}\color{CTsemi}\chapterNumber\thechapter}}{0pt}%
+    {\raggedright\huge\color{CTtitle}\spacedallcaps}[\normalsize\vspace*{.8\baselineskip}\titlerule]%
+}
+\makeatother
+
+% Add any other environments you might need here
+% Note: You should also add any new environments to the autorefnames above
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{method}[theorem]{Method}
+\newtheorem{fact}[theorem]{Fact}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{example}[theorem]{Example}
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+% Better spacing than regular itemize
+\newenvironment{itemize*}
+  {\begin{itemize}[topsep=-\parskip+\jot,itemsep=-\parskip-\jot]}
+  {\end{itemize}}
+  
+% Better spacing than regular enumerate, (a), (b), ...
+\newenvironment{enumerate*}
+  {\begin{enumerate}[label=(\alph*),topsep=-\parskip+\jot,itemsep=-\parskip-\jot]}
+  {\end{enumerate}}
+  
+% Better spacing than regular enumerate, (i), (ii), ...
+\newenvironment{enumerate**}
+  {\begin{enumerate}[label=(\roman*),topsep=-\parskip+\jot,itemsep=-\parskip-\jot]}
+  {\end{enumerate}}
+  
+% Better spacing than regular enumerate, (a'), (b'), ...
+\newenvironment{enumerate***}
+  {\begin{enumerate}[label=(\alph*'),topsep=-\parskip+\jot,itemsep=-\parskip-\jot]}
+  {\end{enumerate}}

@@ -1,0 +1,34 @@
+\chapter{Differentiable Manifolds}
+\label{ch:intro}
+
+In mathematics, a differentiable manifold\footnote{also differential manifold} is a type of manifold that is locally similar enough to a linear space to allow one to do calculus. Any manifold can be described by a collection of charts, also known as an atlas. One may then apply ideas from calculus while working within the individual charts, since each chart lies within a linear space to which the usual rules of calculus apply.
+
+\section{Topological Manifolds}
+
+Here are two definitions.
+
+\begin{definition}[Locally Euclidean Space]\label{def:locallyeuclidean}
+A topological space $X$ is called \emph{locally Euclidean} if there is a non-negative integer $n$ such that every point in $X$ has a neighbourhood which is homeomorphic to $\mathbb{R}^n$
+\end{definition}
+
+\begin{definition}[Topological Manifold]\label{def:topman}
+	A \emph{topological manifold} is a locally Euclidean Hausdorff space.
+\end{definition}
+
+\section{Differentiable Manifolds}
+
+Now let's define something else.
+
+\begin{definition}[Differentiable Manifold]\label{def:diffman}
+	A \emph{differentiable manifold} is a topological manifold equipped with an equivalence class of atlases whose transition maps are all differentiable.
+\end{definition}
+
+\section{Main Theorem of This Thesis}
+
+\begin{theorem}[Theorema Egregium]
+	The Gaussian curvature of a surface is invariant under local isometry.
+\end{theorem}
+
+\begin{proof}
+	This is immediate from \autoref{def:diffman}. Details are left as an exercise to the reader.
+\end{proof}
