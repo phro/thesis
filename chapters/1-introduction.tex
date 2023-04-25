@@ -1,34 +1,553 @@
-\chapter{Differentiable Manifolds}
+\chapter{Tensor Products and Monoidal Categories}
 \label{ch:intro}
 
-In mathematics, a differentiable manifold\footnote{also differential manifold} is a type of manifold that is locally similar enough to a linear space to allow one to do calculus. Any manifold can be described by a collection of charts, also known as an atlas. One may then apply ideas from calculus while working within the individual charts, since each chart lies within a linear space to which the usual rules of calculus apply.
+\section{Tensor product notation}
+In what follows, we will extensively use tensor products, and more generally
+monoidal categories. As all our examples will involve trivial associators, it
+will be more convenient to label tensor factors with elements of a finite set
+rather than by their position in a linear order. We will put the label as a
+subscript on each factor. For a finite set $S = \set{i_1, \dots, i_n}$:
+\begin{equation}\label{eq:tensor_notation}
+        V_S \defeq
+        V^{\otimes S} \defeq
+        V_{i_1}\otimes V_{i_2}\otimes\dots\otimes V_{{i_n}} \iso V^{\otimes n}
+\end{equation}
+In particular, $V_{\emptyset} = \k$ is the base field of $V$.
+Pure tensors in this notation will be written with subscripts and the $\otimes$
+will be suppressed:
+$(v_1)_{i_1}(v_2)_{i_2}\cdots(v_n)_{i_n} \in V^{\otimes\set{i_1,\dots,i_n}}$.
+Observe that with labelled factors, the order the factors are written in does
+not matter: In $V^{\otimes{1,2}}$, we have $x_1y_2 = y_2x_1$.
 
-\section{Topological Manifolds}
+Next, given a map
+$\map {T} {V^{\otimes\set{j_1,\dots,j_s}}} {V^{\otimes\set{i_1,\dots,i_r}}}$
+between tensor powers of $V$, we denote $T$ by
+$T^{j_1,\dots,j_s}_{i_1,\dots, i_r}$. It is important to note that the order of
+the indices in this notation matters for nonsymmetric tensors.
+Furthermore, this same symbol will denote extensions by the identity to any
+arbitrary finite set $S$ disjoint from the $j_k$'s and the $i_k$'s:
+\begin{equation}\label{eq:tensor_extend}
+        \mapdef {T^{j_1,\dots,j_s}_{i_1,\dots, i_r}}
+                {V^{\otimes\set{j_1,\dots,j_s}\sqcup S}}
+                {V^{\otimes\set{i_1,\dots,i_r}\sqcup S}}
+                {v_{j_1,\dots,j_s}\otimes w_S} 
+                {(Tv_{j_1,\dots,j_s})\otimes w_S} 
+\end{equation}
 
-Here are two definitions.
+\begin{remark}
+        There are three special cases with this notation:
+        \begin{itemize}
+                \item We denote (multi)linear functionals with only superscripts:
+                        $\map {ϕ} {V^{\otimes S}} {\k \iso V^{\otimes
+                        \emptyset}}$ will be written $ϕ^S$ (with a linear order
+                        put on $S$).
+                \item Elements $v\in V^{\otimes S}$ will be interpreted as a map
+                        $\map {v} {\k} {V^{\otimes S}}$ written with a (linearly
+                        ordered) subscript: $v_S$ to denote which factors the
+                        element lives in. Following \cref{eq:tensor_extend},
+                        this notation allows us to embed $v$ into higher tensor
+                        powers: $v_S \in V^{\otimes S\sqcup X}$ for a $X$ finite
+                        set.
+                \item When only one index is present in a subscript or
+                        superscript, and its omission does not introduce an
+                        ambiguity in an expression, then it may be omitted to
+                        improve readability.
+                      
+\end{itemize}
+\end{remark}
 
-\begin{definition}[Locally Euclidean Space]\label{def:locallyeuclidean}
-A topological space $X$ is called \emph{locally Euclidean} if there is a non-negative integer $n$ such that every point in $X$ has a neighbourhood which is homeomorphic to $\mathbb{R}^n$
+\subsection{Notation extension to non-Cartesian monoidal categories}
+\label{sec:monoidal_notation}
+
+\ProvideDocumentCommand{\CC}{}{\msc C}
+\ProvideDocumentCommand{\MM}{}{A}
+
+Some of the monoidal categories we will work with are not Cartesian.
+Additionally, the ones we will work with are best suited to their factors being
+labelled by finite sets. For the purpose of representing them clearly, we
+introduce a notation put forth by Bar-Natan: consider an object $\MM$ in a
+monoidal category $\CC$. Then:
+\begin{itemize}
+        \item Monoidal powers of $\MM$ are indexed by finite sets $S$, and
+                are to be written $\MM_S$.
+        \item Homsets in $\CC$ between monoidal powers of $\MM$ are indexed by
+                pairs of finite sets $D$, $C$. Morphisms in these homsets will
+                be denoted by $\map{ϕ^D_C}{\MM_D}{\MM_C}$.
+        \item Composition of morphisms $ϕ^{D_1}_{C_1}$ and
+                $ψ^{D_2}_{C_2}$ is defined when $D_2 = C_1$, and is
+                written with the following concatenation operator: 
+                $\map{ϕ^{D_1}_{C_1}\then ψ^{D_2}_{C_2}}{\msc
+                C_{D_1}}{\CC_{C_2}}$.
+        \item The monoidal product
+                $\map {\otimes} {\CC \times \CC}{\CC}$ satisfies
+                $\MM_{S} \otimes \MM_{T} = \MM_{S \sqcup T}$. Given
+                morphisms $ϕ^{D_1}_{C_1}$ and $ψ^{D_2}_{C_2}$ such that
+                $D_1 \cap D_2 = \emptyset = C_1 \cap C_2$, we have a product
+                morphism $\map {ϕ \otimes ψ} {\CC_{D_1 \sqcup D_2}}
+                {\CC_{C_1\sqcup C_2}}$.\footnote{This encodes the
+                        data of a strict monoidal category with the
+                        linear order of factors replaces with indices
+                        from a finite set.
+                } We will write such products with concatenation:
+                $ϕ^{D_1}_{C_1}ψ^{D_2}_{C_2}$.
+\end{itemize}
+
+\begin{remark}
+        Given a morphism $ϕ^D_C$ and a finite set $S$, there is an extension of $ϕ^D_C$
+        to a morphism
+        $\map {\overline{ϕ}} {\msc C_{D\sqcup S}} {\msc C_{C \sqcup S}}$ given
+        by $ϕ^D_C \id^S_S$. To make expressions easier to read, in this paper we
+        will introduce this extension implicitly in the following context: given
+        morphisms $ϕ^{D_1}_{C_1}$ and $ψ^{D_2}_{C_2}$ such that
+        $D_2 \subseteq C_1$ and
+        $C_2 \cap (C_1\setminus D_2)=\emptyset=D_1\cap(D_2 \setminus C_1)$, we
+        define:
+        \begin{equation}\label{eq:composition_extension}
+                ϕ^{D_1}_{C_1} \then ψ^{D_2}_{C_2}
+                \defeq 
+                        \pn*{\Id{{D_2\setminus C_1}}ϕ^{D_1}_{C_1}} \then
+                        \pn*{ψ^{D_2}_{C_2}\Id{C_1\setminus D_2}}
+        \end{equation}
+\end{remark}
+The two extreme cases of this definition are:
+\begin{itemize}
+        \item When $C_1 \cap D_2 = \emptyset$, the bifunctoriality of $\otimes$ reduces
+                \cref{eq:composition_extension} to the monoidal product
+                $ϕ^{D_1}_{C_1}ψ^{D_2}_{C_2}$ (here written with concatenation).
+        \item When $C_1 = D_2$, \cref{eq:composition_extension} becomes the
+                composition $ϕ^{D_1}_{C_1}\then ψ^{D_2}_{C_2}$ exactly.
+\end{itemize}
+
+\begin{remark}
+        While the $\then$ operator is associative, care must be taken that the
+        compositions are well-defined in the presence of duplicated indices.
+        While it is sufficient for all the finite sets in a composition to be
+        pairwise disjoint, this condition will prove too restrictive for clear
+        communication of formulae.
+\end{remark}
+%TODO: add a proof of associativity? (Likely not necessary.)
+
+\section{Meta-objects}
+
+The notion of an \enquote{-object} in a category (for example, a monoid object
+or an algebra object) is a useful way of generalizing an algebraic structure to
+a different mathematical context. For instance, in the category of topological
+spaces, one is able to talk about groups whose operations are continuous.
+However, this notion only makes sense when we are working with a Cartesian
+category (or more generally a monoidal category).
+
+One of the main characters of this story does not fit into this mould, so we
+will introduce a generalization of this notion by way of example:
+
+Consider a group object. Traditionally, the data of a group object are the
+following:
+\begin{itemize}
+        \item An object $G$ in a category $\CC$.
+        \item A morphism $\map {\mult} {G\times G} {G}$ called
+                \enquote{multiplication}.
+        \item A \enquote{unit} morphism
+                $\map {\unit} {\set{*}} {G}$.\footnote{When $\CC = \Set$, we
+                usually write the unit as an element $e=\unit(*)\in G$
+        }
+        \item An \enquote{inversion} morphism $\map {\antipode} {G} {G}$.
+        \item A collection of relations between the morphisms, written as
+                equalities of morphisms between Cartesian powers of $G$. For
+                example, associativity may be written:
+                \begin{equation}\label{eq:cd_assoc}
+                \begin{tikzcd}
+                        G\times G\times G
+                                \rar["\mult \times \id"]
+                                \dar["\id \times\mult"']
+                        &G \times G
+                                \dar["\mult"] \\
+                        G \times G
+                                \rar["\mult"']
+                        &G
+                \end{tikzcd}
+                \end{equation}
+\end{itemize}
+Further, the data of these relations is extended to higher powers of $G$ by
+acting on other components by the identity:
+\begin{equation}
+\begin{tikzcd}[column sep=large]
+        G^{n+3}
+                \rar["\mult \times \id^{n+1}"]
+                \dar["\id \times\mult\times \id^{n}"']
+        &G^{n+2}
+                \dar["\mult\times \id^{n}"] \\
+        G^{n+2}
+                \rar["\mult\times \id^{n}"']
+        &G^{n+1}
+\end{tikzcd}
+\end{equation}
+
+Consider now two changes in how we package these data:
+\begin{enumerate}
+        \item Instead of linear orders of factors $G \times \dots \times G$, we
+                will index factors by a finite set $S$, writing the power $G_S$
+                in the style of \cref{eq:tensor_notation}.
+        \item Instead of implicitly including extensions of morphisms to higher
+                powers by the identity, we will parametrize the extension by
+                finite sets. For example, multiplication $\map {\mult^{ij}_{k}}
+                {G_{\set{i,j}}} {G_{\set{k}}}$\footnote{This notation is defined
+                        in \cref{eq:tensor_notation}, and is here extended from
+                        tensor products to Cartesian products.
+                } will be viewed as a family of maps
+                $\map {\mult^{ij}_k[S]} {G_{\set{i,j}\sqcup S}}
+                {G_{\set{k}\sqcup S}}$, each of which must satisfy the relations
+                of the group object.
+\end{enumerate}
+This way of packaging the data leads us to a direct generalization: a
+\defi{meta-group}-object in $\CC$ is a collection of objects $G_S\in \CC$
+indexed by finite sets $S$, together with 
+\begin{itemize}
+        \item A family of objects $G_S\in \CC$, indexed over finite sets $S$.
+        \item A family of morphisms $\map {\mult^{ij}_{k}[S]} {G_{\set{i,j}\sqcup S}}
+                {G_{\set{k}\sqcup S}}$ called \enquote{multiplication}.
+        \item A family of \enquote{unit} morphisms
+                $\map {\unit_{i}[S]} {G_S} {G_{\set{i}\sqcup S}}$.
+        \item An family of \enquote{inversion} morphisms $\map {\antipode^{i}_{j}[S]}
+                {G_{\set{i}\sqcup S}} {G_{\set{j}\sqcup S}}$.
+        \item A collection of relations between the morphisms, written as
+                equalities of morphisms between the $G_X$'s. For
+                example, associativity may be written:
+                \begin{equation}
+                \begin{tikzcd}[column sep=huge]
+                        G_{\set{1,2,3}\sqcup S}
+                                \rar["\mult^{1,2}_{1}\bk*{S\sqcup\set{3}}"]
+                                \dar["\mult^{2,3}_{2}\bk*{S\sqcup\set{1}}"']
+                        &G_{\set{1,3}\sqcup S}
+                                \dar["\mult^{1,3}_{1}\bk{S}"] \\
+                        G_{\set{1,2}\sqcup S}
+                                \rar["\mult^{1,2}_{1}\bk{S}"']
+                        &G_{\set{1}\sqcup S}
+                \end{tikzcd}
+                \end{equation}
+\end{itemize}
+We obtain traditional objects by further requiring that each family of morphisms
+$ϕ[S]$ satisfy $ϕ[S] = ϕ\bk{\emptyset} \times \id_S$. 
+
+Several examples of well-known algebraic structures presented as meta-objects
+are given in \cref{sec:alg_defs}.
+
+\section{Algebraic definitions}\label{sec:alg_defs}
+
+We now introduce the algebraic structures which will be used to define the
+tangle invariant. These definitions follow those given by Majid in \cite{SM},
+although the ones presented below are given in a way that their corresponding
+meta-structure is readily visible.
+
+\begin{definition}[algebra]
+        A \defi{algebra} is an object $A\in\CC$ together with an associative
+        multiplication $\map {\mult^{i,j}_{k}} {A_{\set{i,j}}}
+        {A_{\set{k}}}$ (satisfying \cref{eq:cd_mult}), and a unit
+        $\map{\unit_{i}}{A_{\emptyset}}{A_{\set{i}}}$ satisfying
+        \cref{eq:cd_unit}.\footnote{
+                When $\CC = \Vect$, this is becomes the more familiar definition
+                of an \defi{algebra}. When $A_\emptyset$ is a field, and it is
+                more common think of the unit as an element $\one\in A$. The
+                unit map is then defined by linearly extending the assignment
+                $\unit_{i}(1) = \one_{i}$.
+        }
 \end{definition}
 
-\begin{definition}[Topological Manifold]\label{def:topman}
-	A \emph{topological manifold} is a locally Euclidean Hausdorff space.
+\begin{multicols}{2}\noindent
+\begin{equation}\label{eq:cd_mult}
+\begin{tikzcd}
+        A_{\set{1,2,3}}
+                \rar["\mult^{1,2}_{1}"]
+                \dar["\mult^{2,3}_{2}"']
+        &A_{\set{1,3}}
+                \dar["\mult^{1,3}_{1}"] \\
+        A_{\set{1,2}}
+                \rar["\mult^{1,2}_{1}"']
+        &A_{\set{1}}
+\end{tikzcd}
+\end{equation}
+\columnbreak
+\begin{equation}\label{eq:cd_unit}
+\begin{tikzcd}[column sep=large]
+        A_{\set{1}}
+                \rar["\unit_{2}"]
+                \drar["\id"']
+        &A_{\set{1,2}}
+                \dar["\mult^{1,2}_{1}", shift left]
+                \dar["\mult^{2,1}_{1}"', shift right] \\
+        &A_{\set{1}}
+\end{tikzcd}
+\end{equation}
+\end{multicols}
+
+\begin{remark}
+        From now on, we will denote repeated multiplication as in
+        \cref{eq:cd_mult} by using extra indices. For instance:
+        $\mult^{i,j, k}_{\ell} \defeq \mult^{i,j}_{r}\then\mult^{r, k}_{\ell}
+        = \mult^{j, k}_{s}\then\mult^{i, s}_{\ell}$.
+\end{remark}
+
+There is also the dual notion of a \emph{coalgebra}, which arises by reversing
+the arrows in \cref{eq:cd_mult,eq:cd_unit}:
+
+\begin{definition}[coalgebra]
+        A \defi{colagebra} is a vector space $C$ over a field $\k$ with a
+        \defi{comultiplication} $\map {\comult} {C} {C\otimes C}$ which is
+        \defi{coassociative} \eqref{eq:cd_comult} and a \defi{counit}, which is
+        a map $\counit\colon A\to k$ satisfying \eqref{eq:cd_counit}.
+\end{definition}
+\nopagebreak
+\begin{multicols}{2}\noindent
+\begin{equation}\label{eq:cd_comult}
+\begin{tikzcd}
+        C_{\set{1,2,3}}
+        &C_{\set{2,3}}
+                \lar["\comult^{1}_{{1,2}}"'] \\
+        C_{\set{1,2}}
+                \uar["\comult^{2}_{2,3}"]
+        &C_{\set{1}}
+                \lar["\comult^{1}_{1,2}"]
+                \uar["\comult^{1}_{1,3}"']
+\end{tikzcd}
+\end{equation}
+\columnbreak
+\begin{equation}\label{eq:cd_counit}
+\begin{tikzcd}
+        C_{\set{1}}
+        &C_{\set{1,2}}
+                \lar["\counit^{2}"']\\
+        &C_{\set{1}}
+                \ular["\id", shift left]
+                \uar["\comult^{1}_{1,2}", shift left]
+                \uar["\comult^{1}_{2,1}"', shift right] \\
+\end{tikzcd}
+\end{equation}
+\end{multicols}
+
+\begin{remark}
+        From now on, we will denote repeated comultiplication as in
+        \cref{eq:cd_comult} by using extra indices. For instance:
+        $\comult^{i}_{j, k, \ell}
+        \defeq \comult^{i}_{j,r}\then\comult^{r}_{k, \ell}
+        = \comult^{i}_{s,\ell}\then\comult^{s}_{j, j}$.
+\end{remark}
+
+If a vector space $B$ satisfies both definitions of an algebra and a coalgebra,
+we introduce a definition for when the structures are compatible with each other
+in the following way:
+
+\begin{definition}[bialgebra]
+        A \defi{bialgebra} is an algebra $(B,\mult,\unit)$ and a coalgebra
+        $(B,\comult,\counit)$, such that $\comult$ and $\counit$ are algebra
+        morphisms.\footnote{
+                $B^{\otimes n}$ inherits a (co)algebra structure
+                from $B$, given by
+                component-wise operations. For instance, in the case of
+                multiplication, this
+                means $\mult\pn[\big]{(a_1\otimes b_1) \otimes (a_2 \otimes
+                b_2)} = a_1a_2 \otimes b_1 b_2$. The bialgebra structure on
+                $B_{\emptyset}$ is given by
+                $\mult = \unit = \comult = \counit = \id$.
+        }
 \end{definition}
 
-\section{Differentiable Manifolds}
+\ProvideDocumentCommand{\lift}{mm}{\curryIsolated{#1}^{(#2)}}
 
-Now let's define something else.
+\begin{multicols}{2}\noindent
+\begin{equation}\label{eq:cd_mult_comult}
+\begin{tikzcd}[column sep=large]
+        B_{\set{1,3}}
+                \rar["\mult^{1,3}_{1}"]
+                \dar["\comult^{1}_{1,2}\then\comult^{3}_{3,4}"']
+        &B_{\set{1}}
+                \dar["\comult^{1}_{1,2}"] \\
+        B_{\set{1,2,3,4}}
+                \rar["\mult^{1,3}_{1}\then\mult^{2,4}_{2}"']
+        &B_{\set{1,2}}
+\end{tikzcd}
+\end{equation}\begin{equation}\label{eq:cd_unit_comult}
+\begin{tikzcd}[row sep=tiny]
+        &B_{\set{1}}
+                \ar[dd,"\comult^{1}_{1,2}"] \\
+        B_{\emptyset}
+                \urar["\unit_{1}"]
+                \drar["\unit_{1}\then\unit_{2}"',near end]\\
+        &B_{\set{1,2}}
+\end{tikzcd}
+\end{equation}
+\columnbreak
+\begin{equation}\label{eq:cd_mult_counit}
+\begin{tikzcd}[column sep=tiny]
+        B_{\set{1,2}}
+                \ar[rr,"\mult^{1,2}_{1}"]
+                \drar["\counit^{1}\then\counit^{2}"']
+        &&B_{\set{1}}
+                \dlar["\counit^{1}"] \\
+        &B_{\emptyset}
+\end{tikzcd}
+\end{equation}
+\begin{equation}\label{eq:cd_unit_counit}
+\begin{tikzcd}
+        B_{\emptyset}
+                \rar["\unit_{1}"]
+                \drar["\id"']
+        &B_{\set{1}}
+                \dar["\counit^{1}"] \\
+        &B_{\emptyset}
+\end{tikzcd}
+\end{equation}
+\end{multicols}
 
-\begin{definition}[Differentiable Manifold]\label{def:diffman}
-	A \emph{differentiable manifold} is a topological manifold equipped with an equivalence class of atlases whose transition maps are all differentiable.
+\begin{remark}
+        The conditions for $\comult$ being an algebra morphism are presented in
+        \cref{eq:cd_mult_comult,eq:cd_unit_comult}, while those for $\counit$
+        are in \cref{eq:cd_mult_counit,eq:cd_unit_counit}.\footnote{While
+        notation explicitly naming each tensor factor appears cumbersome in
+        these diagrams, it will prove invaluable later when used on tangle
+        diagrams, so we leave it as is for the sake of consistency.} Observing
+        invariance under arrow reversal, it may not come as a surprise that
+        \cref{eq:cd_mult_comult,eq:cd_mult_counit} also are the conditions for
+        $\mult$ being a coalgebra morphism, and
+        \cref{eq:cd_unit_comult,eq:cd_unit_counit} tell us that $\unit$ is as
+        well.
+\end{remark}
+
+Finally, we introduce the invertibility condition we would expect on a quantum
+group.
+\begin{definition}[Hopf algebra]
+A \defi{Hopf algebra} is a bialgebra $H$ together with a map $\map {\antipode} {H}
+{H}$ called the \defi{antipode}, which satisfies for all $h\in H$,
+$\comult^{1}_{1,2}\then \antipode^1_1 \then \mult^{1,2}_1 =
+\counit^{1}\then\unit_{1} = 
+\comult^{1}_{1,2}\then \antipode^2_2 \then \mult^{1,2}_1$.
+As a commutative diagram, this looks like \cref{eq:cd_antipode}
+\begin{equation}
+\begin{tikzcd}[column sep=tiny]\label{eq:cd_antipode}
+        H_{\set{1}}
+                \arrow[rr, "\counit^{1}"] \arrow[rd, "\comult^{1}_{1,2}"']
+        && H_{\emptyset}
+                \arrow[rr, "\unit_{1}"]
+        && H_{\set{1}} \\
+        & H_{\set{1,2}}
+                \arrow[rr, "\antipode^{2}_{2}", shift left]
+                \arrow[rr, "\antipode^{1}_{1}"', shift right]
+        && H_{\set{1,2}} \arrow[ru, "\mult^{1,2}_{1}"']
+\end{tikzcd}
+\end{equation}
 \end{definition}
 
-\section{Main Theorem of This Thesis}
+In order to do knot theory, we need an algebraic way to represent a crossing of
+two strands. This is accomplished by the so-called $\Rmat$-matrix:
 
-\begin{theorem}[Theorema Egregium]
-	The Gaussian curvature of a surface is invariant under local isometry.
-\end{theorem}
+\begin{definition}[quasitriangular Hopf algebra]
+A \defi{quasitriangular Hopf algebra} is a Hopf algebra $H$, together with an
+invertible element $\Rmat \in H\otimes H$, called the \defi{$\Rmat$-matrix},
+which satisfies the following properties: (we will denote the inverse by
+$\Rmati$)
+\begin{align}
+        \label{eq:Rmat_overstrand}
+        \Rmat_{12}\then\comult^{2}_{23}&=\Rmat_{a2}\Rmat_{b3}\then\mult^{ab}_1\\
+        \label{eq:Rmat_understrand}
+        \Rmat_{13}\then\comult^{1}_{12}&=\Rmat_{1b}\Rmat_{2a}\then\mult^{ab}_3\\
+        \label{eq:Rmat_comult}
+        \comult^{1}_{21} &= 
+                \comult^{1}_{12} \Rmat_{1_i,2_i}\Rmati_{1_f,2_f}\then
+                \mult^{1_i,1,1_f}_{1}\then \mult^{2_i,2,2_f}_{2}
+\end{align}
+\end{definition}
 
+\begin{definition}[Drinfeld element]
+        In a quasitriangular Hopf algebra $H$, the \defi{Drinfeld element},
+        $\dfe \in H$ is given by:
+        \begin{equation}
+                \dfe \defeq \Rmat_{21}\then\antipode^2_2 \then \mult^{12}
+        \end{equation}
+\end{definition}
+
+\begin{definition}[monodromy]
+        The \defi{monodromy}
+        $\monodromy_{12} \defeq
+        \Rmat_{12}\Rmat_{34}\then\mult^{14}_{1}\then\mult^{23}_{2}$. It's
+        inverse will be denoted
+        $\invb\monodromy =
+        \Rmati_{12}\Rmati_{34}\then\mult^{14}_{1}\then\mult^{23}_{2}$.
+\end{definition}
+
+\begin{lemma}
+        The Drinfeld element $\dfe$ satisfies for all $h\in H$:
+        \begin{align}
+                \dfe_{1}h_2\dfe_{3} \then \mult^{1,2,3}
+                &= h \then S \then S\\
+                \dfe \then \comult_{12} 
+                &= \dfe_1\dfe_2\invb\monodromy_{34}
+                \then\mult^{13}_{1}\then\mult^{24}_2
+        \end{align}
+\end{lemma}
 \begin{proof}
-	This is immediate from \autoref{def:diffman}. Details are left as an exercise to the reader.
+        See \cite{SM} or \cite{ES} %or an original reference?
+        for more details on this standard result. Note that the proof does not
+        rely on the additive structure of the Hopf algebra, which allows us to
+        extend this result to the realm of meta-Hopf algebras.
+        %TODO: finish
 \end{proof}
+
+\begin{definition}[ribbon Hopf algebra]
+        A quasitriangular Hopf algebra $H$ is called \defi{ribbon} if it has an
+        element $\ribbon\in \centre(H)$ such that:
+        \begin{align}
+                \ribbon_1\ribbon_2\then\mult^{12}
+                &= \dfe_1 \dfe_2 \then \antipode^{2}_{2} \then \mult^{12}\\
+                \ribbon_1 \then \comult^1_{12}
+                &=      \ribbon_1\ribbon_2
+                        \then\invb\monodromy_{34}
+                        \then\mult^{13}_{1}
+                        \then\mult^{24}_{2} \\
+                \ribbon \then \antipode &= \ribbon\\
+                \ribbon \then \counit &= \unit \then \counit = 1
+        \end{align}
+\end{definition}
+
+\begin{definition}[distinguished grouplike element (spinner)]
+        A \defi{distinguished grouplike element} (or \defi{spinner}) in a
+        quasitriangular Hopf algebra $H$ is an invertible element $\spin\in H$
+        (with inverse $\invb\spin$) such that for all $x\in H$:
+        \begin{align}
+                \label{eq:spinner_ribbon}
+                \spin_1\ribbon_2\spin_3 \then \antipode^2_2 \then \mult^{123} &=
+                \ribbon\\
+                \label{eq:spinner_comult}
+                \spin_1\then\comult^{1}_{12} &=\spin_1\spin_2\\
+                \label{eq:spinner_antipode}
+                \spin \then\antipode &= \invb\spin\\
+                \label{eq:spinner_conjugate}
+                \spin_{1}x_2\invb\spin_{3}\then\mult^{1,2,3} &=
+                x \then \antipode \then \antipode\\
+                \label{eq:spinner_counit}
+                \spin \then \counit &= \unit \then \counit = 1
+        \end{align}
+\end{definition}
+
+\begin{lemma}[spinners and ribbon Hopf algebras]\label{lem:spinner_ribbon}
+        If a Hopf algebra has either a ribbon element $\ribbon$ or a spinner
+        $\spin$, then it must have the other as well, given by the formula:
+        $\spin_1 \ribbon_2 \then \mult^{12} = \dfe$.
+\end{lemma}
+
+Both the ribbon and the spinner element relevant have topological
+interpretations in the context of tangles, which are outlined in
+\cref{sec:topological_interpretations}.
+
+% TODO:
+% braided categories
+
+% define graphical calculus
+
+\begin{remark}
+        By insisting that the ends of all strands in the diagram point up, and
+        that only upward-pointing portions of strands participate in crossings,
+        we may replace the (co)evaluation operations with the \enquote{spinner}
+        element (also called the distinguished grouplike element), derived from
+        the ribbon element and the Drinfeld element.
+\end{remark}
+In \cite{BV}, Bar-Natan and Van der Veen define an invariant of tangles valued
+in tensor powers of a certain Hopf algebra $\CU$. Their work expresses the
+algebra operations as perturbed Gaußian generating functions so as to produce a
+strong polynomial-time tangle invariant.
