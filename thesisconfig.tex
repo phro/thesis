@@ -32,12 +32,15 @@
 \PassOptionsToPackage{english}{babel}
 \usepackage{babel} % language support
 \usepackage{enumitem} % for better itemize and enumerate
-\usepackage{amsmath,amsthm,amssymb} % because math
+\usepackage{mathtools,amsthm,amssymb} % because math
+\usepackage{etoolbox}
 \usepackage{thmtools} % for correct autorefs
 \usepackage[onehalfspacing]{setspace} % as required by SGS
 \usepackage{graphicx} % to include graphics
 \usepackage{xspace} % to get the spacing after macros right
 \usepackage{calc} % to allow adding lengths
+
+\input{macros}
 
 % Her Majesty herself
 \usepackage{classicthesis}
@@ -62,6 +65,7 @@
   pdfcreator={pdfLaTeX},%
   pdfproducer={LaTeX with hyperref and classicthesis}%
 }
+\usepackage{cleveref}
 
 % Setup autoreferences (hyperref and babel)
 % In the document, don't use \ref{...}
