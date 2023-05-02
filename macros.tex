@@ -144,6 +144,24 @@
                 {\HomHelper{#2}{#3}{#4}}
 }
 
+% Maps
+        \ProvideDocumentCommand{\map}{mmO{\to}m}{#1\colon#2#3#4}
+        \ProvideDocumentCommand{\nodomainmap}{mmm}{#1\colon#2\mapsto#3}
+        \ProvideDocumentCommand{\selfmap}{mmO{\to}}{#1\colon#2#3#2}
+        \ProvideDocumentCommand{\selfmapdef}{mmO{\to}m m }{%
+                \begin{aligned}
+                        #1\colon#2&#3#2\\
+                        #4&\mapsto#5
+                \end{aligned}%
+        }
+        \ProvideDocumentCommand{\mapdef}{mmO{\to}m m m o}{%
+                \begin{aligned}
+                        #1\colon#2&#3#4\\
+                        #5&\mapsto#6
+                        \IfNoValueTF{#7}{}{\\ #7}
+                \end{aligned}%
+        }
+
 % Quantum groups / Hopf algebras
 
 \newcommand{\unit}{\eta}           % unit
