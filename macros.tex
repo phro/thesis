@@ -1,0 +1,108 @@
+% Symbols
+
+% Paired Delimiters
+
+\ProvideDocumentCommand{\curry}{m}{\ifblank{#1}{\:\cdot\:}{#1}}
+
+%% Parenthetical constructs
+\DeclarePairedDelimiter{\pn}\lparen\rparen
+\DeclarePairedDelimiter{\set}\{\}
+\DeclarePairedDelimiter{\bk}\lbrack\rbrack
+\DeclarePairedDelimiter{\bkk}\llbracket\rrbracket
+\DeclarePairedDelimiter{\gen}\langle\rangle
+
+%% Operators
+
+\DeclarePairedDelimiterX{\commutator}[2]{[}{]}{\curry{#1}, \curry{#2}}
+
+\DeclarePairedDelimiterX{\liebk}[2]{[}{]}{\curry{#1}, \curry{#2}}
+
+\DeclarePairedDelimiterXPP{\normHelper}[2]{}\lVert\rVert
+        {\IfNoValueTF{#2}{}{_{#2}}}
+        {\curry{#1}}
+\ProvideDocumentCommand{\norm}{s O{} m o}{% Optional subscript token at the end.
+        \IfBooleanTF{#1}
+                {\normHelper*{#3}{#4}}
+                {\normHelper[#2]{#3}{#4}}
+}
+
+\DeclarePairedDelimiterXPP{\absHelper}[2]{}\lvert\rvert
+        {\IfNoValueTF{#2}{}{_{#2}}}
+        {\curry{#1}}
+\ProvideDocumentCommand{\abs}{s O{} m o}{% Optional subscript token at the end.
+        \IfBooleanTF{#1}
+                {\absHelper*{#3}{#4}}
+                {\absHelper[#2]{#3}{#4}}
+}
+
+\DeclarePairedDelimiterX{\pair}[2]\langle\rangle{%
+        \nonscript\,\curry{#1}\PairSymbol[\delimsize]{\vert}\curry{#2}\nonscript\,%
+}
+
+\DeclarePairedDelimiterX{\inner}[2]\langle\rangle{%
+        \nonscript\,\curry{#1}\PairSymbol[\delimsize]{,}\curry{#2}\nonscript\,%
+}
+
+\DeclarePairedDelimiterX{\card}[1]\lvert\rvert{\curry{#1}}
+% \ProvideDocumentCommand{\card}{\#}
+
+\DeclarePairedDelimiterX\ceil [1]{\lceil}{\rceil}{\curry{#1}}
+
+\DeclarePairedDelimiterX\floor[1]{\lfloor}{\rfloor}{\curry{#1}}
+
+\DeclarePairedDelimiterX\ord  [1]{\lvert}{\rvert}{\curry{#1}}
+\DeclareMathOperator{\Ord}{ord}
+
+
+%% Building constructs
+
+\DeclarePairedDelimiterX{\setbuilder}[2]\{\}{\,#1\SetSymbol[\delimsize]#2\,}
+
+\DeclarePairedDelimiterX{\genbuilder}[2]\langle\rangle{\,#1\SetSymbol[\delimsize]#2\,}
+
+\newcommand{\grppres}{\genbuilder}
+
+\DeclareMathOperator{\HomOp}{Hom} 
+\DeclarePairedDelimiterXPP{\HomHelper}[3]
+        {\IfNoValueTF{#1}
+                {\HomOp}
+                {\HomOp_{#1}}
+        }
+        ()
+        {}{\curry{#2}, \curry{#3}}
+\ProvideDocumentCommand{\Hom}{s O{} m m}{
+        \IfBooleanTF{#1}
+                {\HomHelper*{#2}{#3}{#4}}
+                {\HomHelper{#2}{#3}{#4}}
+}
+
+% Quantum groups / Hopf algebras
+
+\newcommand{\unit}{\eta}           % unit
+\newcommand{\one}{\mbf 1}          % another form of the unit
+\newcommand{\counit}{\epsilon}     % counit
+
+\newcommand{\mult}{m}              % multiplication
+\newcommand{\comult}{\Delta}       % comultiplication
+\ProvideDocumentCommand{\cmf}{mm}  % comultiplication factor
+  {#2_{(#1)}}
+
+\newcommand{\antipode}{S}          % antipode
+\ProvideDocumentCommand{\bap}{m}   % bar-antipode
+  {\overline{#1}}
+\ProvideDocumentCommand{\baap}{m}  % bar-inverse(i.e. anti)-antipode
+  {\underline{#1}}
+
+\newcommand{\rmat}{r}         % Lie-algebraic r-matrix
+
+\newcommand{\Rmat}{\mcl R}         % R-matrix
+\ProvideDocumentCommand{\rmf}{O{}} % R-matrix First factor
+  {\Rmat^{(1)}_{#1}}
+\ProvideDocumentCommand{\rms}{O{}} % R-matrix Second factor
+  {\Rmat^{(2)}_{#1}}
+
+\ProvideDocumentCommand{\coevf}{m} % Coevaluation First factor
+  {r_{#1}}
+\ProvideDocumentCommand{\coevd}{m} % Coevaluation Dual factor
+  {ρ_{#1}}
+
