@@ -12,7 +12,7 @@ subscript on each factor. For a finite set $S = \set{i_1, \dots, i_n}$:
         V^{\otimes S} \defeq
         V_{i_1}\otimes V_{i_2}\otimes\dots\otimes V_{{i_n}} \iso V^{\otimes n}
 \end{equation}
-In particular, $V_{\emptyset} = \k$ is the base field of $V$.
+In particular, $V_{\emptyset} = \K$ is the base field of $V$.
 Pure tensors in this notation will be written with subscripts and the $\otimes$
 will be suppressed:
 $(v_1)_{i_1}(v_2)_{i_2}\cdots(v_n)_{i_n} \in V^{\otimes\set{i_1,\dots,i_n}}$.
@@ -38,11 +38,11 @@ arbitrary finite set $S$ disjoint from the $j_k$'s and the $i_k$'s:
         There are three special cases with this notation:
         \begin{itemize}
                 \item We denote (multi)linear functionals with only superscripts:
-                        $\map {ϕ} {V^{\otimes S}} {\k \iso V^{\otimes
+                        $\map {ϕ} {V^{\otimes S}} {\K \iso V^{\otimes
                         \emptyset}}$ will be written $ϕ^S$ (with a linear order
                         put on $S$).
                 \item Elements $v\in V^{\otimes S}$ will be interpreted as a map
-                        $\map {v} {\k} {V^{\otimes S}}$ written with a (linearly
+                        $\map {v} {\K} {V^{\otimes S}}$ written with a (linearly
                         ordered) subscript: $v_S$ to denote which factors the
                         element lives in. Following \cref{eq:tensor_extend},
                         this notation allows us to embed $v$ into higher tensor
@@ -289,7 +289,7 @@ There is also the dual notion of a \emph{coalgebra}, which arises by reversing
 the arrows in \cref{eq:cd_mult,eq:cd_unit}:
 
 \begin{definition}[coalgebra]
-        A \defi{colagebra} is a vector space $C$ over a field $\k$ with a
+        A \defi{colagebra} is a vector space $C$ over a field $\K$ with a
         \defi{comultiplication} $\map {\comult} {C} {C\otimes C}$ which is
         \defi{coassociative} \eqref{eq:cd_comult} and a \defi{counit}, which is
         a map $\counit\colon A\to k$ satisfying \eqref{eq:cd_counit}.
