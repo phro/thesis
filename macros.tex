@@ -1,4 +1,65 @@
+% Font changes
+
+        \ProvideDocumentCommand{\mcl}{m}{\mathcal{#1}}
+        \ProvideDocumentCommand{\mbb}{m}{\mathbb{#1}}
+        \ProvideDocumentCommand{\mbf}{m}{\boldsymbol{\mathbf{#1}}}
+        \ProvideDocumentCommand{\msc}{m}{\mathscr{#1}}
+        \ProvideDocumentCommand{\mfk}{m}{\mathfrak{#1}}
+        \ProvideDocumentCommand{\mit}{m}{\mathit{#1}}
+
 % Symbols
+
+% Standard number sets.
+        \newcommand{\N}{\mbb{N}}   % Natural
+        \newcommand{\Z}{\mbb{Z}}   % Integer
+        \newcommand{\Q}{\mbb{Q}}   % Rational
+        \newcommand{\R}{\mbb{R}}   % Real
+        \newcommand{\C}{\mbb{C}}   % Complex
+        \newcommand{\F}{\mbb{F}}   % Finite
+        \newcommand{\K}{\mbb{K}}   % Generic
+        \renewcommand{\k}{\mbb{k}} % Generic
+
+% Common operators
+
+        \DeclareMathOperator{\dom}{dom}        % Domain
+        \DeclareMathOperator{\cod}{cod}        % Codomain
+
+        \DeclareMathOperator{\Null}{Null}      % Nullspace
+        \DeclareMathOperator{\Gal}{Gal}        % Galois group
+        \DeclareMathOperator{\Spec}{Spec}      % Spectrum
+        \DeclareMathOperator{\Frac}{Frac}      % Field of fractions
+        \DeclareMathOperator{\Proj}{Proj}      % Proj construction
+        \DeclareMathOperator*{\esssup}{ess\,sup} % essential supremum
+        \DeclareMathOperator*{\supp}{supp}     % support
+
+% Classic Groups
+        \DeclareMathOperator{\GL}{GL}
+        \DeclareMathOperator{\SL}{SL}
+        \DeclareMathOperator{\SP}{Sp}
+        \DeclareMathOperator{\SO}{SO}
+        \DeclareMathOperator{\Spin}{Spin}
+        \DeclareMathOperator{\U}{U}
+        \DeclareMathOperator{\SU}{SU}
+        \DeclareMathOperator{\Or}{O}
+
+% Lie algebras
+
+        %% Algebras
+
+                \DeclareMathOperator{\Gl}{\mfk{gl}}
+                \DeclareMathOperator{\Sp}{\mfk{sp}}
+                \DeclareMathOperator{\Sl}{\mfk{sl}}
+                \DeclareMathOperator{\So}{\mfk{so}}
+                \DeclareMathOperator{\g}{\mfk{g}}
+
+        %% Lie algebra operations
+
+                \DeclareMathOperator{\ad}{ad}   % adjoint
+                \DeclareMathOperator{\Ad}{Ad}   % Big Adjoint
+                \DeclareMathOperator{\Lie}{Lie} % Lie algebra
+
+        %% Universal enveloping algebra
+                \ProvideDocumentCommand{\uea}{O{}m}{\mathfrak{U}_{#1}\pn{#2}}
 
 % Paired Delimiters
 
