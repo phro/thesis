@@ -1,3 +1,7 @@
+% Theorem-like environments
+
+\ProvideDocumentCommand{\defi}{m}{\uline{#1}} % the Item being DEFined
+
 % Font changes
 
         \ProvideDocumentCommand{\mcl}{m}{\mathcal{#1}}
@@ -29,6 +33,7 @@
 
 % Common operators
 
+        \ProvideDocumentCommand{\invb}{m}{\overline{#1}} % bar-style inverse
         \DeclareMathOperator{\dom}{dom}        % Domain
         \DeclareMathOperator{\cod}{cod}        % Codomain
         \ProvideDocumentCommand{\id}{o}{
@@ -200,6 +205,7 @@
 \newcommand{\rmat}{r}         % Lie-algebraic r-matrix
 
 \newcommand{\Rmat}{\mcl R}         % R-matrix
+\newcommand{\Rmati}{\invb\Rmat}
 \ProvideDocumentCommand{\rmf}{O{}} % R-matrix First factor
   {\Rmat^{(1)}_{#1}}
 \ProvideDocumentCommand{\rms}{O{}} % R-matrix Second factor
@@ -210,3 +216,7 @@
 \ProvideDocumentCommand{\coevd}{m} % Coevaluation Dual factor
   {ρ_{#1}}
 
+\ProvideDocumentCommand{\spin}{}{C}
+\ProvideDocumentCommand{\ribbon}{}{ν}
+\ProvideDocumentCommand{\dfe}{}{\mfk u}
+\ProvideDocumentCommand{\monodromy}{}{Q}
