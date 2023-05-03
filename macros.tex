@@ -31,6 +31,12 @@
 
         \DeclareMathOperator{\dom}{dom}        % Domain
         \DeclareMathOperator{\cod}{cod}        % Codomain
+        \ProvideDocumentCommand{\id}{o}{
+          \IfNoValueTF {#1}
+            {\operatorname{id}}
+            {\operatorname{id}_{#1}}
+        }
+        \ProvideDocumentCommand{\Id}{m}{\id^{#1}_{#1}}
 
         \DeclareMathOperator{\Null}{Null}      % Nullspace
         \DeclareMathOperator{\Gal}{Gal}        % Galois group
