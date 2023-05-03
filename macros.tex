@@ -44,6 +44,15 @@
 
 % Common operators
 
+        \ProvideDocumentCommand{\inv}{sm}{% Invert something
+                \IfBooleanTF{#1}
+                        {\frac1{#2}}
+                        {#2^{-1}}
+        }
+        % Exponential Map
+        \ProvideDocumentCommand{\Exp}{m}{%
+                \mbf e^{#1}
+        }
         \ProvideDocumentCommand{\invb}{m}{\overline{#1}} % bar-style inverse
         \DeclareMathOperator{\dom}{dom}        % Domain
         \DeclareMathOperator{\cod}{cod}        % Codomain
