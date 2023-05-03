@@ -1,0 +1,37 @@
+\chapter{Code}
+\section{Implementation of the invariant $Z$}
+% todo: include a link to the source code. Ensure it is all on github (i.e. a
+% stable website not likely to disappear in a few years).
+This is a Mathematica™ implementation by Bar-Natan and van der Veen in
+\cite{BV}, modified by the author.
+\begin{minted}{wolfram}
+setValue[value_,obj_,coord_]:=Module[
+        {b=Association@@obj},
+        b[coord] = value; Head[obj]@@Normal@b
+]
+
+(* PG[L, Q, P] = Perturbed Gaußian Pe^(L + Q) *)
+\end{minted}
+
+\section{Implementation of the trace}
+
+This is a Mathematica™ implementation of the trace.
+\begin{minted}[linenos=true]{wolfram}
+getConstLCoef::usage = "getConstLCoef[i][gdo] returns the terms in the L-portion of a GDO expression which are not a function of y[i], b[i], a[i], nor x[i]."
+getConstLCoef[i_][gdo_] :=
+        (SeriesCoefficient[#, {b[i],0,0}]&) @*
+        (Coefficient[#, y[i], 0]&) @*
+        (Coefficient[#, a[i], 0]&) @*
+        (Coefficient[#, x[i], 0]&) @*
+        ReplaceAll[U2l] @*
+        getL@
+        gdo
+\end{minted}
+
+\section{Implementation of rotation number calculator}
+
+This is a Haskell implementation of the algorithm \hs{toRVT} which takes a
+classical tangle and produces a rotational tangle by computing a compatible
+choice of rotation numbers for each arc.
+
+\input{./KnotTheory/src/KnotTheory/PD.lhs}
