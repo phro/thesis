@@ -2,6 +2,15 @@
 
         \ProvideDocumentCommand{\defi}{m}{\uline{#1}} % Item being DEFined
 
+        \newcommand{\alignedintertext}[1]{%
+          \noalign{%
+            \vskip\belowdisplayshortskip
+            \vtop{\hsize=\linewidth#1\par
+            \expandafter}%
+            \expandafter\prevdepth\the\prevdepth
+          }%
+        }
+
 % Font changes
 
         \ProvideDocumentCommand{\mcl}{m}{\mathcal{#1}}
@@ -21,6 +30,8 @@
         \newcommand{\homeo}{\cong} % or \cong
         \newcommand{\hty}{\cong} % or \cong
         \ProvideDocumentCommand{\then}{}{\mathbin{/\mkern-6mu/}}
+        \newcommand{\fracl}[2]{\left.{#1}\middle/{#2}\right.}
+        \renewcommand{\boundary}{\partial}
 
 % Standard number sets.
         \newcommand{\N}{\mbb{N}}   % Natural
@@ -42,7 +53,11 @@
             {\operatorname{id}_{#1}}
         }
         \ProvideDocumentCommand{\Id}{m}{\id^{#1}_{#1}}
+        \ProvideDocumentCommand{\dual}{m}{{#1}^*}
 
+        \DeclareMathOperator{\nullity}{nullity} % nullity
+        \DeclareMathOperator{\rank}{rank}       % rank
+        \DeclareMathOperator{\trace}{tr}        % trace
         \DeclareMathOperator{\Null}{Null}      % Nullspace
         \DeclareMathOperator{\Gal}{Gal}        % Galois group
         \DeclareMathOperator{\Spec}{Spec}      % Spectrum
@@ -54,6 +69,44 @@
           Z
           % ζ
         }
+
+        \ProvideDocumentCommand{\Operator}{moo}{
+          \IfNoValueTF{#2}
+            {#1}
+            {\IfNoValueTF{#3}% Don't make parentheses expand beyond the operator.
+              {#1_{#2}}
+              {#1_{#2}^{#3}}
+              % {\vphantom{#1^{-}}\smash{#1_{#2}}}
+              % {\vphantom{#1^{-}}\smash{#1_{#2}^{#3}}}
+            }
+        }
+
+
+        % There should really be another argument for what the operator is acting on,
+        % but that's a lot more typing I really don't care to do. However, semantically
+        % this is the way to go, and snippets *are* at my disposal.
+        % {oo} means "take two optional arguments"
+        \ProvideDocumentCommand{\Sum   }{oo}{\Operator\sum      [#1][#2]}
+        \ProvideDocumentCommand{\Dsum  }{oo}{\Operator\bigoplus [#1][#2]}
+        % The following code does not work. Why is this?
+        \ProvideDocumentCommand{\Dsumc }{oo}{\Operator{\bigoplus}[#1][#2]}
+        \ProvideDocumentCommand{\Prod  }{oo}{\Operator\prod     [#1][#2]}
+        \ProvideDocumentCommand{\Tprod }{oo}{\Operator\bigotimes[#1][#2]}
+        \ProvideDocumentCommand{\Coprod}{oo}{\Operator\coprod   [#1][#2]}
+        \ProvideDocumentCommand{\Dunion}{oo}{\Operator\bigsqcup [#1][#2]}
+        \ProvideDocumentCommand{\Union }{oo}{\Operator\bigcup   [#1][#2]}
+        \ProvideDocumentCommand{\Inter }{oo}{\Operator\bigcap   [#1][#2]}
+        \ProvideDocumentCommand{\Int   }{oo}{\Operator\int      [#1][#2]}
+        \newcommand{\gint}{\mathrlap{\int}\,G}
+        \ProvideDocumentCommand{\GInt  }{}{\Operator\gint     }
+        \ProvideDocumentCommand{\IInt  }{oo}{\Operator\iint     [#1][#2]}
+        \ProvideDocumentCommand{\IIInt }{oo}{\Operator\iiint    [#1][#2]}
+        \ProvideDocumentCommand{\Wedge }{oo}{\Operator\bigwedge [#1][#2]}
+
+% Rings
+
+        \ProvideDocumentCommand{\polyring}{mm}{#1\bk{#2}}
+        \ProvideDocumentCommand{\powerseries}{mm}{#1\bkk{#2}}
 
 % Classic Groups
         \DeclareMathOperator{\GL}{GL}
@@ -74,6 +127,10 @@
                 \DeclareMathOperator{\Sl}{\mfk{sl}}
                 \DeclareMathOperator{\So}{\mfk{so}}
                 \DeclareMathOperator{\g}{\mfk{g}}
+                \newcommand{\fg}{\mfk{g}}
+                \newcommand{\fh}{\mfk{h}}
+                \newcommand{\fn}{\mfk{n}}
+                \newcommand{\fb}{\mfk{b}}
 
         %% Lie algebra operations
 
@@ -87,7 +144,7 @@
 % Categories
         \ProvideDocumentCommand{\catname}{m}{\mathbf{#1}}
         \DeclareMathOperator{\mfld  }{\catname{Mfld}}
-        \DeclareMathOperator{\mfldb }{\catname{Mfld}\pmb\del}
+        \DeclareMathOperator{\mfldb }{\catname{Mfld}\pmb\boundary}
         \DeclareMathOperator{\Vect  }{\catname{Vect}}
         \DeclareMathOperator{\Mod   }{\catname{Mod}}
         \DeclareMathOperator{\Set   }{\catname{Set}}
@@ -151,6 +208,18 @@
 
 %% Building constructs
 
+% can be useful to refer to this outside \Set
+\ProvideDocumentCommand{\innerspacing}{}{\mathchoice{\:}{\:}{\,}{\,}}
+\newcommand\SetSymbol[1][]{%
+  \innerspacing%
+  %:%
+  #1\vert%
+  \allowbreak\innerspacing\mathopen{}%
+}
+\newcommand\PairSymbol[2][]{%
+  \nonscript\, #1 #2 \allowbreak\nonscript\,\mathopen{}%
+}
+
 \DeclarePairedDelimiterX{\setbuilder}[2]\{\}{\,#1\SetSymbol[\delimsize]#2\,}
 
 \DeclarePairedDelimiterX{\genbuilder}[2]\langle\rangle{\,#1\SetSymbol[\delimsize]#2\,}
@@ -188,6 +257,14 @@
                         \IfNoValueTF{#7}{}{\\ #7}
                 \end{aligned}%
         }
+
+        \newcommand{\mono}{\hookrightarrow} % monomorphism
+        \newcommand{\inc }{\hookrightarrow} % inclusion % DEPRECATE?
+        \newcommand{\inj }{\hookrightarrow} % injection
+        \newcommand{\emb }{\hookrightarrow} % embedding
+        \newcommand{\sur }{\twoheadrightarrow} % epimorphism
+        \newcommand{\epi }{\twoheadrightarrow} % epimorphism
+        \newcommand{\toiso }{\xrightarrow{\sim}} % isomorphism
 
 % Quantum groups / Hopf algebras
 
@@ -227,4 +304,14 @@
 
 % Thesis-specific macros
 
+\ProvideDocumentCommand{\fa}{}{\mfk{a}}
+\ProvideDocumentCommand{\Alg}{}{\fg}
 \ProvideDocumentCommand{\CU}{}{U}
+\ProvideDocumentCommand{\nn}{}{\mathbf{n}}
+\ProvideDocumentCommand{\Order}{}{\mathbb O}
+\RenewDocumentCommand{\k}{}{\mbf k}
+\DeclareMathOperator{\GenMap}{\msc G} 
+\DeclarePairedDelimiterXPP{\Gen}[1]{\GenMap}\lparen\rparen{}{#1}
+\DeclarePairedDelimiter{\contraction}\langle\rangle
+\ProvideDocumentCommand{\tangle}{}{\msc T}
+\ProvideDocumentCommand{\RVT}{}{\msc{T}^{\text{rv}}}
