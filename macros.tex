@@ -1,6 +1,6 @@
 % Theorem-like environments
 
-        \ProvideDocumentCommand{\defi}{m}{\underline{#1}} % Item being DEFined
+        \ProvideDocumentCommand{\defi}{m}{\uline{#1}} % Item being DEFined
 
 % Font changes
 
@@ -50,6 +50,10 @@
         \DeclareMathOperator{\Proj}{Proj}      % Proj construction
         \DeclareMathOperator*{\esssup}{ess\,sup} % essential supremum
         \DeclareMathOperator*{\supp}{supp}     % support
+        \ProvideDocumentCommand{\centre}{}{%
+          Z
+          % ζ
+        }
 
 % Classic Groups
         \DeclareMathOperator{\GL}{GL}
@@ -220,3 +224,7 @@
 \ProvideDocumentCommand{\ribbon}{}{ν}
 \ProvideDocumentCommand{\dfe}{}{\mfk u}
 \ProvideDocumentCommand{\monodromy}{}{Q}
+
+% Thesis-specific macros
+
+\ProvideDocumentCommand{\CU}{}{U}
