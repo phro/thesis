@@ -72,6 +72,8 @@
 \frenchspacing
 \raggedbottom
 
+\newcommand{\addchapter}[1]{\cleardoublepage\include{#1}}
+\newcommand{\addchaptereven}[1]{\cleardoublepageeven\include{#1}}
 \selectlanguage{english}
 
 % Frontmatter
@@ -80,28 +82,19 @@
 \pagenumbering{roman}
 \pagestyle{plain}
 \include{frontbackmatter/titlepage}
-\cleardoublepage
-\include{frontbackmatter/abstract}
-\cleardoublepage
-\include{frontbackmatter/dedication}
-\cleardoublepage
-\include{frontbackmatter/acknowledgements}
-\cleardoublepage
-\include{frontbackmatter/acronyms}
+\addchapter{frontbackmatter/abstract}
+\addchapter{frontbackmatter/dedication}
+\addchapter{frontbackmatter/acknowledgements}
+\addchapter{frontbackmatter/acronyms}
 % The following command will make sure that publications are on the left and contents are on the right.
-\cleardoubleevenpage
-\include{frontbackmatter/publications}
-\clearpage
-\include{frontbackmatter/contents}
+\addchaptereven{frontbackmatter/publications}
+\addchapter{frontbackmatter/contents}
 
 % Add any chapters here
-\cleardoublepage
 \pagestyle{scrheadings}
 \pagenumbering{arabic}
-\cleardoublepage
-\include{chapters/1-introduction}
-\cleardoublepage
-\include{chapters/2-perturbedGaussians}
+\addchapter{chapters/1-introduction}
+\addchapter{chapters/2-perturbedGaussians}
 
 \appendix
 \cleardoublepage
