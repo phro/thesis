@@ -75,6 +75,17 @@
         %% Universal enveloping algebra
                 \ProvideDocumentCommand{\uea}{O{}m}{\mathfrak{U}_{#1}\pn{#2}}
 
+% Categories
+        \ProvideDocumentCommand{\catname}{m}{\mathbf{#1}}
+        \DeclareMathOperator{\mfld  }{\catname{Mfld}}
+        \DeclareMathOperator{\mfldb }{\catname{Mfld}\pmb\del}
+        \DeclareMathOperator{\Vect  }{\catname{Vect}}
+        \DeclareMathOperator{\Mod   }{\catname{Mod}}
+        \DeclareMathOperator{\Set   }{\catname{Set}}
+        \DeclareMathOperator{\Ring  }{\catname{Ring}}
+        \DeclareMathOperator{\Top   }{\catname{Top}}
+        \DeclareMathOperator{\FinSet}{\catname{FinSet}}
+
 % Paired Delimiters
 
 \ProvideDocumentCommand{\curry}{m}{\ifblank{#1}{\:\cdot\:}{#1}}
