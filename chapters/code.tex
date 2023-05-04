@@ -30,6 +30,51 @@ getConstLCoef[i_][gdo_] :=
 
 \section{Implementation of rotation number calculator}
 
+%\section{Generating \acp{RVT} for links}
+
+\subsection{\acp{RVT} for knots}
+Describe algorithm previously developed for knots
+
+\subsection{Extending the algorithm to multiple components}
+
+Given a classical link, there is a unique \ac{RVL} corresponding to it. Given a
+classical link diagram, one may obtain the corresponding \ac{RVL} by attaching
+an appropriate rotation number to each arc. However, there is not a unique way
+to do so.
+
+The situation becomes more complicated when one considers the case where the
+tangle has an open component. In this case, two \ac{RVT} diagrams which
+correspond to the same classical link exactly when they differ only by a
+sequence of rotational Reidemeister moves \emph{and} a modification of the
+rotation numbers of the (two) unbounded arcs. Equivalently, we have the
+statement:
+
+\begin{lemma}
+        For each classical tangle with one open component, there exists a unique
+        \ac{RVT} whose unbounded arcs have rotation numbers $0$.
+\end{lemma}
+\begin{proof}
+        See \cite{BV}.
+\end{proof}
+
+Bar-Natan and van der Veen develop an algorithm to convert a classical long knot
+into an \ac{RVT}. As we are interested in links, we must extend this algorithm
+to include so-called \enquote{long links}, which we outline below:
+\begin{verbatim}
+        1. Pass a front over the beginning of the open strand.
+        2. Progressively absorb the leftmost crossings
+                2a. As crossings are absorbed,
+                    take into account any rotations of arcs.
+        3. If an arc passes through the front twice, absorb it,
+           taking into account any rotations of that arc as a
+           result.
+\end{verbatim}
+
+% If the code is to be presented within this section, it should be "clean,
+% short, and match the mathematics" according to Dror. We'll see how much the
+% Haskell code reflects that description.
+
+
 This is a Haskell implementation of the algorithm \hs{toRVT} which takes a
 classical tangle and produces a rotational tangle by computing a compatible
 choice of rotation numbers for each arc.
