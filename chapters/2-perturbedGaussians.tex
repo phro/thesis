@@ -410,4 +410,18 @@ Since the above notation will occur several times, we will use the notion of
 It is important to note that contraction does not always define a convergent
 expression.
 
+The theorem we will rely heavily on in this thesis is the following, taken from
+\cite[Theorem~6]{BV}:
+
+\newcommand{\Wt}[]{\widetilde{W}} 
+\begin{theorem}[Contraction theorem]
+        For any $n\in \N$, consider the ring $R_n =
+        \powerseries{\polyring{\Q}{r_j, g_j}}{s_j, W_{ij}, f_j
+        \SetSymbol[\big] 1 ≤ i, j ≤ n}$. Then
+        \begin{equation}
+                \contraction{\Exp{gs + rf + rWs}}[r, s] = \det(\Wt)\Exp{g\Wt f}
+        \end{equation}
+        where $\Wt = \inv{(1-W)}$.
+\end{theorem}
+
 % TODO: complete
