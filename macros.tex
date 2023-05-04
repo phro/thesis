@@ -32,6 +32,7 @@
         \ProvideDocumentCommand{\then}{}{\mathbin{/\mkern-6mu/}}
         \newcommand{\fracl}[2]{\left.{#1}\middle/{#2}\right.}
         \renewcommand{\boundary}{\partial}
+        \newunicodechar{∂}{\ensuremath\partial}
 
 % Standard number sets.
         \newcommand{\N}{\mbb{N}}   % Natural
@@ -196,12 +197,30 @@
                 {\absHelper[#2]{#3}{#4}}
 }
 
+\DeclarePairedDelimiterXPP{\resHelper}[2]{}{{}}\rvert
+        {\IfNoValueTF{#2}{}{_{#2}}}
+        {#1}
+\ProvideDocumentCommand{\res}{s O{} m o}{% Optional subscript token at the end.
+        \IfBooleanTF{#1}
+                {\resHelper*{#3}{#4}}
+                {\resHelper[#2]{#3}{#4}}
+}
+
 \DeclarePairedDelimiterX{\pair}[2]\langle\rangle{%
         \nonscript\,\curry{#1}\PairSymbol[\delimsize]{\vert}\curry{#2}\nonscript\,%
 }
 
 \DeclarePairedDelimiterX{\inner}[2]\langle\rangle{%
         \nonscript\,\curry{#1}\PairSymbol[\delimsize]{,}\curry{#2}\nonscript\,%
+}
+
+\DeclarePairedDelimiterXPP{\contractionHelper}[2]{}\langle\rangle
+        {\IfNoValueTF{#2}{}{_{#2}}}
+        {\curry{#1}}
+\ProvideDocumentCommand{\contraction}{s O{} m o}{% Optional subscript token at the end.
+        \IfBooleanTF{#1}
+                {\contractionHelper*{#3}{#4}}
+                {\contractionHelper[#2]{#3}{#4}}
 }
 
 \DeclarePairedDelimiterX{\card}[1]\lvert\rvert{\curry{#1}}
@@ -321,6 +340,5 @@
 \RenewDocumentCommand{\k}{}{\mbf k}
 \DeclareMathOperator{\GenMap}{\msc G} 
 \DeclarePairedDelimiterXPP{\Gen}[1]{\GenMap}\lparen\rparen{}{#1}
-\DeclarePairedDelimiter{\contraction}\langle\rangle
 \ProvideDocumentCommand{\tangle}{}{\msc T}
 \ProvideDocumentCommand{\RVT}{}{\msc{T}^{\text{rv}}}

@@ -359,4 +359,55 @@ There exist monoidal isomorphisms between these categories, namely $\map
 
 We use this formulation because of the existence of a computationally amenable
 subcategory of $\GenFunc$ which contains the image of this invariant.
+
+\subsection{Formulating composition in other categories}
+Composing operations in $\UMaps$ or $\LinMaps$ is straightforward to define, but
+lacks a closed form. However, on $\GenFunc$, the corresponding definition of
+composition takes the following form (quoted from \cite[Lemma~3]{BV}):
+
+\begin{lemma}[Composition of generating functions]
+Suppose $J$, $K$, $L$ are finite sets and
+$ϕ ∈ \Hom{\polyring{\Q}{z_J}}{\polyring{\Q}{z_K}}$ and
+$ψ ∈ \Hom{\polyring{\Q}{z_K}}{\polyring{\Q}{z_L}}$.
+We have
+\begin{equation}
+        \Gen{ϕ\then ψ}
+        = \res[\bigg]{
+                \pn*{
+                        \res*{\Gen{ϕ}}[z_K\to ∂ζ_K]
+                        \Gen{ψ}
+                }
+        }[ζ_K=0]
+\end{equation}
+\end{lemma}
+
+Since the above notation will occur several times, we will use the notion of
+\defi{contraction} used by Bar-Natan and van der Veen (taken from
+\cite[Definition~4]{BV}):
+
+\begin{definition}[Contraction]
+        Let $f\in\powerseries{\K}{r, s}$ be a powerseries. The
+        \defi{contraction} of $f = \Sum[k, l]{c_{k, l}r^{k}s^{l}}$ along the
+        pair $(r, s)$ is:
+        \begin{equation}
+                \contraction*{f}[(r, s)]
+                \defeq \Sum[k] c_{k, k}k!
+                = \res[\bigg]{\Sum[k, l]{c_{k, l} \partial_{s}^{k}s^{l}}}[s=0]
+        \end{equation}
+        Further, this notation is to be extended to allow for multiple
+        consecutive contractions for $f\in \powerseries{\K}{r_i, s_i}_{i≤n}$:
+        \begin{equation}
+                \contraction{f}[\pn*{(r_i)_i, (s_i)_i}]
+                \defeq
+                \contraction*{
+                        \contraction*{
+                                \contraction{f}[(r_1, s_1)]
+                        }[(r_2, s_2)]
+                        \cdots
+                }[(r_n, s_n)]
+        \end{equation}
+\end{definition}
+It is important to note that contraction does not always define a convergent
+expression.
+
 % TODO: complete
