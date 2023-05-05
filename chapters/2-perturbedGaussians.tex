@@ -372,9 +372,9 @@ $ψ ∈ \Hom{\polyring{\Q}{z_K}}{\polyring{\Q}{z_L}}$.
 We have
 \begin{equation}
         \Gen{ϕ\then ψ}
-        = \res[\bigg]{
+        = \restrict[\bigg]{
                 \pn*{
-                        \res*{\Gen{ϕ}}[z_K\to ∂ζ_K]
+                        \restrict*{\Gen{ϕ}}[z_K\to ∂ζ_K]
                         \Gen{ψ}
                 }
         }[ζ_K=0]
@@ -392,7 +392,7 @@ Since the above notation will occur several times, we will use the notion of
         \begin{equation}
                 \contraction*{f}[(r, s)]
                 \defeq \Sum[k] c_{k, k}k!
-                = \res[\bigg]{\Sum[k, l]{c_{k, l} \partial_{s}^{k}s^{l}}}[s=0]
+                = \restrict[\bigg]{\Sum[k, l]{c_{k, l} \partial_{s}^{k}s^{l}}}[s=0]
         \end{equation}
         Further, this notation is to be extended to allow for multiple
         consecutive contractions for $f\in \powerseries{\K}{r_i, s_i}_{i≤n}$:
@@ -413,7 +413,7 @@ expression.
 The theorem we will rely heavily on in this thesis is the following, taken from
 \cite[Theorem~6]{BV}:
 
-\newcommand{\Wt}[]{\widetilde{W}} 
+\newcommand{\Wt}{\widetilde{W}} 
 \begin{theorem}[Contraction theorem]
         For any $n\in \N$, consider the ring $R_n =
         \powerseries{\polyring{\Q}{r_j, g_j}}{s_j, W_{ij}, f_j

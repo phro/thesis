@@ -197,13 +197,15 @@
                 {\absHelper[#2]{#3}{#4}}
 }
 
-\DeclarePairedDelimiterXPP{\resHelper}[2]{}{{}}\rvert
-        {\IfNoValueTF{#2}{}{_{#2}}}
-        {#1}
-\ProvideDocumentCommand{\res}{s O{} m o}{% Optional subscript token at the end.
-        \IfBooleanTF{#1}
-                {\resHelper*{#3}{#4}}
-                {\resHelper[#2]{#3}{#4}}
+\NewDocumentCommand{\restrict}{sO{}mO{}}{%
+        \IfBooleanTF{#1}{% star
+                \mleft.\kern-\nulldelimiterspace
+                #3
+                \mright|%
+        }{% no star
+                #3#2|%
+        }%
+        _{#4}%
 }
 
 \DeclarePairedDelimiterX{\pair}[2]\langle\rangle{%
