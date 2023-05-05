@@ -1,12 +1,12 @@
 % Note that depending on your settings in the table of contents, subsections and subsubsections might appear virtually identical.
 % Make sure to set the ToC depth and the numbering depth in the ToC the way you want.
-\chapter{Perturbed Gaussians}\label{ch:perturbed_gaussians}
+\chapter{Perturbed Gaußians}\label{ch:perturbed_gaussians}
 We now summarize the work of Bar Natan and van der Veen in \cite{BV}, which
-develops a universal knot invariant using perturbed Gaussians. 
+develops a universal knot invariant using perturbed Gaußians. 
 
 \section{Algebraic definitions}
 \subsection{Defining the algebra}
-Here we define the Hopf algebra $U$, it's quasitriangular structure, and its
+Here we define the Hopf algebra $\CU$, it's quasitriangular structure, and its
 ribbon structure:
 
 We begin by defining the algebra $\CU$. Denote by $\fa$ the non-commutative
@@ -25,7 +25,7 @@ $\uea{\fg}$.
         For convenience, we define $b \defeq \dual a \in \dual\fa$ and
         $y \defeq \dual x \in \dual\fa$, so that
         \begin{equation}
-                U = \genbuilder*{y, b, a, x}{
+                \CU = \genbuilder*{y, b, a, x}{
                         \liebk{a}{x} = x,
                         \liebk{a}{y} = -y,
                         \liebk{x}{y} = b,
@@ -344,11 +344,11 @@ We define the morphism of meta-ribbon Hopf algebras in two steps:
 \ProvideDocumentCommand{\UMaps}{}{\mcl{U}}
 \ProvideDocumentCommand{\LinMaps}{}{\mcl{H}}
 \ProvideDocumentCommand{\GenFunc}{}{\mcl{C}}
-To properly describe $\K$-linear maps between tensor powers of the algebra $U$, 
-we define categories $\UMaps$, $\LinMaps$, and $\GenFunc$ with objects finite
-sets and morphisms:
+To efficiently describe $\K$-linear maps between tensor powers of the algebra
+$\CU$, we define categories $\UMaps$, $\LinMaps$, and $\GenFunc$ with objects
+finite sets and morphisms:
 \begin{align}
-        \Hom[\UMaps]JK &\defeq \Hom[\K]{U^{\otimes J}}{U^{\otimes K}}\\
+        \Hom[\UMaps]JK &\defeq \Hom[\K]{\CU^{\otimes J}}{\CU^{\otimes K}}\\
         \Hom[\LinMaps]JK &\defeq \Hom[\K]{\polyring\Q{z_J}}{\polyring\Q{z_K}}\\
         \Hom[\GenFunc]JK &\defeq \powerseries{\polyring\Q{z_K}}{ζ_J}
 \end{align}
