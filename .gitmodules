@@ -1,3 +1,6 @@
 [submodule "KnotTheory"]
 	path = KnotTheory
 	url = git@github.com:phro/KnotTheory
+[submodule "GDO"]
+	path = GDO
+	url = git@github.com:phro/GDO
