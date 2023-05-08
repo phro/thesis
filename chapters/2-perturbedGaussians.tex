@@ -438,14 +438,37 @@ in \cref{sec:algebraic-definitions} all have the form of a perturbed Gaußian.
 Namely:
 
 \begin{align}
-        \Gen*{\mult^{ij}_{k}} &= \label{eq:gen-mult}
-        \\ \Gen*{\unit_{i}} &=\label{eq:gen-unit}
-        \\\Gen*{\comult^{i}_{jk}} &=\label{eq:gen-comult}
-        \\\Gen*{\counit^{i}} &=\label{eq:gen-counit}
-        \\\Gen*{\antipode^{i}_{i}} &=\label{eq:gen-antipode}
-        \\\Gen*{\Rmat_{ij}} &=\label{eq:gen-Rmat}
-        \\\Gen*{\spin_{i}} &=\label{eq:gen-spin}
-        \\\Gen*{\ribbon_{i}} &=\label{eq:gen-ribbon}
+        \Gen*{\mult^{ij}_{k}} &=\exp\pn*
+        {
+                (α_i + α_j)a_k +
+                (β_i + β_j + ξ_iη_j)b_k +
+                \pn*{\frac{ξ_i}{\A_j} + ξ_j} x_k+
+                \pn*{\frac{η_j}{\A_i}+ η_i }y_k
+        } \label{eq:gen-mult}
+        \\ \Gen*{\unit_{i}} &=1\label{eq:gen-unit}
+        \\\Gen*{\comult^{i}_{jk}} &=\exp\pn*{
+                β_i(b_j + b_k) +
+                α_i(a_j + a_k) +
+                η_i(y_j + y_k) +
+                ξ_i(x_j + x_k)
+        } \label{eq:gen-comult}
+        \\\Gen*{\counit^{i}} &=1\label{eq:gen-counit}
+        \\\Gen*{\antipode^{i}_{i}} &=\exp\pn*
+        {
+                - a_iα_i
+                - b_iβ_i 
+                - η_i\A_iy_i
+                - \A_iξ_ix_i
+                + η_i\A_iξ_ib_i
+        }
+        \label{eq:gen-antipode}
+        \\\Gen*{\Rmat_{ij}} &=\exp\pn*{
+                a_j b_i + \frac{B_i-1}{-b_i} y_i x_j 
+        }\label{eq:gen-Rmat}
+        \\\Gen*{\spin_{i}} &=\sqrt{B_i}\label{eq:gen-spin}
+        \\\Gen*{\ribbon_{i}} &=\sqrt{B_i}\exp\pn*{
+                a_i b_i + \frac{1-B_i}{b_i}x_iy_i
+        }\label{eq:gen-ribbon}
 \end{align}
 
 % TODO: complete
