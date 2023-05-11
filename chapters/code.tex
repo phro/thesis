@@ -4,18 +4,10 @@
 % stable website not likely to disappear in a few years).
 This is a Mathematica™ implementation by Bar-Natan and van der Veen in
 \cite{BV}, modified by the author.
-\begin{minted}{wolfram}
-setValue[value_,obj_,coord_]:=Module[
-        {b=Association@@obj},
-        b[coord] = value; Head[obj]@@Normal@b
-]
-
-(* PG[L, Q, P] = Perturbed Gaußian Pe^(L + Q) *)
-\end{minted}
 
 \section{Implementation of the trace}
 
-This is a Mathematica™ implementation of the trace.
+\input{./GDO/newVersion.tex}
 \begin{minted}[linenos=true]{wolfram}
 getConstLCoef::usage = "getConstLCoef[i][gdo] returns the terms in the L-portion of a GDO expression which are not a function of y[i], b[i], a[i], nor x[i]."
 getConstLCoef[i_][gdo_] :=
