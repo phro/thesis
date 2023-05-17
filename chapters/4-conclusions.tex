@@ -12,6 +12,55 @@ On all two-component links with at most $11$ crossings (a collection of size
 $914$), the trace map attains $878$ distinct values, while the MVA attains only
 $778$. However, the two invariants are incomparable in terms of their strength.
 
+The links $\link[a]51$ and $\link[a]{10}{43}$ are not distinguished by their
+partial traces, with both returning a value of:
+
+\begin{equation}
+        \pn*{
+                \pn*{
+                        \frac{B_1}{B_1^2 t_2 -2 B_1 t_2 +B_1+t_2}
+                }_{\pn*{\set{1},\set{2}}},
+                \pn*{
+                        \frac{B_2^{3/2}}{B_2^2 t_1 -2 B_2 t_1 +B_2+t_1}
+                }_{\pn*{\set{2},\set{1}}}
+}
+\end{equation}
+
+The values of these links under the \ac{MVA} are, however
+
+\begin{equation}
+        \frac{\left(B_1-1\right) \left(B_2-1\right)}{\sqrt{B_1} \sqrt{B_2}}
+        \text{ and }
+        -\frac{\left(B_1-1\right) \left(B_2-1\right) \left(B_1+B_2-1\right)
+        \left(B_2 B_1-B_1-B_2\right)}{B_1^{3/2} B_2^{3/2}}
+\end{equation}
+respectively.
+
+In the other direction, there are also pairs of links in the same fibre of the
+\ac{MVA} which this traced invariant can distinguish. In particular
+$\link[a]{5}{1}$ and $\link[n]{7}{2}$ both have the same value under the
+\ac{MVA}:
+\begin{equation}
+        \frac{\left(B_1-1\right) \left(B_2-1\right)}{\sqrt{B_1} \sqrt{B_2}}
+\end{equation}
+The trace yields the following values (respectively):
+\begin{align}
+\pn*{
+                \left(
+                        \frac{B_1}{B_1^2 t_2  -2 B_1 t_2  +B_1+t_2 
+                }\right)_{\pn{\set{1},\set{2}}}
+                ,\left(\frac{B_2^{3/2}}{B_2^2 t_1  -2 B_2 t_1  +B_2+t_1 
+        }\right)_{(\set{2},\set{1})}
+}\\
+        \pn*{
+          \left(\frac{B_1}{B_1^2 t_2  -2 B_1 t_2  +B_1+t_2 
+        }\right)_{\pn{\set{1},\set{2}}},\left(\frac{B_2^{5/2}}{B_2^2 t_1  -2 B_2 t_1  +B_2^2-B_2+t_1  +1}\right)_{\pn{\set{2},\set{1}}}} 
+\end{align}
+
+This example also serves to highlight that the information provided by leaving
+one strand open is not enough to recover the value of a different strand being
+left open.
+
 \section{Further work}
 While all other Hopf algebra operations in $U$ are expressed by \cite{BV} as
 perturbed Gaußians, the form in \cref{eq:trace_formula} does not to conform to
