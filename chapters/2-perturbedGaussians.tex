@@ -471,4 +471,25 @@ Namely:
         }\label{eq:gen-ribbon}
 \end{align}
 
-% TODO: complete
+\subsection{Notational conventions}
+
+The generating function of a tangle is not the entirety of this definition, for
+the additional data is the domain and codomain of the corresponding morphism.
+
+We will thereby write a morphism with domain $D$, codomain $C$, and generating
+function $f(ζ_{D}, z_{C})$ as $f(ζ_{D}, z_{C})^{D}_{C}$. 
+
+\begin{align}
+        Z(\knot31) &= \pn*{
+                \frac{1}{B_1^{-1} + 1 + B_1^1} 
+        }^{\emptyset}_{\set{1}}
+        = \inv{Δ(\knot31)}
+        \\Z(\knot[a]{11}{10}) &= \pn*{
+                \frac{1}
+                {2B_1^{-3}-11B_1^{-2}+25B_1^{-1}-31+25B_1-11B_1^2+2B_1^3}
+        }^{\emptyset}_{\set{1}}
+        = \inv{Δ(\knot[a]{11}{10})}
+\end{align}
+
+Since each tangle is expressed as an object, the domains in these examples are
+empty.
