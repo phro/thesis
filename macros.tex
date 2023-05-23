@@ -345,5 +345,10 @@
 \ProvideDocumentCommand{\tangle}{}{\msc T}
 \ProvideDocumentCommand{\RVT}{}{\msc{T}^{\text{rv}}}
 \ProvideDocumentCommand{\A}{}{\msc{A}}
-\ProvideDocumentCommand{\knot}{omm}{K_{#2\text{#1}#3}}
-\ProvideDocumentCommand{\link}{omm}{L_{#2\text{#1}#3}}
+\ProvideDocumentCommand{\tanglename}{momm}{#1_{
+                #3%
+                \IfValueTF{#2}{\text{#2}}{,}%
+                #4
+}}
+\newcommand{\knot}{\tanglename{K}} 
+\newcommand{\link}{\tanglename{L}} 
