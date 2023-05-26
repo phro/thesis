@@ -267,38 +267,42 @@ function in (the square root of) $B_i$.
 \end{aligned}\end{equation}
 where $μ\defeq (1-\Exp{-α})\bz_i$.
 \end{theorem}
-Let us compute the trace of \cref{eq:sample_GDO}. For clarity, we will put bars
-over the coinvariants variables $a_i$ and $z_i$, as they do not play a role in
-the contraction.
-\begin{equation}\begin{aligned}\label{eq:trace_on_gaussian_computation}
-        &\contraction{
-                P(B_i)
-                \Exp{c + α a_i + β b_i + ξ(b_i) x_i + η(b_i)y_i + λ(b_i)x_i y_i}
-                \trace^i
-        }_{v_i}\\
-        &= \contraction{
-                P(B_i)
-                \Exp{c + β b_i + ξ(b_i) x_i + η(b_i)y_i + λ(b_i)x_i y_i
-                +η_iξ_i\bz_i+β_i(1-\Exp{-α_i})\bz_i}
-                \Exp{α a_i + α_i\ba_i}
-        }_{v_i}\\
-        &= \Exp{α\ba_i}\contraction{
-                P(B_i)
-                \Exp{c + ξ(b_i) x_i + η(b_i)y_i + λ(b_i)x_i y_i
-                +η_iξ_i\bz_i}
-                \Exp{β b_i +β_i(1-\Exp{-α})\bz_i}
-        }_{b_i, x_i, y_i}\\
-        \alignedintertext{In what follows, we let $μ\defeq (1-\Exp{-α})\bz_i$:}
-        &= \Exp{c+α\ba_i+βμ}P(\Exp{-μ})\contraction{
-                \Exp{η(μ)y_i}
-                \Exp{(ξ(μ) + λ(μ)y_i)x_i + ξ_iη_i\bz_i}
-        }_{x_i, y_i}\\
-        &= \Exp{c+α\ba_i+βμ}P(\Exp{-μ})\contraction{
-                \Exp{η(μ)y_i+ξ(μ)\bz_iη_i + λ(μ)\bz_iη_iy_i}
-        }_{y_i}\\
-        &= \frac{P(\Exp{-μ})}
+\begin{proof}
+        Let us compute the trace of \cref{eq:sample_GDO}. For clarity, we will
+        put bars over the coinvariants variables $a_i$ and $z_i$, as they do not
+        play a role in the contraction.
+        \begin{equation}\begin{aligned}\label{eq:trace_on_gaussian_computation}
+                &\contraction{
+                        P(B_i)
+                        \Exp{c + α a_i + β b_i + ξ(b_i) x_i + η(b_i)y_i + λ(b_i)x_i y_i}
+                        \trace^i
+                }_{v_i}\\
+                &= \contraction{
+                        P(B_i)
+                        \Exp{c + β b_i + ξ(b_i) x_i + η(b_i)y_i + λ(b_i)x_i y_i
+                        +η_iξ_i\bz_i+β_i(1-\Exp{-α_i})\bz_i}
+                        \Exp{α a_i + α_i\ba_i}
+                }_{v_i}\\
+                &= \Exp{α\ba_i}\contraction{
+                        P(B_i)
+                        \Exp{c + ξ(b_i) x_i + η(b_i)y_i + λ(b_i)x_i y_i
+                        +η_iξ_i\bz_i}
+                        \Exp{β b_i +β_i(1-\Exp{-α})\bz_i}
+                }_{b_i, x_i, y_i}\\
+                \alignedintertext{
+                        In what follows, we let $μ\defeq (1-\Exp{-α})\bz_i$:
+                }
+                &= \Exp{c+α\ba_i+βμ}P(\Exp{-μ})\contraction{
+                        \Exp{η(μ)y_i}
+                        \Exp{(ξ(μ) + λ(μ)y_i)x_i + ξ_iη_i\bz_i}
+                }_{x_i, y_i}\\
+                &= \Exp{c+α\ba_i+βμ}P(\Exp{-μ})\contraction{
+                        \Exp{η(μ)y_i+ξ(μ)\bz_iη_i + λ(μ)\bz_iη_iy_i}
+                }_{y_i}\\
+                &= \frac{P(\Exp{-μ})}
                 {1-λ(μ)\bz_i}\Exp{c+α\ba_i+βμ+\frac{η(μ)ξ(μ)\bz_i}{1-λ(μ)\bz_i}}
-\end{aligned}\end{equation}
+        \end{aligned}\end{equation}
+\end{proof}
 
 We point out that the outcome of this computation is not guaranteed to be a
 Gaußian. This puts a limitation on the applicability of this formula to links
