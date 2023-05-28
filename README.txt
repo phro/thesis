@@ -1,3 +1,5 @@
+The PhD thesis for Jesse Frohlich. This thesis uses:
+
 A Thesis Template
 for the Department of Mathematics, University of Toronto
 Copyright (C) 2019 Fabian Parsch
