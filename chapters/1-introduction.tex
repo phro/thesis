@@ -17,7 +17,7 @@ Pure tensors in this notation will be written with subscripts and the $\otimes$
 will be suppressed:
 $(v_1)_{i_1}(v_2)_{i_2}\cdots(v_n)_{i_n} \in V^{\otimes\set{i_1,\dots,i_n}}$.
 Observe that with labelled factors, the order the factors are written in does
-not matter: In $V^{\otimes{1,2}}$, we have $x_1y_2 = y_2x_1$.
+not matter: In $V^{\otimes\set{1,2}}$, we have $x_1y_2 = y_2x_1$.
 
 Next, given a map
 $\map {T} {V^{\otimes\set{j_1,\dots,j_s}}} {V^{\otimes\set{i_1,\dots,i_r}}}$
@@ -40,7 +40,7 @@ arbitrary finite set $S$ disjoint from the $j_k$'s and the $i_k$'s:
                 \item We denote (multi)linear functionals with only superscripts:
                         $\map {ϕ} {V^{\otimes S}} {\K \iso V^{\otimes
                         \emptyset}}$ will be written $ϕ^S$ (with a linear order
-                        put on $S$).
+                        on $S$).
                 \item Elements $v\in V^{\otimes S}$ will be interpreted as a map
                         $\map {v} {\K} {V^{\otimes S}}$ written with a (linearly
                         ordered) subscript: $v_S$ to denote which factors the
@@ -51,8 +51,10 @@ arbitrary finite set $S$ disjoint from the $j_k$'s and the $i_k$'s:
                 \item When only one index is present in a subscript or
                         superscript, and its omission does not introduce an
                         ambiguity in an expression, then it may be omitted to
-                        improve readability.
-                      
+                        improve readability. For instance, a map $\map {ϕ}
+                        {V^{\otimes\set{1,2}}} {V^{\otimes\set{3}}}$ may be
+                        written as $ϕ^{1,2}$, with the canonical isomorphism
+                        $V\iso V^{\otimes\set{*}}$ being suppressed.
 \end{itemize}
 \end{remark}
 
