@@ -64,11 +64,12 @@ arbitrary finite set $S$ disjoint from the $j_k$'s and the $i_k$'s:
 \ProvideDocumentCommand{\CC}{}{\msc C}
 \ProvideDocumentCommand{\MM}{}{A}
 
-Some of the monoidal categories we will work with are not Cartesian.
-Additionally, the ones we will work with are best suited to their factors being
-labelled by finite sets. For the purpose of representing them clearly, we
-introduce a notation put forth by Bar-Natan: consider an object $\MM$ in a
-monoidal category $\CC$. Then:
+Some of the monoidal categories we will work with are not Cartesian. (In fact,
+some of our objects will be neither monoidal nor categories, though this
+generalization is described in \cref{sec:meta-objects}.) Additionally, the ones
+we will work with are best suited to their factors being labelled by finite
+sets. For the purpose of representing them clearly, we introduce a notation put
+forth by Bar-Natan: consider an object $\MM$ in a monoidal category $\CC$. Then:
 \begin{itemize}
         \item Monoidal powers of $\MM$ are indexed by finite sets $S$, and
                 are to be written $\MM_S$.
@@ -129,7 +130,7 @@ The two extreme cases of this definition are:
 \end{remark}
 %TODO: add a proof of associativity? (Likely not necessary.)
 
-\section{Meta-objects}
+\section{Meta-objects}\label{sec:meta-objects}
 
 The notion of an \enquote{-object} in a category (for example, a monoid object
 or an algebra object) is a useful way of generalizing an algebraic structure to
