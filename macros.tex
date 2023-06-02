@@ -149,7 +149,11 @@
                 \DeclareMathOperator{\Lie}{Lie} % Lie algebra
 
         %% Universal enveloping algebra
-                \ProvideDocumentCommand{\uea}{O{}m}{\mathfrak{U}_{#1}\pn{#2}}
+                \ProvideDocumentCommand{\uea}{sO{}m}{
+                        \mathfrak{
+                                \IfBooleanTF{#1}{\hat U}{U}
+                        }_{#2}\pn{#3}
+                }
 
 % Categories
         \ProvideDocumentCommand{\catname}{m}{\mathbf{#1}}
@@ -336,6 +340,7 @@
 
 \ProvideDocumentCommand{\fa}{}{\mfk{a}}
 \ProvideDocumentCommand{\Alg}{}{\fg}
+\ProvideDocumentCommand{\CUlong}{}{\uea*{\Sl_{2+}^0}}
 \ProvideDocumentCommand{\CU}{}{U}
 \ProvideDocumentCommand{\nn}{}{\mathbf{n}}
 \ProvideDocumentCommand{\Order}{}{\mathbb O}
