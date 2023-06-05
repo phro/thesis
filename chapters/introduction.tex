@@ -3,10 +3,10 @@
 
 \section{Tensor product notation}
 In what follows, we will extensively use tensor products, and more generally
-monoidal categories. As all our examples will involve trivial associators, it
-will be more convenient to label tensor factors with elements of a finite set
-rather than by their position in a linear order. We will put the label as a
-subscript on each factor. For a finite set $S = \set{i_1, \dots, i_n}$:
+monoidal categories. It will often be more convenient to label tensor factors
+with elements of a finite set rather than by their position in a linear order.
+We will put the label as a subscript on each factor. For a finite set
+$S = \set{i_1, \dots, i_n}$:
 \begin{equation}\label{eq:tensor_notation}
         V_S \defeq
         V^{\otimes S} \defeq
@@ -17,7 +17,8 @@ Pure tensors in this notation will be written with subscripts and the $\otimes$
 will be suppressed:
 $(v_1)_{i_1}(v_2)_{i_2}\cdots(v_n)_{i_n} \in V^{\otimes\set{i_1,\dots,i_n}}$.
 Observe that with labelled factors, the order the factors are written in does
-not matter: In $V^{\otimes\set{1,2}}$, we have $x_1y_2 = y_2x_1$.
+not matter: Given $x, y\in V$, in $V^{\otimes\set{1,2}}$, we have
+$x_1y_2 = y_2x_1$.
 
 Next, given a map
 $\map {T} {V^{\otimes\set{j_1,\dots,j_s}}} {V^{\otimes\set{i_1,\dots,i_r}}}$

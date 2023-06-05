@@ -63,7 +63,7 @@ Boston, MA 02111-1307, USA.
 
 #### Chapter: Introduction (Tensor products and Monoidal categories) ####
 - symmetric monoidal / strict monoidal categories (mention terminology like this).
-- [ ] Or, drop the entire statement about tensors.
+- [X] Or, drop the entire statement about tensors.
 - Scaring people away with fancy words is worse than hiding irrelevant
   terminology that an expert can connect with if they wish (cf. "associator", "braidor").
 - Linear orders on sets
