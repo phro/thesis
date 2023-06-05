@@ -55,7 +55,7 @@ Boston, MA 02111-1307, USA.
 
 #### Abstract ####
 - [X] Missing an executive summary; add to abstract or add an "executive summary" section.
-- [ ] Provide the reader with a one-paragraph summary of the results of my thesis
+- [X] Provide the reader with a one-paragraph summary of the results of my thesis
   - Create invariant
   - to our surprise, it is distinct from the MVA
   - the structure is richer than Gaußians
