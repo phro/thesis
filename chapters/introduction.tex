@@ -2,9 +2,65 @@
 \label{ch:intro}
 
 \section{Tensor product notation}
-In what follows, we will extensively use tensor products, and more generally
-monoidal categories. It will often be more convenient to label tensor factors
-with elements of a finite set rather than by their position in a linear order.
+In what follows, we will extensively use tensor products, tensor powers, and
+generalizations thereof. We begin by introducing the notation that will be used
+first for traditional tensor products, then for their generalizations.
+
+Let $V$ be a vector space (for the moment assumed to be finite dimensional).
+When working with a large tensor power $V^{\otimes n}$ of $V$, it will often be
+more convenient to label tensor factors with elements of a finite set $S$ (with
+$\ord S = n$) rather than by their position in a linear order.
+
+For example, consider the vector $u \otimes v \otimes w \in V^{\otimes 3}$. Let
+us choose an index set $S = \set{1,2,3}$. We then may equivalently write this
+vector by labelling each tensor factor with one of the elements of $S$, say
+$u_1v_2w_3$. Since the labels serve to distinguish the separate factors, this
+vector may equivalently be written as $u_1v_2w_3 = v_2u_1w_3 = w_3u_2u_1 \in
+V^{\otimes S}$. We will write the set $V^{\otimes S}$ with a subscript: $V_S$.
+We formalize the idea below:
+
+\begin{definition}[indexed tensor powers]
+        Let $V$ be a vector space and $S = \set{s_1,…, s_n}$ be a finite
+        set. We define the \defi{indexed tensor power} of $V$ to be the
+        collection of formal linear combinations of functions from $S$ to $V$
+        \begin{equation}
+                V_S \defeq \Span\set{\map {f} {S} {V}}/\sim
+        \end{equation}
+        subject to the standard multilinear relations:
+        \begin{enumerate}
+                \item For each $i$, we may factor out scalars:
+                        \begin{equation}
+                                \label{eq:tensor_scalar}
+                                \pn[\Big]{s \mapsto λ^{δ_{si}}f(s)} = λ \cdot f
+                        \end{equation}
+                \item For each $i\in S$ and $f, g \in V_S$ satisfying
+                        $f(i) = g(i) = v$, we have multi-additivity:
+                        \begin{equation}
+                                \label{eq:tensor_additive}
+                                f + g = \pn*{
+                                        s \mapsto \begin{cases}
+                                                v & \text{if $s = i$}\\
+                                                f(i) + g(i) & \text{otherwise}
+                                        \end{cases}
+                                }
+                        \end{equation}
+        \end{enumerate}
+\end{definition}
+
+In practice, we will write such functions $\map {f} {S} {V}$ with $f(s_i) = v_i$
+in the following way:
+\begin{equation}
+        \pn{v_{1}}_{s_1}
+        \pn{v_{2}}_{s_2} ⋯
+        \pn{v_{n}}_{s_n}
+        \defeq f
+\end{equation}
+With this notation, we may equivalently write \cref{eq:tensor_scalar} as
+\begin{equation}
+        (v_1)_{s_1}(v_2)_{s_2} ⋯(λv_i)_{s_i} ⋯(v_n)_{s_n} = 
+        λ\cdot(v_1)_{s_1}(v_2)_{s_2} ⋯(v_n)_{s_n}
+\end{equation}
+
 We will put the label as a subscript on each factor. For a finite set
 $S = \set{i_1, \dots, i_n}$:
 \begin{equation}\label{eq:tensor_notation}

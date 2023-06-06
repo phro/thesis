@@ -33,6 +33,9 @@
         \newcommand{\fracl}[2]{\left.{#1}\middle/{#2}\right.}
         \renewcommand{\boundary}{\partial}
         \newunicodechar{∂}{\ensuremath\partial}
+        \newunicodechar{⋯}{\ensuremath\cdots}
+        \newunicodechar{⋮}{\ensuremath\vdots}
+        \newunicodechar{…}{\ensuremath\dots}
 
 % Standard number sets.
         \newcommand{\N}{\mbb{N}}   % Natural
@@ -65,6 +68,7 @@
         \ProvideDocumentCommand{\Id}{m}{\id^{#1}_{#1}}
         \ProvideDocumentCommand{\dual}{m}{{#1}^*}
 
+        \DeclareMathOperator{\Span}{span}       % span
         \DeclareMathOperator{\nullity}{nullity} % nullity
         \DeclareMathOperator{\rank}{rank}       % rank
         \DeclareMathOperator{\trace}{tr}        % trace
