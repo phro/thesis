@@ -61,26 +61,12 @@ With this notation, we may equivalently write \cref{eq:tensor_scalar} as
         λ\cdot(v_1)_{s_1}(v_2)_{s_2} ⋯(v_n)_{s_n}
 \end{equation}
 
-We will put the label as a subscript on each factor. For a finite set
-$S = \set{i_1, \dots, i_n}$:
-\begin{equation}\label{eq:tensor_notation}
-        V_S \defeq
-        V^{\otimes S} \defeq
-        V_{i_1}\otimes V_{i_2}\otimes\dots\otimes V_{{i_n}} \iso V^{\otimes n}
-\end{equation}
-In particular, $V_{\emptyset} = \K$ is the base field of $V$.
-Pure tensors in this notation will be written with subscripts and the $\otimes$
-will be suppressed:
-$(v_1)_{i_1}(v_2)_{i_2}\cdots(v_n)_{i_n} \in V^{\otimes\set{i_1,\dots,i_n}}$.
-Observe that with labelled factors, the order the factors are written in does
-not matter: Given $x, y\in V$, in $V^{\otimes\set{1,2}}$, we have
-$x_1y_2 = y_2x_1$.
+Next, we introduce notation for maps between tensor powers so that we may
+unambiguously refer to appropriate tensor factors while defining morphisms. Let
+$D$ and $C$ be finite sets, and $\map {T} {V_{D}} {V_{C}}$. We will denote $T$
+by $T^{D}_{C}$. It is important to note that when $T$ is not symmetric in its
+arguments, the order of the indices in this notation matters.
 
-Next, given a map
-$\map {T} {V^{\otimes\set{j_1,\dots,j_s}}} {V^{\otimes\set{i_1,\dots,i_r}}}$
-between tensor powers of $V$, we denote $T$ by
-$T^{j_1,\dots,j_s}_{i_1,\dots, i_r}$. It is important to note that the order of
-the indices in this notation matters for nonsymmetric tensors.
 Furthermore, this same symbol will denote extensions by the identity to any
 arbitrary finite set $S$ disjoint from the $j_k$'s and the $i_k$'s:
 \begin{equation}\label{eq:tensor_extend}
