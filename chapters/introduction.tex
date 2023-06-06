@@ -87,15 +87,12 @@ arguments, the order of the indices in this notation matters.
 \end{example}
 
 Furthermore, this same symbol will denote extensions by the identity to any
-arbitrary finite set $S$ disjoint from the $j_k$'s and the $i_k$'s:
+arbitrary finite set $S$ disjoint from $D$ and $C$.
 \begin{equation}\label{eq:tensor_extend}
-        \mapdef {T^{j_1,\dots,j_s}_{i_1,\dots, i_r}}
-                {V^{\otimes\set{j_1,\dots,j_s}\sqcup S}}
-                {V^{\otimes\set{i_1,\dots,i_r}\sqcup S}}
-                {v_{j_1,\dots,j_s}\otimes w_S} 
-                {\pn*{Tv_{j_1,\dots,j_s}}\otimes w_S} 
+        \mapdef {T^{D}_{C}} {V_{D \sqcup S}}  {V_{C \sqcup S}}
+                         {v_{D}\otimes w_S} {\pn*{T^{D}_{C}v_{D}}\otimes w_S} 
 \end{equation}
-(Here, $w_S\in V^{\otimes S}$.)
+(Here, $w_S\in V_{S}$.)
 \begin{remark}
 There are three special cases with this notation:
 \begin{itemize}
