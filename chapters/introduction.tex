@@ -73,6 +73,19 @@ $D$ and $C$ be finite sets, and $\map {T} {V_{D}} {V_{C}}$. We will denote $T$
 by $T^{D}_{C}$. It is important to note that when $T$ is not symmetric in its
 arguments, the order of the indices in this notation matters.
 
+\begin{example}
+        Let $V = \R^2$, and $T^{a, b}_{c}$ defined by
+        \begin{equation}
+                \begin{aligned}
+                        T^{a, b}_{c}\pn*{\vec v_a(\vec e_1)_b} &= \vec 0_c\\
+                        T^{a, b}_{c}\pn*{\vec v_a(\vec e_2)_b} &= \vec v_c
+                \end{aligned}
+        \end{equation}
+        This function zeros out vectors whose $b$-component is $\vec e_1$. If we
+        wish to define an analogous function for the $a$-component, we may
+        simply reverse the order of the superscript: $T^{b, a}_{c}$.
+\end{example}
+
 Furthermore, this same symbol will denote extensions by the identity to any
 arbitrary finite set $S$ disjoint from the $j_k$'s and the $i_k$'s:
 \begin{equation}\label{eq:tensor_extend}
