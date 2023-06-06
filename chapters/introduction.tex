@@ -59,42 +59,61 @@ There are three special cases with this notation:
 \end{itemize}
 \end{remark}
 
-\subsection{Notation extension to non-Cartesian monoidal categories}
+\subsection{Notation extension beyond monoidal categories}
 \label{sec:monoidal_notation}
 
 \ProvideDocumentCommand{\CC}{}{\msc C}
 \ProvideDocumentCommand{\MM}{}{A}
 
-Some of the monoidal categories we will work with are not Cartesian. (In fact,
-some of our objects will be neither monoidal nor categories, though this
-generalization is described in \cref{sec:meta-objects}.) Additionally, the ones
-we will work with are best suited to their factors being labelled by finite
-sets. For the purpose of representing them clearly, we introduce a notation put
-forth by Bar-Natan: consider an object $\MM$ in a monoidal category $\CC$. Then:
-\begin{itemize}
-        \item Monoidal powers of $\MM$ are indexed by finite sets $S$, and
-                are to be written $\MM_S$.
-        \item Homsets in $\CC$ between monoidal powers of $\MM$ are indexed by
-                pairs of finite sets $D$, $C$. Morphisms in these homsets will
-                be denoted by $\map{ϕ^D_C}{\MM_D}{\MM_C}$.
-        \item Composition of morphisms $ϕ^{D_1}_{C_1}$ and
-                $ψ^{D_2}_{C_2}$ is defined when $D_2 = C_1$, and is
-                written with the following concatenation operator: 
-                $\map{ϕ^{D_1}_{C_1}\then ψ^{D_2}_{C_2}}{\msc
-                C_{D_1}}{\CC_{C_2}}$.
-        \item The monoidal product
-                $\map {\otimes} {\CC \times \CC}{\CC}$ satisfies
-                $\MM_{S} \otimes \MM_{T} = \MM_{S \sqcup T}$. Given
-                morphisms $ϕ^{D_1}_{C_1}$ and $ψ^{D_2}_{C_2}$ such that
-                $D_1 \cap D_2 = \emptyset = C_1 \cap C_2$, we have a product
-                morphism $\map {ϕ \otimes ψ} {\CC_{D_1 \sqcup D_2}}
-                {\CC_{C_1\sqcup C_2}}$.\footnote{This encodes the
-                        data of a strict monoidal category with the
-                        linear order of factors replaces with indices
-                        from a finite set.
-                } We will write such products with concatenation:
-                $ϕ^{D_1}_{C_1}ψ^{D_2}_{C_2}$.
-\end{itemize}
+While the above notation is helpful when working with vector spaces, we are
+interested in also using the same notation to describe a tangle. Unfortunately,
+our formulation of tangles (introduced in
+\cref{sec:topological_interpretations}) is neither a tensor product nor a
+monoidal category, though it shares many similarities with both concepts. In
+particular, the domains and codomains of the maps we have discussed so far have
+only depended on the index set. With this observation, we replace the notaion of
+tensor powers with that of a so-called \defi{meta-object}.
+
+\begin{definition}[Meta-object]
+        Let $\CC$ be a category. A \defi{meta-object} in $\CC$ is a
+        functor\footnote{%
+                This generalizes the map $S \mapsto V^{\otimes S}$.
+        } % TODO: move from footnotes to main content.
+        \begin{equation}
+                \mapdef {\MM} {\FinSet} {\CC}
+                              {S}       {\MM_S}
+        \end{equation}
+        together with a collection of finite-set-indexed morphisms
+        $\map {ϕ[S]} {\MM_{C\sqcup S}} {\MM_{D\sqcup S}}$.\footnote{%
+                This generalizes the extension-by-indentity $ϕ \otimes \Id{S}$.
+        } % TODO: move from footnotes to main content.
+\end{definition}
+
+we define a subcategory of $\CC$ whose objects are the collection
+$\set{\MM_S}_S$.\footnote{%
+        We write the image of $\MM$ with subscripts to remind ourselves of the
+        map derived from a vector space $V$, namely $S \mapsto V^{\otimes S}$.
+} The homsets of this subcategory are indexed by pairs of finite sets $D$,
+$C$. Morphisms in these homsets will be denoted by $\map{ϕ^D_C}{\MM_D}{\MM_C}$.
+
+Composition of morphisms $ϕ^{D_1}_{C_1}$ and $ψ^{D_2}_{C_2}$ is defined when
+$C_1 = D_2$, and is written with the following concatenation operator:
+$\map{
+ϕ^{D_1}_{C_1}\then ψ^{D_2}_{C_2}
+=
+ψ^{D_2}_{C_2}\circ ϕ^{D_1}_{C_1}
+}{\msc C_{D_1}}{\CC_{C_2}}$.\footnote{We denote left-to-right composition with
+the \enquote{$\then$} symbol: $f \then g \defeq g \circ f$. Writing function
+composition in this order assists with readability when there are many functions
+to apply.}
+
+We also generalize the notion of the monoidal product: the map
+$\map {\otimes} {\CC \times \CC}{\CC}$ satisfies
+$\MM_{S} \otimes \MM_{T} = \MM_{S \sqcup T}$. Given morphisms $ϕ^{D_1}_{C_1}$
+and $ψ^{D_2}_{C_2}$ such that $D_1 \cap D_2 = \emptyset = C_1 \cap C_2$, we have
+a product morphism
+$\map {ϕ^{D_1}_{C_1}ψ^{D_2}_{C_2} \defeq ϕ \otimes ψ} {\CC_{D_1 \sqcup D_2}}
+{\CC_{C_1\sqcup C_2}}$, which we write with concatenation.
 
 \begin{remark}
         Given a morphism $ϕ^D_C$ and a finite set $S$, there is an extension of $ϕ^D_C$
