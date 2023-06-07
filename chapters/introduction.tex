@@ -175,20 +175,17 @@ $\map {ϕ^{D_1}_{C_1}ψ^{D_2}_{C_2} \defeq ϕ \otimes ψ} {\CC_{D_1 \sqcup D_2}}
 {\CC_{C_1\sqcup C_2}}$, which we write with concatenation.
 
 \begin{remark}
-        Given a morphism $ϕ^D_C$ and a finite set $S$, there is an extension of $ϕ^D_C$
-        to a morphism
-        $\map {\overline{ϕ}} {\msc C_{D\sqcup S}} {\msc C_{C \sqcup S}}$ given
-        by $ϕ^D_C \id^S_S$. To make expressions easier to read, in this paper we
-        will introduce this extension implicitly in the following context: given
-        morphisms $ϕ^{D_1}_{C_1}$ and $ψ^{D_2}_{C_2}$ such that
+        To make expressions easier to read, in this paper we
+        will introduce the domain extension implicitly in the following context:
+        given morphisms $ϕ^{D_1}_{C_1}$ and $ψ^{D_2}_{C_2}$ such that
         $D_2 \subseteq C_1$ and
         $C_2 \cap (C_1\setminus D_2)=\emptyset=D_1\cap(D_2 \setminus C_1)$, we
         define:
         \begin{equation}\label{eq:composition_extension}
                 ϕ^{D_1}_{C_1} \then ψ^{D_2}_{C_2}
                 \defeq 
-                        \pn*{\Id{{D_2\setminus C_1}}ϕ^{D_1}_{C_1}} \then
-                        \pn*{ψ^{D_2}_{C_2}\Id{C_1\setminus D_2}}
+                {ϕ^{D_1}_{C_1}[D_2\setminus C_1]} \then
+                {ψ^{D_2}_{C_2}[C_1\setminus D_2]}
         \end{equation}
 \end{remark}
 The two extreme cases of this definition are:
