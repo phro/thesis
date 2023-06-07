@@ -79,16 +79,16 @@ arguments, the order of the indices in this notation matters.
         \end{equation}
         This function zeros out vectors whose $b$-component is $\vec e_1$. If we
         wish to define an analogous function for the $a$-component, we may
-        simply reverse the order of the superscript: $T^{b, a}_{c}$.
+        simply reverse the order of the superscript: $T^{b, a}_{c}$, which sends
+        $\vec v_b(\vec e_1)_a = (\vec e_1)_a\vec v_b$ to $\vec 0_c$ and
+        $\vec v_b(\vec e_2)_a$ to $\vec v_c$.
 \end{example}
 
-Furthermore, this same symbol will denote extensions by the identity to any
-arbitrary finite set $S$ disjoint from $D$ and $C$.
-\begin{equation}\label{eq:tensor_extend}
-        \mapdef {T^{D}_{C}} {V_{D \sqcup S}}  {V_{C \sqcup S}}
-                         {v_{D}\otimes w_S} {\pn*{T^{D}_{C}v_{D}}\otimes w_S} 
-\end{equation}
-(Here, $w_S\in V_{S}$.)
+Finally, we point out that any morphism $T^D_C$ may be extended to one with
+larger domain and codomain, which we write
+$T^{D}_{C}[S] \defeq T^D_C \otimes \Id{S}$. For any $v_D \in V_{D}$ and $w_S\in
+V_{S}$, it acts by
+$\pn*{T^{D}_{C}[S]}\pn{v_{D}\otimes w_S} = \pn*{T^{D}_{C}v_{D}}\otimes w_S$.
 \begin{remark}
 There are three special cases with this notation:
 \begin{itemize}
