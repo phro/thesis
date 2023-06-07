@@ -127,13 +127,16 @@ tensor powers with that of a so-called \defi{meta-object}.
 
 \begin{definition}[Meta-object]
         Let $\CC$ be a category. A \defi{meta-object} in $\CC$ is subcategory
-        with images indexed by the functor
+        with objects indexed by the functor
         \begin{equation}
                 \mapdef {\MM} {\FinSet} {\Object(\CC)}
                               {S}       {\MM_S}
         \end{equation}
-        For each morphism $ϕ^{D}_{C}$, there is a finite-set-indexed morphism
-        $\map {ϕ[\curry{}]} {\FinSet} {\HomOp(\CC)}$
+        The homsets of this subcategory are indexed by pairs of finite sets $D$,
+        $C$. Morphisms in these homsets will be denoted by
+        $\map{ϕ^D_C}{\MM_D}{\MM_C}$.
+        For each such morphism $ϕ^{D}_{C}$, there is a finite-set-indexed
+        morphism $\map {ϕ^{D}_{C}[\curry{}]} {\FinSet} {\HomOp(\CC)}$
         such that 
         \begin{enumerate}
                 \item $\map {ϕ[\curry{S}]}{\MM_{C\sqcup S}} {\MM_{D\sqcup S}}$
