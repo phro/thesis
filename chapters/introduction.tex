@@ -239,7 +239,7 @@ Traditionally, the data of a group object are the following:
 \end{itemize}
 Further, the data of these relations is extended to higher powers of $G$ by
 acting on other components by the identity:
-\begin{equation}
+\begin{equation}\label{eq:extend_group_identity}
 \begin{tikzcd}[column sep=large]
         G^{n+3}
                 \rar["\mult \times \id^{n+1}"]
@@ -266,13 +266,10 @@ meta-group structure:
         \item Instead of implicitly including extensions of morphisms to higher
                 powers by the identity, we will parametrize the extension by
                 finite sets. For example, multiplication $\map {\mult^{ij}_{k}}
-                {G_{\set{i,j}}} {G_{\set{k}}}$\footnote{This notation is defined
-                        in \cref{eq:tensor_notation}, and is here extended from
-                        tensor products to Cartesian products.
-                } will be viewed as a family of maps
+                {G_{\set{i,j}}} {G_{\set{k}}}$ generates a family of maps
                 $\map {\mult^{ij}_k[S]} {G_{\set{i,j}\sqcup S}}
                 {G_{\set{k}\sqcup S}}$, each of which must satisfy the relations
-                of the group object.
+                of the group object such as \cref{eq:extend_group_identity}.
 \end{enumerate}
 This way of packaging the data leads us to a direct generalization: a
 \defi{meta-group}-object in $\CC$ is a collection of objects $G_S\in \CC$
