@@ -361,11 +361,13 @@ extending the assignment $\unit_{i}(1) = \one_{i}$.
 There is also the dual notion of a \emph{coalgebra}, which arises by reversing
 the arrows in \cref{eq:cd_mult,eq:cd_unit}:
 
-\begin{definition}[coalgebra]
-        A \defi{colagebra} is a vector space $C$ over a field $\K$ with a
-        \defi{comultiplication} $\map {\comult} {C} {C\otimes C}$ which is
-        \defi{coassociative} \eqref{eq:cd_comult} and a \defi{counit}, which is
-        a map $\counit\colon A\to k$ satisfying \eqref{eq:cd_counit}.
+\begin{definition}[meta-coalgebra]
+        A \defi{meta-colagebra} (or \defi{meta-comonoid}) is a collection 
+        $\set{C_X}_X$ together with a \defi{comultiplication} $\map
+        {\comult^{i}_{jk}} {C_{\set{i}}} {C_{\set{j,k}}}$ which is
+        \defi{coassociative} (\cref{eq:cd_comult}) and a \defi{counit}, which is a
+        map $\map {\counit^{i}} {A_{i}} {A_{\emptyset}}$ satisfying
+        \cref{eq:cd_counit}.
 \end{definition}
 \nopagebreak
 \begin{multicols}{2}\noindent
