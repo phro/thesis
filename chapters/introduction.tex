@@ -110,7 +110,7 @@ There are three special cases with this notation:
 \end{itemize}
 \end{remark}
 
-\subsection{Notation extension beyond monoidal categories}
+\subsection{Notation extension beyond vector spaces}
 \label{sec:monoidal_notation}
 
 \ProvideDocumentCommand{\CC}{}{\msc C}
@@ -122,23 +122,28 @@ our formulation of tangles (introduced in
 \cref{sec:topological_interpretations}) is neither a tensor product nor a
 monoidal category, though it shares many similarities with both concepts. In
 particular, the domains and codomains of the maps we have discussed so far have
-only depended on the index set. With this observation, we replace the notaion of
+only depended on the index set. With this observation, we replace the notation of
 tensor powers with that of a so-called \defi{meta-object}.
 
 \begin{definition}[Meta-object]
-        Let $\CC$ be a category. A \defi{meta-object} in $\CC$ is a
-        functor\footnote{%
-                This generalizes the map $S \mapsto V^{\otimes S}$.
-        } % TODO: move from footnotes to main content.
+        Let $\CC$ be a category. A \defi{meta-object} in $\CC$ is subcategory
+        with images indexed by the functor
         \begin{equation}
-                \mapdef {\MM} {\FinSet} {\CC}
+                \mapdef {\MM} {\FinSet} {\Object(\CC)}
                               {S}       {\MM_S}
         \end{equation}
-        together with a collection of finite-set-indexed morphisms
-        $\map {ϕ[S]} {\MM_{C\sqcup S}} {\MM_{D\sqcup S}}$.\footnote{%
-                This generalizes the extension-by-indentity $ϕ \otimes \Id{S}$.
-        } % TODO: move from footnotes to main content.
+        For each morphism $ϕ^{D}_{C}$, there is a finite-set-indexed morphism
+        $\map {ϕ[\curry{}]} {\FinSet} {\HomOp(\CC)}$
+        such that 
+        \begin{enumerate}
+                \item $\map {ϕ[\curry{S}]}{\MM_{C\sqcup S}} {\MM_{D\sqcup S}}$
+                \item $ϕ[\emptyset] = ϕ$
+                \item $\pn*{ϕ[S]}[T] = ϕ[S \sqcup T]$
+        \end{enumerate}
 \end{definition}
+
+Note that the functor generalizes the map $S \mapsto V^{\otimes S}$, while the
+morphisms generalize the extension-by-indentity $ϕ \otimes \Id{S}$.
 
 we define a subcategory of $\CC$ whose objects are the collection
 $\set{\MM_S}_S$.\footnote{%
