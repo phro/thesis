@@ -114,6 +114,8 @@ Additionally, given $ϕ^{D_1}_{C_1}$ and $ψ^{D_2}_{C_2}$ such that $D_1 \cap D_
 $\map {ϕ^{D_1}_{C_1}ψ^{D_2}_{C_2} \defeq ϕ \otimes ψ} {V_{D_1 \sqcup D_2}}
 {V_{C_1\sqcup C_2}}$, which we also write with concatenation.
 
+\section{Meta-objects}\label{sec:meta-objects}
+
 \subsection{Notation extension beyond vector spaces}
 \label{sec:monoidal_notation}
 
@@ -205,20 +207,11 @@ The two extreme cases of this definition are:
 \end{remark}
 %TODO: add a proof of associativity? (Likely not necessary.)
 
-\section{Meta-objects}\label{sec:meta-objects}
+\subsection{Defining a meta-group}
 
-The notion of an \enquote{-object} in a category (for example, a monoid object
-or an algebra object) is a useful way of generalizing an algebraic structure to
-a different mathematical context. For instance, in the category of topological
-spaces, one is able to talk about groups whose operations are continuous.
-However, this notion only makes sense when we are working with a Cartesian
-category (or more generally a monoidal category).
-
-One of the main characters of this story does not fit into this mould, so we
-will introduce a generalization of this notion by way of example:
-
-Consider a group object. Traditionally, the data of a group object are the
-following:
+To make the above definition more concrete, we will go through the process of
+defining a meta-group, which is a generalization of a group object.
+Traditionally, the data of a group object are the following:
 \begin{itemize}
         \item An object $G$ in a category $\CC$.
         \item A morphism $\map {\mult} {G\times G} {G}$ called
@@ -259,7 +252,8 @@ acting on other components by the identity:
 \end{tikzcd}
 \end{equation}
 
-Consider now two changes in how we package these data:
+Let us alter how we package these data so as to maximize the clarity of the
+meta-group structure:
 \begin{enumerate}
         \item Instead of linear orders of factors $G \times \dots \times G$, we
                 will index factors by a finite set $S$, writing the power $G_S$
