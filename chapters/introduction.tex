@@ -256,8 +256,8 @@ Let us alter how we package these data so as to maximize the clarity of the
 meta-group structure:
 \begin{enumerate}
         \item Instead of linear orders of factors $G \times \dots \times G$, we
-                will index factors by a finite set $S$, writing it $G_S \defeq
-                \set{\map {f} {S} {G}}$ in the style of
+                will index factors by a finite set $X$, writing it $G_X \defeq
+                \set{\map {f} {X} {G}}$ in the style of
                 \cref{eq:indexed_tensor}.
         \item The indexed factors will determine how the group operations act.
                 For instance, multiplication of factor $i$ and $j$ together,
@@ -265,10 +265,11 @@ meta-group structure:
                 $\map {\mult^{ij}_{k}} {G_{\set{i,j}}} {G_{\set{k}}}$.
         \item Instead of implicitly including extensions of morphisms to higher
                 powers by the identity, we will parametrize the extension by
-                finite sets. For example, multiplication $\map {\mult^{ij}_{k}}
+                finite sets by $ϕ^{D}_{C}[X] \defeq ϕ^{D}_{C}\times\Id{X}$.
+                For example, multiplication $\map {\mult^{ij}_{k}}
                 {G_{\set{i,j}}} {G_{\set{k}}}$ generates a family of maps
-                $\map {\mult^{ij}_k[S]} {G_{\set{i,j}\sqcup S}}
-                {G_{\set{k}\sqcup S}}$, each of which must satisfy the relations
+                $\map {\mult^{ij}_k[X]} {G_{\set{i,j}\sqcup X}}
+                {G_{\set{k}\sqcup X}}$, each of which must satisfy the relations
                 of the group object such as \cref{eq:extend_group_identity}.
 \end{enumerate}
 This way of packaging the data leads us to the following generalization:
@@ -299,8 +300,6 @@ A \defi{meta-group} in $\CC$ is the following data:
                 \end{equation}
 \end{itemize}
 \end{definition}
-We obtain traditional objects by further requiring that each family of morphisms
-$ϕ[S]$ satisfy $ϕ[S] = ϕ\bk{\emptyset} \times \id_S$. 
 
 Several examples of well-known algebraic structures presented as meta-objects
 are given in \cref{sec:alg_defs}.
