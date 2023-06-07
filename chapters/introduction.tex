@@ -23,7 +23,7 @@ We formalize the idea below:
         Let $V$ be a vector space and $S = \set{s_1,…, s_n}$ be a finite
         set. We define the \defi{indexed tensor power} of $V$ to be the
         collection of formal linear combinations of functions from $S$ to $V$
-        \begin{equation}
+        \begin{equation}\label{eq:indexed_tensor}
                 V_S \defeq \Span\set{\map {f} {S} {V}}/\sim
         \end{equation}
         subject to the standard multilinear relations, namely multi-additivity
@@ -256,8 +256,9 @@ Let us alter how we package these data so as to maximize the clarity of the
 meta-group structure:
 \begin{enumerate}
         \item Instead of linear orders of factors $G \times \dots \times G$, we
-                will index factors by a finite set $S$, writing the power $G_S$
-                in the style of \cref{eq:tensor_notation}.
+                will index factors by a finite set $S$, writing it $G_S \defeq
+                \set{\map {f} {S} {G}}$ in the style of
+                \cref{eq:indexed_tensor}.
         \item Instead of implicitly including extensions of morphisms to higher
                 powers by the identity, we will parametrize the extension by
                 finite sets. For example, multiplication $\map {\mult^{ij}_{k}}
