@@ -156,31 +156,27 @@ tensor powers with that of a so-called meta-object:
 \end{definition}
 
 Note that the functor generalizes the map $S \mapsto V^{\otimes S}$, while the
-morphisms generalize the extension-by-indentity $ϕ \otimes \Id{S}$.
-
-we define a subcategory of $\CC$ whose objects are the collection
-$\set{\MM_S}_S$.\footnote{%
-        We write the image of $\MM$ with subscripts to remind ourselves of the
-        map derived from a vector space $V$, namely $S \mapsto V^{\otimes S}$.
-} The homsets of this subcategory are indexed by pairs of finite sets $D$,
-$C$. Morphisms in these homsets will be denoted by $\map{ϕ^D_C}{\MM_D}{\MM_C}$.
+morphisms generalize the extension-by-identity $ϕ \otimes \Id{S}$.
 
 Composition of morphisms $ϕ^{D_1}_{C_1}$ and $ψ^{D_2}_{C_2}$ is defined when
 $C_1 = D_2$, and is written with the following concatenation operator:
-$\map{
-ϕ^{D_1}_{C_1}\then ψ^{D_2}_{C_2}
-=
-ψ^{D_2}_{C_2}\circ ϕ^{D_1}_{C_1}
-}{\msc C_{D_1}}{\CC_{C_2}}$.\footnote{We denote left-to-right composition with
-the \enquote{$\then$} symbol: $f \then g \defeq g \circ f$. Writing function
-composition in this order assists with readability when there are many functions
-to apply.}
+\footnote{
+        We denote left-to-right composition with the \enquote{$\then$} symbol:
+        $f \then g \defeq g \circ f$. Writing function composition in this order
+        assists with readability when there are many functions to apply.
+}
+\begin{equation}
+        \map{
+                ϕ^{D_1}_{C_1}\then ψ^{D_2}_{C_2}
+                \defeq
+                ψ^{D_2}_{C_2}\circ ϕ^{D_1}_{C_1}
+        }{\msc C_{D_1}}{\CC_{C_2}}
+\end{equation}
 
-We also generalize the notion of the monoidal product: the map
-$\map {\otimes} {\CC \times \CC}{\CC}$ satisfies
-$\MM_{S} \otimes \MM_{T} = \MM_{S \sqcup T}$. Given morphisms $ϕ^{D_1}_{C_1}$
-and $ψ^{D_2}_{C_2}$ such that $D_1 \cap D_2 = \emptyset = C_1 \cap C_2$, we have
-a product morphism
+In the general case, we still have the map
+$\sqcup$ defined by $\MM_{S} \sqcup \MM_{T} = \MM_{S \sqcup T}$. Given morphisms
+$ϕ^{D_1}_{C_1}$ and $ψ^{D_2}_{C_2}$ such that $D_1 \cap D_2 = \emptyset = C_1
+\cap C_2$, we have a product morphism
 $\map {ϕ^{D_1}_{C_1}ψ^{D_2}_{C_2} \defeq ϕ \otimes ψ} {\CC_{D_1 \sqcup D_2}}
 {\CC_{C_1\sqcup C_2}}$, which we write with concatenation.
 
