@@ -61,24 +61,22 @@ To avoid the issue of exponential computational complexity, one can instead
 investigate the nature of the set of all values of the invariant as a subset of
 the algebra and its tensor powers. For a particular choice of algebra (namely
 $\CUlong$, as investigated by Dror Bar-Natan and Roland van der Veen in
-\cref{BV}) the space of values the invariant can take is significantly smaller
-than the whole space; the dimension of the space of values grows only
-quadratically with the number of crossings in the knotted object. In particular,
-by looking at the generating functions of the associated maps, instead of a
-generic power series, the invariants of knots always take the form of a
-(perturbed) Gaußian, so computationally, one needs only to keep track of the
-quadratic form and the perturbation.
-
-Using this method, Bar-Natan and van der Veen's invariant, which dominates the
-$\Sl_2$-coloured Jones polynomial, provides an efficient method of computing the
-Alexander polynomial.
+\cref{BV}) the space of values the corresponding invariant $Z$ can take is
+significantly smaller than the whole space; the dimension of the space of values
+grows only quadratically with the number of crossings in the knotted object. In
+particular, by looking at the generating functions of the associated maps,
+instead of a generic power series, the value of $Z$ on tangles always take the
+form of a (perturbed) Gaußian. Computationally, this means one needs only to
+keep track of the quadratic form and the perturbation. The invariant $Z$---which
+dominates the $\Sl_2$-coloured Jones polynomial---provides an efficient method
+of computing the Alexander polynomial.
 
 \section{Extending the invariant to more knotted objects}
-The research program outlined by Bar-Natan and van der Veen computes invariants
+The research program outlined by Bar-Natan and van der Veen computes $Z$
 only for (pure) tangles--that is, collections of open strands whose endpoints
 are fixed to a boundary circle. (Note that this includes long knots, which are
-exactly the one-component tangles.) This thesis is focused on extending this
-invariant and its computations to tangles with closed components.
+exactly the one-component tangles.) This thesis is focused on extending $Z$ and
+its computations to tangles with closed components.
 \begin{figure}[h]
         \centering
         \includegraphics[width=0.2\textwidth]{figures/sample.png}% todo: fix
@@ -93,12 +91,12 @@ invariant and its computations to tangles with closed components.
 \end{figure}        
 
 \subsection{Computing the extended map}
-The first task is to determine the space in which the extended invariant lives.
-One may observe that in a matrix algebra, one is able to contract two matrices
-together via matrix multiplication. When one wishes to contract a matrix along
-itself, one uses the trace map. Analogously, since two strands in a tangle
-corresponds to multiplication, closing a strand into a loop should correspond
-algebraically to a trace map.
+The first task is to determine the space in which the extended invariant, which
+we will call $\ptr$, lives. One may observe that in a matrix algebra, one is
+able to contract two matrices together via matrix multiplication. When one
+wishes to contract a matrix along itself, one uses the trace map. Analogously,
+since two strands in a tangle corresponds to multiplication, closing a strand
+into a loop should correspond algebraically to a trace map.
 
 In a generic algebra $A$, the trace map is defined as the projection onto the
 set of coinvariants: $\map {\trace} {A} {A_A = A/\liebk{A}{A}}$. In order to
@@ -110,15 +108,26 @@ generating function. (This is accomplished in \cref{sec:coinv_comp}.)
 Unfortunately, the resulting trace map does not take the form of a perturbed
 Gaußian in a way that readily connects to the existing framework. In order to
 determine whether further study in this direction is merited, we must find an
-alternative computation method to get a preliminary sense of the strength of the
-invariant.
+alternative computation method to get a preliminary sense of the strength of
+$\ptr$.
 
 For a subclass of links (which includes all two-component links), we compute an
 explicit closed form for the trace map, then implement a computer program to
-compute the value of this invariant on all two-component links with up to $11$
-crossings. The form of the invariant implemented computes the Alexander
-polynomial on one-component tangles. Surprisingly, when applied to two-component
-tangles, the resulting invariant did not compute the natural generalization to
-multiple components: the \ac{MVA}. In fact, the \ac{MVA} and the
-traced-invariant are incomparable, with each being able to distinguish pairs of
-links the other cannot. (See \cref{sec:compare_MVA} for more information.)
+compute the value of $\ptr$ on all two-component links with up to $11$
+crossings. When applied to knots, $Z$ computes the Alexander
+polynomial. When applied to two-component
+tangles, one may expect that $\ptr$ would produce the natural generalization to
+multiple components: the \ac{MVA}. Surprisingly, the \ac{MVA} and $\ptr$ are
+incomparable, with each being able to distinguish pairs of links the other
+cannot. (See \cref{sec:compare_MVA} for more information.)
+
+\subsection{Further study}
+As $\ptr$ does not generalize $Z$ in the manner expected, several interesting
+avenues of further research are opened. Firstly, determining what the
+relationship between $\ptr$ and the \ac{MVA} is remains open. Second is the
+challenge of finding an efficient method for computing $\ptr$ on links with more
+than two components, which currently is mired in complications with
+the presence of non-elementary functions where quadratic forms normally appear.
+Third is the question of the existence of other viable trace candidates. In
+particular, it may be worth exploring whether a universal trace with respect to
+the perturbed Gaußian framework defines a sufficiently useful invariant.
