@@ -511,8 +511,8 @@ two strands. This is accomplished by the so-called $\Rmat$-matrix:
 
 \begin{definition}[quasitriangular meta-Hopf algebra]
 A \defi{quasitriangular meta-Hopf algebra} (or \defi{quasitriangular meta-Hopf
-monoid}) is a Hopf algebra $H$, together with an invertible element $\Rmat \in
-H\otimes H$, called the \defi{$\Rmat$-matrix}, which satisfies the following
+monoid}) is a Hopf algebra $H$, together with an invertible element $\Rmat_{i,j} \in
+H_{i,j}$, called the \defi{$\Rmat$-matrix}, which satisfies the following
 properties: (we will denote the inverse by $\Rmati$)
 \begin{align}
         \label{eq:Rmat_overstrand}
@@ -525,6 +525,24 @@ properties: (we will denote the inverse by $\Rmati$)
                 \mult^{1_i,1,1_f}_{1}\then \mult^{2_i,2,2_f}_{2}
 \end{align}
 \end{definition}
+\begin{figure}[h]
+        \centering
+        \includegraphics[width=0.2\textwidth]{figures/sample.png}% todo: fix
+        \caption{Example of a tangle satisfying \cref{eq:Rmat_overstrand}}
+        \label{fig:Rmat_overstrand}
+\end{figure}
+\begin{figure}[h]
+        \centering
+        \includegraphics[width=0.2\textwidth]{figures/sample.png}% todo: fix
+        \caption{Example of a tangle satisfying \cref{eq:Rmat_understrand}}
+        \label{fig:Rmat_understrand}
+\end{figure}
+\begin{figure}[h]
+        \centering
+        \includegraphics[width=0.2\textwidth]{figures/sample.png}% todo: fix
+        \caption{Example of a tangle satisfying \cref{eq:Rmat_comult}}
+        \label{fig:Rmat_comult}
+\end{figure}
 
 \begin{definition}[Drinfeld element]
         In a quasitriangular Hopf algebra $H$, the \defi{Drinfeld element},
