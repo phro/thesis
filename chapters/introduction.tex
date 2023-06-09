@@ -642,7 +642,71 @@ properties: (we will denote the inverse by $\Rmati$)
 
 \section{The meta-algebra of tangle diagrams}
 
-% TODO: INSERT DEFINITION OF TANGLES, THEN UPRIGHT TANGLES
+The particular structures introduced were chosen for their ability to represent
+the topological properties of knotted objects. We will now introduce the notion
+of a tangle and demonstrate its meta-algebraic structure.
+
+For our purposes, a tangle will be visualised as follows: take a stiff circular
+metal frame and attach a collection of strings to the wire, ensuring that the
+strings always remain inside the circle, and that each string is tied to the
+metal frame in two unique locations (that is, no two strings share an endpoint).
+\begin{figure}[h]
+        \centering
+        \includegraphics[width=0.4\textwidth]{figures/sample.png}% todo: fix
+        \caption{Example of a tangle}
+        \label{fig:tangle_example}
+\end{figure}
+
+\begin{definition}[pure tangle]
+        A \defi{pure tangle} is an embedding of line segments (called
+        \defi{strands}) into the thickened unit disk $D \times [-1,1]$ (or a
+        disjoint union of such disks) such that the endpoints of the line
+        segments are fixed along $\boundary D \times \set0$. Two pure tangles
+        are considered equivalent if there exists an isotopy of the embedding
+        which fixes the endpoints of the strands. The term \enquote{pure} refers
+        to the lack of closed loops present.
+\end{definition}
+
+In order to best capture the combinatorial properties of a tangle, observe that
+a generic projection of a tangle to its \defi{central core} $D\times \set 0$
+will result in the strands forming a graph, with each crossing of two strands in
+the tangle producing a vertex in the graph. By assigning to each vertex the sign
+of the corresponding crossing (either \enquote{positive} or \enquote{negative}),
+we end up with a combinatorial object which is equivalent to the original
+concept of a tangle.
+
+\begin{definition}[pure tangle diagram]\label{def:pure_tangle_diagram}
+        A \defi{pure tangle diagram} is a projection of a tangle onto its
+        central core such that all the line segments are immersions which
+        intersect both the boundary disk and the other strands transversally,
+        together with an assignment of a sign to each strand intersection.
+        Small open neighbourhoods of these intersections are called
+        \defi{crossings}, while the complement of the crossings is a collection
+        of embedded line segments called \defi{arcs}.
+
+        Two pure tangle diagrams are considered equivalent if they differ by a
+        finite sequence of Reidemeister moves, as outlined in
+        \crefrange{fig:R1}{fig:R3}
+\end{definition}
+
+\begin{figure}[h]
+        \centering
+        \includegraphics[width=0.2\textwidth]{figures/sample.png}% todo: fix
+        \caption{Reidemeister move $R1$}
+        \label{fig:R1}
+\end{figure}
+\begin{figure}[h]
+        \centering
+        \includegraphics[width=0.2\textwidth]{figures/sample.png}% todo: fix
+        \caption{Reidemeister move $R2$}
+        \label{fig:R2}
+\end{figure}
+\begin{figure}[h]
+        \centering
+        \includegraphics[width=0.2\textwidth]{figures/sample.png}% todo: fix
+        \caption{Reidemeister move $R3$}
+        \label{fig:R3}
+\end{figure}
 
 \section{The $ybax$ meta-algebra}
 
