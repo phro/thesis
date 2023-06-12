@@ -717,6 +717,64 @@ concept of a tangle.
         \label{fig:R3}
 \end{figure}
 
+The rotation numbers of arcs will play a role in this thesis, so we will capture
+these data in the following way (as described in \cref{apai}):
+
+\begin{definition}[upright pure tangle diagram]
+        We will put a further requirement on our tangles: each arc must begin and end
+        pointing upwards, and each crossing must involve only upward-pointing curves.
+        This way, each arc will have a well-defined integer rotation number.
+        Two tangles are considered equivalent if they agree under the
+        \enquote{rotational Reidemeister moves}.
+\end{definition}
+\begin{figure}[h]
+        \centering
+        \includegraphics[width=0.2\textwidth]{figures/sample.png}% todo: fix
+        \caption{Rotational Reidemeister move $R1'_{\text{rot}}$}
+        \label{fig:R1prot}
+\end{figure}
+\begin{figure}[h]
+        \centering
+        \includegraphics[width=0.2\textwidth]{figures/sample.png}% todo: fix
+        \caption{The two rotational Reidemeister moves $R2_{\text{rot}}$}
+        \label{fig:R2rot}
+\end{figure}
+\begin{figure}[h]
+        \centering
+        \includegraphics[width=0.2\textwidth]{figures/sample.png}% todo: fix
+        \caption{Rotational Reidemeister move $R3_{\text{rot}}$}
+        \label{fig:R3rot}
+\end{figure}
+\begin{figure}[h]
+        \centering
+        \includegraphics[width=0.2\textwidth]{figures/sample.png}% todo: fix
+        \caption{Whirling move $Wh$}
+        \label{fig:whirl}
+\end{figure}
+
+Fortunately, ambient isotopy allows us to rotate any classical tangle into an
+upward-pointing form. Additionally, there is only one way to do this. We
+reproduce the proof of this fact by Bar-Natan and van der Veen in \cite{BV}
+below:
+
+\begin{lemma}[tangles inject into upright tangles]
+        To each pure tangle diagram $D$ there exists an upright pure tangle
+        diagram $D'$ obtained from $D$ by a planar isotopy. Further, if $D''$ is
+        another such upright pure tangle diagram obtained from $D$, then $D'$
+        and $D''$ differ by a finite sequence of rotational Reidemeister moves
+        and a change of rotation number at the endpoints.
+\end{lemma}
+\begin{proof}
+        Each arc and crossing in the diagram $D$ may be rotated so that its
+        endpoints are pointing upwards, giving rise to a diagram $D'$. Two
+        (nonupright) tangle diagrams are equivalent when they differ by a finite
+        sequence of Reidemeister moves. Each of these Reidemeister may also be
+        rotated to an equivalence of upright tangles, each of which is given as
+        a rotational Reidemeister move \crefrange{fig:R1prot}{fig:R3rot}. The
+        last possibility is the rotation of an entire crossing, which is covered
+        by \cref{fig:whirl}.
+\end{proof}
+
 \section{The $ybax$ meta-algebra}
 
 % TODO: INSERT DEFINITION OF CU ALGEBRA
