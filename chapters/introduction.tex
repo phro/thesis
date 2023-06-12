@@ -659,12 +659,21 @@ metal frame in two unique locations (that is, no two strings share an endpoint).
 
 \begin{definition}[pure tangle]
         A \defi{pure tangle} is an embedding of line segments (called
-        \defi{strands}) into the thickened unit disk $D \times [-1,1]$ (or a
-        disjoint union of such disks) such that the endpoints of the line
-        segments are fixed along $\boundary D \times \set0$. Two pure tangles
-        are considered equivalent if there exists an isotopy of the embedding
-        which fixes the endpoints of the strands. The term \enquote{pure} refers
-        to the lack of closed loops present.
+        \defi{components} or \defi{strands}) into the thickened unit disk
+        $D \times [-1,1]$ (or a disjoint union of such disks) such that the
+        endpoints of the line segments are fixed along
+        $\boundary D \times \set0$. Two pure tangles are considered equivalent
+        if there exists an isotopy of the embedding which fixes the endpoints of
+        the strands. The term \enquote{pure} refers to the absence of closed
+        loops.
+\end{definition}
+
+\begin{definition}[framed tangle]
+        The object which is more natural for us to deal with is the \defi{framed
+        tangle}, which is a pure tangle together with a choice of section of the
+        normal bundle for each component. One may equivalently think of
+        replacing the strings in a pure tangle with thin ribbons. Unless
+        otherwise mentioned, it will be assumed that all tangles are framed.
 \end{definition}
 
 In order to best capture the combinatorial properties of a tangle, observe that
