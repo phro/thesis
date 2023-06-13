@@ -641,10 +641,13 @@ properties: (we will denote the inverse by $\Rmati$)
 % todo: is this lemma important for the thesis? If not, cut it out!
 
 \section{The meta-algebra of tangle diagrams}
+\label{sec:topological_interpretations}
 
 The particular structures introduced were chosen for their ability to represent
 the topological properties of knotted objects. We will now introduce the notion
 of a tangle and demonstrate its meta-algebraic structure.
+
+\subsection{Upright tangles}
 
 For our purposes, a tangle will be visualised as follows: take a stiff circular
 metal frame and attach a collection of strings to the wire, ensuring that the
@@ -773,6 +776,128 @@ below:
         a rotational Reidemeister move \crefrange{fig:R1prot}{fig:R3rot}. The
         last possibility is the rotation of an entire crossing, which is covered
         by \cref{fig:whirl}.
+\end{proof}
+
+\subsection{The meta-algebra structure of upright tangle diagrams}
+
+Let us now formally connect tangle diagrams with meta-algebras.
+
+% TODO: Add a footnote or remark about the multiplication caveat. 
+\begin{theorem}[tangles form a ribbon meta-Hopf algebra]
+        \label{thm:vt_qtmha}
+        Define $\tangle_X$ to be the set of upright tangles with $\ord{X}$
+        strands, each labelled by an element $i\in X$. Then the collection
+        $\set{\tangle_X}_X$ forms a quasitriangular ribbon meta-Hopf algebra
+        with the following operations:
+        \begin{itemize}
+                \item multiplication $\mult^{ij}_{k}[X]$ takes a tangle with
+                        strands $X\sqcup\set{i,j}$ and glues the end of strand
+                        $i$ to strand $j$, labelling the resulting strand $k$.
+                \item the unit $\unit_{i}[X]$ takes a tangle diagram with
+                        strands $X$ and introduces a new strand $i$ which does
+                        not touch any of the other strands.
+                \item the comultiplication $\comult^{i}_{jk}[X]$ takes a tangle
+                        with strands $X\sqcup \set{i}$ and doubles strand $i$,
+                        separating the two strands along the framing of strand
+                        $i$, calling the right strand $j$ and the left one
+                        $k$.\footnote{While this convention appears unfortunate,
+                        we follow the notation laid out in \cite{BV} so that the
+                        antipode and spinner have a more memorable
+                        representation, namely looking like the letters they are
+                        represented by (see \cref{thm:rvt_metaHopf} for more
+                        details).
+                }
+                \item the counit $\counit^{i}[X]$ takes a tangle with strands
+                        indexed by $X\sqcup \set{i}$ and returns the tangle with
+                        strand labelled by $i$ deleted.
+                \item The antipode $\antipode^{i}_{j}[X]$ takes a tangle with
+                        strands labelled by $X \sqcup \set{i}$ and reverses the
+                        direction of strand $i$, then adds a counter-clockwise
+                        cap to the new beginning, and a clockwise cup to the
+                        end. This new strand is called $j$. When applied to a
+                        single vertical strand, the resulting tangle looks like
+                        the letter \enquote{S}.
+                \item the $\Rmat$-matrix $\Rmat_{ij}$ is given by the two-strand
+                        tangle with a single positive crossing of strand $i$
+                        over strand $j$. The inverse $\Rmat$-matrix
+                        $\Rmati_{ij}$ is the two-strand tangle with a
+                        \emph{negative} crossing of strand $i$ over strand $j$.
+                \item The spinner $\spin_i[X]$ takes a tangle in $\tangle_X$ and
+                        adds a new strand with rotation number $1$ which has no
+                        interactions with any other strands. This new strand
+                        looks like the letter \enquote{C}.
+        \end{itemize}
+\end{theorem}
+\begin{proof}
+        Associativity of multiplication (\cref{eq:cd_mult}) follows from the
+        fact that stitching strands together amounts to concatenating the order
+        of the crossings each strand interacts with. Since list concatenation is
+        an associative operation, associativity follows in this case as well.
+
+        Adding a non-interacting strand to a diagram, then stitching it to an
+        existing strand (\cref{eq:cd_unit}) does not change any of the
+        combinatorial data in the diagram, and results in identical diagrams.
+
+        Establishing coassociativity (\cref{eq:cd_comult}) amount to the same
+        argument that cutting a piece of paper into three strips does not depend
+        on the order of cutting.
+
+        The counit identity (\cref{eq:cd_counit}) states deleting a strand
+        is the same operation as first doubling it, then deleting both resulting
+        strands.
+
+        The meta-bialgebra axioms we verify next:
+
+        \Cref{eq:cd_mult_comult} states that if two strands are stitched
+        together, then the resulting strand is doubled, this could have
+        equivalently been achieved by doubling each of the original strands,
+        then performing a stitching on both resulting pairs of strands.
+
+        \Cref{eq:cd_mult_counit} simply states that stitching two strands
+        together, then removing the resulting strand could have equally been
+        achieved by removing both of the original strands without stitching them
+        first.
+
+        \Cref{eq:cd_unit_counit} states that introducing a strand, then
+        immediately removing it is the identity operation.
+
+        \Cref{eq:cd_unit_comult} says that doubling a newly-introduced (and
+        therefore free of crossings) strand is the same operation as introducing
+        two strands separately. (Recall that in the virtual case, proximity of
+        strands is not accounted for)
+
+        \Cref{eq:cd_antipode} states that when a strand is doubled, then one of
+        the two strands is reversed, multiplying the two strands together
+        results in a strand which can be rearranged to not interact with any of
+        the other strands. This can be readily seen, as this newly-created
+        strand looks like a snake weaving through the tangle diagram. One can
+        remove the snake by applying a series of Reidemeister 2 moves, resulting
+        in a strand disjoint from the rest of the diagram. This is the same as
+        deleting the original strand, then introducing a new disjoint one.
+        
+        The quasitriangular axioms are equalities of pairs of three-strand
+        tangles:
+        \begin{itemize}
+                \item \Cref{eq:Rmat_overstrand,eq:Rmat_understrand} tell us that
+                        doubling a strand involved in a single crossing can also
+                        be built by adjoining two crossings together.
+                \item \Cref{eq:Rmat_comult} tells us that we can swap the order
+                        of a doubled strand by adding crossings to either end
+                        (reminiscent of a Reidemeister 2 move)
+        \end{itemize}
+
+        Finally, we observe that the quotient we introduce to tangle diagrams by
+        the Reidemeister moves does not introduce any new relations.
+        Reidemeister 2 follows from the invertibility of the $\Rmat$-matrix.
+        Next, it is readily seen that the quasitriangular relations governing
+        the $\Rmat$-matrix force it to solve the Yang-Baxter equation, which is
+        one equivalent to the Reidemeister 3 in this case.
+
+        Using \cref{lem:spinner_ribbon}, it is enough to verify the spinner
+        axioms
+        (\cref{eq:spinner_ribbon,eq:spinner_comult,eq:spinner_antipode,eq:spinner_conjugate,eq:spinner_counit}).
+        All these axioms have corresponding pictures one can draw, keeping in
+        mind the orientations in the definitions of the relevant operations.
 \end{proof}
 
 \section{The $ybax$ meta-algebra}
