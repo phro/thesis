@@ -144,7 +144,7 @@ well-defined, and especially those where the computation is accessible.
 The theorem we will rely heavily on in this thesis is the following, taken from
 \cite[Theorem~6]{BV}:
 
-\newcommand{\Wt}{\tilde{W}} 
+\newcommand{\Wt}{\tilde{W}}
 \begin{theorem}[Contraction theorem]
         For any $n\in \N$, consider the ring $R_n =
         \powerseries{\polyring{\Q}{r_j, g_j}}{s_j, W_{ij}, f_j
@@ -164,43 +164,105 @@ $V^{\otimes n}$, the computational complexity is exponential in $n$.
 
 \subsection{Expressing Hopf algebra operations as perturbed Gaußians}
 
-We will now observe that the meta-Hopf algebra operations for $\CU$ as defined
-in \cref{sec:algebraic-definitions} all have the form of a perturbed Gaußian.
-Namely:
+\begin{thm}[The meta-Hopf structure of $\CU$ is Gaußian]
+        We will now observe that the meta-Hopf algebra operations for $\CU$ as defined
+        in \cref{sec:algebraic-definitions} all have the form of a perturbed Gaußian.
+        Namely:
 
-\begin{align}
-        \Gen*{\mult^{ij}_{k}} &=\exp\pn*
-        {
-                (α_i + α_j)a_k +
-                (β_i + β_j + ξ_iη_j)b_k +
-                \pn*{\frac{ξ_i}{\A_j} + ξ_j} x_k+
-                \pn*{\frac{η_j}{\A_i}+ η_i }y_k
-        } \label{eq:gen-mult}
-        \\ \Gen*{\unit_{i}} &=1\label{eq:gen-unit}
-        \\\Gen*{\comult^{i}_{jk}} &=\exp\pn*{
-                β_i(b_j + b_k) +
-                α_i(a_j + a_k) +
-                η_i(y_j + y_k) +
-                ξ_i(x_j + x_k)
-        } \label{eq:gen-comult}
-        \\\Gen*{\counit^{i}} &=1\label{eq:gen-counit}
-        \\\Gen*{\antipode^{i}_{i}} &=\exp\pn*
-        {
-                - a_iα_i
-                - b_iβ_i 
-                - η_i\A_iy_i
-                - \A_iξ_ix_i
-                + η_i\A_iξ_ib_i
-        }
-        \label{eq:gen-antipode}
-        \\\Gen*{\Rmat_{ij}} &=\exp\pn*{
-                a_j b_i + \frac{B_i-1}{-b_i} y_i x_j 
-        }\label{eq:gen-Rmat}
-        \\\Gen*{\spin_{i}} &=\sqrt{B_i}\label{eq:gen-spin}
-        \\\Gen*{\ribbon_{i}} &=\sqrt{B_i}\exp\pn*{
-                a_i b_i + \frac{1-B_i}{b_i}x_iy_i
-        }\label{eq:gen-ribbon}
-\end{align}
+        \begin{align}
+                \Gen*{\mult^{ij}_{k}} &=\exp\pn*
+                {
+                        (α_i + α_j)a_k +
+                        (β_i + β_j + ξ_iη_j)b_k +
+                        \pn*{\frac{ξ_i}{\A_j} + ξ_j} x_k+
+                        \pn*{\frac{η_j}{\A_i}+ η_i }y_k
+                } \label{eq:gen-mult}
+                \\ \Gen*{\unit_{i}} &=1\label{eq:gen-unit}
+                \\\Gen*{\comult^{i}_{jk}} &=\exp\pn*{
+                        β_i(b_j + b_k) +
+                        α_i(a_j + a_k) +
+                        η_i(y_j + y_k) +
+                        ξ_i(x_j + x_k)
+                } \label{eq:gen-comult}
+                \\\Gen*{\counit^{i}} &=1\label{eq:gen-counit}
+                \\\Gen*{\antipode^{i}_{i}} &=\exp\pn*
+                {
+                        - a_iα_i
+                        - b_iβ_i
+                        - η_i\A_iy_i
+                        - \A_iξ_ix_i
+                        + η_i\A_iξ_ib_i
+                }
+                \label{eq:gen-antipode}
+                \\\Gen*{\Rmat_{ij}} &=\exp\pn*{
+                        a_j b_i + \frac{B_i-1}{-b_i} y_i x_j
+                }\label{eq:gen-Rmat}
+                \\\Gen*{\spin_{i}} &=\sqrt{B_i}\label{eq:gen-spin}
+                \\\Gen*{\ribbon_{i}} &=\sqrt{B_i}\exp\pn*{
+                        a_i b_i + \frac{1-B_i}{b_i}x_iy_i
+                }\label{eq:gen-ribbon}
+        \end{align}
+\end{thm}
+
+\begin{proof}
+        To prove \cref{eq:gen-mult}, we first note the Weyl canonical
+        commutation relation:
+        \begin{equation}
+                \Exp{ξx}\Exp{ηy} = \Exp{-ξηb}\Exp{ηy}\Exp{ξx}
+        \end{equation}
+        Secondly, using \cref{eq:xay_relations} and $\A\defeq \Exp{α}$, we
+        compute
+        \begin{equation}
+                \Exp{αa}\Exp{ηy}
+                = \Exp{αa}\Sum[n]\frac{(ηy)^n}{n!}
+                = \Sum[n]\frac{(ηy)^n}{n!}\Exp{α(a-n)}
+                = \Sum[n]\frac{(ηy)^n}{n!}\Exp{αa}\A^{-n}
+                = \Exp{\frac{η}{\A}y}\Exp{αa}
+        \end{equation}
+        Using this relation allows us to commute exponentials past each other to
+        bring expressions into $\Order_{ybax}$ form. Below we omit the index $k$
+        for readability:
+        \begin{equation}
+                \begin{aligned}
+                        \Gen{\mult^{ij}_{k}}
+                        &= \mult^{ij}\pn{\Exp{
+                                        η_iy_i + β_ib_i + α_ia_i + ξ_ix_i
+                                }
+                                \Exp{
+                                        η_jy_j + β_jb_j + α_ja_j + ξ_jx_j
+                                }
+                        }\\
+                        &= \Exp{
+                                η_iy + β_ib + α_ia + ξ_ix
+                        }
+                        \Exp{
+                                η_jy + β_jb + α_ja + ξ_jx
+                        }\\
+                        &= \Exp{η_iy}
+                           \Exp{β_ib}
+                           \Exp{α_ia}
+                           \Exp{ξ_ix}
+                           \Exp{η_jy}
+                           \Exp{β_jb}
+                           \Exp{α_ja}
+                           \Exp{ξ_jx}\\
+                        &= \Exp{η_iy}
+                           \Exp{β_ib}
+                           \Exp{α_ia}
+                           \pn*{\Exp{-ξ_iη_jb}\Exp{η_jy}\Exp{ξ_ix}}
+                           \Exp{β_jb}
+                           \Exp{α_ja}
+                           \Exp{ξ_jx}\\
+                        &= \Exp{(β_j+ β_i-ξ_iη_j)b}
+                           \Exp{η_iy}
+                           \Exp{\frac{η_j}{\A_i}y}\Exp{α_ia}
+                           \Exp{ξ_ix}
+                           \Exp{α_ja}
+                           \Exp{ξ_jx}\\
+                        &= %TODO: finish
+                \end{aligned}
+        \end{equation}
+\end{proof}
 
 \subsection{Notational conventions}
 
