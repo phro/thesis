@@ -2,8 +2,7 @@
 % Make sure to set the ToC depth and the numbering depth in the ToC the way you want.
 \chapter{Perturbed Gaußians}\label{ch:perturbed_gaussians}
 We now summarize the work of Bar-Natan and van der Veen in \cite{BV}, which
-develops a universal knot invariant using perturbed Gaußians. 
-
+develops a universal knot invariant using perturbed Gaußians.
 
 \section{Expressing morphisms as generating functions}
 
@@ -39,10 +38,10 @@ multi-index $\nn \in \N^A$.
 
 By the PBW theorem, we know that $\CU$ is isomorphic as a vector space to the
 polynomial ring $\polyring{\Q}{y, b, a, x}$ by choosing an ordering of the
-generators (following \cite{BV}, we use $(y, b, a, x)$):
+generators (following \cite{BV}, we use $(\yo, \bo, \ao, \xo)$):
 \begin{equation}\label{eq:order_map}
         \mapdef {\Order} {\polyring{\Q}{y, b, a, x}} [\toiso] {\CU}
-        {y^{n_1}b^{n_2}a^{n_3}x^{n_4}} {y^{n_1}b^{n_2}a^{n_3}x^{n_4}}
+        {y^{n_1}b^{n_2}a^{n_3}x^{n_4}} {\yo^{n_1}\bo^{n_2}\ao^{n_3}\xo^{n_4}}
 \end{equation}
 
 Using this vector space isomorphism, \cite{BV} expresses all Hopf algebra
@@ -68,7 +67,7 @@ We define the morphism of meta-ribbon Hopf algebras in two steps:
         \item Since computing compositions of operations is an essential
                 component to this invariant, we then define an equivalent
                 category which allows for the more efficient computation. This
-                is done by replacing morphisms 
+                is done by replacing morphisms
 \end{enumerate}
 
 \ProvideDocumentCommand{\UMaps}{}{\mcl{U}}
@@ -208,70 +207,132 @@ $V^{\otimes n}$, the computational complexity is exponential in $n$.
         To prove \cref{eq:gen-mult}, we first note the Weyl canonical
         commutation relation:
         \begin{equation}
-                \Exp{ξx}\Exp{ηy} = \Exp{-ξηb}\Exp{ηy}\Exp{ξx}
+                \Exp{ξ\xo}\Exp{η\yo} = \Exp{-ξη\bo}\Exp{η\yo}\Exp{ξ\xo}
         \end{equation}
         Secondly, using \cref{eq:xay_relations} and $\A\defeq \Exp{α}$, we
         compute
         \begin{equation}
-                \Exp{αa}\Exp{ηy}
-                = \Exp{αa}\Sum[n]\frac{(ηy)^n}{n!}
-                = \Sum[n]\frac{(ηy)^n}{n!}\Exp{α(a-n)}
-                = \Sum[n]\frac{(ηy)^n}{n!}\Exp{αa}\A^{-n}
-                = \Exp{\frac{η}{\A}y}\Exp{αa}
+                \Exp{α\ao}\Exp{η\yo}
+                = \Exp{α\ao}\Sum[n]\frac{(η\yo)^n}{n!}
+                = \Sum[n]\frac{(η\yo)^n}{n!}\Exp{α(\ao-n)}
+                = \Sum[n]\frac{(η\yo)^n}{n!}\Exp{α\ao}\A^{-n}
+                = \Exp{\frac{η}{\A}\yo}\Exp{α\ao}
+        \end{equation}
+        similarly,
+        \begin{equation}
+                \Exp{ξ\xo}\Exp{α\ao}
+                = \Sum[n]\frac{(ξ\xo)^n}{n!}\Exp{α\ao}
+                = \Sum[n]\Exp{α(\ao-n)}\frac{(ξ\xo)^n}{n!}
+                = \Sum[n]\Exp{α\ao}\frac{\pn{\frac{ξ\xo}{\A}}^n}{n!}
+                = \Exp{α\ao}\Exp{\frac{ξ}{\A}\xo}
         \end{equation}
         Using this relation allows us to commute exponentials past each other to
         bring expressions into $ybax$-order. Below we omit the index $k$
         for readability:
         \begin{equation}
                 \begin{aligned}
-                        \Gen{\mult^{ij}_{k}}
-                        &= \mult^{ij}\pn{\Exp{
+                        \Gen{\mult^{ij}}
+                        &= \pn*{\inv{\Order}\circ\mult^{ij}\circ\Order}\pn{\Exp{
                                         η_iy_i + β_ib_i + α_ia_i + ξ_ix_i
                                 }
                                 \Exp{
                                         η_jy_j + β_jb_j + α_ja_j + ξ_jx_j
                                 }
                         }\\
-                        &= \Exp{
-                                η_iy + β_ib + α_ia + ξ_ix
-                        }
-                        \Exp{
-                                η_jy + β_jb + α_ja + ξ_jx
+                        &= \inv{\Order}\pn*{
+                                \Exp{η_i\yo}
+                                \Exp{β_i\bo}
+                                \Exp{α_i\ao}
+                                \Exp{ξ_i\xo}
+                                \Exp{η_j\yo}
+                                \Exp{β_j\bo}
+                                \Exp{α_j\ao}
+                                \Exp{ξ_j\xo}
                         }\\
-                        &= \Exp{η_iy}
-                           \Exp{β_ib}
-                           \Exp{α_ia}
-                           \Exp{ξ_ix}
-                           \Exp{η_jy}
-                           \Exp{β_jb}
-                           \Exp{α_ja}
-                           \Exp{ξ_jx}\\
-                        &= \Exp{η_iy}
-                           \Exp{β_ib}
-                           \Exp{α_ia}
-                           \pn*{\Exp{-ξ_iη_jb}\Exp{η_jy}\Exp{ξ_ix}}
-                           \Exp{β_jb}
-                           \Exp{α_ja}
-                           \Exp{ξ_jx}\\
-                        &= \Exp{(β_j+ β_i-ξ_iη_j)b}
-                           \Exp{η_iy}
-                           \Exp{\frac{η_j}{\A_i}y}\Exp{α_ia}
-                           \Exp{ξ_ix}
-                           \Exp{α_ja}
-                           \Exp{ξ_jx}\\
-                        &= \Exp{(β_j+ β_i-ξ_iη_j)b}
-                           \Exp{\pn{η_i+\frac{η_j}{\A_i}}y}\Exp{α_ia}
-                           \Exp{α_ja}\Exp{\frac{ξ_i}{\A_j}x}
-                           \Exp{ξ_jx}\\
-                        &= \Exp{\pn*{η_i+\frac{η_j}{\A_i}}y}
-                           \Exp{(β_j+ β_i-ξ_iη_j)b}
-                           \Exp{(α_i+α_j)a}
-                           \Exp{\pn*{\frac{ξ_i}{\A_j}+ξ_j}x}
-                \end{aligned}
-        \end{equation}
-        Since this expression is now written in the $ybax$-order, we conclude
-        that the corresponding generating function is this same expression, but
-        written with commuting variables.
+                        &= \inv{\Order}\pn*{
+                                \Exp{η_i\yo}
+                                \Exp{β_i\bo}
+                                \Exp{α_i\ao}
+                                \pn*{\Exp{-ξ_iη_j\bo}\Exp{η_j\yo}\Exp{ξ_i\xo}}
+                                \Exp{β_j\bo}
+                                \Exp{α_j\ao}
+                                \Exp{ξ_j\xo}
+                        }\\
+                        &= \inv{\Order}\pn*{
+                                \Exp{(β_j+ β_i-ξ_iη_j)\bo}
+                                \Exp{η_i\yo}
+                                \Exp{\frac{η_j}{\A_i}\yo}\Exp{α_i\ao}
+                                \Exp{ξ_i\xo}
+                                \Exp{α_j\ao}
+                                \Exp{ξ_j\xo}
+                        }\\
+                        &= \inv{\Order}\pn*{
+                                \Exp{(β_j+ β_i-ξ_iη_j)\bo}
+                                \Exp{\pn{η_i+\frac{η_j}{\A_i}}\yo}\Exp{α_i\ao}
+                                \Exp{α_j\ao}\Exp{\frac{ξ_i}{\A_j}\xo}
+                                \Exp{ξ_j\xo}
+                        }\\
+                        &= \inv{\Order}\pn*{
+                                \Exp{\pn*{η_i+\frac{η_j}{\A_i}}\yo}
+                                \Exp{(β_j+ β_i-ξ_iη_j)\bo}
+                                \Exp{(α_i+α_j)\ao}
+                                \Exp{\pn*{\frac{ξ_i}{\A_j}+ξ_j}\xo}
+                        }\\
+                        &=
+                        \Exp{\pn*{η_i+\frac{η_j}{\A_i}}\yco}
+                        \Exp{(β_j+ β_i-ξ_iη_j)\bco}
+                        \Exp{(α_i+α_j)\aco}
+                        \Exp{\pn*{\frac{ξ_i}{\A_j}+ξ_j}\xco}
+        \end{aligned}
+\end{equation}
+Since this expression is now written in the $\yo\bo\ao\xo$-order, we conclude
+that the corresponding generating function is this same expression, but
+written with commuting variables.
+
+The other computation we must verify is the antipode, which follows
+similarly:
+\begin{equation}
+        \begin{aligned}
+                \Gen{\antipode}
+                        &= \pn*{\inv{\Order}\circ\antipode\circ\Order}\pn{\Exp{
+                                        ηy + βb + αa + ξx
+                                }
+                        }\\
+                        &= \inv{\Order}\pn*{
+                                \Exp{-ξ\xo}
+                                \Exp{-α\ao}
+                                \Exp{-β\bo}
+                                \Exp{-η\yo}
+                        }\\
+                        &= \inv{\Order}\pn*{
+                                \Exp{-ξ\xo}
+                                \Exp{-\Aη\yo}
+                                \Exp{-α\ao}
+                                \Exp{-β\bo}
+                        }\\
+                        &= \inv{\Order}\pn*{
+                                \Exp{-ξ\Aη\bo}
+                                \Exp{-\Aη\yo}
+                                \Exp{-ξ\xo}
+                                \Exp{-α\ao}
+                                \Exp{-β\bo}
+                        }\\
+                        &= \inv{\Order}\pn*{
+                                \Exp{-\Aη\yo}
+                                \Exp{-ξ\Aη\bo}
+                                \Exp{-β\bo}
+                                \Exp{-ξ\xo}
+                                \Exp{-α\ao}
+                        }\\
+                        &= \inv{\Order}\pn*{
+                                \Exp{-\Aη\yo}
+                                \Exp{-(ξ\Aη+β)\bo}
+                                \Exp{-α\ao}
+                                \Exp{-ξ\A \xo}
+                        }
+\end{aligned}
+\end{equation}
+%TODO: fix minus-sign error
 \end{proof}
 
 \subsection{Notational conventions}
@@ -280,11 +341,11 @@ The generating function of a tangle is not the entirety of this definition, for
 the additional data is the domain and codomain of the corresponding morphism.
 
 We will thereby write a morphism with domain $D$, codomain $C$, and generating
-function $f(ζ_{D}, z_{C})$ as $f(ζ_{D}, z_{C})^{D}_{C}$. 
+function $f(ζ_{D}, z_{C})$ as $f(ζ_{D}, z_{C})^{D}_{C}$.
 
 \begin{align}
         Z(\knot31) &= \pn*{
-                \frac{1}{B_1^{-1} + 1 + B_1^1} 
+                \frac{1}{B_1^{-1} + 1 + B_1^1}
         }^{\emptyset}_{\set{1}}
         = \inv{Δ(\knot31)}
         \\Z(\knot[a]{11}{10}) &= \pn*{

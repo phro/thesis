@@ -343,6 +343,17 @@
 
 % Thesis-specific macros
 
+\ProvideDocumentCommand{\orderedvar}{m}{\mbf{#1}}
+\ProvideDocumentCommand{\commutevar}{m}{#1}
+\ProvideDocumentCommand{\yo}{}{\orderedvar{y}}
+\ProvideDocumentCommand{\bo}{}{\orderedvar{b}}
+\ProvideDocumentCommand{\ao}{}{\orderedvar{a}}
+\ProvideDocumentCommand{\xo}{}{\orderedvar{x}}
+\ProvideDocumentCommand{\yco}{}{\commutevar{y}}
+\ProvideDocumentCommand{\bco}{}{\commutevar{b}}
+\ProvideDocumentCommand{\aco}{}{\commutevar{a}}
+\ProvideDocumentCommand{\xco}{}{\commutevar{x}}
+
 \ProvideDocumentCommand{\ptr}{}{Z^\trace}
 \ProvideDocumentCommand{\fa}{}{\mfk{a}}
 \ProvideDocumentCommand{\Alg}{}{\fg}
