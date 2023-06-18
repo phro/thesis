@@ -902,55 +902,33 @@ Let us now formally connect tangle diagrams with meta-algebras.
 
 \section{The $ybax$ meta-algebra}
 
-Here we define the Hopf algebra $\CU$, it's quasitriangular structure, and its
-ribbon structure:
+Here we define the ribbon Hopf algebra $\CU$.
 
-We begin by defining the algebra $\CU$. Denote by $\fa$ the non-commutative
-$2$-dimensional cocommutative Lie bialgebra spanned by $a$ and $x$ with relation
-$\liebk{a}{x} = x$. (This is also a Borel subalgebra of $\Sl_2$.)
-
-Next, we use the Drinfeld double construction (outlined in \cite{ES}) to obtain
-a quasitriangular Lie algebra $\fg$. As a vector space,
-$\fg = \fa \oplus \dual\fa$. Given $u \in \fa$ and $v\in \dual \fa$, we have
-$\liebk{u}{v}_{\fg} \defeq \dual\ad_u(v) - \dual\ad_v(u)$, extended bilinearly
-and anticommutatively to all of $\fg$.
+Define the Lie algebra
+\begin{equation}
+\fg \defeq \Span\setbuilder[\Big]{\yo, \bo, \ao, \xo}{
+                \liebk{\ao}{\xo} = \xo,
+                \liebk{\ao}{\yo} = -\yo,
+                \liebk{\xo}{\yo} = \bo,
+                \liebk{\bo}{ } = 0
+        }
+\end{equation}
 Then the algebra $\CU$ is defined to be the universal enveloping algebra
-$\uea{\fg}$.
-
-\begin{remark}
-        For convenience, we define $b \defeq \dual a \in \dual\fa$ and
-        $y \defeq \dual x \in \dual\fa$, so that
-        \begin{equation}
-                \CU = \genbuilder[\Big]{y, b, a, x}{
-                        \liebk{a}{x} = x,
-                        \liebk{a}{y} = -y,
-                        \liebk{x}{y} = b,
-                        \liebk{b}{ } = 0
-                }
-        \end{equation}
-        as an algebra.
-\end{remark}
-
-Next, we define the bialgebra structure of $\CU$. For any $z\in\set{y, b, a,
-x}$, we have
+$\uea{\fg}$. The bialgebra structure of $\CU$ is: for any $\zo\in\set{\yo, \bo,
+\ao, \xo}$, we have
 \begin{align}
-        \comult_{i,j}(y) &= y_iB_j + y_j\\
-        \comult_{i,j}(b) &= b_i + b_j\\
-        \comult_{i,j}(a) &= a_i + a_j\\
-        \comult_{i,j}(x) &= x_i + x_j\\
-        \counit(z) &= 0
+        \comult_{i,j}(\zo) &= \zo_i + \zo_j\\
+        \counit(\zo) &= 0
 \end{align}
 Next, we define the Hopf algebra structure by defining the antipode
-\begin{align}
-        \antipode(y) &= -y\inv B\\
-        \antipode(b) &= -b\\
-        \antipode(a) &= -a\\
-        \antipode(x) &= -x
-\end{align}
+\begin{equation}
+        \antipode(\zo) &= -\zo
+\end{equation}
 
 The ribbon structure of $\CU$ requires we introduce both the $\Rmat$-matrix and
 the spinner $\spin$:
 \begin{align}
-        \Rmat_{i,j} &\defeq \exp\pn*{a_jb_i + \frac{1-B_i}{b_i}y_ix_j}\\
-        \spin &\defeq \sqrt{B}
+        \Rmat_{i,j}
+        &\defeq \exp\pn*{\ao_j\bo_i + \frac{1-\Bo_i}{\bo_i}\yo_i\xo_j}\\
+        \spin &\defeq \sqrt{\Bo}
 \end{align}
