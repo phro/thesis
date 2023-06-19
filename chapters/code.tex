@@ -10,29 +10,6 @@
 %\section{Generating \acp{RVT} for links}
 
 \subsection{\acp{RVT} for knots}
-Describe algorithm previously developed for knots
-
-\subsection{Extending the algorithm to multiple components}
-
-Given a classical link, there is a unique \ac{RVL} corresponding to it. Given a
-classical link diagram, one may obtain the corresponding \ac{RVL} by attaching
-an appropriate rotation number to each arc. However, there is not a unique way
-to do so.
-
-The situation becomes more complicated when one considers the case where the
-tangle has an open component. In this case, two \ac{RVT} diagrams which
-correspond to the same classical link exactly when they differ only by a
-sequence of rotational Reidemeister moves \emph{and} a modification of the
-rotation numbers of the (two) unbounded arcs. Equivalently, we have the
-statement:
-
-\begin{lemma}
-        For each classical tangle with one open component, there exists a unique
-        \ac{RVT} whose unbounded arcs have rotation numbers $0$.
-\end{lemma}
-\begin{proof}
-        See \cite{BV}.
-\end{proof}
 
 Bar-Natan and van der Veen develop an algorithm to convert a classical long knot
 into an \ac{RVT}. As we are interested in links, we must extend this algorithm
@@ -47,10 +24,21 @@ to include so-called \enquote{long links}, which we outline below:
            result.
 \end{verbatim}
 
-% If the code is to be presented within this section, it should be "clean,
-% short, and match the mathematics" according to Dror. We'll see how much the
-% Haskell code reflects that description.
+\subsection{Extending the algorithm to multiple components}
 
+An algorithm to convert a classical knot diagram into an upright knot diagram
+was implemented by Bar-Natan and van der Veen. Here we generalize the algorithm
+to convert a classical tangle with one open component to an upright tangle
+diagram. This generalization allows us to consider tangle diagrams with multiple
+components.
+
+\begin{lemma}
+        For each classical tangle with one open component, there exists a unique
+        upright tangle whose unbounded arcs have rotation numbers $0$.
+\end{lemma}
+\begin{proof}
+        See \cite{BV}, Lemma~43.
+\end{proof}
 
 This is a Haskell implementation of the algorithm \hs{toRVT} which takes a
 classical tangle and produces a rotational tangle by computing a compatible
