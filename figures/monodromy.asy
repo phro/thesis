@@ -1,4 +1,4 @@
-size(5cm);
+size(3cm,0);
 import tangleSettings;
 filldraw(yscale(2)*unitsquare,backgroundColor,boundaryArc);
 xing((0.2,0),(0.8,1),
