@@ -53,7 +53,7 @@ in the following way:
 With this notation, we may easily express the factoring of scalars as:
 \begin{equation}
         \label{eq:tensor_scalar}
-        (v_1)_{s_1}(v_2)_{s_2} ⋯(λv_i)_{s_i} ⋯(v_n)_{s_n} = 
+        (v_1)_{s_1}(v_2)_{s_2} ⋯(λv_i)_{s_i} ⋯(v_n)_{s_n} =
         λ\cdot(v_1)_{s_1}(v_2)_{s_2} ⋯(v_n)_{s_n}
 \end{equation}
 
@@ -143,7 +143,7 @@ tensor powers with that of a so-called meta-object:
         $\map{ϕ^D_C}{\MM_D}{\MM_C}$.
         For each such morphism $ϕ^{D}_{C}$, there is a finite-set-indexed
         morphism $\map {ϕ^{D}_{C}[\curry{}]} {\FinSet} {\HomOp(\CC)}$
-        such that 
+        such that
         \begin{enumerate}
                 \item $\map {ϕ[\curry{S}]}{\MM_{C\sqcup S}} {\MM_{D\sqcup S}}$
                 \item $ϕ[\emptyset] = ϕ$
@@ -185,7 +185,7 @@ $\map {ϕ^{D_1}_{C_1}ψ^{D_2}_{C_2} \defeq ϕ \otimes ψ} {\CC_{D_1 \sqcup D_2}}
         define:
         \begin{equation}\label{eq:composition_extension}
                 ϕ^{D_1}_{C_1} \then ψ^{D_2}_{C_2}
-                \defeq 
+                \defeq
                 {ϕ^{D_1}_{C_1}[D_2\setminus C_1]} \then
                 {ψ^{D_2}_{C_2}[C_1\setminus D_2]}
         \end{equation}
@@ -193,7 +193,7 @@ $\map {ϕ^{D_1}_{C_1}ψ^{D_2}_{C_2} \defeq ϕ \otimes ψ} {\CC_{D_1 \sqcup D_2}}
 The two extreme cases of this definition are:
 \begin{itemize}
         \item When $C_1 \cap D_2 = \emptyset$, \cref{eq:composition_extension}
-                becomes $ϕ^{D_1}_{C_1}ψ^{D_2}_{C_2}$. 
+                becomes $ϕ^{D_1}_{C_1}ψ^{D_2}_{C_2}$.
         \item When $C_1 = D_2$, \cref{eq:composition_extension} becomes the
                 composition $ϕ^{D_1}_{C_1}\then ψ^{D_2}_{C_2}$ exactly.
 \end{itemize}
@@ -362,7 +362,7 @@ There is also the dual notion of a \emph{coalgebra}, which arises by reversing
 the arrows in \cref{eq:cd_mult,eq:cd_unit}:
 
 \begin{definition}[meta-coalgebra]
-        A \defi{meta-colagebra} (or \defi{meta-comonoid}) is a collection 
+        A \defi{meta-colagebra} (or \defi{meta-comonoid}) is a collection
         $\set{C_X}_X$ together with a \defi{comultiplication} $\map
         {\comult^{i}_{jk}} {C_{\set{i}}} {C_{\set{j,k}}}$ which is
         \defi{coassociative} (\cref{eq:cd_comult}) and a \defi{counit}, which is a
@@ -488,7 +488,7 @@ algebra.
 \begin{definition}[meta-Hopf algebra]
 A \defi{meta-Hopf algebra} (or \defi{meta-Hopf monoid})is a bialgebra $H$ together with a map $\map {\antipode} {H} {H}$ called the \defi{antipode}, which satisfies
 $\comult^{1}_{1,2}\then \antipode^1_1 \then \mult^{1,2}_1 =
-\counit^{1}\then\unit_{1} = 
+\counit^{1}\then\unit_{1} =
 \comult^{1}_{1,2}\then \antipode^2_2 \then \mult^{1,2}_1$.
 As a commutative diagram, this looks like \cref{eq:cd_antipode}
 \begin{equation}
@@ -520,7 +520,7 @@ properties: (we will denote the inverse by $\Rmati$)
         \label{eq:Rmat_understrand}
         \Rmat_{13}\then\comult^{1}_{12}&=\Rmat_{1b}\Rmat_{2a}\then\mult^{ab}_3\\
         \label{eq:Rmat_comult}
-        \comult^{1}_{21} &= 
+        \comult^{1}_{21} &=
                 \comult^{1}_{12} \Rmat_{1_i,2_i}\Rmati_{1_f,2_f}\then
                 \mult^{1_i,1,1_f}_{1}\then \mult^{2_i,2,2_f}_{2}
 \end{align}
@@ -548,7 +548,7 @@ properties: (we will denote the inverse by $\Rmati$)
         \begin{align}
                 \dfe_{1}h_2\dfe_{3} \then \mult^{1,2,3}
                 &= h \then S \then S\\
-                \dfe \then \comult_{12} 
+                \dfe \then \comult_{12}
                 &= \dfe_1\dfe_2\invb\monodromy_{34}
                 \then\mult^{13}_{1}\then\mult^{24}_2
         \end{align}
@@ -746,7 +746,7 @@ below:
 
 Let us now formally connect tangle diagrams with meta-algebras.
 
-% TODO: Add a footnote or remark about the multiplication caveat. 
+% TODO: Add a footnote or remark about the multiplication caveat.
 \begin{theorem}[tangles form a ribbon meta-Hopf algebra]
         \label{thm:vt_qtmha}
         Define $\tangle_X$ to be the set of upright tangles with $\ord{X}$
@@ -937,7 +937,7 @@ along its framing. Notice the right-to-left strand labels.}
         remove the snake by applying a series of Reidemeister 2 moves, resulting
         in a strand disjoint from the rest of the diagram. This is the same as
         deleting the original strand, then introducing a new disjoint one.
-        
+
         The quasitriangular axioms are equalities of pairs of three-strand
         tangles:
         \begin{itemize}
