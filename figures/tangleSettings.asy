@@ -16,6 +16,14 @@ pen tangleArc = tangleArcColor+tangleArcWidth;
 pen tangleArcShadow = backgroundColor+(tangleArcWidth*tangleArcShadowScale);
 pen tangleEndpoint = linewidth(endpointSize);
 
+void drawTangleDisk(path disk) {
+        filldraw(disk,backgroundColor,boundaryArc);
+}
+
+void drawTangleEndpoint(pair p) {
+        dot(p,tangleEndpoint);
+}
+
 void drawTangleArc(
         path g,
         bool doDrawArrow=false,
