@@ -530,7 +530,7 @@ properties: (we will denote the inverse by $\Rmati$)
         In a quasitriangular meta-Hopf algebra $H$, the \defi{Drinfeld element},
         $\dfe \in H$ is given by:
         \begin{equation}
-                \dfe \defeq \Rmat_{21}\then\antipode^2_2 \then \mult^{12}
+                \dfe \defeq \Rmat_{21}\then\antipode^1_1 \then \mult^{12}
         \end{equation}
 \end{definition}
 
@@ -543,16 +543,6 @@ properties: (we will denote the inverse by $\Rmati$)
         \Rmati_{12}\Rmati_{34}\then\mult^{14}_{1}\then\mult^{23}_{2}$.
 \end{definition}
 
-\begin{lemma}
-        The Drinfeld element $\dfe$ satisfies for all $h\in H$:
-        \begin{align}
-                \dfe_{1}h_2\dfe_{3} \then \mult^{1,2,3}
-                &= h \then S \then S\\
-                \dfe \then \comult_{12}
-                &= \dfe_1\dfe_2\invb\monodromy_{34}
-                \then\mult^{13}_{1}\then\mult^{24}_2
-        \end{align}
-\end{lemma}
 \begin{proof}
         See Majid's work in \cite{SM} or Etingof and Schiffmann in \cite{ES}
         for more details on this standard result. Note that the proof does not
@@ -667,19 +657,19 @@ concept of a tangle.
 
 \begin{figure}[h]
         \centering
-        \includegraphics[width=0.2\textwidth]{figures/sample.png}% todo: fix
+        \includegraphics{figures/R1p.pdf}
         \caption{Reidemeister move $R1'$}
         \label{fig:R1p}
 \end{figure}
 \begin{figure}[h]
         \centering
-        \includegraphics[width=0.2\textwidth]{figures/sample.png}% todo: fix
+        \includegraphics{figures/R2.pdf}
         \caption{Reidemeister move $R2$}
         \label{fig:R2}
 \end{figure}
 \begin{figure}[h]
         \centering
-        \includegraphics[width=0.2\textwidth]{figures/sample.png}% todo: fix
+        \includegraphics{figures/R3.pdf}
         \caption{Reidemeister move $R3$}
         \label{fig:R3}
 \end{figure}
@@ -839,9 +829,9 @@ along its framing. Notice the right-to-left strand labels.}
 \end{figure}
 \begin{figure}[h]
         \centering
-        \includegraphics[width=0.2\textwidth]{figures/sample.png}% todo: fix
+        \includegraphics{figures/tangle_drinfeld.pdf}
         \caption{The Drinfeld element in the meta-Hopf algebra of tangles.}
-        \label{fig:drinfeld_element}
+        \label{fig:tangle_drinfeld}
 \end{figure}
 \begin{figure}[h]
         \centering
@@ -865,12 +855,12 @@ along its framing. Notice the right-to-left strand labels.}
 \end{figure}
 \begin{figure}[h]
         \centering
-        \includegraphics[width=0.2\textwidth]{figures/sample.png}% todo: fix
-        \caption{A ribbon element in the meta-Hopf algebra of tangles. One can
-        use \cref{lem:spinner_ribbon} to verify this is compatible with the
-        spinner.
+        \includegraphics{figures/tangle_ribbon.pdf}
+        \caption{A ribbon element $\ribbon_i$ in the meta-Hopf algebra of
+                tangles. One can use \cref{lem:spinner_ribbon} to verify this is
+                compatible with the spinner.
         }
-        \label{fig:ribbon_element}
+        \label{fig:tangle_ribbon}
 \end{figure}
 
 \begin{figure}[h]
