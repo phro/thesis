@@ -516,9 +516,9 @@ H_{i,j}$, called the \defi{$\Rmat$-matrix}, which satisfies the following
 properties: (we will denote the inverse by $\Rmati$)
 \begin{align}
         \label{eq:Rmat_overstrand}
-        \Rmat_{12}\then\comult^{2}_{23}&=\Rmat_{a2}\Rmat_{b3}\then\mult^{ab}_1\\
+        \Rmat_{12}\then\comult^{2}_{23}&=\Rmat_{a3}\Rmat_{b2}\then\mult^{ab}_1\\
         \label{eq:Rmat_understrand}
-        \Rmat_{13}\then\comult^{1}_{12}&=\Rmat_{1b}\Rmat_{2a}\then\mult^{ab}_3\\
+        \Rmat_{13}\then\comult^{1}_{12}&=\Rmat_{1a}\Rmat_{2b}\then\mult^{ab}_3\\
         \label{eq:Rmat_comult}
         \comult^{1}_{21} &=
                 \comult^{1}_{12} \Rmat_{1_i,2_i}\Rmati_{1_f,2_f}\then
@@ -609,7 +609,7 @@ strings always remain inside the circle, and that each string is tied to the
 metal frame in two unique locations (that is, no two strings share an endpoint).
 \begin{figure}[h]
         \centering
-        \includegraphics[width=0.4\textwidth]{figures/sample.png}% todo: fix
+        \includegraphics{figures/tangle_example.pdf}
         \caption{Example of a tangle}
         \label{fig:tangle_example}
 \end{figure}
@@ -853,21 +853,15 @@ along its framing. Notice the right-to-left strand labels.}
 
 \begin{figure}[h]
         \centering
-        \includegraphics[width=0.2\textwidth]{figures/sample.png}% todo: fix
+        \includegraphics{figures/Rmat_overstrand.pdf}
         \caption{Example of a tangle satisfying \cref{eq:Rmat_overstrand}}
         \label{fig:Rmat_overstrand}
 \end{figure}
 \begin{figure}[h]
         \centering
-        \includegraphics[width=0.2\textwidth]{figures/sample.png}% todo: fix
+        \includegraphics{figures/Rmat_understrand.pdf}
         \caption{Example of a tangle satisfying \cref{eq:Rmat_understrand}}
         \label{fig:Rmat_understrand}
-\end{figure}
-\begin{figure}[h]
-        \centering
-        \includegraphics[width=0.2\textwidth]{figures/sample.png}% todo: fix
-        \caption{Example of a tangle satisfying \cref{eq:Rmat_comult}}
-        \label{fig:Rmat_comult}
 \end{figure}
 \begin{proof}
         Associativity of multiplication (\cref{eq:cd_mult}) follows from the

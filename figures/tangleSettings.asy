@@ -8,6 +8,7 @@ real tangleArcWidth       = 1mm;
 real endpointSize         = 2tangleArcWidth;
 real tangleArcShadowScale = 3;
 real arrowheadSize        = 3tangleArcWidth;
+real diagramGap           = 0.5;
 
 real arcShadowBuffer = 0.1;
 
@@ -28,9 +29,10 @@ void drawTangleArc(
         path g,
         bool doDrawArrow=false,
         real arrowPos=0.8,
-        string arcLabel = ""
+        string arcLabel = "",
+        real arcLabelPos = 0.1
         ) {
-        Label arcLabel = Label(arcLabel, Relative(0.1), RightSide);
+        Label arcLabel = Label(arcLabel, Relative(arcLabelPos), RightSide);
         draw(g,tangleArcShadow,margin=PenMargins);
         if(doDrawArrow){
                 draw(g, L=arcLabel, tangleArc, ArcArrow(
