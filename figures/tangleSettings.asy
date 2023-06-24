@@ -2,11 +2,16 @@ pen backgroundColor  = grey;
 pen defaultArcColor  = black;
 pen boundaryArcColor = defaultArcColor;
 pen tangleArcColor   = defaultArcColor;
+pen frontArcColor    = heavygray;
 
-real boundaryArcWidth     = 0.5mm;
 real tangleArcWidth       = 1mm;
-real endpointSize         = 2tangleArcWidth;
+real boundaryArcWidth     = 0.5tangleArcWidth;
+real frontArcWidth        = 0.5tangleArcWidth;
+
+real tangleEndpointSize   = 2tangleArcWidth;
+real frontEndpointSize    = 2frontArcWidth;
 real tangleArcShadowScale = 3;
+real frontArcShadowScale  = tangleArcShadowScale;
 real arrowheadSize        = 3tangleArcWidth;
 real diagramGap           = 0.5;
 
@@ -14,8 +19,13 @@ real arcShadowBuffer = 0.1;
 
 pen boundaryArc = boundaryArcColor+boundaryArcWidth;
 pen tangleArc = tangleArcColor+tangleArcWidth;
+pen frontArc = frontArcColor+frontArcWidth;
+
 pen tangleArcShadow = backgroundColor+(tangleArcWidth*tangleArcShadowScale);
-pen tangleEndpoint = linewidth(endpointSize);
+pen frontArcShadow = backgroundColor+(frontArcWidth*frontArcShadowScale);
+
+pen tangleEndpoint = tangleArcColor+linewidth(tangleEndpointSize);
+pen frontEndpoint = frontArcColor+linewidth(frontEndpointSize);
 
 void drawTangleDisk(path disk) {
         filldraw(disk,backgroundColor,boundaryArc);
@@ -23,6 +33,10 @@ void drawTangleDisk(path disk) {
 
 void drawTangleEndpoint(pair p) {
         dot(p,tangleEndpoint);
+}
+
+void drawFrontEndpoint(pair p) {
+        dot(p,frontEndpoint);
 }
 
 void drawTangleArc(
@@ -45,6 +59,11 @@ void drawTangleArc(
         }
 }
 
+void drawFrontArc(path g) {
+        draw(g,frontArcShadow,margin=PenMargins);
+        draw(g, frontArc);
+}
+
 void xing(
         pair sw,
         pair ne,
@@ -59,7 +78,7 @@ void xing(
         if(isPositive) {
                 drawTangleArc(under, arcLabel=underLabel,  doDrawArrow, arrowPos);
                 drawTangleArc(over,  arcLabel=overLabel, doDrawArrow, arrowPos);
-        } 
+        }
         if(!isPositive) {
                 drawTangleArc(over,  arcLabel=underLabel,  doDrawArrow, arrowPos);
                 drawTangleArc(under, arcLabel=overLabel, doDrawArrow, arrowPos);
