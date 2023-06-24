@@ -9,11 +9,11 @@
 
 %\section{Generating \acp{RVT} for links}
 
-\subsection{\acp{RVT} for knots}
+\subsection{Converting knots to upright tangles}
 
 Bar-Natan and van der Veen develop an algorithm to convert a classical long knot
-into an \ac{RVT}. As we are interested in links, we must extend this algorithm
-to include so-called \enquote{long links}, which we outline below:
+into an upright tangle. As we are interested in links, we must extend this
+algorithm to include so-called \enquote{long links}, which we outline below:
 \begin{verbatim}
         1. Pass a front over the beginning of the open strand.
         2. Progressively absorb the leftmost crossings
@@ -40,8 +40,11 @@ components.
         See \cite{BV}, Lemma~43.
 \end{proof}
 
-This is a Haskell implementation of the algorithm \hs{toRVT} which takes a
-classical tangle and produces a rotational tangle by computing a compatible
-choice of rotation numbers for each arc.
+This is a Haskell implementation\footnote{The full source code is available at
+\url{https://github.com/phro/KnotTheory}.} of the algorithm \hs{toRVT},\footnote{Here, the
+acronym \enquote{RVT} stands for \enquote{Rotational Virtual Tangle}, which is
+another term for \enquote{Upright Tangle}.} which takes a classical tangle and
+produces an upright tangle by computing a compatible choice of rotation numbers
+for each arc.
 
 \input{./KnotTheory/src/KnotTheory/PD.lhs}
