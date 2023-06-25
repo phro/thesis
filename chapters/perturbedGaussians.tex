@@ -145,13 +145,16 @@ operations as power series in a closed form, namely as perturbed Gaußians.
         \cref{sec:algebraic-definitions} all have the form of a perturbed
         Gaußian. That is:
         \begin{align}
-                \Gen*{\mult^{ij}_{k}} &=\exp\pn*
-                {
-                        (α_i + α_j)a_k +
-                        (β_i + β_j + ξ_iη_j)b_k +
-                        \pn*{\frac{ξ_i}{\A_j} + ξ_j} x_k+
-                        \pn*{\frac{η_j}{\A_i}+ η_i }y_k
-                } \label{eq:gen-mult}
+                \label{eq:gen-mult}
+                \Gen*{\mult^{ij}_{k}} &=
+                \begin{multlined}[t]
+                \exp\biggl(
+                (α_i + α_j)a_k +
+                        (β_i + β_j + ξ_iη_j)b_k \\
+                +\pn*{\frac{ξ_i}{\A_j} + ξ_j} x_k+
+                \pn*{\frac{η_j}{\A_i}+ η_i }y_k
+                \biggr)
+                \end{multlined}
                 \\ \Gen*{\unit_{i}} &=1\label{eq:gen-unit}
                 \\\Gen*{\comult^{i}_{jk}} &=\exp\pn*{
                         β_i(b_j + b_k) +
