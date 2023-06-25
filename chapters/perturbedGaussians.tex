@@ -44,31 +44,6 @@ generators (following \cite{BV}, we use $(\yo, \bo, \ao, \xo)$):
         {y^{n_1}b^{n_2}a^{n_3}x^{n_4}} {\yo^{n_1}\bo^{n_2}\ao^{n_3}\xo^{n_4}}
 \end{equation}
 
-Using this vector space isomorphism, \cite{BV} expresses all Hopf algebra
-operations as perturbed Gaußians. To extend the resulting tangle invariant to
-one on links, one would need to define a trace operator on $\CU$. The first
-natural place to look is the coinvariants,
-$\CU_\CU = \fracl{\CU}{\liebk{\CU}{\CU}}$. In what follows, we will compute
-$\CU_\CU$, determine a vector space isomorphism to a suitable polynomial ring,
-and compute the corresponding generating function of the quotient map $\map
-{\trace} {\CU} {\CU_\CU}$.
-
-\section{Upright tangle invariants from a ribbon Hopf algebra}
-Here we describe the morphism from the category of pure upright tangles to a
-ribbon Hopf algebra, as outlined by Bar-Natan and van der Veen in \cite{BV}.
-
-We define the morphism of meta-ribbon Hopf algebras in two steps:
-\begin{enumerate}
-        \item Given a pure tangle, we write out a sequence of meta-ribbon Hopf
-                algebra operations which produce the tangle. Each operation is
-                then mapped to the corresponding operation on the algebra, with
-                a sequence of operations mapped to composition.
-        \item Since computing compositions of operations is an essential
-                component to this invariant, we then define an equivalent
-                category which allows for the more efficient computation. This
-                is done by replacing morphisms
-\end{enumerate}
-
 \ProvideDocumentCommand{\UMaps}{}{\mcl{U}}
 \ProvideDocumentCommand{\LinMaps}{}{\mcl{H}}
 \ProvideDocumentCommand{\GenFunc}{}{\mcl{C}}
@@ -162,11 +137,13 @@ $V^{\otimes n}$, the computational complexity is exponential in $n$.
 
 \subsection{Expressing Hopf algebra operations as perturbed Gaußians}
 
-\begin{theorem}[The meta-Hopf structure of $\CU$ is Gaußian]
-        We will now observe that the meta-Hopf algebra operations for $\CU$ as defined
-        in \cref{sec:algebraic-definitions} all have the form of a perturbed Gaußian.
-        Namely:
+Using this vector space isomorphism, \cite{BV} expresses all Hopf algebra
+operations as power series in a closed form, namely as perturbed Gaußians.
 
+\begin{theorem}[The meta-Hopf structure of $\CU$ is Gaußian]
+        Each of the meta-Hopf algebra operations for $\CU$ as defined in
+        \cref{sec:algebraic-definitions} all have the form of a perturbed
+        Gaußian. That is:
         \begin{align}
                 \Gen*{\mult^{ij}_{k}} &=\exp\pn*
                 {
