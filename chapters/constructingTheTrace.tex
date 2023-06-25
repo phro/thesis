@@ -60,7 +60,7 @@ The first example we give is that of impure tangles.
 \end{lemma}
 \begin{proof}
         When $L = \emptyset$, the situation is exactly the case of
-        \cref{thm:pure_tangle}, so $\RVT_{\emptyset, S} = \tangle_S$ is a
+        \cref{thm:tangles_meta_algebra}, so $\RVT_{\emptyset, S} = \tangle_S$ is a
         meta-Hopf algebra. Furthermore, since the Reidemeister moves are local
         operations, the presence of closed components does not affect our
         ability to verify the identities on the Hopf-algebra operations.
@@ -92,11 +92,9 @@ The first example we give is that of impure tangles.
                        f &\mapsto f \otimes \id_{A_A}^{\otimes L}
                }
        \end{equation}
-       Next, we wish to show that the two maps with shape
-       $\map {f}
-               {A^{\otimes \set {i, j} \sqcup S}\otimes A_A^{\otimes L}}
-               {A^{\otimes S}\otimes A_A^{\otimes \set k \sqcup L}}$
-       are equivalent. This amounts to showing that, given $u, v\in A$, that
+       Next, we must show that
+       $\mult^{ij}_k\then\trace^{k} =\mult^{ji}_k\then\trace^{k}$.
+       This amounts to showing that, given $u, v\in A$, that
        $\overline{uv} = \overline{vu} \in A_A$.
        However, by the construction of the coinvariants,
        $\overline{uv}-\overline{vu} = \overline{uv-vu} = \overline{0} \in A$,
@@ -160,10 +158,11 @@ $n$, we conclude that:
 \begin{equation}\label{eq:coinv_reduction}
         y^n b^m f(a) x^k \sim δ_{nk}\frac{n!}{(n+m)!}y^{n+m}\nabla^m[f](a)x^{n+m}
 \end{equation}
-Observing when $f$ is a monomial in \cref{eq:coinv_reduction}, we see
-$\CU_{\Alg}$ is spanned by $\set{y^n a^k x^n}_{n, k \ge 0}$. Since all relations are
-accounted for, setting $m=0$  demonstrates this set is linearly independent, and
-we have a basis.
+where $\sim$ refers to equivalence in the set of coinvariants. Observing when
+$f$ is a monomial in \cref{eq:coinv_reduction}, we see $\CU_{\Alg}$ is spanned
+by $\set{y^n a^k x^n}_{n, k \ge 0}$.
+Since all relations are accounted for, setting $m=0$ demonstrates this set is
+linearly independent, and we have a basis.
 \end{proof}
 
 \subsection{A generating function for the coinvariants}
