@@ -81,17 +81,35 @@ void xing(
         path under = (ne.x,sw.y){N}..{N}(sw.x,ne.y);
         real arrowPos = 0.8;
         if(isPositive) {
-                drawTangleArc(under, arcLabel=underLabel,  doDrawArrow, arrowPos);
-                drawTangleArc(over,  arcLabel=overLabel, doDrawArrow, arrowPos);
+                drawTangleArc(under, doDrawArrow, arcLabel=underLabel, arrowPos);
+                drawTangleArc(over , doDrawArrow, arcLabel=overLabel ,
+                arcLabelPos = 0.25, arrowPos);
         }
         if(!isPositive) {
-                drawTangleArc(over,  arcLabel=underLabel,  doDrawArrow, arrowPos);
-                drawTangleArc(under, arcLabel=overLabel, doDrawArrow, arrowPos);
+                drawTangleArc(over , doDrawArrow, arcLabel=underLabel, arrowPos);
+                drawTangleArc(under, doDrawArrow, arcLabel=overLabel ,
+                arcLabelPos = 0.25, arrowPos);
         }
 }
 
-void spin(pair start, pair mid, pair stop, bool doDrawArrow=false) {
-        drawTangleArc(start{N}..mid..{N}stop,doDrawArrow, 0.5);
+pair[] pointsFromXing(pair sw, pair ne) {
+        return new pair[] {
+                sw,
+                (ne.x,sw.y),
+                ne,
+                (sw.x,ne.y)
+        };
+}
+
+void spin(pair start, pair mid, pair stop, bool doDrawArrow=false,
+        string arcLabel = "", real arcLabelPos = 0.1) {
+        drawTangleArc(
+                start{N}..
+                (mid.x,start.y){S}..
+                mid{S}..
+                (mid.x,stop.y){S}..
+                {N}stop
+                ,doDrawArrow, 0.5, arcLabel, arcLabelPos);
 }
 
 void drawTestGrid(pair size) {

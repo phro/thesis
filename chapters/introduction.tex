@@ -977,3 +977,40 @@ the spinner $\spin$:
         &\defeq \exp\pn*{\ao_j\bo_i + \frac{1-\Bo_i}{\bo_i}\yo_i\xo_j}\\
         \spin &\defeq \sqrt{\Bo}
 \end{align}
+
+\section{Morphisms between meta-objects}
+
+When equipped with meta-structures on both tangles and an algebraic object, we
+can define a tangle invariant by considering a morphism between the
+meta-objects.
+
+\begin{definition}[morphism of meta-objects]
+        Let $\set{A_X}_X$ and $\set{B_X}_X$ be compatible meta-objects (i.e.
+        ones with the same operations and relations between the operations). A
+        \defi{morphism} $ϕ$ between these meta-objects is map $\map {ϕ}
+        {\set{A_X}_X} {\set{B_X}_X}$ sending $A_X \mapsto B_X$ such that for
+        each map $f^{X}_{Y}$ in $A$, $ϕ(f^{X}_{Y}) = f^X_Y$ in $B$.
+\end{definition}
+
+\subsection{Upright tangle invariants from a ribbon meta-Hopf algebra}
+We define a $\CU$-valued tangle invariant in the following way:
+\begin{enumerate}
+        \item Given a pure tangle, disconnect each crossing from its neighbours,
+                as well as each arc with a nonzero rotation number.
+        \item Replace each crossing with an $\Rmat$-matrix
+                $\Rmat_{ij}\in\CU_{\set{i,j}}$, and each rotation of an arc with
+                a spinner $\spin_i\in \CU_{\set{i}}$.
+        \item For each disconnection, there is a corresponding stitching
+                operation required to bring the tangle back to its original
+                state. Replace each stitching operation with a multiplication
+                operation in $\CU$.
+\end{enumerate}
+
+\begin{figure}[h]
+        \centering
+        \includegraphics{figures/invariant_example.pdf}
+        \caption{Breaking up a tangle into its constituent components. The
+        left-hand tangle is obtainable by the right-hand one by applying the map
+        $\mult^{1,2,\dots,7}_{i}$.}
+        \label{fig:invariant_example}
+\end{figure}
