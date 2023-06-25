@@ -161,8 +161,14 @@ $n$, we conclude that:
 where $\sim$ refers to equivalence in the set of coinvariants. Observing when
 $f$ is a monomial in \cref{eq:coinv_reduction}, we see $\CU_{\Alg}$ is spanned
 by $\set{y^n a^k x^n}_{n, k \ge 0}$.
-Since all relations are accounted for, setting $m=0$ demonstrates this set is
-linearly independent, and we have a basis.
+
+Finally, all that remains to show is this set is linearly independent. This is
+equivalent to no two $y^na^kx^n$'s with distinct choices of exponents being
+related under a sequence of relations. Since \cref{lem:coinvLieAlg} allows us to
+only consider sequences of relations of the form $\ad_z$ for $z$ a one-letter
+word in $\set{y, b, a, x}$, inspection of the above comprehensive summary of all
+one-letter relations (in particular, \cref{eq:coinv_reduction} with $m=0$)
+allows us to conclude that this set is indeed linearly independent.
 \end{proof}
 
 \subsection{A generating function for the coinvariants}
