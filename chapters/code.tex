@@ -12,17 +12,38 @@
 \subsection{Converting knots to upright tangles}
 
 Bar-Natan and van der Veen develop an algorithm to convert a classical long knot
-into an upright tangle. As we are interested in links, we must extend this
-algorithm to include so-called \enquote{long links}, which we outline below:
-\begin{verbatim}
-        1. Pass a front over the beginning of the open strand.
-        2. Progressively absorb the leftmost crossings
-                2a. As crossings are absorbed,
-                    take into account any rotations of arcs.
-        3. If an arc passes through the front twice, absorb it,
-           taking into account any rotations of that arc as a
-           result.
-\end{verbatim}
+into an upright tangle. It involves passing a line segment, called the
+\emph{front}, over the knot, requiring that everything behind the front is in
+upright form. For example, consider the link:
+\begin{figure}[h]
+        \centering
+        \includegraphics{figures/upright_41_1.pdf}
+        \caption{A knot which is not in upright form. The front is written in
+        grey.}
+        \label{fig:figures-upright_41_1}
+\end{figure}
+By pulling the crossings along the arc which touches the front, we can bring the
+knot to upright form.
+\begin{figure}[h]
+        \centering
+        \includegraphics{figures/upright_41_2a.pdf}
+        \includegraphics{figures/upright_41_2b.pdf}
+        \caption{By advancing the front over a crossing, we bring a crossing
+        into upright form. A dashed front indicates where the front is advancing
+        to.
+        }
+        \label{fig:figures-upright_41_2}
+\end{figure}
+\begin{figure}[h]
+        \centering
+        \includegraphics{figures/upright_41_3a.pdf}
+        \includegraphics{figures/upright_41_3b.pdf}
+        \caption{By advancing the front over a crossing, we bring a crossing
+        into upright form. A dashed front indicates where the front is advancing
+        to.
+        }
+        \label{fig:figures-upright_41_3}
+\end{figure}
 
 \subsection{Extending the algorithm to multiple components}
 

@@ -44,24 +44,29 @@ void drawTangleArc(
         bool doDrawArrow=false,
         real arrowPos=0.8,
         string arcLabel = "",
-        real arcLabelPos = 0.1
+        real arcLabelPos = 0.1,
+        picture pic = currentpicture
         ) {
         Label arcLabel = Label(arcLabel, Relative(arcLabelPos), RightSide);
-        draw(g,tangleArcShadow,margin=PenMargins);
+        draw(pic,g,tangleArcShadow,margin=PenMargins);
         if(doDrawArrow){
-                draw(g, L=arcLabel, tangleArc, ArcArrow(
+                draw(pic,g, L=arcLabel, tangleArc, ArcArrow(
                                         position=arrowPos*length(g),
                                         arrowhead=SimpleHead,
                                         size=arrowheadSize
                                         ));
         } else {
-                draw(g, L=arcLabel, tangleArc);
+                draw(pic,g, L=arcLabel, tangleArc);
         }
 }
 
-void drawFrontArc(path g) {
+void drawFrontArc(path g,bool drawDotted=false) {
         draw(g,frontArcShadow,margin=PenMargins);
-        draw(g, frontArc);
+        if(drawDotted){
+                draw(g,frontArc+linetype(new real[]{0,2})); 
+        } else {
+                draw(g,frontArc);
+        }
 }
 
 void xing(
@@ -87,4 +92,12 @@ void xing(
 
 void spin(pair start, pair mid, pair stop, bool doDrawArrow=false) {
         drawTangleArc(start{N}..mid..{N}stop,doDrawArrow, 0.5);
+}
+
+void drawTestGrid(pair size) {
+        for(int i = 1; i < size.x; ++i){ 
+                for(int j = 1; j < size.y; ++j) {
+                        dot((i,j),red);
+                }
+        }
 }
