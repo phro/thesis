@@ -51,7 +51,7 @@ Boston, MA 02111-1307, USA.
   - [ ] E.g. how the invariant interacts with satellites
 
 ### Feedback from Dror ###
-2023-06-01
+#### 2023-06-01 ####
 
 #### Abstract ####
 - [X] Missing an executive summary; add to abstract or add an "executive summary" section.
@@ -103,3 +103,18 @@ Explicit examples are missing.
   - [X] Reidemeister moves
   - [X] Whirling relations
   - [X] `toRVT` algorithm
+
+#### 2023-06-26 ####
+
+- [ ] p.11 there must also be a bound on the degree of the polynomial to be
+      polynomial time
+- [ ] p.27 mention in the Thm that this is only for virtual knots
+- [ ] Address the rest of Dror's comments
+  - [ ] Earlier feedback
+  - [ ] 2023-06-26 feedback
+- [ ] *Print* the thesis off to read
+  - [ ] Read over the thesis five more times
+  - [ ] Read over the thesis four more times
+  - [ ] Read over the thesis three more times
+  - [ ] Read over the thesis two more times
+  - [ ] Read over the thesis one more time
