@@ -112,8 +112,8 @@ Explicit examples are missing.
     - [X] p.10 wording changes
     - [X] p.12 distinguish between vector space `[A,A]` and ideal `[A,A]`.
     - [X] p.13 grammar
-    - [ ] p.15 math error
-    - [ ] p.15 add notational description
+    - [X] p.15 math error
+    - [X] p.15 add notational description
     - [ ] Define a meta-object better; start with meta-monoids.
     - [ ] Remove meta-group reference (this is a meta-Hopf algebra).
     - [ ] Give a non-trivial example of a meta-monoid (say, `n×n` matrices)

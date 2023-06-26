@@ -29,14 +29,14 @@ We formalize the idea below:
         subject to the standard multilinear relations, namely multi-additivity
         and the factoring of scalars.
 
-        By multi-additivity, we mean that for each $i\in S$ and $f, g \in V_S$ satisfying
-        $f(i) = g(i) = v$, we have:
+        By multi-additivity, we mean that for each $i\in S$ and $f, g \in V_S$
+        satisfying $f(s) = g(s)$ for each $s \in S\setminus\set i$, we have:
         \begin{equation}
                 \label{eq:tensor_additive}
                 f + g = \pn*{
                         s \mapsto \begin{cases}
-                                v & \text{if $s = i$}\\
-                                f(i) + g(i) & \text{otherwise}
+                                f(s) = g(s) & \text{if $s \neq i$}\\
+                                f(i) + g(i) & \text{if $s = i$}
                         \end{cases}
                 }
         \end{equation}
@@ -55,6 +55,16 @@ With this notation, we may easily express the factoring of scalars as:
         \label{eq:tensor_scalar}
         (v_1)_{s_1}(v_2)_{s_2} ⋯(λv_i)_{s_i} ⋯(v_n)_{s_n} =
         λ\cdot(v_1)_{s_1}(v_2)_{s_2} ⋯(v_n)_{s_n}
+\end{equation}
+Likewise, \cref{eq:tensor_additive} becomes
+\begin{equation}\label{eq:tensor_additive_compact}
+        \begin{multlined}[t]
+                \pn*{(v_1)_{s_1}(v_2)_{s_2} ⋯x_{s_i} ⋯(v_n)_{s_n}} + 
+                \pn*{(v_1)_{s_1}(v_2)_{s_2} ⋯y_{s_i} ⋯(v_n)_{s_n}}
+                \\
+                =
+                (v_1)_{s_1}(v_2)_{s_2} ⋯(x+y)_{s_i} ⋯(v_n)_{s_n}
+        \end{multlined}
 \end{equation}
 
 Next, we introduce notation for maps between tensor powers so that we may
