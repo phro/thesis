@@ -37,24 +37,25 @@ slice knot which is not ribbon) may be advanced by the development of
 in a retrievable way.
 
 \subsection{Quantum Invariants}
-One such class of topological invariants is derived from quantum groups, which
-are algebraic structures whose relations mimic those of knotted objects. With
-this approach, one takes a knotted object and decomposes it into a series of
-topological operations (such as stitching strands or doubling strands), then
-maps each of these operations to a corresponding algebraic operation. The
-composition of these algebraic operations is the value of the invariant.
 
-More specifically, a quantum group (also called a \defi{Hopf algebra}) is a
-vector space $A$ together with several maps between various tensor powers (for
-instance, a multiplication map $\map {\mult} {A \otimes A} {A}$). The value of
-the invariant is a vector in some tensor power of $A$, with one factor assigned
-to each strand of the knotted object. It is computed by associating to each
-concatenation of strands with a multiplication of algebra elements. While this
-formulation is elegant, it has a notable drawback: computing the value of an
-invariant with many components requires manipulating large tensor powers of $A$.
-One remedy is to instead perform the computation in a representation of $A$, say
-a small vector space $V$, though the issue of exponential growth in complexity
-remains.
+One such class of topological invariants is derived from quasitriangular Hopf
+algebras, which are algebraic structures whose operations mimic those of knotted
+objects. With this approach, one takes a knotted object and constructs it into a
+series of topological operations (such as stitching strands or doubling
+strands), then maps each of these operations to a corresponding algebraic
+operation. The composition of these algebraic operations is the value of the
+invariant.
+
+More specifically, a Hopf algebra is a vector space $A$ together with several
+maps between various tensor powers thereof (for instance, a multiplication map
+$\map {\mult} {A \otimes A} {A}$). The value of the invariant is a vector in a
+tensor power of $A$, with each crossing assigned an element of $A \otimes A$.
+Tensor factors which belong to the same strand are concatenated by multiplying
+the associated algebra elements. While this formulation is elegant, it has a
+notable drawback: computing the value of the invariant of an object with many
+components requires manipulating large tensor powers of $A$. One remedy is to
+instead perform the computation in a representation of $A$, say a small vector
+space $V$, though the issue of exponential growth in complexity remains.
 
 \subsection{Images of the invariant}
 To avoid the issue of exponential computational complexity, one can instead

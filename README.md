@@ -106,15 +106,29 @@ Explicit examples are missing.
 
 #### 2023-06-26 ####
 
-- [ ] p.11 there must also be a bound on the degree of the polynomial to be
-      polynomial time
-- [ ] p.27 mention in the Thm that this is only for virtual knots
 - [ ] Address the rest of Dror's comments
   - [ ] Earlier feedback
   - [ ] 2023-06-26 feedback
+    - [X] p.10 wording changes
+    - [ ] p.11 there must also be a bound on the degree of the polynomial to be
+          polynomial time (no change necessarily warranted)
+    - [ ] p.12 distinguish between vector space `[A,A]` and ideal `[A,A]`.
+    - [ ] p.13 grammar
+    - [ ] p.15 math error
+    - [ ] p.15 add notational description
+    - [ ] Define a meta-object better; start with meta-monoids.
+    - [ ] Remove meta-group reference (this is a meta-Hopf algebra).
+    - [ ] Give a non-trivial example of a meta-monoid (say, `n×n` matrices)
+    - [ ] p.21 Don't subscript integers.
+    - [ ] p.23 Replace "pure" and "impure" with "open" and "mixed" (say).
+    - [ ] The definition of framed tangles must put a condition on the endpoints.
+    - [ ] Fix broken references.
+    - [ ] p.27 mention in the Thm that this is only for virtual knots
+    - [ ] p.36 "morphism-valued" is misleading.
+    - [ ] p.39 Generating functions are not Gaußian in `b`-variables.
 - [ ] *Print* the thesis off to read
-  - [ ] Read over the thesis five more times
-  - [ ] Read over the thesis four more times
-  - [ ] Read over the thesis three more times
-  - [ ] Read over the thesis two more times
-  - [ ] Read over the thesis one more time
+  - [ ] Read over the thesis for a total of one time
+  - [ ] Read over the thesis for a total of two times
+  - [ ] Read over the thesis for a total of three times
+  - [ ] Read over the thesis for a total of four times
+  - [ ] Read over the thesis for a total of five times
