@@ -9,7 +9,7 @@
 
 %\section{Generating \acp{RVT} for links}
 
-\subsection{Converting knots to upright tangles}
+\subsection{Description of algorithm for knots}
 
 Bar-Natan and van der Veen develop an algorithm to convert a classical long knot
 into an upright tangle. It involves passing a line segment, called the
@@ -63,6 +63,32 @@ This is a Haskell implementation\footnote{The full source code is available at
 acronym RVT stands for \enquote{Rotational Virtual Tangle}, which is
 another term for \enquote{Upright Tangle}.} which takes a classical tangle and
 produces an upright tangle by computing a compatible choice of rotation numbers
-for each arc.
+for each arc. This follows largely the same logic as above, except the leftmost
+strand is always prioritized for absorption, regardless of which component it
+belongs to.
+
+\subsection{Use case}
+
+For example, to query the \hs{SX}-form of a link (i.e. its skeleton-crossing
+form), one writes:
+\begin{code}
+>>> link 4 True 1
+SX [Loop [1,2,3,4],Loop [5,6,7,8]]
+   [Xm 1 6,Xm 3 8,Xm 5 2,Xm 7 4]
+\end{code}
+To convert from the \hs{SX} form to an upright tangle form (here written
+\hs{RVT}), we must first replace one of the closed \hs{Loop}s with an open
+\hs{Strand} (accomplished by \hs{openFirstStrand}):
+\begin{code}
+>>> toRVT . openFirstStrand $ link 4 True 1
+RVT [Strand [1,2,3,4],Loop [5,6,7,8]]
+    [Xm 1 6,Xm 3 8,Xm 5 2,Xm 7 4]
+    [(5,-1),(6,1),(8,1)]
+\end{code}
+Reading off the final line, we see that arc $5$ has rotation number $-1$, arcs
+$6$ and $8$ have rotation number $1$, and the rest of the arcs have rotation
+number $0$.
+
+\subsection{Implementation}
 
 \input{./KnotTheory/src/KnotTheory/PD.lhs}
