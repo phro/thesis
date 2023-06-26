@@ -70,22 +70,22 @@ Boston, MA 02111-1307, USA.
   - the linear order on a set is used for functionals. Dror finds this either
     confusing or wrong, and I am not so sure anymore.
   - I need to think more about how to fix this.
-- [ ] The // notation needs to be clarified
-- [ ] Clarify "Cartesian category". What does this mean? Add a footnote.
+- [X] The // notation needs to be clarified
+- [X] Clarify "Cartesian category". What does this mean? Add a footnote.
 
 #### Chapter: Perturbed Gaußians ####
-- [ ] Clean up RVT definition
+- [X] Clean up RVT definition
   - hard to understand
   - no pictures are provided!
-- [ ] 2.3 is just a summary of how to define the invariant. It is missing all the details.
-- [ ] do proofs for the values of the generating functions
+- [X] 2.3 is just a summary of how to define the invariant. It is missing all the details.
+- [X] do proofs for the values of the generating functions
 
 #### Chapter: Constructing the trace ####
 - [ ] the trace has more properties; write them out
-- [ ] explicitly define A_A as A/[A,A]
-- [ ] What is a "shape"? The proof of lemma 3.4 is awkward. Clean it up.
-- [ ] Here $\sim$ is undefined (equivalent modulo the coinvariants).
-- [ ] "all the relations are accounted for" -> make the proof more formal.
+- [X] explicitly define A_A as A/[A,A]
+- [X] What is a "shape"? The proof of lemma 3.4 is awkward. Clean it up.
+- [X] Here $\sim$ is undefined (equivalent modulo the coinvariants).
+- [X] "all the relations are accounted for" -> make the proof more formal.
 
 The jump from the end of `Constructing the trace` to `Conclusions` is abrupt.
 Explicit examples are missing.
@@ -99,7 +99,7 @@ Explicit examples are missing.
 
 "Pictures are hard to make. In this subject, they are necessary."
 - hand-drawn can be time-consuming to modify.
-- [ ] make pictures for Reidemeister moves, for whirling relations, &c.
-  - [ ] Reidemeister moves
-  - [ ] Whirling relations
-  - [ ] `toRVT` algorithm
+- [X] make pictures for Reidemeister moves, for whirling relations, &c.
+  - [X] Reidemeister moves
+  - [X] Whirling relations
+  - [X] `toRVT` algorithm
