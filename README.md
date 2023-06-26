@@ -110,9 +110,7 @@ Explicit examples are missing.
   - [ ] Earlier feedback
   - [ ] 2023-06-26 feedback
     - [X] p.10 wording changes
-    - [ ] p.11 there must also be a bound on the degree of the polynomial to be
-          polynomial time (no change necessarily warranted)
-    - [ ] p.12 distinguish between vector space `[A,A]` and ideal `[A,A]`.
+    - [X] p.12 distinguish between vector space `[A,A]` and ideal `[A,A]`.
     - [ ] p.13 grammar
     - [ ] p.15 math error
     - [ ] p.15 add notational description

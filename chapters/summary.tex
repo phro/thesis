@@ -101,10 +101,13 @@ since two strands in a tangle corresponds to multiplication, closing a strand
 into a loop should correspond algebraically to a trace map.
 
 In a generic algebra $A$, the trace map is defined as the projection onto the
-set of coinvariants: $\map {\trace} {A} {A_A = A/\liebk{A}{A}}$. In order to
-extend the invariant in this framework, we must first compute the space of
-coinvariants for $\CUlong$, then compute the coinvariants map, and write it as a
-generating function. (This is accomplished in \cref{sec:coinv_comp}.)
+set of coinvariants: $\map {\trace} {A} {A_A = A/\liebk{A}{A}}$.\footnote{Here,
+$\liebk AA = \Span\setbuilder{\liebk{x}{y}}{x, y\in A}$ refers to the vector
+space of Lie brackets, not the ideal generated thereby. The space $A_A$ does not
+have an algebra structure in general.} In order to extend the invariant in this
+framework, we must first compute the space of coinvariants for $\CUlong$, then
+compute the coinvariants map, and write it as a generating function. (This is
+accomplished in \cref{sec:coinv_comp}.)
 
 \subsection{Performing computations}
 Unfortunately, the resulting trace map does not take the form of a perturbed
