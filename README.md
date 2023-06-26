@@ -111,7 +111,7 @@ Explicit examples are missing.
   - [ ] 2023-06-26 feedback
     - [X] p.10 wording changes
     - [X] p.12 distinguish between vector space `[A,A]` and ideal `[A,A]`.
-    - [ ] p.13 grammar
+    - [X] p.13 grammar
     - [ ] p.15 math error
     - [ ] p.15 add notational description
     - [ ] Define a meta-object better; start with meta-monoids.
