@@ -59,7 +59,7 @@ With this notation, we may easily express the factoring of scalars as:
 Likewise, \cref{eq:tensor_additive} becomes
 \begin{equation}\label{eq:tensor_additive_compact}
         \begin{multlined}[t]
-                \pn*{(v_1)_{s_1}(v_2)_{s_2} ⋯x_{s_i} ⋯(v_n)_{s_n}} + 
+                \pn*{(v_1)_{s_1}(v_2)_{s_2} ⋯x_{s_i} ⋯(v_n)_{s_n}} +
                 \pn*{(v_1)_{s_1}(v_2)_{s_2} ⋯y_{s_i} ⋯(v_n)_{s_n}}
                 \\
                 =
@@ -139,9 +139,122 @@ formulation of tangles (introduced in
 monoidal category, though it shares many similarities with both concepts. In
 particular, the domains and codomains of the maps we have discussed so far have
 only depended on the index set. With this observation, we replace the notation of
-tensor powers with that of a so-called meta-object:
+tensor powers with that of a so-called \defi{meta-object}. We introduce this
+concept by starting with monoids.
 
-\begin{definition}[Meta-object]
+\subsection{Defining a meta-monoid}
+
+To make the above definition more concrete, we will go through the process of
+defining a meta-monoid, which is a generalization of a monoid object.
+Traditionally, the data of a monoid object are the following:
+\begin{itemize}
+        \item An object $M$ in a category $\CC$.
+        \item A morphism $\map {\mult} {M\times M} {M}$ called
+                the \enquote{multiplication} operation.
+        \item A \enquote{unit} morphism
+                $\map {\unit} {\set{1}} {M}$.\footnote{When $\CC = \Set$, we
+                usually write the unit as an element $1=\unit(1)\in M$
+        }
+        \item A collection of relations between the operations, written as
+                equalities of morphisms between Cartesian powers of $M$. For
+                example, associativity may be written:
+                \begin{equation}\label{eq:cd_assoc}
+                \begin{tikzcd}
+                        M\times M\times M
+                                \rar["\mult \times \id"]
+                                \dar["\id \times\mult"']
+                        &M \times M
+                                \dar["\mult"] \\
+                        M \times M
+                                \rar["\mult"']
+                        &M
+                \end{tikzcd}
+                \end{equation}
+\end{itemize}
+Further, the data of these relations is extended to higher powers of $M$ by
+acting on other components by the identity:
+\begin{equation}\label{eq:extend_monoid_identity}
+\begin{tikzcd}[column sep=large]
+        M^{n+3}
+                \rar["\mult \times \id^{n+1}"]
+                \dar["\id \times\mult\times \id^{n}"']
+        &M^{n+2}
+                \dar["\mult\times \id^{n}"] \\
+        M^{n+2}
+                \rar["\mult\times \id^{n}"']
+        &M^{n+1}
+\end{tikzcd}
+\end{equation}
+
+Let us alter how we package these data so as to maximize the clarity of the
+meta-monoid structure:
+\begin{enumerate}
+        \item Instead of linear orders of factors $M \times \dots \times M$, we
+                will index factors by a finite set $X$, writing it $M_X \defeq
+                \set{\map {f} {X} {M}}$ in the style of
+                \cref{eq:indexed_tensor}.
+        \item The indexed factors will determine how the monoid operations act.
+                For instance, multiplication of factor $i$ and $j$ together,
+                with the result labelled in factor $k$ is to be written
+                $\map {\mult^{ij}_{k}} {M_{\set{i,j}}} {M_{\set{k}}}$.
+        \item Instead of implicitly including extensions of operations to higher
+                powers by the identity, we will parametrize the extension by
+                finite sets by $ϕ^{D}_{C}[X] \defeq ϕ^{D}_{C}\times\Id{X}$.
+                For example, multiplication $\map {\mult^{ij}_{k}}
+                {M_{\set{i,j}}} {M_{\set{k}}}$ generates a family of maps
+                $\map {\mult^{ij}_k[X]} {M_{\set{i,j}\sqcup X}}
+                {M_{\set{k}\sqcup X}}$, each of which must satisfy the relations
+                of the monoid object such as \cref{eq:extend_monoid_identity}.
+\end{enumerate}
+This way of packaging the data leads us to the following generalization:
+\begin{definition}
+A \defi{meta-monoid} in $\CC$ is the following data:
+\begin{itemize}
+        \item A family of objects $M_X\in \CC$, indexed over finite sets $X$.
+        \item A family of morphisms $\map {\mult^{ij}_{k}[X]} {M_{\set{i,j}\sqcup X}}
+                {M_{\set{k}\sqcup X}}$ called \enquote{multiplication}.
+        \item A family of \enquote{unit} morphisms
+                $\map {\unit_{i}[X]} {M_X} {M_{\set{i}\sqcup X}}$.
+        \item A collection of relations between the morphisms, written as
+                equalities of morphisms between the $M_X$'s. For
+                example, associativity may be written:
+                \begin{equation}
+                        \begin{tikzcd}[column sep=huge]
+                                M_{\set{1,2,3}\sqcup X}
+                                \rar["\mult^{1,2}_{1}\bk*{X\sqcup\set{3}}"]
+                                \dar["\mult^{2,3}_{2}\bk*{X\sqcup\set{1}}"']
+                        &M_{\set{1,3}\sqcup X}
+                        \dar["\mult^{1,3}_{1}\bk{X}"] \\
+                        M_{\set{1,2}\sqcup X}
+                        \rar["\mult^{1,2}_{1}\bk{X}"']
+                        &M_{\set{1}\sqcup X}
+                        \end{tikzcd}
+                \end{equation}
+\end{itemize}
+\end{definition}
+
+Consider the following structure, which satisfies the definition of a
+meta-monoid, but is not a monoid object in any category: %todo: oh really?
+\begin{example}[the meta-monoid of square matrices]
+Let $\K$ be a field and $M_X \defeq \Mat_{X\times X}(\K)$ be the set of square
+matrices whose rows and columns are indexed by the finite set $X$. Define
+$\map {\mult^{ij}_{k}}
+        {M_{X\sqcup\set{i, j}}}
+        {M_{X\sqcup\set{k}}}$
+by
+$\mult^{i, j}_{k}\pn*{(a_{rs})_{rs}} \defeq
+\pn*{a_{rs} + δ_{rk}(a_{is} + a_{js}) + δ_{sk}(a_{si} + a_{sj})}_{rs}$. That is,
+the multiplication of two indices corresponds to the summation of their
+respective rows and columns, the result of which is stored in row and column
+$k$.
+\end{example}
+
+\subsection{Defining meta-objects}
+
+In order to define other meta-objects, such as a meta-colagebra or a
+meta-semigroup, we provide the following more general definition:
+
+\begin{definition}[meta-object]
         Let $\CC$ be a category. A \defi{meta-object} in $\CC$ is subcategory
         with objects indexed by the functor
         \begin{equation}
@@ -216,100 +329,6 @@ The two extreme cases of this definition are:
         communication of formulae.
 \end{remark}
 %TODO: add a proof of associativity? (Likely not necessary.)
-
-\subsection{Defining a meta-group}
-
-To make the above definition more concrete, we will go through the process of
-defining a meta-group, which is a generalization of a group object.
-Traditionally, the data of a group object are the following:
-\begin{itemize}
-        \item An object $G$ in a category $\CC$.
-        \item A morphism $\map {\mult} {G\times G} {G}$ called
-                \enquote{multiplication}.
-        \item A \enquote{unit} morphism
-                $\map {\unit} {\set{1}} {G}$.\footnote{When $\CC = \Set$, we
-                usually write the unit as an element $1=\unit(1)\in G$
-        }
-        \item An \enquote{inversion} morphism $\map {\antipode} {G} {G}$.
-        \item A collection of relations between the morphisms, written as
-                equalities of morphisms between Cartesian powers of $G$. For
-                example, associativity may be written:
-                \begin{equation}\label{eq:cd_assoc}
-                \begin{tikzcd}
-                        G\times G\times G
-                                \rar["\mult \times \id"]
-                                \dar["\id \times\mult"']
-                        &G \times G
-                                \dar["\mult"] \\
-                        G \times G
-                                \rar["\mult"']
-                        &G
-                \end{tikzcd}
-                \end{equation}
-\end{itemize}
-Further, the data of these relations is extended to higher powers of $G$ by
-acting on other components by the identity:
-\begin{equation}\label{eq:extend_group_identity}
-\begin{tikzcd}[column sep=large]
-        G^{n+3}
-                \rar["\mult \times \id^{n+1}"]
-                \dar["\id \times\mult\times \id^{n}"']
-        &G^{n+2}
-                \dar["\mult\times \id^{n}"] \\
-        G^{n+2}
-                \rar["\mult\times \id^{n}"']
-        &G^{n+1}
-\end{tikzcd}
-\end{equation}
-
-Let us alter how we package these data so as to maximize the clarity of the
-meta-group structure:
-\begin{enumerate}
-        \item Instead of linear orders of factors $G \times \dots \times G$, we
-                will index factors by a finite set $X$, writing it $G_X \defeq
-                \set{\map {f} {X} {G}}$ in the style of
-                \cref{eq:indexed_tensor}.
-        \item The indexed factors will determine how the group operations act.
-                For instance, multiplication of factor $i$ and $j$ together,
-                with the result labelled in factor $k$ is to be written
-                $\map {\mult^{ij}_{k}} {G_{\set{i,j}}} {G_{\set{k}}}$.
-        \item Instead of implicitly including extensions of morphisms to higher
-                powers by the identity, we will parametrize the extension by
-                finite sets by $ϕ^{D}_{C}[X] \defeq ϕ^{D}_{C}\times\Id{X}$.
-                For example, multiplication $\map {\mult^{ij}_{k}}
-                {G_{\set{i,j}}} {G_{\set{k}}}$ generates a family of maps
-                $\map {\mult^{ij}_k[X]} {G_{\set{i,j}\sqcup X}}
-                {G_{\set{k}\sqcup X}}$, each of which must satisfy the relations
-                of the group object such as \cref{eq:extend_group_identity}.
-\end{enumerate}
-This way of packaging the data leads us to the following generalization:
-\begin{definition}
-A \defi{meta-group} in $\CC$ is the following data:
-\begin{itemize}
-        \item A family of objects $G_X\in \CC$, indexed over finite sets $X$.
-        \item A family of morphisms $\map {\mult^{ij}_{k}[X]} {G_{\set{i,j}\sqcup X}}
-                {G_{\set{k}\sqcup X}}$ called \enquote{multiplication}.
-        \item A family of \enquote{unit} morphisms
-                $\map {\unit_{i}[X]} {G_X} {G_{\set{i}\sqcup X}}$.
-        \item An family of \enquote{inversion} morphisms $\map {\antipode^{i}_{j}[X]}
-                {G_{\set{i}\sqcup X}} {G_{\set{j}\sqcup X}}$.
-        \item A collection of relations between the morphisms, written as
-                equalities of morphisms between the $G_X$'s. For
-                example, associativity may be written:
-                \begin{equation}
-                        \begin{tikzcd}[column sep=huge]
-                                G_{\set{1,2,3}\sqcup X}
-                                \rar["\mult^{1,2}_{1}\bk*{X\sqcup\set{3}}"]
-                                \dar["\mult^{2,3}_{2}\bk*{X\sqcup\set{1}}"']
-                        &G_{\set{1,3}\sqcup X}
-                        \dar["\mult^{1,3}_{1}\bk{X}"] \\
-                        G_{\set{1,2}\sqcup X}
-                        \rar["\mult^{1,2}_{1}\bk{X}"']
-                        &G_{\set{1}\sqcup X}
-                        \end{tikzcd}
-                \end{equation}
-\end{itemize}
-\end{definition}
 
 \section{Algebraic definitions}\label{sec:alg_defs}
 
