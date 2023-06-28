@@ -216,8 +216,8 @@ A \defi{meta-monoid} in $\CC$ is the following data:
         \item A family of \enquote{unit} morphisms
                 $\map {\unit_{i}[X]} {M_X} {M_{\set{i}\sqcup X}}$.
         \item A collection of relations between the morphisms, written as
-                equalities of morphisms between the $M_X$'s. For
-                example, associativity may be written:
+                equalities of morphisms between the $M_X$'s. In particular,
+                associativity:
                 \begin{equation}
                         \begin{tikzcd}[column sep=huge]
                                 M_{\set{1,2,3}\sqcup X}
@@ -230,11 +230,28 @@ A \defi{meta-monoid} in $\CC$ is the following data:
                         &M_{\set{1}\sqcup X}
                         \end{tikzcd}
                 \end{equation}
+                and the identity:
+                \begin{equation}\label{eq:monoid_unit}
+                        \begin{tikzcd}[column sep=large]
+                                M_{\set{1}\sqcup X}
+                                \rar["\unit_{2}\bk{X}"]
+                                \drar["\id"', bend right]
+                                &M_{\set{1,2}\sqcup X}
+                                \dar["\mult^{1,2}_{1}\bk{X}", shift left]
+                                \dar["\mult^{2,1}_{1}\bk{X}"', shift right] \\
+                                &M_{\set{1}\sqcup X}
+                        \end{tikzcd}
+                \end{equation}
 \end{itemize}
 \end{definition}
 
+Given any monoid object $M$ in a monoidal category $\CC$, $M$ has the structure
+of a meta-monoid $\set{M_X}_X$ via $M_X \defeq M^{\otimes X}$, $\mult^{ij}_k[X]
+\defeq \mult^{ij}_k \otimes \Id{X}$, and $\unit_i[X](v) \defeq 1_i \otimes v$
+for any $v\in M^{\otimes X}$.
+
 Consider the following structure, which satisfies the definition of a
-meta-monoid, but is not a monoid object in any category: %todo: oh really?
+meta-monoid, but is not a monoid in the traditional sense:
 \begin{example}[the meta-monoid of square matrices]
 Let $\K$ be a field and $M_X \defeq \Mat_{X\times X}(\K)$ be the set of square
 matrices whose rows and columns are indexed by the finite set $X$. Define
