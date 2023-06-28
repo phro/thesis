@@ -76,7 +76,8 @@ when $T$ is not symmetric in its arguments, the order of the indices in this
 notation matters.
 
 \begin{example}
-        Let $V = \R^2$, and $T^{a, b}_{c}$ defined by
+        Let $V = \R^2$, and $T^{a, b}_{c}$ (equivalently, $\map {T} {V_{\set{a,
+        b}}} {V_{\set{c}}}$) defined by
         \begin{equation}
                 \begin{aligned}
                         T^{a, b}_{c}\pn*{\vec v_a(\vec e_1)_b} &= \vec 0_c\\
@@ -92,10 +93,13 @@ notation matters.
 
 Finally, we point out that any morphism $T^D_C$ may be extended to one with
 larger domain and codomain. We introduce the notation
-$T^{D}_{C}[S] \defeq T^D_C \otimes \Id{S}$ for this concept, though will also
-overload the notation $T^D_C$ for the same map: for any $v_D \in V_{D}$ and
-$w_S\in V_{S}$, we may also write
-$\pn*{T^{D}_{C}}\pn{v_{D}\otimes w_S} \defeq \pn*{T^{D}_{C}v_{D}}\otimes w_S$.
+$T[S] \defeq T \otimes \Id{S}$ for this concept. When no ambiguity arises, we
+will also suppress the \enquote{$[S]$} so that $T^D_C$ becomes more generally:
+\begin{equation}
+        \pn*{T^{D}_{C}}\pn{v_{D}\otimes w_S}
+                \defeq \pn[\big]{T^{D}_{C}v_{D}}\otimes w_S
+\end{equation}
+for any $v_D \in V_{D}$ and $w_S\in V_{S}$.
 
 \begin{remark}
 There are three special cases with this notation:

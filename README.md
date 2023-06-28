@@ -130,3 +130,42 @@ Explicit examples are missing.
   - [ ] Read over the thesis for a total of three times
   - [ ] Read over the thesis for a total of four times
   - [ ] Read over the thesis for a total of five times
+
+### Feedback from Joel ###
+
+- [X] 2.1
+  I found the notation T^D_C confusing.  Does it denote a specific linear map
+  from V_D to V_C or just an arbitrary one?
+
+- [ ] 2.2
+  I didn't understand the definition of "meta-object", possibly because of
+  missing words.  Subcategory of what category?  Is a meta-object a functor?
+  Similarly, I don't understand equation (2.8).
+  Similarly, I didn't understand the discussion afterwards about homsets and
+  about the "map \sqcup".
+  In the definition of meta-group (def 2.7), if X -> Y is a map of finite
+  sets, do we have a morphism G_X -> G_Y ?  For example, if X and Y both
+  contain one element, do we have an isomorphism G_X \cong C_Y?  What is the
+  relation between "meta-group" and "meta-object"?  And what is the relation
+  between "meta-group in C" and "group object in C"?
+  (Some of these same questions apply to "meta-algebra")
+
+- [ ] 2.4
+  def 2.25: What does upward pointing arcs mean?  I thought that the tangles
+  are in a disc.
+  Theorem 2.28: is this a ... algebra in the category Set?  Are these tangles
+  considered up to isotopy?
+
+- [ ] 2.5
+  What do you mean "The ribbon structure of U requires ..." ?  maybe you
+  should verify that these R, C satisfy the desired equations.
+
+- [ ] 3.1
+  In Remark 3.2, I didn't understand what "extending the definition" means.
+  Why do you say that the categories \mathcal H and \mathcal U are
+  isomorphic?  If I understand correctly, if for example J, K are one element
+  sets, then Hom_{\mathcal U}(J,K) = Hom(U, U) whereas Hom_{\mathcal H}(J,K)
+  = Hom(Q[z], Q[z]) ?  But U is a polynomial ring in 4 variables.  I suppose
+  that there is a vector space isomorphism U \cong Q[z] since both are
+  countable dimensional, but there is no preferred one.
+  In Lemma 3.3, what is |_{z_K -> \del \zeta_K} ?
