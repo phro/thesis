@@ -33,17 +33,16 @@ We formalize the idea below:
         satisfying $f(s) = g(s)$ for each $s \in S\setminus\set i$, we have:
         \begin{equation}
                 \label{eq:tensor_additive}
-                f + g = \pn*{
-                        s \mapsto \begin{cases}
+                (f + g)(s) = 
+                        \begin{cases}
                                 f(s) = g(s) & \text{if $s \neq i$}\\
                                 f(i) + g(i) & \text{if $s = i$}
                         \end{cases}
-                }
         \end{equation}
 \end{definition}
 
 In practice, we will write such functions $\map {f} {S} {V}$ with $f(s_i) = v_i$
-in the following way:
+in the following notation:
 \begin{equation}
         \pn{v_{1}}_{s_1}
         \pn{v_{2}}_{s_2} ⋯
