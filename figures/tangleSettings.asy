@@ -1,4 +1,4 @@
-pen backgroundColor  = grey;
+pen backgroundColor  = mediumgrey;
 pen defaultArcColor  = black;
 pen boundaryArcColor = defaultArcColor;
 pen tangleArcColor   = defaultArcColor;
