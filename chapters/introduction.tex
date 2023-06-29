@@ -136,7 +136,6 @@ $\map {ϕ^{D_1}_{C_1}ψ^{D_2}_{C_2} \defeq ϕ \otimes ψ} {V_{D_1 \sqcup D_2}}
 \label{sec:monoidal_notation}
 
 \ProvideDocumentCommand{\CC}{}{\msc C}
-\ProvideDocumentCommand{\MM}{}{A}
 
 While the above notation is helpful when working with vector spaces, we are
 interested in also using the same notation to describe a tangle. Our
@@ -273,6 +272,7 @@ $k$.
 \end{example}
 
 \subsection{Defining meta-objects}
+\ProvideDocumentCommand{\MM}{}{A}
 
 In order to define other meta-objects, such as a meta-colagebra or a
 meta-semigroup, we provide the following more general definition:
@@ -281,7 +281,7 @@ meta-semigroup, we provide the following more general definition:
         Let $\CC$ be a category. A \defi{meta-object} in $\CC$ is two things:
 
         \begin{enumerate}
-                \item A collection of objects $A_X$, one for each choice of
+                \item A collection of objects $\MM_X$, one for each choice of
                         finite set $X$. (This serves as the analogue to monoidal
                         powers.)
                 \item A collection of \defi{operations} $ϕ_1, ϕ_2, \dots, ϕ_n$
@@ -291,12 +291,12 @@ meta-semigroup, we provide the following more general definition:
                         $\pn*{\ord D, \ord C} = \signature{ϕ}$, we have a
                         morphism:
                         \begin{equation}
-                              \map {ϕ^D_C} {A_D} {A_C}
+                              \map {ϕ^D_C} {\MM_D} {\MM_C}
                         \end{equation}
         \end{enumerate}
         Further, for each bijection $\map {f} {X} [\toiso] {Y}$ of finite
         sets $X$ and $Y$, a \defi{reindexing} isomorphism
-        $\map {ι_f} {A_X} [\toiso] {A_Y}$.
+        $\map {ι_f} {\MM_X} [\toiso] {\MM_Y}$.
 
         Finally, for each operation $ϕ^{D}_{C}$, there is a collection of
         morphisms $ϕ^{D}_{C}[\curry{}]$ indexed by finite sets such that for
