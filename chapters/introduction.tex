@@ -278,18 +278,28 @@ In order to define other meta-objects, such as a meta-colagebra or a
 meta-semigroup, we provide the following more general definition:
 
 \begin{definition}[meta-object]
-        Let $\CC$ be a category. A \defi{meta-object} in $\CC$ is subcategory
-        with objects indexed by the functor
-        \begin{equation}
-                \mapdef {\MM} {\FinSet} {\Object(\CC)}
-                              {S}       {\MM_S}
-        \end{equation}
-        The homsets of this subcategory are indexed by pairs of finite sets $D$,
-        $C$. Morphisms in these homsets will be denoted by
-        $\map{ϕ^D_C}{\MM_D}{\MM_C}$.
-        For each such morphism $ϕ^{D}_{C}$, there is a finite-set-indexed
-        morphism $\map {ϕ^{D}_{C}[\curry{}]} {\FinSet} {\HomOp(\CC)}$
-        such that
+        Let $\CC$ be a category. A \defi{meta-object} in $\CC$ is two things:
+
+        \begin{enumerate}
+                \item A collection of objects $A_X$, one for each choice of
+                        finite set $X$. (This serves as the analogue to monoidal
+                        powers.)
+                \item A collection of \defi{operations} $ϕ_1, ϕ_2, \dots, ϕ_n$
+                        each with a \defi{signature} $\signature{ϕ_i}\in \Z_{\ge
+                        0} \times \Z_{\ge 0}$. For any pair of finite sets
+                        $(D, C)$ satisfying $(\ord D, \ord C) = \signature{ϕ}$,
+                        we have a morphism:
+                        \begin{equation}
+                              \map {ϕ^D_C} {A_D} {A_C}
+                        \end{equation}
+        \end{enumerate}
+        Further, for each bijection $\map {f} {X} [\toiso] {Y}$ of finite
+        sets $X$ and $Y$, a \defi{reindexing} isomorphism
+        $\map {ι_f} {A_X} [\toiso] {A_Y}$.
+
+        Finally, for each operation $ϕ^{D}_{C}$, there is a collection of
+        morphisms $ϕ^{D}_{C}[\curry{}]$ indexed by finite sets such that for
+        each finite set $S$, $T$:
         \begin{enumerate}
                 \item $\map {ϕ[\curry{S}]}{\MM_{C\sqcup S}} {\MM_{D\sqcup S}}$
                 \item $ϕ[\emptyset] = ϕ$
@@ -297,23 +307,18 @@ meta-semigroup, we provide the following more general definition:
         \end{enumerate}
 \end{definition}
 
-Note that the functor generalizes the map $S \mapsto V^{\otimes S}$, while the
-morphisms generalize the extension-by-identity $ϕ \otimes \Id{S}$.
-
-Composition of morphisms $ϕ^{D_1}_{C_1}$ and $ψ^{D_2}_{C_2}$ is defined when
-$C_1 = D_2$, and is written with the following concatenation operator:
-\footnote{
-        We denote left-to-right composition with the \enquote{$\then$} symbol:
-        $f \then g \defeq g \circ f$. Writing function composition in this order
-        assists with readability when there are many functions to apply.
-}
+Composition of operators $ϕ^{D_1}_{C_1}$ and $ψ^{D_2}_{C_2}$ is defined when
+$C_1 = D_2$:
 \begin{equation}
-        \map{
-                ϕ^{D_1}_{C_1}\then ψ^{D_2}_{C_2}
-                \defeq
-                ψ^{D_2}_{C_2}\circ ϕ^{D_1}_{C_1}
-        }{\msc C_{D_1}}{\CC_{C_2}}
+        \map{ψ^{D_2}_{C_2}\circ ϕ^{D_1}_{C_1}}{\msc C_{D_1}}{\CC_{C_2}}
 \end{equation}
+
+\begin{remark}
+        In this text, we will denote left-to-right composition with the
+        \enquote{$\then$} symbol: $f \then g \defeq g \circ f$. Writing function
+        composition in this order assists with readability when there are many
+        functions to apply.
+\end{remark}
 
 In the general case, we still have the map
 $\sqcup$ defined by $\MM_{S} \sqcup \MM_{T} = \MM_{S \sqcup T}$. Given morphisms
