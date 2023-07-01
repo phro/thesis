@@ -707,22 +707,22 @@ metal frame in two unique locations (that is, no two strings share an endpoint).
         \label{fig:tangle_example}
 \end{figure}
 
-\begin{definition}[pure tangle]
-        A \defi{pure tangle} is an embedding of line segments (called
+\begin{definition}[open tangle]
+        An \defi{open tangle} is an embedding of line segments (called
         \defi{components} or \defi{strands}) into the thickened unit disk
         $D \times [-1,1]$ (or a disjoint union of such disks) such that the
         endpoints of the line segments are fixed along
-        $\boundary D \times \set0$. Two pure tangles are considered equivalent
+        $\boundary D \times \set0$. Two open tangles are considered equivalent
         if there exists an isotopy of the embedding which fixes the endpoints of
-        the strands. The term \enquote{pure} refers to the absence of closed
+        the strands. The term \enquote{open} refers to the absence of closed
         loops.
 \end{definition}
 
 \begin{definition}[framed tangle]
         The object which is more natural for us to deal with is the \defi{framed
-        tangle}, which is a pure tangle together with a choice of section of the
+        tangle}, which is an open tangle together with a choice of section of the
         normal bundle for each component. One may equivalently think of
-        replacing the strings in a pure tangle with thin ribbons. Unless
+        replacing the strings in an open tangle with thin ribbons. Unless
         otherwise mentioned, it will be assumed that all tangles are framed.
 \end{definition}
 
@@ -734,8 +734,8 @@ of the corresponding crossing (either \enquote{positive} or \enquote{negative}),
 we end up with a combinatorial object which is equivalent to the original
 concept of a tangle.
 
-\begin{definition}[pure tangle diagram]\label{def:pure_tangle_diagram}
-        A \defi{pure tangle diagram} is a projection of a tangle onto its
+\begin{definition}[open tangle diagram]\label{def:open_tangle_diagram}
+        An \defi{open tangle diagram} is a projection of a tangle onto its
         central core such that all the line segments are immersions which
         intersect both the boundary disk and the other strands transversally,
         together with an assignment of a sign to each strand intersection.
@@ -743,7 +743,7 @@ concept of a tangle.
         \defi{crossings}, while the complement of the crossings is a collection
         of embedded line segments called \defi{arcs}.
 
-        Two pure tangle diagrams are considered equivalent if they differ by a
+        Two open tangle diagrams are considered equivalent if they differ by a
         finite sequence of Reidemeister moves, as outlined in
         \crefrange{fig:R1}{fig:R3}
 \end{definition}
@@ -770,7 +770,7 @@ concept of a tangle.
 The rotation numbers of arcs will play a role in this thesis, so we will capture
 these data in the following way (as described in \cref{apai}):
 
-\begin{definition}[upright pure tangle diagram]
+\begin{definition}[upright open tangle diagram]
         We will put a further requirement on our tangles: each arc must begin and end
         pointing upwards, and each crossing must involve only upward-pointing curves.
         This way, each arc will have a well-defined integer rotation number.
@@ -804,9 +804,9 @@ reproduce the proof of this fact by Bar-Natan and van der Veen in \cite{BV}
 below:
 
 \begin{lemma}[tangles inject into upright tangles]
-        To each pure tangle diagram $D$ there exists an upright pure tangle
+        To each open tangle diagram $D$ there exists an upright open tangle
         diagram $D'$ obtained from $D$ by a planar isotopy. Further, if $D''$ is
-        another such upright pure tangle diagram obtained from $D$, then $D'$
+        another such upright open tangle diagram obtained from $D$, then $D'$
         and $D''$ differ by a finite sequence of rotational Reidemeister moves
         and a change of rotation number at the endpoints.
 \end{lemma}
@@ -1104,7 +1104,7 @@ meta-objects.
 \subsection{Upright tangle invariants from a ribbon meta-Hopf algebra}
 We define a $\CU$-valued tangle invariant in the following way:
 \begin{enumerate}
-        \item Given a pure tangle, disconnect each crossing from its neighbours,
+        \item Given a open tangle, disconnect each crossing from its neighbours,
                 as well as each arc with a nonzero rotation number.
         \item Replace each crossing with an $\Rmat$-matrix
                 $\Rmat_{ij}\in\CU_{\set{i,j}}$, and each rotation of an arc with

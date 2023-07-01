@@ -118,7 +118,7 @@ Explicit examples are missing.
     - [X] Remove meta-group reference (this is a meta-Hopf algebra).
     - [X] Give a non-trivial example of a meta-monoid (say, `n×n` matrices)
     - [X] p.21 Don't subscript integers.
-    - [ ] p.23 Replace "pure" and "impure" with "open" and "mixed" (say).
+    - [X] p.23 Replace "pure" and "impure" with "open" and "mixed" (say).
     - [ ] The definition of framed tangles must put a condition on the endpoints.
     - [ ] Fix broken references.
     - [ ] p.27 mention in the Thm that this is only for virtual knots
