@@ -250,10 +250,10 @@ A \defi{meta-monoid} in $\CC$ is the following data:
 \end{itemize}
 \end{definition}
 
-Given any monoid object $M$ in a monoidal category $\CC$, $M$ has the structure
-of a meta-monoid $\set{M_X}_X$ via $M_X \defeq M^{\otimes X}$, $\mult^{ij}_k[X]
-\defeq \mult^{ij}_k \otimes \Id{X}$, and $\unit_i[X](v) \defeq 1_i \otimes v$
-for any $v\in M^{\otimes X}$.
+Given any monoid object $M$ in a monoidal category $(\CC,\otimes,\set{1})$, $M$
+has the structure of a meta-monoid $\set{M_X}_X$ via $M_X \defeq M^{\otimes X}$,
+$\mult^{ij}_k[X] \defeq \mult^{ij}_k \otimes \Id{X}$, and
+$\unit_i[X](v) \defeq 1_i \otimes v$ for any $v\in M^{\otimes X}$.
 
 Consider the following structure, which satisfies the definition of a
 meta-monoid, but is not a monoid in the traditional sense:
@@ -291,14 +291,14 @@ meta-semigroup, we provide the following more general definition:
                         $\pn*{\ord D, \ord C} = \signature{ϕ}$, we have a
                         morphism:
                         \begin{equation}
-                              \map {ϕ^D_C} {\MM_D} {\MM_C}
+                                \map {ϕ^D_C} {\MM_D} {\MM_C}
                         \end{equation}
         \end{enumerate}
         Further, for each bijection $\map {f} {X} [\toiso] {Y}$ of finite
         sets $X$ and $Y$, a \defi{reindexing} isomorphism
         $\map {ι_f} {\MM_X} [\toiso] {\MM_Y}$.
 
-        Finally, for each operation $ϕ^{D}_{C}$, there is a collection of
+        Next, for each operation $ϕ^{D}_{C}$, there is a collection of
         morphisms $ϕ^{D}_{C}[\curry{}]$ indexed by finite sets such that for
         each finite set $S$, $T$:
         \begin{enumerate}
