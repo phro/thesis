@@ -212,7 +212,7 @@ meta-monoid structure:
                 of the monoid object such as \cref{eq:extend_monoid_identity}.
 \end{enumerate}
 This way of packaging the data leads us to the following generalization:
-\begin{definition}
+\begin{definition}\label{def:meta_monoid}
 A \defi{meta-monoid} in $\CC$ is the following data:
 \begin{itemize}
         \item A family of objects $M_X\in \CC$, indexed over finite sets $X$,
@@ -397,7 +397,12 @@ although the ones presented below are given in a way that their corresponding
 meta-structure is readily visible.
 
 \begin{definition}[meta-algebra]\label{def:meta_algebra}
-        A \defi{meta-algebra} (or \defi{meta-monoid}) is a collection of objects
+        A \defi{meta-algebra} (or \defi{meta-monoid}\footnote{%
+                This is a repeat of \cref{def:meta_monoid}. The only difference
+                between an algebra object and a monoid object is the presence of
+                a linear structure. Since meta-monoids are defined for any
+                category, this distinction disappears.%
+        }) is a collection of objects
         $\set{A_X}_X$ in $\CC$ together with an associative multiplication
         $\map {\mult^{i,j}_{k}} {A_{\set{i,j}}} {A_{\set{k}}}$ (satisfying
         \cref{eq:cd_mult}), and a unit
