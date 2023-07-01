@@ -47,7 +47,7 @@ algebra to include closed components.
 The first example we give is that of mixed tangles.
 
 \begin{definition}[mixed upright tangles]
-        Let $\RVT_{L, S}$ be the set of upright tangles with open
+        Let $\tangleMix{L}{S}$ be the set of upright tangles with open
         strands indexed by $S$ and closed strands indexed by $L$. The operations
         $ϕ[L][S]$ are defined analogously to the $ϕ[S]$ given in
         \cref{thm:vt_qtmha}. (Here $ϕ$ varies over $\mult$, $\unit$, $\comult$,
@@ -55,12 +55,13 @@ The first example we give is that of mixed tangles.
 \end{definition}
 
 \begin{lemma}[tangles as a traced algebra]
-        The collection of all $\RVT_{L, S}$ is a traced ribbon meta-Hopf
+        The collection of all $\tangleMix{L}{S}$ is a traced ribbon meta-Hopf
         algebra, with trace map given by closing a strand into a loop.
 \end{lemma}
 \begin{proof}
         When $L = \emptyset$, the situation is exactly the case of
-        \cref{thm:tangles_meta_algebra}, so $\RVT_{\emptyset, S} = \tangle_S$ is a
+        \cref{thm:tangles_meta_algebra}, so
+        $\tangleMix{\emptyset}{S} = \tangle S$ is a
         meta-Hopf algebra. Furthermore, since the Reidemeister moves are local
         operations, the presence of closed components does not affect our
         ability to verify the identities on the Hopf-algebra operations.

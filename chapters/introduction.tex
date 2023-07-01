@@ -712,10 +712,11 @@ metal frame in two unique locations (that is, no two strings share an endpoint).
         \defi{components} or \defi{strands}) into the thickened unit disk
         $D \times [-1,1]$ (or a disjoint union of such disks) such that the
         endpoints of the line segments are fixed along
-        $\boundary D \times \set0$. Two open tangles are considered equivalent
-        if there exists an isotopy of the embedding which fixes the endpoints of
-        the strands. The term \enquote{open} refers to the absence of closed
-        loops.
+        $\boundary D \times \set0$. Each strand is labelled with elements of a
+        set $X$. Two open tangles are considered equivalent if there exists an
+        isotopy of the embedding which fixes the endpoints of the strands. The
+        term \enquote{open} refers to the absence of closed loops. The set of
+        all tangles with strands indexed by $X$ will be denoted $\tangleDown X$.
 \end{definition}
 
 \begin{definition}[framed tangle]
@@ -779,7 +780,8 @@ these data in the following way (as described in \cite{BV23}):
         this requirement, each arc has well-defined integer rotation number. Two
         tangles are considered equivalent if they agree under the
         \enquote{rotational Reidemeister moves}. Such tangle diagrams will be
-        called \defi{upright tangle diagrams}.
+        called \defi{upright tangle diagrams}. Given a finite set $X$, the set
+        of $X$-indexed upright tangle diagrams will be denoted $\tangle X$.
 \end{definition}
 \begin{remark}
         This concept was first introduced by Louis Kauffman in \cite{LK} under
@@ -830,10 +832,9 @@ Let us now formally connect tangle diagrams with meta-algebras.
 
 \begin{theorem}[tangles form a ribbon meta-Hopf algebra]
         \label{thm:tangles_meta_algebra}
-        Define $\tangle_X$ to be the set of upright tangles with $\ord{X}$
-        strands, each labelled by an element $i\in X$. Then the collection
-        $\set{\tangle_X}_X$ forms a quasitriangular ribbon meta-Hopf algebra
-        with the following operations:
+        The collection $\set{\tangle X}_X$ forms a quasitriangular ribbon
+        meta-Hopf algebra (in the category $\Set$) with the following
+        operations:
         \begin{itemize}
                 \item multiplication $\mult^{ij}_{k}[X]$ takes a tangle with
                         strands $X\sqcup\set{i,j}$ and glues the end of strand
@@ -871,7 +872,7 @@ Let us now formally connect tangle diagrams with meta-algebras.
                         over strand $j$. The inverse $\Rmat$-matrix
                         $\Rmati_{ij}$ is the two-strand tangle with a
                         \emph{negative} crossing of strand $i$ over strand $j$.
-                \item The spinner $\spin_i[X]$ takes a tangle in $\tangle_X$ and
+                \item The spinner $\spin_i[X]$ takes a tangle in $\tangle X$ and
                         adds a new strand with rotation number $1$ which has no
                         interactions with any other strands. This new strand
                         looks like the letter \enquote{C}.

@@ -370,8 +370,9 @@
 \RenewDocumentCommand{\k}{}{\mbf k}
 \DeclareMathOperator{\GenMap}{\msc G} 
 \DeclarePairedDelimiterXPP{\Gen}[1]{\GenMap}\lparen\rparen{}{#1}
-\ProvideDocumentCommand{\tangle}{}{\msc T}
-\ProvideDocumentCommand{\RVT}{}{\msc{T}^{\text{rv}}}
+\ProvideDocumentCommand{\tangleDown}{m}{\msc T_{#1}}
+\ProvideDocumentCommand{\tangle}{m}{\msc T^{\text{up}}_{#1}}
+\ProvideDocumentCommand{\tangleMix}{mm}{\overline{\msc T}^{\text{up}}_{#1, #2}}
 \ProvideDocumentCommand{\A}{}{\msc{A}}
 \ProvideDocumentCommand{\tanglename}{momm}{#1_{
                 #3%
