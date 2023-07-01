@@ -837,7 +837,11 @@ Let us now formally connect tangle diagrams with meta-algebras.
         \begin{itemize}
                 \item multiplication $\mult^{ij}_{k}[X]$ takes a tangle with
                         strands $X\sqcup\set{i,j}$ and glues the end of strand
-                        $i$ to strand $j$, labelling the resulting strand $k$.
+                        $i$ to strand $j$, labelling the resulting strand
+                        $k$.\footnote{Strictly speaking, this operation is only
+                        defined when the end of strand $i$ is adjacent to strand
+                        $j$. See \cref{rem:virtual_caveat} for more details.%
+                }
                 \item the unit $\unit_{i}[X]$ takes a tangle diagram with
                         strands $X$ and introduces a new strand $i$ which does
                         not touch any of the other strands.
@@ -873,7 +877,7 @@ Let us now formally connect tangle diagrams with meta-algebras.
                         looks like the letter \enquote{C}.
         \end{itemize}
 \end{theorem}
-\begin{remark}
+\begin{remark}\label{rem:virtual_caveat}
         One may object that strand-stitching $\mult^{ij}_k$ is not defined when
         the endpoint of strand $i$ is not adjacent to the starting point of
         strand $j$. This issue is resolved in multiple ways:
