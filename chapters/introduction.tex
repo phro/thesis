@@ -250,10 +250,12 @@ A \defi{meta-monoid} in $\CC$ is the following data:
 \end{itemize}
 \end{definition}
 
-Given any monoid object $M$ in a monoidal category $(\CC,\otimes,\set{1})$, $M$
+\begin{example}[monoid objects are meta-monoids]
+Any monoid object $M$ in a monoidal category $(\CC,\otimes,\set{1})$
 has the structure of a meta-monoid $\set{M_X}_X$ via $M_X \defeq M^{\otimes X}$,
 $\mult^{ij}_k[X] \defeq \mult^{ij}_k \otimes \Id{X}$, and
 $\unit_i[X](v) \defeq 1_i \otimes v$ for any $v\in M^{\otimes X}$.
+\end{example}
 
 Consider the following structure, which satisfies the definition of a
 meta-monoid, but is not a monoid in the traditional sense:
@@ -268,7 +270,14 @@ $\mult^{ij}_{k}[X]\pn[\big]{(a_{rs})_{rs}} \defeq
 \pn*{a_{rs} + δ_{rk}(a_{is} + a_{js}) + δ_{sk}(a_{si} + a_{sj})}_{rs}$. That is,
 the multiplication of two indices corresponds to the summation of their
 respective rows and columns, the result of which is stored in row and column
-$k$.
+$k$. The unit $\unit_i[X]\pn[\big]{(a_{rs})_{rs}}$ extends $(a_{rs})_{rs}$ to
+include a row and column of $0$'s, each labelled by the index $i$.
+\end{example}
+
+\begin{example}[tangles form a meta-algebra]
+        Tangles are the main example of a meta-algebra which is not an algebra
+        in the traditional sense. We go into more detail in
+        \cref{sec:topological_interpretations}.
 \end{example}
 
 \subsection{Defining meta-objects}
