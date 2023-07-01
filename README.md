@@ -119,8 +119,8 @@ Explicit examples are missing.
     - [X] Give a non-trivial example of a meta-monoid (say, `n×n` matrices)
     - [X] p.21 Don't subscript integers.
     - [X] p.23 Replace "pure" and "impure" with "open" and "mixed" (say).
-    - [ ] The definition of framed tangles must put a condition on the endpoints.
-    - [ ] Fix broken references.
+    - [X] The definition of framed tangles must put a condition on the endpoints.
+    - [X] Fix broken references.
     - [ ] p.27 mention in the Thm that this is only for virtual knots
     - [ ] p.36 "morphism-valued" is misleading.
     - [ ] p.39 Generating functions are not Gaußian in `b`-variables.
