@@ -150,10 +150,10 @@ Explicit examples are missing.
   between "meta-group in C" and "group object in C"?
   (Some of these same questions apply to "meta-algebra")
 
-- [ ] 2.4
+- [X] 2.4
   - [X] def 2.25: What does upward pointing arcs mean?  I thought that the
       tangles are in a disc.
-  - [ ] Theorem 2.28: is this a ... algebra in the category Set?  Are these
+  - [X] Theorem 2.28: is this a ... algebra in the category Set?  Are these
       tangles considered up to isotopy?
 
 - [ ] 2.5
