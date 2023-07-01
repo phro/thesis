@@ -28,12 +28,20 @@ algebra to include closed components.
         compatibility of the families of meta-algebras is governed this trace in
         the following way:
         $\map {\trace^i} {A_{\set{i}\sqcup S, L}} {A_{S,\set{i}\sqcup L}}$ which
-        satisfies the cyclic property:
+        is universal with respect to the cyclic property:
         \begin{equation}
                 \mult^{i,j}_{k}\then\trace^k
                 =
                 \mult^{j,i}_{k}\then\trace^k
         \end{equation}
+        Furthermore, $\trace^i$ is a morphism of meta-coalgebras. That is:
+        \begin{align}
+                \label{eq:tr_comult}
+                \comult^{i}_{jk}\then\trace^j\then\trace^k
+                &= \trace^i \then \comult^{i}_{jk}
+                \\\label{eq:tr_counit}
+                \trace^i \then \counit^i &= \counit^i
+        \end{align}
 \end{definition}
 % Dror finds the notation cumbersome; say instead of \mult[L][S], he would write
 % \mult[L, S] which is a meta-algebra with respect to S
