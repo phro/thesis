@@ -215,7 +215,9 @@ This way of packaging the data leads us to the following generalization:
 \begin{definition}
 A \defi{meta-monoid} in $\CC$ is the following data:
 \begin{itemize}
-        \item A family of objects $M_X\in \CC$, indexed over finite sets $X$.
+        \item A family of objects $M_X\in \CC$, indexed over finite sets $X$,
+                with set bijections $\map {f} {X} [\toiso] {Y}$ inducing
+                isomorphisms $M_X \iso M_Y$.
         \item A family of morphisms $\map {\mult^{ij}_{k}[X]} {M_{\set{i,j}\sqcup X}}
                 {M_{\set{k}\sqcup X}}$ called \enquote{multiplication}.
         \item A family of \enquote{unit} morphisms

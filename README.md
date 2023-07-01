@@ -137,7 +137,7 @@ Explicit examples are missing.
   I found the notation T^D_C confusing.  Does it denote a specific linear map
   from V_D to V_C or just an arbitrary one?
 
-- [ ] 2.2
+- [X] 2.2
   I didn't understand the definition of "meta-object", possibly because of
   missing words.  Subcategory of what category?  Is a meta-object a functor?
   Similarly, I don't understand equation (2.8).
