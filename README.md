@@ -151,10 +151,10 @@ Explicit examples are missing.
   (Some of these same questions apply to "meta-algebra")
 
 - [ ] 2.4
-  def 2.25: What does upward pointing arcs mean?  I thought that the tangles
-  are in a disc.
-  Theorem 2.28: is this a ... algebra in the category Set?  Are these tangles
-  considered up to isotopy?
+  - [X] def 2.25: What does upward pointing arcs mean?  I thought that the
+      tangles are in a disc.
+  - [ ] Theorem 2.28: is this a ... algebra in the category Set?  Are these
+      tangles considered up to isotopy?
 
 - [ ] 2.5
   What do you mean "The ribbon structure of U requires ..." ?  maybe you
