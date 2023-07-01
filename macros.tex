@@ -358,6 +358,8 @@
 \ProvideDocumentCommand{\aco}{}{\commutevar{a}}
 \ProvideDocumentCommand{\xco}{}{\commutevar{x}}
 
+\DeclarePairedDelimiterX{\signature}[1]{\lvert}{\rvert}{\curry{#1}}
+
 \ProvideDocumentCommand{\ptr}{}{Z^\trace}
 \ProvideDocumentCommand{\fa}{}{\mfk{a}}
 \ProvideDocumentCommand{\Alg}{}{\fg}
