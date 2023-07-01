@@ -332,18 +332,11 @@ $C_1 = D_2$:
         functions to apply.
 \end{remark}
 
-In the general case, we still have the map
-$\sqcup$ defined by $\MM_{S} \sqcup \MM_{T} = \MM_{S \sqcup T}$. Given morphisms
-$ϕ^{D_1}_{C_1}$ and $ψ^{D_2}_{C_2}$ such that $D_1 \cap D_2 = \emptyset = C_1
-\cap C_2$, we have a product morphism
-$\map {ϕ^{D_1}_{C_1}ψ^{D_2}_{C_2} \defeq ϕ \otimes ψ} {\CC_{D_1 \sqcup D_2}}
-{\CC_{C_1\sqcup C_2}}$, which we write with concatenation.
-
 \begin{remark}
-        To make expressions easier to read, in this paper we
-        will introduce the domain extension implicitly in the following context:
+        To make expressions easier to read, we introduce the domain extension
+        implicitly in the following context:
         given morphisms $ϕ^{D_1}_{C_1}$ and $ψ^{D_2}_{C_2}$ such that
-        $D_2 \subseteq C_1$ and
+        % $D_2 \subseteq C_1$ and
         $C_2 \cap (C_1\setminus D_2)=\emptyset=D_1\cap(D_2 \setminus C_1)$, we
         define:
         \begin{equation}\label{eq:composition_extension}
@@ -353,6 +346,21 @@ $\map {ϕ^{D_1}_{C_1}ψ^{D_2}_{C_2} \defeq ϕ \otimes ψ} {\CC_{D_1 \sqcup D_2}}
                 {ψ^{D_2}_{C_2}[C_1\setminus D_2]}
         \end{equation}
 \end{remark}
+\begin{figure}[h]
+        \centering
+        \includegraphics{figures/composition_example.pdf}
+        \caption{We may visualize a composition of morphisms with a graphical
+        calculus. This graphic represents $(ϕ_1)^{D_1}_{C_1}\then
+(ϕ_2)^{D_2}_{C_2}$ when $C_1 = D_2$.}
+        \label{fig:figures-composition_example-pdf}
+\end{figure}
+\begin{figure}[h]
+        \centering
+        \includegraphics{figures/composition_extension.pdf}
+        \caption{Visual mnemonic for extending morphisms. This graphic
+        represents \cref{eq:composition_extension}.}
+        \label{fig:figures-composition_extension-pdf}
+\end{figure}
 The two extreme cases of this definition are:
 \begin{itemize}
         \item When $C_1 \cap D_2 = \emptyset$, \cref{eq:composition_extension}
