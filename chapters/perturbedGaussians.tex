@@ -21,7 +21,7 @@ a map is determined by its values on the monomials $z_A^\nn$ for each
 multi-index $\nn \in \N^A$.
 
 \begin{definition}[Exponential generating function]
-        The \defi{exponential generating function} of a map
+        The \defi{exponential generating function} of a linear map
         $\map {Φ} {\polyring{\Q}{z_A}} {\polyring{\Q}{z_B}}$ between polynomial
         spaces is
         \begin{equation}\label{eq:genfunc}
@@ -31,9 +31,10 @@ multi-index $\nn \in \N^A$.
         \end{equation}
 \end{definition}
 \begin{remark}
-        Extending the definition of $Φ$ to
-        $\powerseries{\polyring{\Q}{z_B}}{ζ_A}$ by the extending scalars to
-        $\powerseries{\Q}{ζ_A}$ gives us an equivalent formulation:
+        We may extend the domain of $Φ$ from $\polyring{\Q}{z_B}$ to 
+        $\powerseries{\polyring{\Q}{z_B}}{ζ_A}$ via extension of scalars
+        $\Q \to \powerseries{\Q}{ζ_A}$. This extension allows us to write the
+        exponential generating function in a new way:
         \begin{equation}
                 \Gen{Φ}
                 = Φ\pn*{\Sum[\nn\in\N^A] \frac{(z_Aζ_A)^\nn}{\nn!}}

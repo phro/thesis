@@ -161,7 +161,7 @@ Explicit examples are missing.
   should verify that these R, C satisfy the desired equations.
 
 - [ ] 3.1
-  - [ ] In Remark 3.2, I didn't understand what "extending the definition" means.
+  - [X] In Remark 3.2, I didn't understand what "extending the definition" means.
   - [ ] Why do you say that the categories `\mathcal H` and `\mathcal U` are
       isomorphic?  If I understand correctly, if for example `J`, `K` are one
       element sets, then `Hom_{\mathcal U}(J,K) = Hom(U, U)` whereas
