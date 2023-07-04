@@ -168,4 +168,4 @@ Explicit examples are missing.
       `Hom_{\mathcal H}(J,K) = Hom(Q[z], Q[z])` ?  But `U` is a polynomial ring in
       4 variables.  I suppose that there is a vector space isomorphism `U \cong
       Q[z]` since both are countable dimensional, but there is no preferred one.
-  - [ ] In Lemma 3.3, what is `|_{z_K -> \del \zeta_K}` ?
+  - [X] In Lemma 3.3, what is `|_{z_K -> \del \zeta_K}` ?
