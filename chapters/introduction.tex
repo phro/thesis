@@ -1077,16 +1077,22 @@ Define the Lie algebra
         }
 \end{equation}
 Then the algebra $\CU$ is defined to be the universal enveloping algebra
-$\uea{\fg}$. The bialgebra structure of $\CU$ is: for any $\zo\in\set{\yo, \bo,
-\ao, \xo}$, we have
-\begin{align}
-        \comult_{i,j}(\zo) &= \zo_i + \zo_j\\
-        \counit(\zo) &= 0
-\end{align}
-Next, we define the Hopf algebra structure by defining the antipode
-\begin{equation}
-        \antipode(\zo) &= -\zo
-\end{equation}
+$\uea{\fg}$. The bialgebra structure of $\CU$ is: \begin{equation}\begin{aligned}
+        \comult_{i,j}(\yo) &=
+        \frac{\bo_i+\bo_j}{1-\Bo_i\Bo_j} \pn*{
+                \Bo_j\frac{1-\Bo_i}{\bo_i}\yo_i+
+                \frac{1-\Bo_j}{\bo_j}\yo_j
+        }\\
+        \comult_{i,j}(\bo) &= \bo_i + \bo_j\\
+        \comult_{i,j}(\ao) &= \ao_i + \ao_j\\
+        \comult_{i,j}(\xo) &= \xo_i + \xo_j\\
+\end{aligned}\end{equation}
+For any $\zo\in\set{\yo, \bo, \ao, \xo}$, we have $\counit(\zo)=0$ (extended
+multiplicatively by \cref{eq:cd_mult_counit}).
+
+Next, we define the Hopf algebra structure by defining the antipode, which is
+defined as $\antipode(\zo) \defeq -\zo$ for each
+$\zo\in\set{\yo, \bo, \ao, \xo}$, extended antimultiplicatively.
 
 Next, we introduce the ribbon structure of $\CU$ with an $\Rmat$-matrix and
 the spinner $\spin$:
