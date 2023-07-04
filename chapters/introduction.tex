@@ -1095,6 +1095,66 @@ the spinner $\spin$:
         \spin &\defeq \sqrt{\Bo}
 \end{align}
 
+\begin{lemma}[the algebra $\CU$ is ribbon]
+        The algebra $\CU$ has a ribbon structure given by the above
+        $\Rmat$-matrix and spinner $\spin$.
+\end{lemma}
+\begin{proof}
+        The Hopf algebra structure of $\CU$ is straightforward, and is left to
+        the reader to verify. We will focus our attention on verifying
+        quasitriangularity and the ribbon structure.
+
+        Let us verify \cref{eq:Rmat_overstrand} first. The left-hand side is:
+        \begin{equation}
+                \Rmat_{12} \then \comult^{2}_{23} = 
+                \exp\pn*{\bo_1(\ao_2+\ao_3)}
+                \exp\pn*{\frac{1-\Bo_1}{\bo_1}\yo_1(\xo_2+\xo_3)}
+        \end{equation}
+        Equality with the right-hand side follows by commutativity of $\bo_1$
+        and $\yo_1$:
+        \begin{equation}\begin{aligned}
+                \Rmat_{13} \Rmat_{42} \then \mult^{14}_{1}
+                &=
+                \exp\pn*{\bo_1\ao_3}
+                \exp\pn*{\frac{1-\Bo_1}{\bo_1}\yo_1\xo_3}
+                \exp\pn*{\bo_1\ao_2}
+                \exp\pn*{\frac{1-\Bo_1}{\bo_1}\yo_1\xo_2}
+                \\&=
+                \exp\pn*{\bo_1(\ao_2+\ao_3)}
+                \exp\pn*{\frac{1-\Bo_1}{\bo_1}\yo_1(\xo_2+\xo_3)}
+        \end{aligned}\end{equation}
+        Next we verify \cref{eq:Rmat_understrand}, whose left-hand side is:
+        \begin{equation}
+                \Rmat_{13}\then\comult^{1}_{12} = 
+                \exp\pn[\big]{(\bo_1+\bo_2)\ao_3}
+                \exp\pn*{
+                        \pn*{
+                                \Bo_2\frac{1-\Bo_1}{\bo_1}y_1+
+                                \frac{1-\Bo_2}{\bo_2}y_2
+                        }
+                        \xo_3
+                }
+        \end{equation}
+        On the right-hand side, we have
+        \begin{equation}
+        \begin{aligned}
+                \Rmat_{13}\Rmat_{24}\then\mult^{34}_3
+                &=
+                \exp\pn*{\bo_1\ao_3}
+                \exp\pn*{\frac{1-\Bo_1}{\bo_1}\yo_1\xo_3}
+                \exp\pn*{\bo_2\ao_3}
+                \exp\pn*{\frac{1-\Bo_2}{\bo_2}\yo_2\xo_3}
+              \\&=
+                \exp\pn[\big]{(\bo_1+\bo_2)\ao_3}
+                \exp\pn*{\frac{1-\Bo_1}{\bo_1}\Bo_2\yo_1\xo_3}
+                \exp\pn*{\frac{1-\Bo_2}{\bo_2}\yo_2\xo_3}
+        \end{aligned}
+        \end{equation}
+        The right two exponentials may be combined since each variable commutes
+        with the others, either by belonging to separate tensor factors, or in
+        the case of $\bo$, being central.
+\end{proof}
+
 \section{Morphisms between meta-objects}
 
 When equipped with meta-structures on both tangles and an algebraic object, we
