@@ -57,14 +57,18 @@ To efficiently describe $\K$-linear maps between tensor powers of the algebra
 $\CU$, we define categories $\UMaps$, $\LinMaps$, and $\GenFunc$ with objects
 finite sets and morphisms:
 \begin{align}
-        \Hom[\UMaps]JK &\defeq \Hom[\K]{\CU^{\otimes J}}{\CU^{\otimes K}}\\
-        \Hom[\LinMaps]JK &\defeq \Hom[\K]{\polyring\Q{z_J}}{\polyring\Q{z_K}}\\
-        \Hom[\GenFunc]JK &\defeq \powerseries{\polyring\Q{z_K}}{ζ_J}
+        \label{eq:hom_umaps}\Hom[\UMaps]JK &\defeq
+                \Hom[\K]{\CU^{\otimes J}}{\CU^{\otimes K}}\\
+        \label{eq:hom_linmaps}\Hom[\LinMaps]JK &\defeq
+                \Hom[\K]{\polyring\Q{z_J}}{\polyring\Q{z_K}}\\
+        \label{eq:hom_genfunc}\Hom[\GenFunc]JK &\defeq
+                \powerseries{\polyring\Q{z_K}}{ζ_J}
 \end{align}
-
-There exist monoidal isomorphisms between these categories, namely $\map
-{\Order} {\LinMaps} [\toiso] {\UMaps}$ and $\map {\GenMap} {\LinMaps} [\toiso]
-{\GenFunc}$ as introduced in \cref{eq:order_map,eq:genfunc}.
+Where \cref{eq:hom_umaps,eq:hom_linmaps} explicitly denote vector space maps,
+not just algebra or ring homomorphisms. There exist monoidal isomorphisms
+between these categories, namely $\map {\Order} {\LinMaps} [\toiso] {\UMaps}$
+and $\map {\GenMap} {\LinMaps} [\toiso] {\GenFunc}$ as introduced in
+\cref{eq:order_map,eq:genfunc}.
 
 We use this formulation because of the existence of a computationally amenable
 subcategory of $\GenFunc$ which contains the image of this invariant.

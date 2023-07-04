@@ -160,9 +160,9 @@ Explicit examples are missing.
   What do you mean "The ribbon structure of U requires ..." ?  maybe you
   should verify that these R, C satisfy the desired equations.
 
-- [ ] 3.1
+- [X] 3.1
   - [X] In Remark 3.2, I didn't understand what "extending the definition" means.
-  - [ ] Why do you say that the categories `\mathcal H` and `\mathcal U` are
+  - [X] Why do you say that the categories `\mathcal H` and `\mathcal U` are
       isomorphic?  If I understand correctly, if for example `J`, `K` are one
       element sets, then `Hom_{\mathcal U}(J,K) = Hom(U, U)` whereas
       `Hom_{\mathcal H}(J,K) = Hom(Q[z], Q[z])` ?  But `U` is a polynomial ring in
