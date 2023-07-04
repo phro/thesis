@@ -6,9 +6,14 @@ develops a universal knot invariant using perturbed Gaußians.
 
 \section{Expressing morphisms as generating functions}
 
-When defining a morphism-valued tangle invariant, one needs a compact way of
-encoding the morphism. In \cite{BV} this is achieved through the use of
-generating functions, whose definition we reproduce below:
+The invariant we have defined takes the form of building a knot out of several
+crossings and spinners, then replacing each crossing with an $\Rmat$-matrix
+$\Rmat_{ij}$ and spinners $\spin_k$. Finally, we apply a series of
+multiplication operations to join the various tensor factors into the final
+value. In order to be able to apply the operations efficiently, we need a
+compact way of encoding morphisms. In \cite{BV}, Bar-Natan and van der Veen
+achieve this through the use of generating functions, whose definition we
+reproduce below:
 
 For $A$ and $B$ finite sets, consider the set $\hom(\polyring{\Q}{z_A},
 \polyring{\Q}{z_B})$ of linear maps between multivariate polynomial rings. Such

@@ -122,7 +122,7 @@ Explicit examples are missing.
     - [X] The definition of framed tangles must put a condition on the endpoints.
     - [X] Fix broken references.
     - [X] p.27 mention in the Thm that this is only for virtual knots
-    - [ ] p.36 "morphism-valued" is misleading.
+    - [X] p.36 "morphism-valued" is misleading.
     - [X] p.39 Generating functions are not Gaußian in `b`-variables.
 - [ ] *Print* the thesis off to read
   - [ ] Read over the thesis for a total of one time
