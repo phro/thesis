@@ -608,14 +608,14 @@ monoid}) is a Hopf algebra $H$, together with an invertible element $\Rmat_{i,j}
 H_{i,j}$, called the \defi{$\Rmat$-matrix}, which satisfies the following
 properties: (we will denote the inverse by $\Rmati$)
 \begin{align}
-        \label{eq:Rmat_overstrand}
-        \Rmat_{12}\then\comult^{2}_{23}&=\Rmat_{a3}\Rmat_{b2}\then\mult^{ab}_1\\
         \label{eq:Rmat_understrand}
-        \Rmat_{13}\then\comult^{1}_{12}&=\Rmat_{1a}\Rmat_{2b}\then\mult^{ab}_3\\
+        \Rmat_{13}\then\comult^{1}_{12}&=\Rmat_{13}\Rmat_{24}\then\mult^{34}_3\\
+        \label{eq:Rmat_overstrand}
+        \Rmat_{13}\then\comult^{3}_{23}&=\Rmat_{13}\Rmat_{42}\then\mult^{14}_1\\
         \label{eq:Rmat_comult}
         \comult^{1}_{21} &=
-                \comult^{1}_{12} \Rmat_{1_i,2_i}\Rmati_{1_f,2_f}\then
-                \mult^{1_i,1,1_f}_{1}\then \mult^{2_i,2,2_f}_{2}
+                \comult^{1}_{12} \Rmat_{1',2'}\Rmati_{1'',2''}\then
+                \mult^{1',1,1''}_{1}\then \mult^{2',2,2''}_{2}
 \end{align}
 \end{definition}
 
