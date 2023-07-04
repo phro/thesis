@@ -156,7 +156,7 @@ Explicit examples are missing.
   - [X] Theorem 2.28: is this a ... algebra in the category Set?  Are these
       tangles considered up to isotopy?
 
-- [ ] 2.5
+- [X] 2.5
   What do you mean "The ribbon structure of U requires ..." ?  maybe you
   should verify that these R, C satisfy the desired equations.
 
