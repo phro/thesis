@@ -1095,6 +1095,29 @@ the spinner $\spin$:
         \spin &\defeq \sqrt{\Bo}
 \end{align}
 
+We point out the following commutation relations in $\CU$, beginning with 
+the Weyl canonical commutation relation:
+\begin{equation}
+        \Exp{ξ\xo}\Exp{η\yo} = \Exp{-ξη\bo}\Exp{η\yo}\Exp{ξ\xo}
+\end{equation}
+Secondly, using \cref{eq:xay_relations} and $\A\defeq \Exp{α}$, we
+notice
+\begin{equation}\label{eq:ay_commutation}
+        \Exp{α\ao}\Exp{η\yo}
+        = \Exp{α\ao}\Sum[n]\frac{(η\yo)^n}{n!}
+        = \Sum[n]\frac{(η\yo)^n}{n!}\Exp{α(\ao-n)}
+        = \Sum[n]\frac{(η\yo)^n}{n!}\Exp{α\ao}\A^{-n}
+        = \Exp{\frac{η}{\A}\yo}\Exp{α\ao}
+\end{equation}
+similarly,
+\begin{equation}\label{eq:ax_commutation}
+        \Exp{ξ\xo}\Exp{α\ao}
+        = \Sum[n]\frac{(ξ\xo)^n}{n!}\Exp{α\ao}
+        = \Sum[n]\Exp{α(\ao-n)}\frac{(ξ\xo)^n}{n!}
+        = \Sum[n]\Exp{α\ao}\frac{\pn{\frac{ξ\xo}{\A}}^n}{n!}
+        = \Exp{α\ao}\Exp{\frac{ξ}{\A}\xo}
+\end{equation}
+
 \begin{lemma}[the algebra $\CU$ is ribbon]
         The algebra $\CU$ has a ribbon structure given by the above
         $\Rmat$-matrix and spinner $\spin$.
@@ -1150,9 +1173,13 @@ the spinner $\spin$:
                 \exp\pn*{\frac{1-\Bo_2}{\bo_2}\yo_2\xo_3}
         \end{aligned}
         \end{equation}
-        The right two exponentials may be combined since each variable commutes
-        with the others, either by belonging to separate tensor factors, or in
-        the case of $\bo$, being central.
+        We use \cref{eq:ax_commutation} to write the expression in a canonical
+        order. Finally, the right two exponentials may be combined since each
+        variable commutes with the others, either by belonging to separate
+        tensor factors, or in the case of $\bo$, being central.
+        The verifications of \cref{eq:Rmat_comult} and
+        \crefrange{eq:spinner_ribbon}{eq:spinner_counit} follow with similar
+        computations.
 \end{proof}
 
 \section{Morphisms between meta-objects}

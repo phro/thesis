@@ -190,29 +190,9 @@ operations as power series in a closed form, namely as perturbed Gaußians.
 \end{theorem}
 
 \begin{proof}
-        To prove \cref{eq:gen-mult}, we first note the Weyl canonical
-        commutation relation:
-        \begin{equation}
-                \Exp{ξ\xo}\Exp{η\yo} = \Exp{-ξη\bo}\Exp{η\yo}\Exp{ξ\xo}
-        \end{equation}
-        Secondly, using \cref{eq:xay_relations} and $\A\defeq \Exp{α}$, we
-        compute
-        \begin{equation}
-                \Exp{α\ao}\Exp{η\yo}
-                = \Exp{α\ao}\Sum[n]\frac{(η\yo)^n}{n!}
-                = \Sum[n]\frac{(η\yo)^n}{n!}\Exp{α(\ao-n)}
-                = \Sum[n]\frac{(η\yo)^n}{n!}\Exp{α\ao}\A^{-n}
-                = \Exp{\frac{η}{\A}\yo}\Exp{α\ao}
-        \end{equation}
-        similarly,
-        \begin{equation}
-                \Exp{ξ\xo}\Exp{α\ao}
-                = \Sum[n]\frac{(ξ\xo)^n}{n!}\Exp{α\ao}
-                = \Sum[n]\Exp{α(\ao-n)}\frac{(ξ\xo)^n}{n!}
-                = \Sum[n]\Exp{α\ao}\frac{\pn{\frac{ξ\xo}{\A}}^n}{n!}
-                = \Exp{α\ao}\Exp{\frac{ξ}{\A}\xo}
-        \end{equation}
-        Using this relation allows us to commute exponentials past each other to
+        To prove \cref{eq:gen-mult}, we use
+        \cref{eq:ax_commutation,eq:ay_commutation}, which
+        allows us to commute exponentials past each other to
         bring expressions into $ybax$-order. Below we omit the index $k$
         for readability:
         \begin{equation}
