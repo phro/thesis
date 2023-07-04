@@ -156,12 +156,19 @@ operations as power series in a closed form, namely as perturbed Gaußians.
                 \biggr)
                 \end{multlined}
                 \\ \Gen*{\unit_{i}} &=1\label{eq:gen-unit}
-                \\\Gen*{\comult^{i}_{jk}} &=\exp\pn*{
+                \\\Gen*{\comult^{i}_{jk}} &=
+                \begin{multlined}[t]
+                \exp\biggl(
+                        η_i \frac{b_j+b_k}{1-B_jB_k} \pn*{
+                                B_k\frac{1-B_j}{b_j}y_j+
+                                \frac{1-B_k}{b_k}y_k
+                        } \\+
                         β_i(b_j + b_k) +
-                        α_i(a_j + a_k) +
-                        η_i(y_j + y_k) +
+                        α_i(a_j + a_k)+
                         ξ_i(x_j + x_k)
-                } \label{eq:gen-comult}
+                \biggr)
+                \end{multlined}
+                \label{eq:gen-comult}
                 \\\Gen*{\counit^{i}} &=1\label{eq:gen-counit}
                 \\\Gen*{\antipode^{i}_{i}} &=\exp\pn*
                 {
