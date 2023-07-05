@@ -1065,16 +1065,18 @@ along its framing. Notice the right-to-left strand labels.}
 
 \section{The $ybax$ meta-algebra}\label{sec:algebraic-definitions}
 
-Here we define the ribbon Hopf algebra $\CU$.
+Here we define the ribbon Hopf algebra $\CU$, and point out some of its
+properties.
 
+\begin{definition}[The ribbon Hopf algebra $\CU$]
 Define the Lie algebra
 \begin{equation}
 \fg \defeq \Span\setbuilder[\Big]{\yo, \bo, \ao, \xo}{
-                \liebk{\ao}{\xo} = \xo,
-                \liebk{\ao}{\yo} = -\yo,
-                \liebk{\xo}{\yo} = \bo,
-                \liebk{\bo}{ } = 0
-        }
+        \liebk{\ao}{\xo} = \xo,
+        \liebk{\ao}{\yo} = -\yo,
+        \liebk{\xo}{\yo} = \bo,
+        \liebk{\bo}{ } = 0
+}
 \end{equation}
 Then the algebra $\CU$ is defined to be the universal enveloping algebra
 $\uea{\fg}$. The bialgebra structure of $\CU$ is: \begin{equation}\begin{aligned}
@@ -1098,17 +1100,52 @@ Next, we introduce the ribbon structure of $\CU$ with an $\Rmat$-matrix and
 the spinner $\spin$:
 \begin{align}
         \Rmat_{i,j}
-        &\defeq \exp\pn*{\bo_i\ao_j}\exp\pn*{\frac{1-\Bo_i}{\bo_i}\yo_i\xo_j}\\
+                &\defeq \exp\pn*{\bo_i\ao_j}
+                        \exp\pn*{\frac{1-\Bo_i}{\bo_i}\yo_i\xo_j}\\
         \spin &\defeq \sqrt{\Bo}\\
         \ribbon &\defeq \Rmati_{31}\spini_{2} \then \mult^{123}
 \end{align}
+\end{definition}
 
-We point out the following commutation relations in $\CU$, beginning with
-the Weyl canonical commutation relation:
-\begin{equation}
+\begin{lemma}[Commutation relations in $\CU$]\label{lem:xay_relations}
+        Given a polynomial $f$, we have the
+        following relations in $U$:
+        \begin{align}\label{eq:xay_relations}
+                f(a)y^r &= y^rf(a-r) &
+                x^rf(a) &= f(a-r)x^r
+        \end{align}
+\end{lemma}
+\begin{proof}
+        We begin by commuting a single $a$ past a power of $y$:
+        \begin{equation}
+                ay^r
+                =y(a-1)y^{r-1}
+                =y^2(a-2)y^{r-2}
+                =\dots
+                =y^{r}(a-r)
+        \end{equation}
+        Repeating the above process for multiple copies of $a$:
+        \begin{equation}
+                a^ky^r
+                =a^{k-1}(ay^r)
+                =a^{k-1}y^r(a-r)
+                =a^{k-2}y^r(a-r)^2
+                =\dots
+                =y^r(a-r)^k
+        \end{equation}
+        Finally, we conclude for any linear combination of powers of $a$, the
+        same relation holds, so this holds for any polynomial. Extending this
+        result to formal power series is straightforward.
+
+        A similar argument exists to show $x^rf(a) = f(a-r)x^r$.
+\end{proof}
+
+Next, we observe that since $\liebk{x}{y}$ is central, the Weyl canonical
+commutation relation holds:
+\begin{equation}\label{eq:weyl_relation}
         \Exp{ξ\xo}\Exp{η\yo} = \Exp{-ξη\bo}\Exp{η\yo}\Exp{ξ\xo}
 \end{equation}
-Secondly, using \cref{eq:xay_relations} and $\A\defeq \Exp{α}$, we
+Secondly, using \cref{eq:xay_relations} and setting $\A\defeq \Exp{α}$, we
 notice
 \begin{equation}\label{eq:ay_commutation}
         \Exp{α\ao}\Exp{η\yo}
@@ -1201,7 +1238,7 @@ meta-objects.
         ones with the same operations and relations between the operations). A
         \defi{morphism} $ϕ$ between these meta-objects is map $\map {ϕ}
         {\set{A_X}_X} {\set{B_X}_X}$ sending $A_X \mapsto B_X$ such that for
-        each map $f^{X}_{Y}$ in $A$, $ϕ(f^{X}_{Y}) = f^X_Y$ in $B$.
+        each operation $f^{X}_{Y}$ in $A$, $ϕ(f^{X}_{Y}) = f^X_Y$ in $B$.
 \end{definition}
 
 \subsection{Upright tangle invariants from a ribbon meta-Hopf algebra}
