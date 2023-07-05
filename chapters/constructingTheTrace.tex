@@ -131,15 +131,9 @@ $\liebk*{\uea{\fh}}{\uea{\fh}} = \liebk*{\fh}{\uea{\fh}}$.
         $\set{y^n a^k x^n}_{n, k\ge 0}$.
 \end{theorem}
 \begin{proof}
-Using \cref{lem:coinvLieAlg}, we need only compute $\liebk{\Alg}{\CU}$ to
-determine $\CU_\CU$. Given a polynomial $f$, we have the
-following relations in $U$:
-\begin{align}\label{eq:xay_relations}
-        f(a)y^r &= y^rf(a-r) &
-        x^rf(a) &= f(a-r)x^r
-\end{align}
-Next we compute the adjoint actions of $y$, $a$, and $x$. (Recall $b$ is
-central.)
+By \cref{lem:coinvLieAlg}, we need only compute $\liebk{\Alg}{\CU}$ to
+determine $\CU_\CU$. Using \cref{lem:xay_relations}, we compute the adjoint
+actions of $y$, $a$, and $x$. (Recall $b$ is central.)
 \begin{align}
   \ad_a f(x) &= xf'(x)&
   \ad_a f(y) &= -yf'(y)\label{eq:ada}\\
