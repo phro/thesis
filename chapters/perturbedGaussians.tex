@@ -287,11 +287,11 @@ similarly:
                         &= \inv{\Order}\pn*{
                                 \Exp{-ξ\xo}
                                 \Exp{-\Aη\yo}
-                                \Exp{-α\ao}
                                 \Exp{-β\bo}
+                                \Exp{-α\ao}
                         }\\
                         &= \inv{\Order}\pn*{
-                                \Exp{-ξ\Aη\bo}
+                                \Exp{ξ\Aη\bo}
                                 \Exp{-\Aη\yo}
                                 \Exp{-ξ\xo}
                                 \Exp{-α\ao}
@@ -299,20 +299,25 @@ similarly:
                         }\\
                         &= \inv{\Order}\pn*{
                                 \Exp{-\Aη\yo}
-                                \Exp{-ξ\Aη\bo}
+                                \Exp{ξ\Aη\bo}
                                 \Exp{-β\bo}
                                 \Exp{-ξ\xo}
                                 \Exp{-α\ao}
                         }\\
                         &= \inv{\Order}\pn*{
                                 \Exp{-\Aη\yo}
-                                \Exp{-(ξ\Aη+β)\bo}
+                                \Exp{(η\A ξ-β)\bo}
                                 \Exp{-α\ao}
                                 \Exp{-ξ\A \xo}
+                        }\\
+                        &= \Exp{
+                                -\Aη y
+                                +(η\A ξ-β)b
+                                +-αa
+                                +-ξ\A x
                         }
 \end{aligned}
 \end{equation}
-%TODO: fix minus-sign error
 Finally, \cref{eq:gen-unit,eq:gen-counit,eq:gen-Rmat,eq:gen-spin,eq:gen-ribbon}
 follow immediately.
 \end{proof}
