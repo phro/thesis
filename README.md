@@ -169,3 +169,8 @@ Explicit examples are missing.
       4 variables.  I suppose that there is a vector space isomorphism `U \cong
       Q[z]` since both are countable dimensional, but there is no preferred one.
   - [X] In Lemma 3.3, what is `|_{z_K -> \del \zeta_K}` ?
+
+### Feedback from Vassili ###
+  - [ ] The acknowledgements should fit into one page.
+  - [X] Code annotations: Maybe a box around the annotation would have helped
+      me? Or a very light background?
