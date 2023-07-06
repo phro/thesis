@@ -52,13 +52,6 @@
 \usepackage{caption}
 \usepackage{subcaption}
 
-% Disable fcolorbox.
-\makeatletter
-\AtBeginEnvironment{minted}{\dontdofcolorbox}
-\def\dontdofcolorbox{\renewcommand\fcolorbox[4][]{##4}}
-\xpatchcmd{\inputminted}{\minted@fvset}{\minted@fvset\dontdofcolorbox}{}{}
-\makeatother
-
 % Footnote customization; it is now easier to distinguish superscripts from
 % footnotes.
 \renewcommand{\thefootnote}{\dag\arabic{footnote}}
@@ -137,6 +130,13 @@
 \newminted[spec]{haskell}{}
 \newmintinline[hs]{haskell}{}
 \newmintinline[mma]{mathematica}{}
+
+% Disable fcolorbox.
+\makeatletter
+\AtBeginEnvironment{minted}{\dontdofcolorbox}
+\def\dontdofcolorbox{\renewcommand\fcolorbox[4][]{##4}}
+\xpatchcmd{\inputminted}{\minted@fvset}{\minted@fvset\dontdofcolorbox}{}{}
+\makeatother
 
 % Fine-tune hyperreferences (hyperref should be called last)
 \hypersetup{%
