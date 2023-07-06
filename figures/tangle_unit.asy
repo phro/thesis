@@ -9,6 +9,8 @@ path p2 = (0,0){N} ..{S}(-1,1)..{N}(0,2);
 path q = (-0.7,0)--(-0.7,2);
 path r = (0.3,0)--(0.3,2);
 
+transform rhs = shift(2.7,0);
+
 filldraw(shift((-1.4,0))*scale(2,2)*unitsquare,backgroundColor,boundaryArc);
 drawTangleArc(subpath(q,0,0.5),"$k$");
 drawTangleArc(subpath(p,1,2));
@@ -19,22 +21,22 @@ dot((0,2),tangleEndpoint);
 dot((-0.7,0),tangleEndpoint);
 dot((-0.7,2),tangleEndpoint);
 
-filldraw(shift((1.8,0))*scale(2,2)*unitsquare,backgroundColor,boundaryArc);
-drawTangleArc(shift(3.2,0)*r,"$i$");
-drawTangleArc(shift(3.2,0)*subpath(q,0,0.5),"$k$");
-drawTangleArc(shift(3.2,0)*subpath(p,1,2));
-drawTangleArc(shift(3.2,0)*subpath(p,0,1),"$j$");
-drawTangleArc(shift(3.2,0)*subpath(q,0.5,1));
-dot(shift(3.2,0)*(0,0),tangleEndpoint);
-dot(shift(3.2,0)*(0,2),tangleEndpoint);
-dot(shift(3.2,0)*(-0.7,0),tangleEndpoint);
-dot(shift(3.2,0)*(-0.7,2),tangleEndpoint);
-dot(shift(3.2,0)*(0.3,0),tangleEndpoint);
-dot(shift(3.2,0)*(0.3,2),tangleEndpoint);
+filldraw(shift((-1.4,0))*rhs*scale(2,2)*unitsquare,backgroundColor,boundaryArc);
+drawTangleArc(rhs*r,"$i$");
+drawTangleArc(rhs*subpath(q,0,0.5),"$k$");
+drawTangleArc(rhs*subpath(p,1,2));
+drawTangleArc(rhs*subpath(p,0,1),"$j$");
+drawTangleArc(rhs*subpath(q,0.5,1));
+dot(rhs*(0,0),tangleEndpoint);
+dot(rhs*(0,2),tangleEndpoint);
+dot(rhs*(-0.7,0),tangleEndpoint);
+dot(rhs*(-0.7,2),tangleEndpoint);
+dot(rhs*(0.3,0),tangleEndpoint);
+dot(rhs*(0.3,2),tangleEndpoint);
 
 
 
-draw((0.8,1)--(1.7,1),
+draw((0.8,1)--(1.2,1),
         boundaryArc,
         arrow=EndArrow(arrowhead=TeXHead),
         L=Label("$\eta_{i}$",LeftSide)
