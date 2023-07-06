@@ -108,7 +108,7 @@ Explicit examples are missing.
 
 - [ ] Address the rest of Dror's comments
   - [ ] Earlier feedback
-  - [ ] 2023-06-26 feedback
+  - [X] 2023-06-26 feedback
     - [X] p.10 wording changes
     - [X] p.12 distinguish between vector space `[A,A]` and ideal `[A,A]`.
     - [X] p.13 grammar

@@ -51,10 +51,72 @@
 \usepackage{pdflscape}
 
 \usepackage[langlinenos=true]{minted}
+\usepackage[most, minted]{tcolorbox}
 \setminted{breaklines=true,linenos=true}
+
+\usepackage{xpatch}
+\makeatletter
+\ifminted@draft
+  \xpatchcmd\inputminted
+    {\VerbatimInput{#3}}
+    {\minted@langlinenoson
+     \VerbatimInput{#3}%
+     \minted@langlinenosoff}
+    {}{\PatchFailed}
+\else
+  \xpatchcmd\inputminted
+    {\minted@pygmentize[#3]{#2}}
+    {\minted@langlinenoson
+     \minted@pygmentize[#3]{#2}%
+     \minted@langlinenosoff}
+    {}{\PatchFailed}
+\fi
+\makeatother
+
+\newtcblisting{code}{%
+    listing engine=minted,
+    minted language=haskell,
+    listing only,
+    breakable,
+    enhanced,
+    minted options = {
+        breaklines=true, 
+        breakbefore=., 
+        fontsize=\footnotesize, 
+        numbersep=1mm,
+        linenos=true,
+        langlinenos=true, 
+        firstnumber=last
+    },
+    overlay={%
+        \begin{tcbclipinterior}
+            \fill[gray!25] (frame.south west) rectangle ([xshift=5mm]frame.north west);
+        \end{tcbclipinterior}
+    }   
+}
+\newtcblisting{mathematica}{%
+    listing engine=minted,
+    minted language=mathematica,
+    listing only,
+    breakable,
+    enhanced,
+    minted options = {
+        breaklines=true, 
+        breakbefore=., 
+        fontsize=\footnotesize, 
+        numbersep=1mm,
+        langlinenos=true, 
+        firstnumber=last
+    },
+    overlay={%
+        \begin{tcbclipinterior}
+            \fill[gray!25] (frame.south west) rectangle ([xshift=5mm]frame.north west);
+        \end{tcbclipinterior}
+    }   
+}
+
 \setminted[mathematica]{firstnumber=last}
 \usemintedstyle[wolfram]{mathematica}
-\newminted[code]{haskell}{firstnumber=last}
 \newminted[spec]{haskell}{}
 \newmintinline[hs]{haskell}{}
 \newmintinline[mma]{mathematica}{}
