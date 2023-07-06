@@ -81,14 +81,16 @@ void xing(
         path under = (ne.x,sw.y){N}..{N}(sw.x,ne.y);
         real arrowPos = 0.8;
         if(isPositive) {
-                drawTangleArc(under, doDrawArrow, arcLabel=underLabel, arrowPos);
+                drawTangleArc(under, doDrawArrow, arcLabel=underLabel,
+                        arrowPos);
                 drawTangleArc(over , doDrawArrow, arcLabel=overLabel ,
-                arcLabelPos = 0.25, arrowPos);
+                        arcLabelPos = 0.175, arrowPos);
         }
         if(!isPositive) {
-                drawTangleArc(over , doDrawArrow, arcLabel=underLabel, arrowPos);
+                drawTangleArc(over , doDrawArrow, arcLabel=underLabel,
+                        arcLabelPos = 0.175, arrowPos);
                 drawTangleArc(under, doDrawArrow, arcLabel=overLabel ,
-                arcLabelPos = 0.25, arrowPos);
+                        arrowPos);
         }
 }
 
