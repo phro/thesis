@@ -1,7 +1,7 @@
 size(7cm,0);
 import tangleSettings;
 
-transform rhs = shift(1+1,0);
+transform rhs = shift(1+0.5,0);
 
 filldraw(yscale(2)*unitsquare,backgroundColor,boundaryArc);
 xing((0.2,0),(0.8,1),
@@ -28,4 +28,4 @@ dot(rhs*(0.8,2),tangleEndpoint);
 path pi = (3,0){N}..{S}(1,2.5){S}..{N}(3,5);
 
 
-label("$=$",(1.5,1));
+label("$=$",(1.25,1));

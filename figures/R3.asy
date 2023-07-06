@@ -1,7 +1,7 @@
 size(10cm,0);
 import tangleSettings;
 
-transform rhs = shift(2+1)*reflect((1,0),(1,1));
+transform rhs = shift(2+0.5)*reflect((1,0),(1,1));
 
 filldraw(scale(2,3)*unitsquare,backgroundColor,boundaryArc);
 drawTangleArc((1.75,0)--(1.75,1));
@@ -29,4 +29,4 @@ xing(rhs*(1,1),   rhs*(1.75,2),isPositive = false);
 xing(rhs*(0.25,2),rhs*(1,3)   ,isPositive = false);
 dot(rhs*dots,tangleEndpoint);
 
-label("$=$",(2.5,1.5));
+label("$=$",(2.25,1.5));
