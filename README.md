@@ -171,6 +171,9 @@ Explicit examples are missing.
   - [X] In Lemma 3.3, what is `|_{z_K -> \del \zeta_K}` ?
 
 ### Feedback from Vassili ###
-  - [ ] The acknowledgements should fit into one page.
-  - [X] Code annotations: Maybe a box around the annotation would have helped
-      me? Or a very light background?
+- [ ] The acknowledgements should fit into one page.
+- [X] Code annotations: Maybe a box around the annotation would have helped
+    me? Or a very light background?
+
+### Feedback from Jesse ###
+- [ ] The abstract should fit in one page.
