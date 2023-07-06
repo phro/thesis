@@ -37,4 +37,4 @@ drawTangleEndpoint(rhs*(size.x-margin,margin));
 drawFrontArc(rhs*((0,1+margin)--(size.x,1+margin)));
 
 draw(shift(size.x+margin/2,0.5size.y)*((0,0)--(0.25,0)),boundaryArc,EndArrow(arrowhead
-= SimpleHead));
+= TeXHead));
