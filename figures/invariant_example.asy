@@ -19,49 +19,75 @@ drawTangleEndpoint((margin,5));
 
 transform rhs = shift(size.x+1.5,0);
 
-drawTangleDisk(shift(0,-0.5)*rhs*shift(0,1)*xscale(1.25)*unitsquare);
+real nudge          = 0.55;
+real eps            = 0.2;
+transform nudgeDown = shift(0,-nudge);
+transform nudgeUp   = shift(0,nudge);
+
+
+drawTangleDisk(
+        nudgeDown*
+        rhs*
+        shift(0,1)*
+        shift(0,-eps)*
+        scale(1+margin,1+eps)*
+        unitsquare
+);
 xing(
-        shift(0,-0.5)*rhs*(margin,1),
-        shift(0,-0.5)*rhs*(1,2),
+        nudgeDown*rhs*(margin,1-eps),
+        nudgeDown*rhs*(1,2),
         "$1$",
         "$5$",
         doDrawArrow=true
 );
 for(pair p : pointsFromXing(
-                shift(0,-0.5)*rhs*(margin,1),
-                shift(0,-0.5)*rhs*(1,2)
+                nudgeDown*rhs*(margin,1-eps),
+                nudgeDown*rhs*(1,2)
         )
    ) {
         drawTangleEndpoint(p);
 }
 
-drawTangleDisk(rhs*shift(0,2)*xscale(1.25)*unitsquare);
+drawTangleDisk(rhs*shift(0,2)*xscale(1+margin)*unitsquare);
+drawTangleDisk(
+        rhs*
+        shift(0,2)*
+        shift(0,-0.5eps)*
+        scale(1+margin,1+eps)*
+        unitsquare
+);
 xing(
-        rhs*(margin,2),
-        rhs*(1,3),
+        rhs*(margin,2-0.5eps),
+        rhs*(1,3+0.5eps),
         "$6$",
         "$2$",
         doDrawArrow=true
 );
 for(pair p : pointsFromXing(
-                rhs*(margin,2),
-                rhs*(1,3)
+                rhs*(margin,2-0.5eps),
+                rhs*(1,3+0.5eps)
           )
    ) {
         drawTangleEndpoint(p);
 }
 
-drawTangleDisk(shift(0,0.5)*rhs*shift(0,3)*xscale(1.25)*unitsquare);
+drawTangleDisk(
+        nudgeUp*
+        rhs*
+        shift(0,3)*
+        scale(1+margin,1+eps)*
+        unitsquare
+);
 xing(
-        shift(0,0.5)*rhs*(margin,3),
-        shift(0,0.5)*rhs*(1,4),
+        nudgeUp*rhs*(margin,3),
+        nudgeUp*rhs*(1,4+eps),
         "$3$",
         "$7$",
         doDrawArrow=true
 );
 for(pair p : pointsFromXing(
-                shift(0,0.5)*rhs*(margin,3),
-                shift(0,0.5)*rhs*(1,4)
+                nudgeUp*rhs*(margin,3),
+                nudgeUp*rhs*(1,4+eps)
           )
    ) {
         drawTangleEndpoint(p);
@@ -90,4 +116,4 @@ drawTangleEndpoint(shift(0.75,0)*rhs*(1,1));
 
 draw(shift(size.x+margin,0.5size.y)*(
         (0,0)--(1,0)
-     ),boundaryArc,ArcArrow(arrowhead = SimpleHead));
+     ),boundaryArc,ArcArrow(arrowhead = TeXHead));
