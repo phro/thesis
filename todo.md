@@ -320,4 +320,4 @@ Explicit examples are missing.
   - [ ] Add sample computations to § Perturbed Gaußians
   - [ ] Add sample computations to § Constructing the Trace
   - [ ] Add (small) table of values
-- Colophon: Add version number.
+- [ ] Colophon: Add version number.
