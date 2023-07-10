@@ -135,3 +135,189 @@ Explicit examples are missing.
 
 ### Feedback from Jesse ###
 - [X] The abstract should fit in one page.
+
+## Printout ##
+- [ ] implement abstract comments
+- [ ] implement acknowledgements comments
+- [ ] add "paper" flag to tweak margins and page numbers simultaneously
+- [ ] § Executive summary
+  - [ ] ~~Understanding~~ knotted objects
+  - [ ] Make introductory picture more informative
+  - [ ] "satellite", "ribbon", and "slice" should be introduced more
+      consistently.
+  - [ ] "properties" -> "operations"
+  - [ ] add citation to Ribbon Slice Conjecture
+  - [ ] Use wording from § 2.6 for building an invariant.
+  - [ ] Add reference from § Quantum Invariants to relevant section.
+  - [ ] Incorporate Quantum invariants tweaks
+  - [ ] § Images of the Invariant -> how about § Improving Computation Times
+    - [ ] Add ref to relevant section.
+    - [ ] Implement tweaks.
+  - [ ] § Extending The Invariant...
+    - [ ] Simplify title
+    - [ ] add refs to appropriate sections
+    - [ ] implement tweaks
+    - [ ] modify open tangle image to be non-pure.
+    - [ ] § Further Study -> make subsection instead of subsub? (match chapter
+      outline)
+      - [ ] Sentence is mentioned which is never elaborated on. Talk more about it!
+- [ ] § Tensor Products and Meta-Objects
+  - [ ] § Tensor Product Notation
+    - [ ] Clean up language
+    - [ ] Add reference to Penrose's book on the same notation.
+    - [ ] change indices
+    - [ ] remove extraneous notation for tensor product
+    - [ ] improve notation for indexed tensor product
+    - [ ] Improve example to be easier to understand (use cross product ×).
+    - [ ] Rearrange paragraphs to introduce notation in correct order.
+  - [ ] § Meta-objects
+    - [ ] Are subsubs necessary?
+    - [ ] tweak language
+    - [ ] add footnote
+    - [ ] mention removal of "`[X]`" from notation
+    - [ ] set bijections should be Greek
+    - [ ] add "strict" and "symmetric" to monoidal categories
+    - [ ] add actual matrices to Example: square matrices
+    - [ ] add parentheses in intro sentence to meta-object definition
+    - [ ] a meta-object is **four** things (or however many are actually listed).
+    - [ ] refer to the appropriate figure for composition (×2).
+    - [ ] add pronunciation of `\then` operator
+    - [ ] Remove Remark 2.11?
+  - [ ] § Algebraic Definitions
+    - [ ] Add language tweaks
+    - [ ] add more language to fig 2.1 caption
+    - [ ] remove undefined tensor notation in remark 2.13
+    - [ ] add tensor product to remark 2.13
+    - [ ] fix symbols used in fig 2.2
+    - [ ] rem 2.14 needs associativity
+    - [ ] fix rem 2.16
+    - [ ] tweak text after rem 2.16
+    - [ ] remove footnote "While notation explicitly..."
+    - [ ] add meta- to meta-Hopf algebra definition
+    - [ ] Remove "so-called"
+    - [ ] tweak quasi-triangular meta-Hopf monoid definition.
+    - [ ] tweak Drinfeld element.
+    - [ ] Move/remove isolated proof.
+    - [ ] put "distinguished grouplike element" into footnote
+  - [ ] § Upright Tangles
+    - [ ] Opening paragraph may not be clearest. Tweak.
+    - [ ] Clean up Definition of framed tangle. Mention framing.
+    - [ ] Figure Reidemeister 1 needs the word "framed"
+    - [ ] add missing figure reference
+    - [ ] tweak remark 2.30
+  - [ ] § The meta-algebra structure of...
+    - [ ] "We now formally connect…"
+    - [ ] Add figure references to thm "tangles form a ribbon meta-Hopf algebra"
+    - [ ] add figure representing the antipode
+    - [ ] move remark 2.33 about virtual tangles *after* proof of thm.
+    - [ ] fix missing reference in comultiplication footnote.
+    - [ ] shrink multiplication figure to look less stretched.
+    - [ ] associativity proof is brutal. Fix those sentences.
+    - [ ] itemize the proofs various axioms
+    - [ ] spinner and anti-spinner figures should be subfigures
+    - [ ] add "visualized in fig..." for quasi-triangular axioms
+    - [ ] add "to show \tangle is ribbon" to ribbon proof.
+  - [ ] § The ybax meta-algebra
+    - [ ] Pick a consistent name, or at least provide multiple names consistently.
+    - [ ] define B = e^-b
+    - [ ] add "b-adic completion" to ybax / `\CU` definition
+    - [ ] add second definition to ribbon element
+    - [ ] specify that $f \in \polyring{\K}{b}$ OSTTE
+    - [ ] add quotes around $a$.
+    - [ ] add yields before eq 2.45
+    - [ ] mention linearity of eq 2.45
+    - [ ] Write Weyl commutation relation as a lemma w/ proof
+      - [ ] find citation for lemma
+      - [ ] move e^b coefficient in front
+    - [ ] package ya_commute and xa_commute into lemma.
+    - [ ] eq. 2.50 and 2.52 are over wide.
+    - [ ] Reword beginning of § 2.6.
+    - [ ] morphisms between meta-objects are Capital Greek, e.g. Φ
+    - [ ] add one more arrow to fig 2.21 (or add the algebraic objects to the
+      figure caption).
+    - [ ] Insert Z(K_(3,1)) in unreduced form as motivation for § 3: Perturbed
+      Gaußians.
+- [ ] § 3: Perturbed Gaußians
+  - [ ] Introduction is redundantly worded. Clean it up.
+  - [ ] Embed Remark 3.2 into Def 3.1
+  - [ ] Further clarify the linear isomorphisms between `H`, `U`, and `C`.
+  - [ ] Clarify why these three categories need to be mentioned.
+  - [ ] Be clear about the use of pullbacks.
+  - [ ] define contraction of generating functions explicitly (especially the
+    composition of the ordering map and the generating function map / their
+    inverses).
+  - [ ] add missing word 'ribbon's in § Expressing Hopf algebra operations as
+    perturbed Gaußians.
+  - [ ] Should generating functions be distinguished from the original functions
+    with bold somehow?
+  - [ ] add references above equations in proofs of Thm 3.6 (meta-Hopf structure of
+    U)
+  - [ ] § Notational conventions
+    - [ ] Remove first parragraph, and clean up next paragraph.
+    - [ ] Replace out-of-nowhere example with continuation of the example in fig 2.21.
+    - [ ] Remove second example. Replace with the general "computes the Alexander
+      polynomial" sentence.
+- [ ] § 4: Constructing the trace
+  - [ ] § 4.1: extending an open tangle …  : clean up name
+  - [ ] clean up first paragraph.
+  - [ ] clean up traced meta-algebra definition
+  - [ ] remove coalgebraic compatibility
+  - [ ] add commutation with operations on other strands
+  - [ ] Lemma 4.3 : "as" -> "are"
+    - [ ] tweak proof wording
+  - [ ] lemma 4.4
+    - [ ] add coinvariants caveat to lemma 4.4 (coinvairants as/are a trace map)
+      (vector space, not ideal)
+    - [ ] Remove undefined notation from lemma
+    - [ ] Remove undefined notation from proof
+    - [ ] Add to proof that trace commutes with other operations.
+  - [ ] § a generating function for the coinvariants
+    - [ ] the first paragraph should follow from the previous sections better
+    - [ ] add parenthesis.
+    - [ ] add Remark about formula missing ab term
+      - [ ] (then add such a term maybe?)
+  - [ ] § Computational examples
+    - [ ] Add a picture and more computational details à la fig 2.21 reference in
+      § Notational conventions, say of the Hopf Link.
+- [ ] § 5: Conclusions
+  - [ ] If mentioning the W-Lambert function, then provide an equation for it.
+  - [ ] Eq. 5.2 is not an equation! Put its values inline, or make it a pair of
+    equations.
+  - [ ] "the trace…" -> "while the trace…"
+- [ ] § A: Code
+  - [ ] Add "Use case" subsub to Mathematica™ code.
+  - [ ] be explicit about "former version" -> BN-vdV version.
+  - [ ] p.60: We ~~must also~~ define...
+  - [ ] p.65: Next are ~~defined~~ functions...
+  - [ ] p.67: add "These match the quantities given in Thm 3.6."
+  - [ ] § A.2: Implementation of the trace *and Z^tr*
+    - [ ] Maybe "See ch 5" -> "see ch 4.2"
+    - [ ] As described in ?? -> missing reference
+  - [ ] § A.3
+    - [ ] "consider the link *in fig A.1*"
+    - [ ] "The crossings are absorbed in the order the knot's strand interact with
+      them."
+    - [ ] fig. A.2: front -> line
+    - [ ] § Extending the algorithm
+      - [ ] Remove first sentence; redundant
+      - [ ] Explain Lemma A.1
+    - [ ] § Use Case
+      - [ ] Adjacent code blocks are possible with the new borders (×2)
+      - [ ] footnote: "Upright Tangle" -> "upright tangle"
+    - [ ] § Implementation
+      - [ ] remove blank line before `type Skeleton…`.
+      - [ ] broken acronym (RVT)
+      - [ ] remove blank line after `PD`.
+      - [ ] "Only in this case will the function `toRVT` ~~will then~~ output…"
+- [ ] § B: Table of values
+  - [ ] It should be small
+  - [ ] readable (i.e. fit on the page)
+  - [ ] link to a table online (say [on github](github.com/phro/GDO))
+- [ ] § Bibliography: no publisher for Kauffman's book?
+- [ ] Ensure table of contents issues are resolved.
+  - [ ] "Context" is a poor subtitle
+  - [ ] Uniformize the algebra name (U(sl2+0), U, ybax, &c.)
+  - [ ] Add sample computations to § Perturbed Gaußians
+  - [ ] Add sample computations to § Constructing the Trace
+  - [ ] Add (small) table of values
+- Colophon: Add version number.
