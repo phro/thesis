@@ -147,7 +147,7 @@ Explicit examples are missing.
   - [X] "satellite", "ribbon", and "slice" should be introduced more
       consistently.
   - [X] "properties" -> "operations"
-  - [ ] add citation to Ribbon Slice Conjecture
+  - [X] add citation to Ribbon Slice Conjecture
   - [ ] Use wording from § 2.6 for building an invariant.
   - [ ] Add reference from § Quantum Invariants to relevant section.
   - [ ] Incorporate Quantum invariants tweaks
