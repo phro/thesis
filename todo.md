@@ -144,9 +144,9 @@ Explicit examples are missing.
 - [ ] § Executive summary
   - [X] ~~Understanding~~ knotted objects
   - [X] Make introductory picture more informative
-  - [ ] "satellite", "ribbon", and "slice" should be introduced more
+  - [X] "satellite", "ribbon", and "slice" should be introduced more
       consistently.
-  - [ ] "properties" -> "operations"
+  - [X] "properties" -> "operations"
   - [ ] add citation to Ribbon Slice Conjecture
   - [ ] Use wording from § 2.6 for building an invariant.
   - [ ] Add reference from § Quantum Invariants to relevant section.
