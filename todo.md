@@ -176,7 +176,7 @@ Explicit examples are missing.
     - [X] Are subsubs necessary?
     - [X] tweak language
     - [X] add footnote
-    - [ ] mention removal of "`[X]`" from notation
+    - [X] mention removal of "`[X]`" from notation
     - [ ] set bijections should be Greek
     - [ ] add "strict" and "symmetric" to monoidal categories
     - [ ] add actual matrices to Example: square matrices
