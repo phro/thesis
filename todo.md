@@ -165,7 +165,7 @@ Explicit examples are missing.
       - [ ] Sentence is mentioned which is never elaborated on. Talk more about it!
 - [ ] § Tensor Products and Meta-Objects
   - [ ] § Tensor Product Notation
-    - [ ] Clean up language
+    - [X] Clean up language
     - [ ] Add reference to Penrose's book on the same notation.
     - [X] change indices
     - [X] clarify additional notation for tensor product
