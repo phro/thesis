@@ -149,8 +149,8 @@ Explicit examples are missing.
   - [X] "properties" -> "operations"
   - [X] add citation to Ribbon Slice Conjecture
   - [X] Use wording from § 2.6 for building an invariant.
-  - [ ] Add reference from § Quantum Invariants to relevant section.
-  - [ ] Incorporate Quantum invariants tweaks
+  - [X] Add reference from § Quantum Invariants to relevant section.
+  - [X] Incorporate Quantum invariants tweaks
   - [ ] § Images of the Invariant -> how about § Improving Computation Times
     - [ ] Add ref to relevant section.
     - [ ] Implement tweaks.

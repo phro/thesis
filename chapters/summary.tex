@@ -47,16 +47,20 @@ strands), then maps each of these operations to a corresponding algebraic
 operation. The composition of these algebraic operations is the value of the
 invariant.
 
-More specifically, a Hopf algebra is a vector space $A$ together with several
-maps between various tensor powers thereof (for instance, a multiplication map
-$\map {\mult} {A \otimes A} {A}$). The value of the invariant is a vector in a
-tensor power of $A$, with each crossing assigned an element of $A \otimes A$.
-Tensor factors which belong to the same strand are concatenated by multiplying
-the associated algebra elements. While this formulation is elegant, it has a
-notable drawback: computing the value of the invariant of an object with many
-components requires manipulating large tensor powers of $A$. One remedy is to
-instead perform the computation in a representation of $A$, say a small vector
-space $V$, though the issue of exponential growth in complexity remains.
+More specifically, a Hopf algebra is an algebra $A$ together with several maps
+between various tensor powers thereof (for instance, a comultiplication map
+$\map {\comult} {A} {A \otimes A}$). Each crossing assigned an element of $A
+\otimes A$. Tensor factors which belong to the same strand are concatenated by
+multiplying the associated algebra elements. The value of the invariant is an
+element of a tensor power of $A$. We go over this in more detail in
+\cref{ch:intro}.
+
+While this formulation is elegant, it has a notable drawback: computing the
+invariant of a tangle with many components requires manipulating
+large tensor powers of $A$. One remedy is to instead perform the computation in
+a representation $V$ of $A$ with a low dimension, though the issue of
+exponential growth in complexity remains. This limitation restricts the utility
+of quantum invariants to smaller knots.
 
 \subsection{Images of the invariant}
 To avoid the issue of exponential computational complexity, one can instead
