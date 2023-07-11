@@ -170,7 +170,7 @@ Explicit examples are missing.
     - [X] change indices
     - [X] clarify additional notation for tensor product
     - [X] improve notation for indexed tensor product
-    - [ ] Improve example to be easier to understand (use cross product ×).
+    - [X] Improve example to be easier to understand (use cross product ×).
     - [X] Rearrange paragraphs to introduce notation in correct order.
   - [ ] § Meta-objects
     - [ ] Are subsubs necessary?
