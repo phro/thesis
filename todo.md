@@ -157,7 +157,7 @@ Explicit examples are missing.
     - [X] Implement tweaks.
   - [ ] § Extending The Invariant...
     - [X] Simplify title
-    - [ ] add refs to appropriate sections
+    - [X] add refs to appropriate sections
     - [ ] implement tweaks
     - [X] modify open tangle image to be non-pure.
     - [ ] § Further Study -> make subsection instead of subsub? (match chapter
