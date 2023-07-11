@@ -139,7 +139,8 @@ Explicit examples are missing.
 ## Printout ##
 - [X] implement abstract comments
 - [X] implement acknowledgements comments
-- [ ] add "paper" flag to tweak margins and page numbers simultaneously
+- [ ] add "paper" flag to tweak margins, page numbers, and colophon
+    simultaneously
 - [ ] § Executive summary
   - [ ] ~~Understanding~~ knotted objects
   - [ ] Make introductory picture more informative
