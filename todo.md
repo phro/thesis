@@ -173,7 +173,7 @@ Explicit examples are missing.
     - [X] Improve example to be easier to understand (use cross product ×).
     - [X] Rearrange paragraphs to introduce notation in correct order.
   - [ ] § Meta-objects
-    - [ ] Are subsubs necessary?
+    - [X] Are subsubs necessary?
     - [ ] tweak language
     - [ ] add footnote
     - [ ] mention removal of "`[X]`" from notation
