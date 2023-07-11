@@ -164,9 +164,9 @@ Explicit examples are missing.
       outline)
       - [ ] Sentence is mentioned which is never elaborated on. Talk more about it!
 - [ ] § Tensor Products and Meta-Objects
-  - [ ] § Tensor Product Notation
+  - [X] § Tensor Product Notation
     - [X] Clean up language
-    - [ ] Add reference to Penrose's book on the same notation.
+    - [X] Add reference to Penrose's book on the same notation.
     - [X] change indices
     - [X] clarify additional notation for tensor product
     - [X] improve notation for indexed tensor product
