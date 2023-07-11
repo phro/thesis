@@ -3,59 +3,64 @@
 
 \section{Tensor product notation}
 In what follows, we will extensively use tensor products, tensor powers, and
-generalizations thereof. We begin by introducing the notation that will be used
-first for traditional tensor products, then for their generalizations.
+generalizations thereof. We begin by introducing the notation that will
+make working with these objects more straightforward.
 
-Let $V$ be a $\K$-vector space (for the moment assumed to be finite
-dimensional). When working with a large tensor power $V^{\otimes n}$ of $V$, it
-will often be more convenient to label tensor factors with elements of a finite
-set $S$ (with $\ord S = n$) rather than by their position in a linear order.
+Let $\K$ be a field and $V$ a $\K$-vector space (for the moment assumed to be
+finite dimensional). When working with a large tensor power $V^{\otimes n}$ of
+$V$, it will often be more convenient to label tensor factors with elements of a
+finite set $S$ (with $\ord S = n$) rather than by their position in a linear
+order.
 
 For example, consider the vector $u \otimes v \otimes w \in V^{\otimes 3}$. Let
-us choose an index set $S = \set{1,2,3}$. We then may equivalently write this
+us choose an index set $S = \set{i,j,k}$. We then may equivalently write this
 vector by labelling each tensor factor with one of the elements of $S$, say
-$u_1v_2w_3$. Since the labels serve to distinguish the separate factors, this
-vector may equivalently be written as $u_1v_2w_3 = v_2u_1w_3 = w_3u_2u_1 \in
-V^{\otimes S}$. We will write the set $V^{\otimes S}$ with a subscript: $V_S$.
-We formalize the idea below:
+$u_iv_jw_k$. Since the labels serve to distinguish the separate factors, this
+vector may equivalently be written as $u_iv_jw_k = v_ju_iw_k = w_ku_ju_i \in
+V^{\otimes S}$, where $V^{\otimes S}$ denotes the tensor power of $V$. An
+additional notation which we will prefer is $V_S = V^{\otimes S}$. We formalize
+the idea below:
 
 \begin{definition}[indexed tensor powers]
         Let $V$ be a vector space and $S = \set{s_1,…, s_n}$ be a finite
         set. We define the \defi{indexed tensor power} of $V$ to be the
         collection of formal linear combinations of functions from $S$ to $V$
         \begin{equation}\label{eq:indexed_tensor}
-                V_S \defeq \Span\set{\map {f} {S} {V}}/\sim
+                V_S \defeq V^{\otimes S} \defeq \Span\set{\map {f} {S} {V}}/\sim
         \end{equation}
         subject to the standard multilinear relations, namely multi-additivity
-        and the factoring of scalars.
+        and the factoring of scalars:
 
         By multi-additivity, we mean that for each $i\in S$ and $f, g \in V_S$
         satisfying $f(s) = g(s)$ for each $s \in S\setminus\set i$, we have:
         \begin{equation}
                 \label{eq:tensor_additive}
-                (f + g)(s) =
+                f + g\sim \pn*{
+                        s \mapsto
                         \begin{cases}
                                 f(s) = g(s) & \text{if $s \neq i$}\\
                                 f(i) + g(i) & \text{if $s = i$}
                         \end{cases}
+                }
         \end{equation}
 \end{definition}
 
-In practice, we will write such functions $\map {f} {S} {V}$ with $f(s_i) = v_i$
-in the following notation:
-\begin{equation}
+We will write such functions $\map {f} {S} {V}$ with $f(s_i) = v_i$
+with the following notation:
+\begin{equation}\label{eq:product_notation}
         \pn{v_{1}}_{s_1}
         \pn{v_{2}}_{s_2} ⋯
         \pn{v_{n}}_{s_n}
         \defeq f
 \end{equation}
-With this notation, we may easily express the factoring of scalars as:
+The factoring of scalars relation is:
 \begin{equation}
         \label{eq:tensor_scalar}
         (v_1)_{s_1}(v_2)_{s_2} ⋯(λv_i)_{s_i} ⋯(v_n)_{s_n} =
         λ\cdot(v_1)_{s_1}(v_2)_{s_2} ⋯(v_n)_{s_n}
 \end{equation}
-Likewise, \cref{eq:tensor_additive} becomes
+Similarly, \cref{eq:tensor_additive} in the style of \cref{eq:product_notation}
+becomes:
 \begin{equation}\label{eq:tensor_additive_compact}
         \begin{multlined}[t]
                 \pn*{(v_1)_{s_1}(v_2)_{s_2} ⋯x_{s_i} ⋯(v_n)_{s_n}} +
@@ -66,14 +71,13 @@ Likewise, \cref{eq:tensor_additive} becomes
         \end{multlined}
 \end{equation}
 
-Next, to compactify notation, we introduce notation for maps between tensor
-powers so that we may unambiguously refer to appropriate tensor factors while
-defining morphisms. We accomplish this task by adding a convenient way of
-writing the domain and codomain of a map. Let $D$ and $C$ be finite sets, and
-$\map {T} {V_{D}} {V_{C}}$. We will denote $T$ alternatively by $T^{D}_{C}$, so
-that its domain and codomain are easily read off. It is important to note that
-when $T$ is not symmetric in its arguments, the order of the indices in this
-notation matters.
+Next, we introduce notation for maps between tensor powers so that we may
+unambiguously refer to appropriate tensor factors while defining morphisms. We
+accomplish this task by adding a convenient way of writing the domain and
+codomain of a map. Let $D$ and $C$ be finite sets, and $\map {T} {V_{D}}
+{V_{C}}$. We will denote $T$ alternatively by $T^{D}_{C}$, so that its domain
+and codomain are easily read off. It is important to note that when $T$ is not
+symmetric in its arguments, the order of the indices in this notation matters.
 
 \begin{example}
         Let $V = \R^2$, and $T^{a, b}_{c}$ (equivalently, $\map {T} {V_{\set{a,
@@ -90,16 +94,6 @@ notation matters.
         $\vec v_b(\vec e_1)_a = (\vec e_1)_a\vec v_b$ to $\vec 0_c$ and
         $\vec v_b(\vec e_2)_a$ to $\vec v_c$.
 \end{example}
-
-Finally, we point out that any morphism $T^D_C$ may be extended to one with
-larger domain and codomain. We introduce the notation
-$T[S] \defeq T \otimes \Id{S}$ for this concept. When no ambiguity arises, we
-will also suppress the \enquote{$[S]$} so that $T^D_C$ becomes more generally:
-\begin{equation}
-        \pn*{T^{D}_{C}}\pn{v_{D}\otimes w_S}
-                \defeq \pn[\big]{T^{D}_{C}v_{D}}\otimes w_S
-\end{equation}
-for any $v_D \in V_{D}$ and $w_S\in V_{S}$.
 
 \begin{remark}
 There are three special cases with this notation:
@@ -120,7 +114,7 @@ There are three special cases with this notation:
 \end{itemize}
 \end{remark}
 
-When taking the tensor product of two such tensor powers, we follow \cite{BS}
+When taking the tensor product of two tensor powers, we follow \cite{BS}
 and use the notation \enquote{$\sqcup$} instead of \enquote{$\otimes$}:
 \begin{equation}
         V_{X} \sqcup V_{Y} \defeq V_{X \sqcup Y}
@@ -129,6 +123,17 @@ Additionally, given $ϕ^{D_1}_{C_1}$ and $ψ^{D_2}_{C_2}$ such that $D_1 \cap D_
 \cap C_2$, we have a product morphism
 $\map {ϕ^{D_1}_{C_1}ψ^{D_2}_{C_2} \defeq ϕ \otimes ψ} {V_{D_1 \sqcup D_2}}
 {V_{C_1\sqcup C_2}}$, which we also write with concatenation.
+
+Finally, we point out that any morphism $T^D_C$ may be extended to one with
+larger domain and codomain. We introduce the notation
+$T[S] \defeq T^{D}_{S} \Id{S}$ (recalling the concatenation means
+$T \otimes \Id{S}$) for this concept. When no ambiguity arises, we will also
+suppress the \enquote{$[S]$} so that $T^D_C$ represents more generally:
+\begin{equation}
+        \pn*{T^{D}_{C}}\pn{v_{D} w_S}
+                \defeq \pn[\big]{T^{D}_{C}v_{D}} w_S
+\end{equation}
+for any $v_D \in V_{D}$ and $w_S\in V_{S}$.
 
 \section{Meta-objects}\label{sec:meta-objects}
 

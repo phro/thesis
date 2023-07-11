@@ -167,11 +167,11 @@ Explicit examples are missing.
   - [ ] § Tensor Product Notation
     - [ ] Clean up language
     - [ ] Add reference to Penrose's book on the same notation.
-    - [ ] change indices
-    - [ ] remove extraneous notation for tensor product
-    - [ ] improve notation for indexed tensor product
+    - [X] change indices
+    - [X] clarify additional notation for tensor product
+    - [X] improve notation for indexed tensor product
     - [ ] Improve example to be easier to understand (use cross product ×).
-    - [ ] Rearrange paragraphs to introduce notation in correct order.
+    - [X] Rearrange paragraphs to introduce notation in correct order.
   - [ ] § Meta-objects
     - [ ] Are subsubs necessary?
     - [ ] tweak language
