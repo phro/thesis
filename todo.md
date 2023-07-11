@@ -174,8 +174,8 @@ Explicit examples are missing.
     - [X] Rearrange paragraphs to introduce notation in correct order.
   - [ ] § Meta-objects
     - [X] Are subsubs necessary?
-    - [ ] tweak language
-    - [ ] add footnote
+    - [X] tweak language
+    - [X] add footnote
     - [ ] mention removal of "`[X]`" from notation
     - [ ] set bijections should be Greek
     - [ ] add "strict" and "symmetric" to monoidal categories

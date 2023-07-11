@@ -136,18 +136,17 @@ for any $v_D \in V_{D}$ and $w_S\in V_{S}$.
 \ProvideDocumentCommand{\CC}{}{\msc C}
 
 While the above notation is helpful when working with vector spaces, we are
-interested in also using the same notation to describe a tangle. Our
-formulation of tangles (introduced in
-\cref{sec:topological_interpretations}) is neither a tensor product nor a
-monoidal category, though it shares many similarities with both concepts. In
-particular, the domains and codomains of the maps we have discussed so far have
-only depended on the index set. With this observation, we replace the notation of
-tensor powers with that of a so-called \defi{meta-object}. We introduce this
-concept by starting with monoids.
+interested in also using the same notation to describe a tangle. Our formulation
+of tangles (introduced in \cref{sec:topological_interpretations}) is not a
+tensor product, though it shares many similarities. In particular, the domains
+and codomains of the maps we have discussed so far have only depended on the
+index set. With this observation, we replace the notation of tensor powers with
+that of a so-called \defi{meta-object}. We introduce this concept by starting
+with monoids.
 
-To make the above definition more concrete, we will go through the process of
-defining a meta-monoid, which is a generalization of a monoid object.
-Traditionally, the data of a monoid object are the following:
+We now go through the process of defining a meta-monoid, which is a
+generalization of a monoid object. Traditionally, the data of a monoid object
+are the following:
 \begin{itemize}
         \item An object $M$ in a category $\CC$.
         \item A morphism $\map {\mult} {M\times M} {M}$ called
@@ -193,7 +192,10 @@ meta-monoid structure:
         \item Instead of linear orders of factors $M \times \dots \times M$, we
                 will index factors by a finite set $X$, writing it $M_X \defeq
                 \set{\map {f} {X} {M}}$ in the style of
-                \cref{eq:indexed_tensor}.
+                \cref{eq:indexed_tensor}.\footnote{Indeed, when $\CC = \Vect$,
+                these definitions are identical when the monoidal product is
+                $\otimes$. In this case, they are called \defi{algebras}.%
+        }
         \item The indexed factors will determine how the monoid operations act.
                 For instance, multiplication of factor $i$ and $j$ together,
                 with the result labelled in factor $k$ is to be written
