@@ -177,7 +177,7 @@ Explicit examples are missing.
     - [X] tweak language
     - [X] add footnote
     - [X] mention removal of "`[X]`" from notation
-    - [ ] set bijections should be Greek
+    - [X] set bijections should be Greek
     - [ ] add "strict" and "symmetric" to monoidal categories
     - [ ] add actual matrices to Example: square matrices
     - [ ] add parentheses in intro sentence to meta-object definition
