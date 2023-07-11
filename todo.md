@@ -137,7 +137,7 @@ Explicit examples are missing.
 - [X] The abstract should fit in one page.
 
 ## Printout ##
-- [ ] implement abstract comments
+- [X] implement abstract comments
 - [ ] implement acknowledgements comments
 - [ ] add "paper" flag to tweak margins and page numbers simultaneously
 - [ ] § Executive summary
