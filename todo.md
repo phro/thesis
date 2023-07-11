@@ -142,7 +142,7 @@ Explicit examples are missing.
 - [ ] add "paper" flag to tweak margins, page numbers, and colophon
     simultaneously
 - [ ] § Executive summary
-  - [ ] ~~Understanding~~ knotted objects
+  - [X] ~~Understanding~~ knotted objects
   - [ ] Make introductory picture more informative
   - [ ] "satellite", "ribbon", and "slice" should be introduced more
       consistently.
