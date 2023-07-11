@@ -143,7 +143,7 @@ Explicit examples are missing.
     simultaneously
 - [ ] § Executive summary
   - [X] ~~Understanding~~ knotted objects
-  - [ ] Make introductory picture more informative
+  - [X] Make introductory picture more informative
   - [ ] "satellite", "ribbon", and "slice" should be introduced more
       consistently.
   - [ ] "properties" -> "operations"

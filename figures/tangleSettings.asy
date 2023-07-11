@@ -48,7 +48,7 @@ void drawTangleArc(
         picture pic = currentpicture
         ) {
         Label arcLabel = Label(arcLabel, Relative(arcLabelPos), RightSide);
-        draw(pic,g,tangleArcShadow,margin=PenMargins);
+        draw(pic,g,tangleArcShadow,margin=PenMargin(0,0));
         if(doDrawArrow){
                 draw(pic,g, L=arcLabel, tangleArc, ArcArrow(
                                         position=arrowPos*length(g),
