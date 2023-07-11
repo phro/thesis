@@ -22,7 +22,7 @@ V^{\otimes S}$, where $V^{\otimes S}$ denotes the tensor power of $V$. An
 additional notation which we will prefer is $V_S = V^{\otimes S}$. We formalize
 the idea below:
 
-\begin{definition}[indexed tensor powers]
+\begin{definition}[indexed tensor powers]\label{def:indexed_tensor_powers}
         Let $V$ be a vector space and $S = \set{s_1,…, s_n}$ be a finite
         set. We define the \defi{indexed tensor power} of $V$ to be the
         collection of formal linear combinations of functions from $S$ to $V$
@@ -252,9 +252,13 @@ A \defi{meta-monoid} in $\CC$ is the following data:
 \end{definition}
 
 \begin{example}[monoid objects are meta-monoids]
-Any monoid object $M$ in a monoidal category $(\CC,\otimes,\set{1})$
-has the structure of a meta-monoid $\set{M_X}_X$ via $M_X \defeq M^{\otimes X}$,
-$\mult^{ij}_k[X] \defeq \mult^{ij}_k \otimes \Id{X}$, and
+Any monoid object $M$ in a strict, symmetric monoidal category
+$(\CC,\otimes,\set{1})$ has the structure of a meta-monoid $\set{M_X}_X$ via
+$M_X \defeq M^{\otimes X}$\footnote{%
+        By $M^{\otimes X}$ we mean $M^{\otimes
+        \ord{X}}$ together with a choice of assigning each factor an index,
+        analogous to \cref{def:indexed_tensor_powers}.%
+}, $\mult^{ij}_k[X] \defeq \mult^{ij}_k \otimes \Id{X}$, and
 $\unit_i[X](v) \defeq 1_i \otimes v$ for any $v\in M^{\otimes X}$.
 \end{example}
 
