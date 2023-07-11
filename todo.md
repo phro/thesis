@@ -160,7 +160,7 @@ Explicit examples are missing.
     - [X] add refs to appropriate sections
     - [X] implement tweaks
     - [X] modify open tangle image to be non-pure.
-    - [ ] § Further Study -> make subsection instead of subsub? (match chapter
+    - [X] § Further Study -> make subsection instead of subsub? (match chapter
       outline)
       - [ ] Sentence is mentioned which is never elaborated on. Talk more about it!
 - [ ] § Tensor Products and Meta-Objects
