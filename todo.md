@@ -159,7 +159,7 @@ Explicit examples are missing.
     - [X] Simplify title
     - [ ] add refs to appropriate sections
     - [ ] implement tweaks
-    - [ ] modify open tangle image to be non-pure.
+    - [X] modify open tangle image to be non-pure.
     - [ ] § Further Study -> make subsection instead of subsub? (match chapter
       outline)
       - [ ] Sentence is mentioned which is never elaborated on. Talk more about it!
