@@ -64,19 +64,20 @@ of quantum invariants to smaller knots.
 
 \section{Computational improvements using the universal invariant}
 To avoid the issue of exponential computational complexity, one can instead
-investigate the nature of the set of all values of the invariant as a subset of
-the algebra and its tensor powers. For a particular choice of algebra (namely
-$\CUlong$, as investigated by Dror Bar-Natan and Roland van der Veen in
-\cite{BV}) the space of values the corresponding invariant $Z$ can take is
-significantly smaller than the whole space; the rank of the space of values
-grows only quadratically with the number of crossings in the knotted object. In
-particular, by looking at the generating functions of the associated maps,
-instead of a generic power series, the value of $Z$ on tangles always take the
-form of a (perturbed) Gaußian. Computationally, this means one needs only to
-keep track of the quadratic form and the perturbation. The invariant $Z$
-dominates the $\Sl_2$-coloured Jones polynomial. We will focus on the case when
-$ϵ=0$, for which $Z$ becomes an efficient computation of the Alexander
-polynomial $Δ$ on knots.
+investigate the set of all values of the universal invariant (using the algebra
+itself instead of a representation) as a subset of the algebra and its tensor
+powers. For a particular choice of algebra (namely $\CUlong$, as investigated by
+Dror Bar-Natan and Roland van der Veen in \cite{BV}) the space of values the
+corresponding invariant $Z$ can take is significantly smaller than the whole
+space; the rank of the space of values grows only quadratically with the number
+of crossings in the knotted object. In particular, by looking at the generating
+functions of the algebra operations, one sees that the value of $Z$ on tangles
+always take the form of a (perturbed) Gaußian. Computationally, this means one
+need only keep track of a quadratic form and a small perturbation. The invariant
+$Z$ dominates the $\Sl_2$-coloured Jones polynomial. Here, we will focus on the
+case when $ϵ=0$, for which $Z$ becomes an efficient computation of the Alexander
+polynomial $Δ$ on knots. This topic is described in
+\cref{ch:perturbed_gaussians}.
 
 \section{Extending $Z$ to links}
 The research program outlined by Bar-Natan and van der Veen computes $Z$

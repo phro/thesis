@@ -151,10 +151,10 @@ Explicit examples are missing.
   - [X] Use wording from § 2.6 for building an invariant.
   - [X] Add reference from § Quantum Invariants to relevant section.
   - [X] Incorporate Quantum invariants tweaks
-  - [ ] § Images of the Invariant
+  - [X] § Images of the Invariant
     - [X] how about § Improving Computation Times
-    - [ ] Add ref to relevant section.
-    - [ ] Implement tweaks.
+    - [X] Add ref to relevant section.
+    - [X] Implement tweaks.
   - [ ] § Extending The Invariant...
     - [X] Simplify title
     - [ ] add refs to appropriate sections
