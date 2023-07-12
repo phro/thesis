@@ -223,8 +223,8 @@ Explicit examples are missing.
     - [X] add "to show \tangle is ribbon" to ribbon proof.
   - [ ] § The ybax meta-algebra
     - [X] Pick a consistent name, or at least provide multiple names consistently.
-    - [ ] define B = e^-b
-    - [ ] add "b-adic completion" to ybax / `\CU` definition
+    - [X] define B = e^-b
+    - [X] add "b-adic completion" to ybax / `\CU` definition
     - [ ] add second definition to ribbon element
     - [ ] specify that $f \in \polyring{\K}{b}$ OSTTE
     - [ ] add quotes around $a$.
