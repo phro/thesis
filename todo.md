@@ -197,7 +197,7 @@ Explicit examples are missing.
     - [X] remove footnote "While notation explicitly..."
     - [X] add meta- to meta-Hopf algebra definition
     - [X] Remove "so-called"
-    - [ ] tweak quasi-triangular meta-Hopf monoid definition.
+    - [X] tweak quasi-triangular meta-Hopf monoid definition.
     - [ ] tweak Drinfeld element.
     - [ ] Move/remove isolated proof.
     - [ ] put "distinguished grouplike element" into footnote
