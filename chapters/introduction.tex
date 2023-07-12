@@ -1206,28 +1206,43 @@ the spinner $\spin$:
         A similar argument exists to show $\xo^rf(\ao) = f(\ao-r)\xo^r$.
 \end{proof}
 
-Next, we observe that since $\liebk{\xo}{\yo}$ is central, the Weyl canonical
-commutation relation holds:
-\begin{equation}\label{eq:weyl_relation}
-        \Exp{ξ\xo}\Exp{η\yo} = \Exp{η\yo}\Exp{ξ\xo}\Exp{ξη\bo}
-\end{equation}
-Secondly, using \cref{eq:xay_relations} and setting $\A\defeq \Exp{α}$, we
-notice
-\begin{equation}\label{eq:ay_commutation}
-        \Exp{α\ao}\Exp{η\yo}
-        = \Exp{α\ao}\Sum[n]\frac{(η\yo)^n}{n!}
-        = \Sum[n]\frac{(η\yo)^n}{n!}\Exp{α(\ao-n)}
-        = \Sum[n]\frac{(η\yo)^n}{n!}\Exp{α\ao}\A^{-n}
-        = \Exp{\frac{η}{\A}\yo}\Exp{α\ao}
-\end{equation}
-similarly,
-\begin{equation}\label{eq:ax_commutation}
-        \Exp{ξ\xo}\Exp{α\ao}
-        = \Sum[n]\frac{(ξ\xo)^n}{n!}\Exp{α\ao}
-        = \Sum[n]\Exp{α(\ao-n)}\frac{(ξ\xo)^n}{n!}
-        = \Sum[n]\Exp{α\ao}\frac{\pn{\frac{ξ\xo}{\A}}^n}{n!}
-        = \Exp{α\ao}\Exp{\frac{ξ}{\A}\xo}
-\end{equation}
+Next, we observe that since $\liebk{\xo}{\yo} = \bo$ is central, the Weyl
+canonical commutation relation holds:
+\begin{lemma}[Weyl canonical commutation relation]
+        Let $ξ, η \in \powerseries{\Q}{\bo}$. Then:
+        \begin{equation}\label{eq:weyl_relation}
+                \Exp{ξ\xo}\Exp{η\yo} = \Exp{ξη\bo}\Exp{η\yo}\Exp{ξ\xo}
+        \end{equation}
+\end{lemma}
+We have further commutation relations with exponentials:
+\begin{lemma}[Exponential commutation relations in $\CU$]
+        Let $α, η, ξ \in \powerseries{\Q}{\bo}$, and write $\A\defeq \Exp{α}$.
+        Then we have
+        \begin{align}
+                \label{eq:ay_commutation}
+                \Exp{α\ao}\Exp{η\yo} &= \Exp{\frac{η}{\A}\yo}\Exp{α\ao}\\
+                \label{eq:ax_commutation}
+                \Exp{ξ\xo}\Exp{α\ao} &= \Exp{α\ao}\Exp{\frac{ξ}{\A}\xo}
+        \end{align}
+\end{lemma}
+\begin{proof}
+Using \cref{eq:xay_relations}, we notice
+        \begin{equation}
+                \Exp{α\ao}\Exp{η\yo}
+                = \Exp{α\ao}\Sum[n]\frac{(η\yo)^n}{n!}
+                = \Sum[n]\frac{(η\yo)^n}{n!}\Exp{α(\ao-n)}
+                % = \Sum[n]\frac{(η\yo)^n}{n!}\Exp{α\ao}\A^{-n}
+                = \Exp{\frac{η}{\A}\yo}\Exp{α\ao}
+        \end{equation}
+        similarly,
+        \begin{equation}
+                \Exp{ξ\xo}\Exp{α\ao}
+                = \Sum[n]\frac{(ξ\xo)^n}{n!}\Exp{α\ao}
+                = \Sum[n]\Exp{α(\ao-n)}\frac{(ξ\xo)^n}{n!}
+                % = \Sum[n]\Exp{α\ao}\frac{\pn{\frac{ξ\xo}{\A}}^n}{n!}
+                = \Exp{α\ao}\Exp{\frac{ξ}{\A}\xo}
+        \end{equation}
+\end{proof}
 
 \begin{lemma}[the algebra $\CU$ is ribbon]
         The algebra $\CU$ has a ribbon structure given by the above

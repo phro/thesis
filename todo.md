@@ -232,8 +232,8 @@ Explicit examples are missing.
     - [X] mention linearity of eq 2.45
     - [ ] Write Weyl commutation relation as a lemma w/ proof
       - [ ] find citation for lemma
-      - [ ] move e^b coefficient in front
-    - [ ] package ya_commute and xa_commute into lemma.
+      - [X] move e^b coefficient in front
+    - [X] package ya_commute and xa_commute into lemma.
     - [ ] eq. 2.50 and 2.52 are over wide.
     - [ ] Reword beginning of § 2.6.
     - [ ] morphisms between meta-objects are Capital Greek, e.g. Φ
