@@ -234,6 +234,8 @@ Explicit examples are missing.
       - [ ] find citation for lemma
       - [X] move e^b coefficient in front
     - [X] package ya_commute and xa_commute into lemma.
+    - [ ] `Exponential commutation relations` doesn't jive with the `b`-adic
+        topology. Resolve this issue.
     - [ ] eq. 2.50 and 2.52 are over wide.
     - [ ] Reword beginning of § 2.6.
     - [ ] morphisms between meta-objects are Capital Greek, e.g. Φ
