@@ -202,7 +202,7 @@ Explicit examples are missing.
     - [X] Move/remove isolated proof.
     - [X] put "distinguished grouplike element" into footnote
   - [ ] § Upright Tangles
-    - [ ] Opening paragraph may not be clearest. Tweak.
+    - [X] Opening paragraph may not be clearest. Tweak.
     - [ ] Clean up Definition of framed tangle. Mention framing.
     - [ ] Figure Reidemeister 1 needs the word "framed"
     - [ ] add missing figure reference
