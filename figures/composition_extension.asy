@@ -17,8 +17,8 @@ pair boxMidpoint(path p) {
         return 0.5(min(p) + max(p));
 }
 
-label("$\phi_1$",boxMidpoint(morph1));
-label("$\phi_2$",boxMidpoint(morph2));
+label("$\phi$",boxMidpoint(morph1));
+label("$\psi$",boxMidpoint(morph2));
 
 draw(morph1,morphPen);
 draw(morph2,morphPen);
