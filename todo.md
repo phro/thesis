@@ -230,8 +230,8 @@ Explicit examples are missing.
     - [X] add quotes around $a$.
     - [X] add yields before eq 2.45
     - [X] mention linearity of eq 2.45
-    - [ ] Write Weyl commutation relation as a lemma w/ proof
-      - [ ] find citation for lemma
+    - [X] Write Weyl commutation relation as a lemma w/ proof
+      - [X] find citation for lemma
       - [X] move e^b coefficient in front
     - [X] package ya_commute and xa_commute into lemma.
     - [ ] `Exponential commutation relations` doesn't jive with the `b`-adic
