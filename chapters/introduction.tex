@@ -1220,6 +1220,7 @@ canonical commutation relation holds:
 \end{proof}
 We have further commutation relations with exponentials:
 \begin{lemma}[Exponential commutation relations in $\CU$]
+        \label{lem:exp_xay_relations}
         Let $α, η, ξ \in \powerseries{\Q}{\bo}$, and write $\A\defeq \Exp{α}$.
         Then we have
         \begin{align}
@@ -1303,11 +1304,11 @@ Using \cref{eq:xay_relations}, we notice
                 \exp\pn*{\frac{1-\Bo_2}{\bo_2}\yo_2\xo_3}
         \end{aligned}
         \end{equation}
-        We use \cref{eq:ax_commutation} to write the expression in a canonical
-        order. Finally, the right two exponentials may be combined since each
-        variable commutes with the others, either by belonging to separate
-        tensor factors, or in the case of $\bo$, being central.
-        The verifications of \cref{eq:Rmat_comult} and
+        We use \cref{lem:exp_xay_relations} to write the expression in a
+        canonical order. Finally, the right two exponentials may be combined
+        since each variable commutes with the others, either by belonging to
+        separate tensor factors, or in the case of $\bo$, being central. The
+        verifications of \cref{eq:Rmat_comult} and
         \crefrange{eq:spinner_ribbon}{eq:spinner_counit} follow with similar
         computations.
 \end{proof}
