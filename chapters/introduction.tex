@@ -304,16 +304,18 @@ include a row and column of $0$'s, each labelled by the index $i$.
 
 \ProvideDocumentCommand{\MM}{}{A}
 
-In order to define other meta-objects, such as a meta-colagebra or a
-meta-semigroup, we provide the following more general definition:
+In order to define other meta-objects (such as a meta-colagebra or a
+meta-semigroup) we provide the following more general definition:
 
 \begin{definition}[meta-object]
-        Let $\CC$ be a category. A \defi{meta-object} in $\CC$ is two things:
-
+        Let $\CC$ be a category. A \defi{meta-object} in $\CC$ is four things:
         \begin{enumerate}
                 \item A collection of objects $\MM_X$, one for each choice of
                         finite set $X$. (This serves as the analogue to monoidal
                         powers.)
+                \item  For each bijection $\map {ψ} {X} [\toiso] {Y}$ of finite
+                        sets $X$ and $Y$, a \defi{reindexing} isomorphism
+                        $\map {ι_{ψ}} {\MM_X} [\toiso] {\MM_Y}$.
                 \item A collection of \defi{operations} $ϕ_1, ϕ_2, \dots, ϕ_n$
                         each with a \defi{signature}
                         $\signature{ϕ_i}\in \Z_{\ge 0} \times \Z_{\ge 0}$. For
@@ -323,19 +325,17 @@ meta-semigroup, we provide the following more general definition:
                         \begin{equation}
                                 \map {ϕ^D_C} {\MM_D} {\MM_C}
                         \end{equation}
+                \item For each operation $ϕ^{D}_{C}$, there is a
+                        collection of morphisms $ϕ^{D}_{C}[\curry{}]$ indexed by
+                        finite sets such that for each finite set $S$, $T$:
+                        \begin{enumerate}
+                                \item $\map {ϕ[\curry{S}]}
+                                        {\MM_{C\sqcup S}} {\MM_{D\sqcup S}}$
+                                \item $ϕ[\emptyset] = ϕ$
+                                \item $\pn*{ϕ[S]}[T] = ϕ[S \sqcup T]$
+                        \end{enumerate}
         \end{enumerate}
-        Further, for each bijection $\map {f} {X} [\toiso] {Y}$ of finite
-        sets $X$ and $Y$, a \defi{reindexing} isomorphism
-        $\map {ι_f} {\MM_X} [\toiso] {\MM_Y}$.
 
-        Next, for each operation $ϕ^{D}_{C}$, there is a collection of
-        morphisms $ϕ^{D}_{C}[\curry{}]$ indexed by finite sets such that for
-        each finite set $S$, $T$:
-        \begin{enumerate}
-                \item $\map {ϕ[\curry{S}]}{\MM_{C\sqcup S}} {\MM_{D\sqcup S}}$
-                \item $ϕ[\emptyset] = ϕ$
-                \item $\pn*{ϕ[S]}[T] = ϕ[S \sqcup T]$
-        \end{enumerate}
         When no ambiguity arises, we will omit the portion written in square
         brackets, so that $ϕ$ will stand for $ϕ[X]$, with the set $X$ determined
         from context.

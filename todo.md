@@ -180,8 +180,8 @@ Explicit examples are missing.
     - [X] set bijections should be Greek
     - [X] add "strict" and "symmetric" to monoidal categories
     - [X] add actual matrices to Example: square matrices
-    - [ ] add parentheses in intro sentence to meta-object definition
-    - [ ] a meta-object is **four** things (or however many are actually listed).
+    - [X] add parentheses in intro sentence to meta-object definition
+    - [X] a meta-object is **four** things (or however many are actually listed).
     - [ ] refer to the appropriate figure for composition (×2).
     - [ ] add pronunciation of `\then` operator
     - [ ] Remove Remark 2.11?
