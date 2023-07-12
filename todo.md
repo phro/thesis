@@ -211,7 +211,7 @@ Explicit examples are missing.
     - [X] "We now formally connect…"
     - [X] Add figure references to thm "tangles form a ribbon meta-Hopf algebra"
     - [X] add figure representing the antipode
-    - [ ] move remark 2.33 about virtual tangles *after* proof of thm.
+    - [X] move remark 2.33 about virtual tangles *after* proof of thm.
     - [ ] fix missing reference in comultiplication footnote.
     - [ ] shrink multiplication figure to look less stretched.
     - [ ] associativity proof is brutal. Fix those sentences.

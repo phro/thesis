@@ -901,23 +901,6 @@ We now formally connect tangle diagrams with meta-algebras.
                         \cref{fig:tangle_spinner}.
         \end{itemize}
 \end{theorem}
-\begin{remark}\label{rem:virtual_caveat}
-        One may object that strand-stitching $\mult^{ij}_k$ is not defined when
-        the endpoint of strand $i$ is not adjacent to the starting point of
-        strand $j$. This issue is resolved in multiple ways:
-        \begin{enumerate}
-                \item Extend the collection of tangles we work with to include
-                        \defi{virtual tangles}. This generalization of tangles
-                        deals exactly with the issue that multiplication need
-                        not produce a planar tangle diagram. In fact, virtual
-                        tangles can be thought of as merely non-planar tangle
-                        diagrams.
-                \item Commit to only apply multiplication when doing so would
-                        result in a valid (classical) tangle. This is the
-                        approach we will take when performing computations on
-                        tangles.
-        \end{enumerate}
-\end{remark}
 \begin{figure}[h]
         \centering
         \includegraphics{figures/tangle_mult.pdf}
@@ -1097,6 +1080,24 @@ We now formally connect tangle diagrams with meta-algebras.
         All these axioms have corresponding pictures one can draw, keeping in
         mind the orientations in the definitions of the relevant operations.
 \end{proof}
+
+\begin{remark}\label{rem:virtual_caveat}
+One may object that strand-stitching $\mult^{ij}_k$ is not defined when
+the endpoint of strand $i$ is not adjacent to the starting point of
+strand $j$. This issue is resolved in multiple ways:
+\begin{enumerate}
+        \item Extend the collection of tangles we work with to include
+                \defi{virtual tangles}. This generalization of tangles
+                deals exactly with the issue that multiplication need
+                not produce a planar tangle diagram. In fact, virtual
+                tangles can be thought of as merely non-planar tangle
+                diagrams.
+        \item Commit to only apply multiplication when doing so would
+                result in a valid (classical) tangle. This is the
+                approach we will take when performing computations on
+                tangles.
+\end{enumerate}
+\end{remark}
 
 \section{The $ybax$ meta-algebra}\label{sec:algebraic-definitions}
 
