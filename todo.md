@@ -214,12 +214,12 @@ Explicit examples are missing.
     - [X] move remark 2.33 about virtual tangles *after* proof of thm.
     - [X] fix missing reference in comultiplication footnote.
     - [X] shrink multiplication figure to look less stretched.
-    - [ ] associativity proof is brutal. Fix those sentences.
-    - [ ] itemize the proofs various axioms
+    - [X] associativity proof is brutal. Fix those sentences.
+    - [X] itemize the proofs various axioms
     - [ ] move figure references from theorem statement to proof.
     - [X] spinner and anti-spinner figures should be subfigures
-    - [ ] add "visualized in fig..." for quasi-triangular axioms
-    - [ ] add "to show \tangle is ribbon" to ribbon proof.
+    - [X] add "visualized in fig..." for quasi-triangular axioms
+    - [X] add "to show \tangle is ribbon" to ribbon proof.
   - [ ] § The ybax meta-algebra
     - [ ] Pick a consistent name, or at least provide multiple names consistently.
     - [ ] define B = e^-b

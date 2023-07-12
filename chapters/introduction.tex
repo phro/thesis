@@ -1008,77 +1008,99 @@ We now formally connect tangle diagrams with meta-algebras.
         \label{fig:Rmat_understrand}
 \end{figure}
 \begin{proof}
-        Associativity of multiplication (\cref{eq:cd_mult}) follows from the
-        fact that stitching strands together amounts to concatenating the order
-        of the crossings each strand interacts with. Since list concatenation is
-        an associative operation, associativity follows in this case as well.
-
-        Adding a non-interacting strand to a diagram, then stitching it to an
-        existing strand (\cref{eq:cd_unit}) does not change any of the
-        combinatorial data in the diagram, and results in identical diagrams.
-
-        Establishing coassociativity (\cref{eq:cd_comult}) amount to the same
-        argument that cutting a piece of paper into three strips does not depend
-        on the order of cutting.
-
-        The counit identity (\cref{eq:cd_counit}) states deleting a strand
-        is the same operation as first doubling it, then deleting both resulting
-        strands.
-
-        The meta-bialgebra axioms we verify next:
-
-        \Cref{eq:cd_mult_comult} states that if two strands are stitched
-        together, then the resulting strand is doubled, this could have
-        equivalently been achieved by doubling each of the original strands,
-        then performing a stitching on both resulting pairs of strands.
-
-        \Cref{eq:cd_mult_counit} simply states that stitching two strands
-        together, then removing the resulting strand could have equally been
-        achieved by removing both of the original strands without stitching them
-        first.
-
-        \Cref{eq:cd_unit_counit} states that introducing a strand, then
-        immediately removing it is the identity operation.
-
-        \Cref{eq:cd_unit_comult} says that doubling a newly-introduced (and
-        therefore free of crossings) strand is the same operation as introducing
-        two strands separately. (For those worried that this equation depends on
-        the location of the separately introduced strands, this is one place
-        that the use of virtual tangles will be used, which does not heed the
-        relative locations of disjoint strands.)
-
-        \Cref{eq:cd_antipode} states that when a strand is doubled, then one of
-        the two strands is reversed, multiplying the two strands together
-        results in a strand which can be rearranged to not interact with any of
-        the other strands. This can be readily seen, as this newly-created
-        strand looks like a snake weaving through the tangle diagram. One can
-        remove the snake by applying a series of Reidemeister 2 moves, resulting
-        in a strand disjoint from the rest of the diagram. This is the same as
-        deleting the original strand, then introducing a new disjoint one.
-
-        The quasitriangular axioms are equalities of pairs of three-strand
-        tangles:
-        \begin{itemize}
-                \item \Cref{eq:Rmat_overstrand,eq:Rmat_understrand} tell us that
-                        doubling a strand involved in a single crossing can also
-                        be built by adjoining two crossings together.
-                \item \Cref{eq:Rmat_comult} tells us that we can swap the order
-                        of a doubled strand by adding crossings to either end
-                        (reminiscent of a Reidemeister 2 move)
-        \end{itemize}
-
-        Finally, we observe that the quotient we introduce to tangle diagrams by
-        the Reidemeister moves does not introduce any new relations.
-        Reidemeister 2 follows from the invertibility of the $\Rmat$-matrix.
-        Next, it is readily seen that the quasitriangular relations governing
-        the $\Rmat$-matrix force it to solve the Yang-Baxter equation, which is
-        one equivalent to the Reidemeister 3 in this case.
-
-        Using \cref{lem:spinner_ribbon}, it is enough to verify the spinner
-        axioms
-        (\cref{eq:spinner_ribbon,eq:spinner_comult,eq:spinner_antipode,eq:spinner_conjugate,eq:spinner_counit}).
-        All these axioms have corresponding pictures one can draw, keeping in
-        mind the orientations in the definitions of the relevant operations.
+We go through a straightforward verification of the various axioms:
+\begin{enumerate}
+        \item We show $\tangle X$ is a meta-algebra:
+                \begin{enumerate}
+                        \item Associativity (\cref{eq:cd_mult}) holds, since
+                                stitching a sequence of strands together in a
+                                particular order, the order in which the
+                                individual stitches are made does not affect the
+                                resulting strand. The resulting strand has the
+                                same endpoints and follows the same path. 
+                        \item To see that the unit axiom (\cref{eq:cd_unit})
+                                holds, observe that adding a non-interacting
+                                strand to a diagram, then stitching it to an
+                                existing strand does not change any of the
+                                combinatorial data, resulting in identical
+                                diagrams.
+                \end{enumerate}
+        \item We show $\tangle X$ is a meta-coalgebra:
+                \begin{enumerate}
+                        \item Establishing coassociativity (\cref{eq:cd_comult})
+                                amounts to the same argument that cutting a
+                                strip of paper into three parallel strips does
+                                not depend on the order of cutting.
+                        \item The counit identity (\cref{eq:cd_counit}) states
+                                deleting a strand is the same operation as first
+                                doubling it, then deleting both resulting
+                                strands.
+                \end{enumerate}
+        \item The meta-bialgebra axioms we verify next:
+                \begin{enumerate}
+                        \item \Cref{eq:cd_mult_comult} states that if two
+                                strands are stitched together, then the
+                                resulting strand is doubled, this could have
+                                equivalently been achieved by doubling each of
+                                the original strands, then performing a
+                                stitching on both resulting pairs of strands.
+                        \item \Cref{eq:cd_mult_counit} simply states that
+                                stitching two strands together, then removing
+                                the resulting strand could have equally been
+                                achieved by removing both of the original
+                                strands without stitching them first.
+                        \item \Cref{eq:cd_unit_counit} states that introducing a
+                                strand, then immediately removing it is the
+                                identity operation.
+                        \item \Cref{eq:cd_unit_comult} says that doubling a
+                                newly-introduced (and therefore free of
+                                crossings) strand is the same operation as
+                                introducing two strands separately. (For those
+                                worried that this equation depends on the
+                                location of the separately introduced strands,
+                                this is one place that the use of virtual
+                                tangles will be used, which does not heed the
+                                relative locations of disjoint strands.)
+                        \end{enumerate}
+                \item Next, we show $\tangle X$ is a meta-Hopf algebra.
+                        \Cref{eq:cd_antipode} states that when a strand is
+                        doubled, then one of the two strands is reversed,
+                        multiplying the two strands together results in a strand
+                        which can be rearranged to not interact with any of the
+                        other strands. This can be readily seen, as this
+                        newly-created strand looks like a snake weaving through
+                        the tangle diagram. One can remove the snake by applying
+                        a series of Reidemeister 2 moves, resulting in a strand
+                        disjoint from the rest of the diagram. This is the same
+                        as deleting the original strand, then introducing a new
+                        disjoint one.
+                \item The quasitriangular axioms are equalities of pairs of
+                        three-strand tangles:
+                        \begin{enumerate}
+                                \item \Cref{eq:Rmat_overstrand,eq:Rmat_understrand}
+                                        tell us that doubling a strand involved
+                                        in a single crossing can also be built
+                                        by adjoining two crossings together.
+                                        This is visualized in
+                                        \cref{fig:Rmat_overstrand,fig:Rmat_understrand}.
+                                \item \Cref{eq:Rmat_comult} tells us that we can
+                                        swap the order of a doubled strand by
+                                        adding crossings to either end
+                                        (reminiscent of a Reidemeister 2 move).
+                        \end{enumerate}
+                \item Next, we establish that $\tangle X$ is ribbon. Using
+                        \cref{lem:spinner_ribbon}, it is enough to verify the
+                        spinner axioms
+                        (\cref{eq:spinner_ribbon,eq:spinner_comult,eq:spinner_antipode,eq:spinner_conjugate,eq:spinner_counit}).
+                        All these axioms have corresponding pictures one can
+                        draw, keeping in mind the orientations in the
+                        definitions of the relevant operations.
+        \end{enumerate}
+        Finally, we observe that the Reidemeister moves do not introduce any new
+        relations. Reidemeister $2$ follows from the invertibility of the
+        $\Rmat$-matrix. Next, it is readily seen that the quasitriangular
+        relations governing the $\Rmat$-matrix force it to solve the Yang-Baxter
+        equation, which is one equivalent to the Reidemeister $3$ in this case.
 \end{proof}
 
 \begin{remark}\label{rem:virtual_caveat}
