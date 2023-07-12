@@ -190,7 +190,7 @@ Explicit examples are missing.
     - [X] add more language to fig 2.1 caption
     - [ ] remove undefined tensor notation in remark 2.13
     - [ ] add tensor product to remark 2.13
-    - [ ] fix symbols used in fig 2.2
+    - [X] fix symbols used in fig 2.2
     - [ ] rem 2.14 needs associativity
     - [ ] fix rem 2.16
     - [ ] tweak text after rem 2.16
