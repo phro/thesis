@@ -521,7 +521,7 @@ each other:
         $(B,\comult,\counit)$, such that $\comult$ and $\counit$ are
         meta-algebra morphisms.
         \footnote{
-                $B_{X}$ inherits a (co)algebra structure from $B$, given by
+                $B_{X}$ inherits a meta-(co)algebra structure from $B$, given by
                 $(B_X)_Y \defeq B_{X^Y}$ and component-wise operations. The
                 bialgebra structure on $B_{\emptyset}$ is given by
                 $\mult = \unit = \comult = \counit = \id$.
@@ -586,10 +586,12 @@ each other:
         well.
 \end{remark}
 
-Next, we introduce a notion of invertibility which extends a bialgebra to a Hopf
-algebra.
+Next, we introduce a notion of invertibility which extends a (meta-)bialgebra to
+a (meta-)Hopf algebra:
 \begin{definition}[meta-Hopf algebra]
-A \defi{meta-Hopf algebra} (or \defi{meta-Hopf monoid}) is a bialgebra $H$ together with a map $\map {\antipode} {H} {H}$ called the \defi{antipode}, which satisfies
+A \defi{meta-Hopf algebra} (or \defi{meta-Hopf monoid}) is a meta-bialgebra $H$
+together with a map $\map {\antipode} {H} {H}$ called the \defi{antipode}, which
+satisfies
 $\comult^{1}_{1,2}\then \antipode^1_1 \then \mult^{1,2}_1 =
 \counit^{1}\then\unit_{1} =
 \comult^{1}_{1,2}\then \antipode^2_2 \then \mult^{1,2}_1$.
