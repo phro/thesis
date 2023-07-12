@@ -237,7 +237,7 @@ Explicit examples are missing.
     - [ ] `Exponential commutation relations` doesn't jive with the `b`-adic
         topology. Resolve this issue.
     - [ ] eq. 2.50 and 2.52 are over wide.
-    - [ ] Reword beginning of § 2.6.
+    - [X] Reword beginning of § 2.6.
     - [ ] morphisms between meta-objects are Capital Greek, e.g. Φ
     - [ ] add one more arrow to fig 2.21 (or add the algebraic objects to the
       figure caption).
