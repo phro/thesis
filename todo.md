@@ -172,7 +172,7 @@ Explicit examples are missing.
     - [X] improve notation for indexed tensor product
     - [X] Improve example to be easier to understand (use cross product ×).
     - [X] Rearrange paragraphs to introduce notation in correct order.
-  - [ ] § Meta-objects
+  - [X] § Meta-objects
     - [X] Are subsubs necessary?
     - [X] tweak language
     - [X] add footnote
@@ -185,7 +185,7 @@ Explicit examples are missing.
     - [X] refer to the appropriate figure for composition (×2).
     - [X] add pronunciation of `\then` operator
     - [X] Remove Remark 2.11?
-  - [ ] § Algebraic Definitions
+  - [X] § Algebraic Definitions
     - [X] Add language tweaks
     - [X] add more language to fig 2.1 caption
     - [X] deal with undefined tensor notation in remark 2.13
@@ -207,7 +207,7 @@ Explicit examples are missing.
     - [X] Figure Reidemeister 1 needs the word "framed"
     - [X] add missing figure reference
     - [X] tweak remark 2.30
-  - [ ] § The meta-algebra structure of...
+  - [X] § The meta-algebra structure of...
     - [X] "We now formally connect…"
     - [X] Add figure references to thm "tangles form a ribbon meta-Hopf algebra"
     - [X] add figure representing the antipode
