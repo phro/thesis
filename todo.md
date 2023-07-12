@@ -203,7 +203,7 @@ Explicit examples are missing.
     - [X] put "distinguished grouplike element" into footnote
   - [ ] § Upright Tangles
     - [X] Opening paragraph may not be clearest. Tweak.
-    - [ ] Clean up Definition of framed tangle. Mention framing.
+    - [X] Clean up Definition of framed tangle. Mention framing.
     - [ ] Figure Reidemeister 1 needs the word "framed"
     - [ ] add missing figure reference
     - [ ] tweak remark 2.30
