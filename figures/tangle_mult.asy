@@ -1,36 +1,77 @@
 size(12cm);
 import tangleSettings;
 
-path pi = (4.5,0){N} ..{S}(1.5,2)..{N}(4.5,4);
-path pj = (4.5,4.5){N} ..{S}(2.5,4)..{S}(2.5,1.5)..{N}(0.5,2)..(0.5,5.5);
+real eps = 0.5;
+pair boxSize = (5,5-eps);
+pair grooveSize = (1,0.5);
+real grooveOffset = 1.5-eps;
 
-transform target = shift(7,0);
+path pi =
+        (boxSize.x-0.5grooveSize.x,0){N}..{S}
+        (1.5,2)..{N}
+        (boxSize.x-0.5grooveSize.x,boxSize.y-grooveSize.y-grooveOffset);
+real [] ti = {0,0.5,1,1.5,2};
 
-path disk = (0,0)--(5,0)--(5,4)--
-        (4,4)--(4,4.5)--(5,4.5)--(5,5.5)--(0,5.5)--(0,2)--cycle;
-path disk2 = (0,0)--(5,0)--(5,4)--(5,5.5)--(0,5.5)--(0,2)--cycle;
+path pj =
+        (boxSize.x-0.5grooveSize.x,boxSize.y-grooveOffset){N}..{S}
+        // (2.5,boxSize.y-grooveOffset)..{S}
+        (2.5,3)..{N}
+        (0.5,2)..
+        (0.5grooveSize.x,boxSize.y);
+real [] tj = {0,1.2,4};
 
-filldraw(disk,backgroundColor,boundaryArc);
-drawTangleArc(subpath(pj,2,4), doDrawArrow = true);
-drawTangleArc(subpath(pi,1,2), doDrawArrow = true);
-drawTangleArc(subpath(pi,0,1),"$i$");
-drawTangleArc(subpath(pj,0,2),"$j$");
-dot(point(pi,0),tangleEndpoint);
-dot(point(pi,2),tangleEndpoint);
-dot(point(pj,0),tangleEndpoint);
-dot(point(pj,4),tangleEndpoint);
+transform rhs = shift(boxSize.x+1.5,0);
 
-filldraw(target*disk2,backgroundColor,boundaryArc);
-drawTangleArc(target*subpath(pj,2,4), doDrawArrow = true);
-drawTangleArc(target*subpath(pi,1,2), doDrawArrow = false);
-drawTangleArc(target*((4.5,4)--(4.5,4.5)));
-drawTangleArc(target*subpath(pi,0,1),"$k$");
-drawTangleArc(target*subpath(pj,0,2));
-dot(target*point(pi,0),tangleEndpoint);
-dot(target*point(pj,4),tangleEndpoint);
+path disk = 
+        (0,                     0                                  )--
+        (boxSize.x,             0                                  )--
+        (boxSize.x,             boxSize.y-grooveSize.y-grooveOffset)--
+        (boxSize.x-grooveSize.x,boxSize.y-grooveSize.y-grooveOffset)--
+        (boxSize.x-grooveSize.x,boxSize.y-grooveOffset             )--
+        (boxSize.x,             boxSize.y-grooveOffset             )--
+        (boxSize.x,             boxSize.y                          )--
+        (0,                     boxSize.y                          )--
+        cycle;
+path disk2 = scale(boxSize.x,boxSize.y)*unitsquare;
 
-draw((5.5,3)--(6.5,3),
+picture aboveArcs;
+
+drawTangleDisk(disk);
+drawTangleArc(subpath(pi,ti[0],ti[1]),"$i$",aboveArcs);
+drawTangleArc(subpath(pi,ti[1],ti[2]));
+drawTangleArc(subpath(pi,ti[2],ti[3]),aboveArcs);
+drawTangleArc(subpath(pi,ti[3],ti[4]),doDrawArrow=true);
+drawTangleArc(subpath(pj,tj[0],tj[1]),"$j$");
+drawTangleArc(subpath(pj,tj[1],tj[2]),doDrawArrow=true);
+
+drawTangleDisk(rhs*disk2);
+drawTangleArc(rhs*subpath(pi,ti[0],ti[1]),"$k$",aboveArcs);
+drawTangleArc(rhs*subpath(pi,ti[1],ti[2]));
+drawTangleArc(rhs*subpath(pi,ti[2],ti[3]),aboveArcs);
+drawTangleArc(rhs*subpath(pi,ti[3],ti[4]),doDrawArrow=true);
+drawTangleArc(rhs*subpath(pj,tj[0],tj[1]));
+drawTangleArc(rhs*subpath(pj,tj[1],tj[2]),doDrawArrow=true);
+drawTangleArc(rhs*(
+        (boxSize.x-0.5grooveSize.x,boxSize.y-grooveSize.y-grooveOffset)--
+        (boxSize.x-0.5grooveSize.x,boxSize.y-grooveOffset)
+));
+
+add(aboveArcs);
+
+drawTangleEndpoint(point(pi,0));
+drawTangleEndpoint(point(pi,length(pi)));
+drawTangleEndpoint(point(pj,0));
+drawTangleEndpoint(point(pj,length(pj)));
+
+drawTangleEndpoint(rhs*point(pi,0));
+drawTangleEndpoint(rhs*point(pj,4));
+
+draw((boxSize.x+0.25,0.5boxSize.y)--(boxSize.x+1.5-0.25,0.5boxSize.y),
         boundaryArc,
         arrow=EndArrow(arrowhead=TeXHead),
         L=Label("$m^{ij}_{k}$",LeftSide)
 );
+// for(real t : ti) {
+        // dot(point(pi,t),yellow);
+        // }
+// for(real t : tj) { dot(point(pj,t),red   ); }

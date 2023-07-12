@@ -213,7 +213,7 @@ Explicit examples are missing.
     - [X] add figure representing the antipode
     - [X] move remark 2.33 about virtual tangles *after* proof of thm.
     - [X] fix missing reference in comultiplication footnote.
-    - [ ] shrink multiplication figure to look less stretched.
+    - [X] shrink multiplication figure to look less stretched.
     - [ ] associativity proof is brutal. Fix those sentences.
     - [ ] itemize the proofs various axioms
     - [X] spinner and anti-spinner figures should be subfigures
