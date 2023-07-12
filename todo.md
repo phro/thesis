@@ -183,7 +183,7 @@ Explicit examples are missing.
     - [X] add parentheses in intro sentence to meta-object definition
     - [X] a meta-object is **four** things (or however many are actually listed).
     - [X] refer to the appropriate figure for composition (×2).
-    - [ ] add pronunciation of `\then` operator
+    - [X] add pronunciation of `\then` operator
     - [ ] Remove Remark 2.11?
   - [ ] § Algebraic Definitions
     - [ ] Add language tweaks
