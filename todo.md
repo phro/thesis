@@ -205,7 +205,7 @@ Explicit examples are missing.
     - [X] Opening paragraph may not be clearest. Tweak.
     - [X] Clean up Definition of framed tangle. Mention framing.
     - [X] Figure Reidemeister 1 needs the word "framed"
-    - [ ] add missing figure reference
+    - [X] add missing figure reference
     - [ ] tweak remark 2.30
   - [ ] § The meta-algebra structure of...
     - [ ] "We now formally connect…"
