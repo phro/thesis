@@ -194,7 +194,7 @@ Explicit examples are missing.
     - [X] rem 2.14 needs associativity
     - [X] fix rem 2.16
     - [X] tweak text after rem 2.16
-    - [ ] remove footnote "While notation explicitly..."
+    - [X] remove footnote "While notation explicitly..."
     - [ ] add meta- to meta-Hopf algebra definition
     - [ ] Remove "so-called"
     - [ ] tweak quasi-triangular meta-Hopf monoid definition.
