@@ -248,7 +248,7 @@ Explicit examples are missing.
   - [X] Embed Remark 3.2 into Def 3.1
   - [X] Further clarify the linear isomorphisms between `H`, `U`, and `C`.
   - [X] Clarify why these three categories need to be mentioned.
-  - [ ] Be clear about the use of pullbacks.
+  - [X] Be clear about the use of pullbacks.
   - [ ] define contraction of generating functions explicitly (especially the
     composition of the ordering map and the generating function map / their
     inverses).
