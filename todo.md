@@ -229,7 +229,7 @@ Explicit examples are missing.
     - [X] specify that $f \in \polyring{\K}{b}$ OSTTE
     - [X] add quotes around $a$.
     - [X] add yields before eq 2.45
-    - [ ] mention linearity of eq 2.45
+    - [X] mention linearity of eq 2.45
     - [ ] Write Weyl commutation relation as a lemma w/ proof
       - [ ] find citation for lemma
       - [ ] move e^b coefficient in front
