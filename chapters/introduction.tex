@@ -1323,8 +1323,11 @@ morphism between meta-objects:
         Let $\set{A_X}_X$ and $\set{B_X}_X$ be compatible meta-objects (i.e.
         ones with the same operations and relations between the operations). A
         \defi{morphism} $Φ$ between these meta-objects is map $\map {Φ}
-        {\set{A_X}_X} {\set{B_X}_X}$ sending $A_X \mapsto B_X$ such that for
-        each operation $φ^{X}_{Y}$ in $A$, $Φ(ϕ^{X}_{Y}) = ϕ^X_Y$ in $B$.
+        {\set{A_X}_X} {\set{B_X}_X}$ sending $A_X \mapsto B_X$ such that
+        each operation $φ^{X}_{Y}$ in $A$ intertwines with that in $B$:
+        \begin{equation}\label{eq:meta_intertwine}
+                Φ(ϕ^{X}_{Y}) = ϕ^X_Y
+        \end{equation}
 \end{definition}
 
 \subsection{Upright tangle invariants from a ribbon meta-Hopf algebra}
@@ -1340,12 +1343,32 @@ We define a $\CU$-valued tangle invariant in the following way:
                 state. Replace each stitching operation with a multiplication
                 operation in $\CU$.
 \end{enumerate}
-
+\Cref{fig:invariant_example} provides an example of this process. There, the
+meta-morphism $Z$ sends the right-hand tangle to
+$\Rmat_{3,7}\Rmat_{6,2}\Rmat_{1,5}\spini_{4}$. By \cref{eq:meta_intertwine}, the
+image of the left-hand tangle (which is the knot $3_1$) under $Z$ is
+$\Rmat_{3,7}\Rmat_{6,2}\Rmat_{1,5}\spini_{4}\then\mult^{1,2,\dots,7}_{i}$. As an
+algebra element, this is
+\begin{equation}
+        \begin{multlined}[t]
+                \exp\pn*{\bo_3\ao_7}
+                \exp\pn*{\frac{1-\Bo_3}{\bo_3}\yo_3\xo_7}
+                \exp\pn*{\bo_6\ao_2}
+                \exp\pn*{\frac{1-\Bo_6}{\bo_6}\yo_6\xo_2}\\
+                \cdot
+                \exp\pn*{\bo_1\ao_5}
+                \exp\pn*{\frac{1-\Bo_1}{\bo_1}\yo_1\xo_5}
+                \then\mult^{1,2,\dots,7}_{i}
+        \end{multlined}
+\end{equation}
+In order to meaningfully compare such expressions, we must first write them in a
+canonical form. The form we use here is to order monomials so that they are of
+the form $\yo^{n_1}\bo^{n_2}\ao^{n_3}\xo^{n_4}$. This may always be done through
+the use of the relations with the Lie bracket. Doing so efficiently is a
+difficult task, and will be addressed in the following chapter.
 \begin{figure}[h]
         \centering
         \includegraphics{figures/invariant_example.pdf}
-        \caption{Breaking up a tangle into its constituent components. The
-        left-hand tangle is obtainable by the right-hand one by applying the map
-        $\mult^{1,2,\dots,7}_{i}$.}
+        \caption{Breaking up a tangle into its constituent components. }
         \label{fig:invariant_example}
 \end{figure}

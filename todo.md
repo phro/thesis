@@ -239,9 +239,9 @@ Explicit examples are missing.
     - [ ] eq. 2.50 and 2.52 are over wide.
     - [X] Reword beginning of § 2.6.
     - [X] morphisms between meta-objects are Capital Greek, e.g. Φ
-    - [ ] add one more arrow to fig 2.21 (or add the algebraic objects to the
+    - [X] add one more arrow to fig 2.21 (or add the algebraic objects to the
       figure caption).
-    - [ ] Insert Z(K_(3,1)) in unreduced form as motivation for § 3: Perturbed
+    - [X] Insert Z(K_(3,1)) in unreduced form as motivation for § 3: Perturbed
       Gaußians.
 - [ ] § 3: Perturbed Gaußians
   - [ ] Introduction is redundantly worded. Clean it up.
