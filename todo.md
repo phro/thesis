@@ -225,7 +225,7 @@ Explicit examples are missing.
     - [X] Pick a consistent name, or at least provide multiple names consistently.
     - [X] define B = e^-b
     - [X] add "b-adic completion" to ybax / `\CU` definition
-    - [ ] add second definition to ribbon element
+    - [X] add second definition to ribbon element
     - [ ] specify that $f \in \polyring{\K}{b}$ OSTTE
     - [ ] add quotes around $a$.
     - [ ] add yields before eq 2.45
