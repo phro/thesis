@@ -216,7 +216,7 @@ Explicit examples are missing.
     - [ ] shrink multiplication figure to look less stretched.
     - [ ] associativity proof is brutal. Fix those sentences.
     - [ ] itemize the proofs various axioms
-    - [ ] spinner and anti-spinner figures should be subfigures
+    - [X] spinner and anti-spinner figures should be subfigures
     - [ ] add "visualized in fig..." for quasi-triangular axioms
     - [ ] add "to show \tangle is ribbon" to ribbon proof.
   - [ ] § The ybax meta-algebra
