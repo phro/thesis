@@ -227,7 +227,7 @@ Explicit examples are missing.
     - [X] add "b-adic completion" to ybax / `\CU` definition
     - [X] add second definition to ribbon element
     - [X] specify that $f \in \polyring{\K}{b}$ OSTTE
-    - [ ] add quotes around $a$.
+    - [X] add quotes around $a$.
     - [ ] add yields before eq 2.45
     - [ ] mention linearity of eq 2.45
     - [ ] Write Weyl commutation relation as a lemma w/ proof
