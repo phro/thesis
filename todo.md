@@ -196,7 +196,7 @@ Explicit examples are missing.
     - [X] tweak text after rem 2.16
     - [X] remove footnote "While notation explicitly..."
     - [X] add meta- to meta-Hopf algebra definition
-    - [ ] Remove "so-called"
+    - [X] Remove "so-called"
     - [ ] tweak quasi-triangular meta-Hopf monoid definition.
     - [ ] tweak Drinfeld element.
     - [ ] Move/remove isolated proof.
