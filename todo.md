@@ -222,7 +222,7 @@ Explicit examples are missing.
     - [X] add "visualized in fig..." for quasi-triangular axioms
     - [X] add "to show \tangle is ribbon" to ribbon proof.
   - [ ] § The ybax meta-algebra
-    - [ ] Pick a consistent name, or at least provide multiple names consistently.
+    - [X] Pick a consistent name, or at least provide multiple names consistently.
     - [ ] define B = e^-b
     - [ ] add "b-adic completion" to ybax / `\CU` definition
     - [ ] add second definition to ribbon element
