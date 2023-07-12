@@ -244,7 +244,7 @@ Explicit examples are missing.
     - [X] Insert Z(K_(3,1)) in unreduced form as motivation for § 3: Perturbed
       Gaußians.
 - [ ] § 3: Perturbed Gaußians
-  - [ ] Introduction is redundantly worded. Clean it up.
+  - [X] Introduction is redundantly worded. Clean it up.
   - [ ] Embed Remark 3.2 into Def 3.1
   - [ ] Further clarify the linear isomorphisms between `H`, `U`, and `C`.
   - [ ] Clarify why these three categories need to be mentioned.
