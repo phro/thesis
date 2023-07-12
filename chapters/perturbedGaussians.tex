@@ -6,14 +6,10 @@ develops uses perturbed Gaußians to compute $Z$ quickly.
 
 \section{Expressing morphisms as generating functions}
 
-The invariant we have defined takes the form of building a knot out of several
-crossings and spinners, then replacing each crossing with an $\Rmat$-matrix
-$\Rmat_{ij}$ and spinners $\spin_k$. Finally, we apply a series of
-multiplication operations to join the various tensor factors into the final
-value. In order to be able to apply the operations efficiently, we need a
-compact way of encoding morphisms. In \cite{BV}, Bar-Natan and van der Veen
-achieve this through the use of generating functions, whose definition we
-reproduce below:
+In order to be able to compute $Z$ efficiently, we need an efficient way to
+reduce expressions in $\CU$ to a closed form. In \cite{BV}, Bar-Natan and van der Veen
+achieve this by compactly encoding operations. They use generating functions,
+whose definition we reproduce below:
 
 For $A$ and $B$ finite sets, consider the set $\hom(\polyring{\Q}{z_A},
 \polyring{\Q}{z_B})$ of linear maps between multivariate polynomial rings. Such
