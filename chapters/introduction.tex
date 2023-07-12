@@ -266,7 +266,8 @@ Consider the following structure, which satisfies the definition of a
 meta-monoid, but is not a monoid in the traditional sense:
 \begin{example}[the meta-monoid of square matrices]
 Let $\K$ be a field and $M_X \defeq \Mat_{X\times X}(\K)$ be the set of square
-matrices whose rows and columns are indexed by the finite set $X$. Define
+matrices whose rows and columns are indexed by the finite set $X=\set{x_i}_i$.
+Define
 $\map {\mult^{ij}_{k}[X]}
         {M_{X\sqcup\set{i, j}}}
         {M_{X\sqcup\set{k}}}$
@@ -275,7 +276,23 @@ $\mult^{ij}_{k}[X]\pn[\big]{(a_{rs})_{rs}} \defeq
 \pn*{a_{rs} + δ_{rk}(a_{is} + a_{js}) + δ_{sk}(a_{si} + a_{sj})}_{rs}$. That is,
 the multiplication of two indices corresponds to the summation of their
 respective rows and columns, the result of which is stored in row and column
-$k$. The unit $\unit_i[X]\pn[\big]{(a_{rs})_{rs}}$ extends $(a_{rs})_{rs}$ to
+$k$:
+\begin{equation}
+\begin{bmatrix}
+a_{x_1,x_1} & \cdots & a_{x_1,i} & a_{x_1,j} \\
+\vdots         & \ddots & \vdots         & \vdots         \\
+a_{i,x_1} & \cdots & a_{ii} & a_{ij} \\
+a_{j,x_1} & \cdots & a_{ji} & a_{jj}
+\end{bmatrix}
+\xrightarrow{\mult^{ij}_{k}}
+\begin{bmatrix}
+a_{x_1,x_1} & \cdots & a_{x_1,i}+a_{x_1,j} \\
+\vdots         & \ddots & \vdots         & \\
+a_{i,x_1}+a_{j,x_1} & \cdots & a_{ii}+a_{ji}+a_{ij}+a_{jj} \\
+\end{bmatrix}
+\end{equation}
+Where the last column and row on the right-hand-side is indexed by $k$.
+The unit $\unit_i[X]\pn[\big]{(a_{rs})_{rs}}$ extends $(a_{rs})_{rs}$ to
 include a row and column of $0$'s, each labelled by the index $i$.
 \end{example}
 

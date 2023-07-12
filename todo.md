@@ -179,7 +179,7 @@ Explicit examples are missing.
     - [X] mention removal of "`[X]`" from notation
     - [X] set bijections should be Greek
     - [X] add "strict" and "symmetric" to monoidal categories
-    - [ ] add actual matrices to Example: square matrices
+    - [X] add actual matrices to Example: square matrices
     - [ ] add parentheses in intro sentence to meta-object definition
     - [ ] a meta-object is **four** things (or however many are actually listed).
     - [ ] refer to the appropriate figure for composition (×2).
