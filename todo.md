@@ -252,7 +252,7 @@ Explicit examples are missing.
   - [X] define contraction of generating functions explicitly (especially the
     composition of the ordering map and the generating function map / their
     inverses).
-  - [ ] add missing word 'ribbon's in § Expressing Hopf algebra operations as
+  - [X] add missing word 'ribbon's in § Expressing Hopf algebra operations as
     perturbed Gaußians.
   - [ ] Should generating functions be distinguished from the original functions
     with bold somehow?
