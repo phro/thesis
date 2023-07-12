@@ -184,7 +184,7 @@ Explicit examples are missing.
     - [X] a meta-object is **four** things (or however many are actually listed).
     - [X] refer to the appropriate figure for composition (×2).
     - [X] add pronunciation of `\then` operator
-    - [ ] Remove Remark 2.11?
+    - [X] Remove Remark 2.11?
   - [ ] § Algebraic Definitions
     - [ ] Add language tweaks
     - [ ] add more language to fig 2.1 caption
