@@ -199,8 +199,8 @@ Explicit examples are missing.
     - [X] Remove "so-called"
     - [X] tweak quasi-triangular meta-Hopf monoid definition.
     - [X] tweak Drinfeld element.
-    - [ ] Move/remove isolated proof.
-    - [ ] put "distinguished grouplike element" into footnote
+    - [X] Move/remove isolated proof.
+    - [X] put "distinguished grouplike element" into footnote
   - [ ] § Upright Tangles
     - [ ] Opening paragraph may not be clearest. Tweak.
     - [ ] Clean up Definition of framed tangle. Mention framing.
