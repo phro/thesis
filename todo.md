@@ -192,7 +192,7 @@ Explicit examples are missing.
     - [X] add tensor product to remark 2.13
     - [X] fix symbols used in fig 2.2
     - [X] rem 2.14 needs associativity
-    - [ ] fix rem 2.16
+    - [X] fix rem 2.16
     - [ ] tweak text after rem 2.16
     - [ ] remove footnote "While notation explicitly..."
     - [ ] add meta- to meta-Hopf algebra definition
