@@ -1178,6 +1178,8 @@ the spinner $\spin$:
                 f(\ao)\yo^r &= \yo^rf(\ao-r) &
                 \xo^rf(\ao) &= f(\ao-r)\xo^r
         \end{align}
+        These relations also hold when $f(a)$ is replaced with
+        $f(a, b)\in \powerseries{\polyring{\Q}{\ao}}{\bo}$.
 \end{lemma}
 \begin{proof}
         We begin by commuting a single \enquote{$\ao$} past a power of $\yo$:
@@ -1198,7 +1200,8 @@ the spinner $\spin$:
                 =\yo^r(\ao-r)^k
         \end{equation}
         \Cref{eq:ay_relation_monomial} establishes a linear relation, so the
-        result extends to any polynomial.
+        result extends to any polynomial in $\ao$, and thereby to any element of 
+        $\powerseries{\polyring{\Q}{\ao}}{\bo}$.
 
         A similar argument exists to show $\xo^rf(\ao) = f(\ao-r)\xo^r$.
 \end{proof}
