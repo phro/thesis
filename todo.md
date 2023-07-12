@@ -193,7 +193,7 @@ Explicit examples are missing.
     - [X] fix symbols used in fig 2.2
     - [X] rem 2.14 needs associativity
     - [X] fix rem 2.16
-    - [ ] tweak text after rem 2.16
+    - [X] tweak text after rem 2.16
     - [ ] remove footnote "While notation explicitly..."
     - [ ] add meta- to meta-Hopf algebra definition
     - [ ] Remove "so-called"
