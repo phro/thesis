@@ -186,8 +186,8 @@ Explicit examples are missing.
     - [X] add pronunciation of `\then` operator
     - [X] Remove Remark 2.11?
   - [ ] § Algebraic Definitions
-    - [ ] Add language tweaks
-    - [ ] add more language to fig 2.1 caption
+    - [X] Add language tweaks
+    - [X] add more language to fig 2.1 caption
     - [ ] remove undefined tensor notation in remark 2.13
     - [ ] add tensor product to remark 2.13
     - [ ] fix symbols used in fig 2.2
