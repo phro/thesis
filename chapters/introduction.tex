@@ -1175,36 +1175,36 @@ the spinner $\spin$:
         Given $f\in \polyring{\Q}{\ao}$, we have the
         following relations in $U$:
         \begin{align}\label{eq:xay_relations}
-                f(a)y^r &= y^rf(a-r) &
-                x^rf(a) &= f(a-r)x^r
+                f(\ao)\yo^r &= \yo^rf(\ao-r) &
+                \xo^rf(\ao) &= f(\ao-r)\xo^r
         \end{align}
 \end{lemma}
 \begin{proof}
-        We begin by commuting a single $a$ past a power of $y$:
+        We begin by commuting a single $\ao$ past a power of $\yo$:
         \begin{equation}
-                ay^r
-                =y(a-1)y^{r-1}
-                =y^2(a-2)y^{r-2}
+                \ao y^r
+                =\yo(\ao-1)\yo^{r-1}
+                =\yo^2(\ao-2)\yo^{r-2}
                 =\dots
-                =y^{r}(a-r)
+                =\yo^{r}(\ao-r)
         \end{equation}
         Repeating the above process for multiple copies of $a$:
         \begin{equation}
-                a^ky^r
-                =a^{k-1}(ay^r)
-                =a^{k-1}y^r(a-r)
-                =a^{k-2}y^r(a-r)^2
+                \ao^ky^r
+                =\ao^{k-1}(\aoy^r)
+                =\ao^{k-1}\yo^r(\ao-r)
+                =\ao^{k-2}\yo^r(\ao-r)^2
                 =\dots
-                =y^r(a-r)^k
+                =\yo^r(\ao-r)^k
         \end{equation}
-        Finally, we conclude for any linear combination of powers of $a$, the
+        Finally, we conclude for any linear combination of powers of $\ao$, the
         same relation holds, so this holds for any polynomial. Extending this
         result to formal power series is straightforward.
 
-        A similar argument exists to show $x^rf(a) = f(a-r)x^r$.
+        A similar argument exists to show $\xo^rf(\ao) = f(\ao-r)\xo^r$.
 \end{proof}
 
-Next, we observe that since $\liebk{x}{y}$ is central, the Weyl canonical
+Next, we observe that since $\liebk{\xo}{\yo}$ is central, the Weyl canonical
 commutation relation holds:
 \begin{equation}\label{eq:weyl_relation}
         \Exp{ξ\xo}\Exp{η\yo} = \Exp{η\yo}\Exp{ξ\xo}\Exp{ξη\bo}
