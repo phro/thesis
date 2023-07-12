@@ -208,7 +208,7 @@ Explicit examples are missing.
     - [X] add missing figure reference
     - [X] tweak remark 2.30
   - [ ] § The meta-algebra structure of...
-    - [ ] "We now formally connect…"
+    - [X] "We now formally connect…"
     - [ ] Add figure references to thm "tangles form a ribbon meta-Hopf algebra"
     - [ ] add figure representing the antipode
     - [ ] move remark 2.33 about virtual tangles *after* proof of thm.
