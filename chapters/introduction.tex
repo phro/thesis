@@ -648,14 +648,6 @@ following properties: (we will denote the inverse by $\Rmati$)
         \Rmati_{12}\Rmati_{34}\then\mult^{14}_{1}\then\mult^{23}_{2}$.
 \end{definition}
 
-\begin{proof}
-        See Majid's work in \cite{SM} or Etingof and Schiffmann in \cite{ES}
-        for more details on this standard result. Note that the proof does not
-        rely on the additive structure of the Hopf algebra, which allows us to
-        extend this result to the realm of meta-Hopf algebras.
-        %TODO: finish
-\end{proof}
-
 \begin{definition}[ribbon meta-Hopf algebra]
         A quasitriangular meta-Hopf algebra $H$ is called \defi{ribbon} if it has an
         element $\ribbon\in \centre(H)$ such that:
@@ -693,10 +685,17 @@ following properties: (we will denote the inverse by $\Rmati$)
 \end{definition}
 
 \begin{lemma}[spinners and ribbon Hopf algebras]\label{lem:spinner_ribbon}
-        If a Hopf algebra has either a ribbon element $\ribbon$ or a spinner
+        If a (meta-)Hopf algebra has either a ribbon element $\ribbon$ or a spinner
         $\spin$, then it must have the other as well, given by the formula:
         $\spin_1 \ribbon_2 \then \mult^{12} = \dfe$.
 \end{lemma}
+\begin{proof}
+        See Majid's work in \cite{SM} or Etingof and Schiffmann in \cite{ES}
+        for more details on this standard result. Note that the proof does not
+        rely on the additive structure of the Hopf algebra, which allows us to
+        extend this result to the realm of meta-Hopf algebras.
+        %TODO: finish
+\end{proof}
 % todo: is this lemma important for the thesis? If not, cut it out!
 
 \section{The meta-algebra of tangle diagrams}
