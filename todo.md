@@ -182,7 +182,7 @@ Explicit examples are missing.
     - [X] add actual matrices to Example: square matrices
     - [X] add parentheses in intro sentence to meta-object definition
     - [X] a meta-object is **four** things (or however many are actually listed).
-    - [ ] refer to the appropriate figure for composition (×2).
+    - [X] refer to the appropriate figure for composition (×2).
     - [ ] add pronunciation of `\then` operator
     - [ ] Remove Remark 2.11?
   - [ ] § Algebraic Definitions
