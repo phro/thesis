@@ -249,7 +249,7 @@ Explicit examples are missing.
   - [X] Further clarify the linear isomorphisms between `H`, `U`, and `C`.
   - [X] Clarify why these three categories need to be mentioned.
   - [X] Be clear about the use of pullbacks.
-  - [ ] define contraction of generating functions explicitly (especially the
+  - [X] define contraction of generating functions explicitly (especially the
     composition of the ordering map and the generating function map / their
     inverses).
   - [ ] add missing word 'ribbon's in § Expressing Hopf algebra operations as
