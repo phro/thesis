@@ -29,18 +29,16 @@ multi-index $\nn \in \N^A$.
                 \Sum[\nn\in\N^A] \frac{Φ(z_A^\nn)}{\nn!}ζ_A^\nn
                 \in \powerseries{\polyring{\Q}{z_B}}{ζ_A}
         \end{equation}
-\end{definition}
-\begin{remark}
-        We may extend the domain of $Φ$ from $\polyring{\Q}{z_B}$ to 
+        We also extend the domain of $Φ$ from $\polyring{\Q}{z_B}$ to 
         $\powerseries{\polyring{\Q}{z_B}}{ζ_A}$ via extension of scalars
-        $\Q \to \powerseries{\Q}{ζ_A}$. This extension allows us to write the
-        exponential generating function in a new way:
+        $Φ \mapsto Φ\otimes \id_{\powerseries{\Q}{ζ_A}}$. This extension allows
+        us to write the exponential generating function in a cleaner way:
         \begin{equation}
                 \Gen{Φ}
                 = Φ\pn*{\Sum[\nn\in\N^A] \frac{(z_Aζ_A)^\nn}{\nn!}}
                 = Φ\pn*{\Gen[\big]{\id_{\polyring{\Q}{z_A}}}}
         \end{equation}
-\end{remark}
+\end{definition}
 
 By the PBW theorem, we know that $\CU$ is isomorphic as a vector space to the
 polynomial ring $\polyring{\Q}{y, b, a, x}$ by choosing an ordering of the

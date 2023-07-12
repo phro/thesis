@@ -245,7 +245,7 @@ Explicit examples are missing.
       Gaußians.
 - [ ] § 3: Perturbed Gaußians
   - [X] Introduction is redundantly worded. Clean it up.
-  - [ ] Embed Remark 3.2 into Def 3.1
+  - [X] Embed Remark 3.2 into Def 3.1
   - [ ] Further clarify the linear isomorphisms between `H`, `U`, and `C`.
   - [ ] Clarify why these three categories need to be mentioned.
   - [ ] Be clear about the use of pullbacks.
