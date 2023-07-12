@@ -216,6 +216,7 @@ Explicit examples are missing.
     - [X] shrink multiplication figure to look less stretched.
     - [ ] associativity proof is brutal. Fix those sentences.
     - [ ] itemize the proofs various axioms
+    - [ ] move figure references from theorem statement to proof.
     - [X] spinner and anti-spinner figures should be subfigures
     - [ ] add "visualized in fig..." for quasi-triangular axioms
     - [ ] add "to show \tangle is ribbon" to ribbon proof.
