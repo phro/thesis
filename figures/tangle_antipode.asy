@@ -1,7 +1,7 @@
 size(7cm);
 import tangleSettings;
 
-pair size = (1,3);
+pair size = (1,2);
 pair extension = (0.5,0.75);
 transform rhs = shift(size.x+extension.x+1,0);
 
@@ -34,5 +34,5 @@ drawTangleEndpoint(rhs*point(p2,length(p2)));
 draw((size.x+0.25,0.5size.y)--(size.x+1-0.25,0.5size.y),
         boundaryArc,
         arrow=EndArrow(arrowhead=TeXHead),
-        L=Label("$S^{i}_{i}$",Relative(0.4),LeftSide)
+        L=Label("$S^{i}_{i}$",LeftSide)
 );

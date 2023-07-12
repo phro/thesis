@@ -209,8 +209,8 @@ Explicit examples are missing.
     - [X] tweak remark 2.30
   - [ ] § The meta-algebra structure of...
     - [X] "We now formally connect…"
-    - [ ] Add figure references to thm "tangles form a ribbon meta-Hopf algebra"
-    - [ ] add figure representing the antipode
+    - [X] Add figure references to thm "tangles form a ribbon meta-Hopf algebra"
+    - [X] add figure representing the antipode
     - [ ] move remark 2.33 about virtual tangles *after* proof of thm.
     - [ ] fix missing reference in comultiplication footnote.
     - [ ] shrink multiplication figure to look less stretched.

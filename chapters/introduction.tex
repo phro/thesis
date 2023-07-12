@@ -861,10 +861,10 @@ We now formally connect tangle diagrams with meta-algebras.
                         $k$.\footnote{Strictly speaking, this operation is only
                         defined when the end of strand $i$ is adjacent to strand
                         $j$. See \cref{rem:virtual_caveat} for more details.%
-                }
+                } This is visualized in \cref{fig:tangle_mult}.
                 \item the unit $\unit_{i}[X]$ takes a tangle diagram with
                         strands $X$ and introduces a new strand $i$ which does
-                        not touch any of the other strands.
+                        not touch any of the other strands. This is visualized in \cref{fig:tangle_unit}.
                 \item the comultiplication $\comult^{i}_{jk}[X]$ takes a tangle
                         with strands $X\sqcup \set{i}$ and doubles strand $i$,
                         separating the two strands along the framing of strand
@@ -875,26 +875,30 @@ We now formally connect tangle diagrams with meta-algebras.
                         representation, namely looking like the letters they are
                         represented by (see \cref{thm:rvt_metaHopf} for more
                         details).
-                }
+                } This is visualized in \cref{fig:tangle_comult}.
                 \item the counit $\counit^{i}[X]$ takes a tangle with strands
                         indexed by $X\sqcup \set{i}$ and returns the tangle with
-                        strand labelled by $i$ deleted.
+                        strand labelled by $i$ deleted. This is visualized in
+                        \cref{fig:tangle_counit}.
                 \item The antipode $\antipode^{i}_{j}[X]$ takes a tangle with
                         strands labelled by $X \sqcup \set{i}$ and reverses the
                         direction of strand $i$, then adds a counter-clockwise
                         cap to the new beginning, and a clockwise cup to the
                         end. This new strand is called $j$. When applied to a
                         single vertical strand, the resulting tangle looks like
-                        the letter \enquote{S}.
+                        the letter \enquote{S}. This is visualized in
+                        \cref{fig:tangle_antipode}.
                 \item the $\Rmat$-matrix $\Rmat_{ij}$ is given by the two-strand
                         tangle with a single positive crossing of strand $i$
                         over strand $j$. The inverse $\Rmat$-matrix
                         $\Rmati_{ij}$ is the two-strand tangle with a
-                        \emph{negative} crossing of strand $i$ over strand $j$.
+                        \emph{negative} crossing of strand $i$ over strand $j$. This is visualized in
+                        \cref{fig:tangle_rmats}.
                 \item The spinner $\spin_i[X]$ takes a tangle in $\tangle X$ and
                         adds a new strand with rotation number $1$ which has no
                         interactions with any other strands. This new strand
-                        looks like the letter \enquote{C}.
+                        looks like the letter \enquote{C}. This is visualized in
+                        \cref{fig:tangle_spinner}.
         \end{itemize}
 \end{theorem}
 \begin{remark}\label{rem:virtual_caveat}
@@ -916,7 +920,7 @@ We now formally connect tangle diagrams with meta-algebras.
 \end{remark}
 \begin{figure}[h]
         \centering
-        \includegraphics[width=0.8\textwidth]{figures/tangle_mult.pdf}
+        \includegraphics{figures/tangle_mult.pdf}
         \caption{
                 Multiplication $\mult^{ij}_{k}$ stitches two strands in a tangle
                 together.
@@ -925,26 +929,26 @@ We now formally connect tangle diagrams with meta-algebras.
 \end{figure}
 \begin{figure}[h]
         \centering
-        \includegraphics[width=0.8\textwidth]{figures/tangle_unit.pdf}
+        \includegraphics{figures/tangle_unit.pdf}
         \caption{The unit $\unit_i$ introduces a new strand in a tangle.}
         \label{fig:tangle_unit}
 \end{figure}
 \begin{figure}[h]
         \centering
-        \includegraphics[width=0.8\textwidth]{figures/tangle_counit.pdf}
+        \includegraphics{figures/tangle_counit.pdf}
         \caption{The counit $\counit^i$ deletes a strand in a tangle.}
         \label{fig:tangle_counit}
 \end{figure}
 \begin{figure}[h]
         \centering
-        \includegraphics[width=0.8\textwidth]{figures/tangle_comult.pdf}
+        \includegraphics{figures/tangle_comult.pdf}
         \caption{The comultiplication $\comult^{i}_{jk}$ doubles a strand in a tangle
         along its framing. Notice the right-to-left strand labels.}
         \label{fig:tangle_comult}
 \end{figure}
 \begin{figure}[h]
         \centering
-        \includegraphics[width=0.8\textwidth]{figures/tangle_antipode.pdf}
+        \includegraphics{figures/tangle_antipode.pdf}
         \caption{The antipode $\antipode^{i}_{i}$ reverses a strand, rotating the
         endpoints to maintain an upright tangle.}
         \label{fig:tangle_antipode}
@@ -965,6 +969,7 @@ We now formally connect tangle diagrams with meta-algebras.
         \end{subfigure}
         \caption{The $\Rmat$-matrix and its inverse represent a tangle with a
         single crossing.}
+        \label{fig:tangle_rmats}
 \end{figure}
 \begin{figure}[h]
         \centering
