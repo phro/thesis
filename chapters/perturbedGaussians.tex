@@ -56,17 +56,19 @@ $\CU$, we define categories $\UMaps$, $\LinMaps$, and $\GenFunc$ with objects
 finite sets and morphisms:
 \begin{align}
         \label{eq:hom_umaps}\Hom[\UMaps]JK &\defeq
-                \Hom[\K]{\CU^{\otimes J}}{\CU^{\otimes K}}\\
+                \Hom[\K]{\CU_{J}}{\CU_{K}}\\
         \label{eq:hom_linmaps}\Hom[\LinMaps]JK &\defeq
                 \Hom[\K]{\polyring\Q{z_J}}{\polyring\Q{z_K}}\\
         \label{eq:hom_genfunc}\Hom[\GenFunc]JK &\defeq
                 \powerseries{\polyring\Q{z_K}}{ζ_J}
 \end{align}
-Where \cref{eq:hom_umaps,eq:hom_linmaps} explicitly denote vector space maps,
-not just algebra or ring homomorphisms. There exist monoidal isomorphisms
-between these categories, namely $\map {\Order} {\LinMaps} [\toiso] {\UMaps}$
+Where $z_X$ is a shorthand for all the variables $y_i$, $b_i$, $a_i$, and $x_i$
+for all $i\in X$. \Cref{eq:hom_umaps,eq:hom_linmaps} explicitly denote vector
+space maps, not just algebra or ring homomorphisms. The maps
+$\map {\Order} {\LinMaps} [\toiso] {\UMaps}$
 and $\map {\GenMap} {\LinMaps} [\toiso] {\GenFunc}$ as introduced in
-\cref{eq:order_map,eq:genfunc}.
+\cref{eq:order_map,eq:genfunc} induce linear isomorphisms between the
+corresponding homsets, which extend to monoidal isomorphisms.
 
 We use this formulation because of the existence of a computationally amenable
 subcategory of $\GenFunc$ which contains the image of this invariant.

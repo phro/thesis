@@ -234,7 +234,7 @@ Explicit examples are missing.
       - [X] find citation for lemma
       - [X] move e^b coefficient in front
     - [X] package ya_commute and xa_commute into lemma.
-    - [ ] `Exponential commutation relations` doesn't jive with the `b`-adic
+    - [X] `Exponential commutation relations` doesn't jive with the `b`-adic
         topology. Resolve this issue.
     - [ ] eq. 2.50 and 2.52 are over wide.
     - [X] Reword beginning of § 2.6.
@@ -246,7 +246,7 @@ Explicit examples are missing.
 - [ ] § 3: Perturbed Gaußians
   - [X] Introduction is redundantly worded. Clean it up.
   - [X] Embed Remark 3.2 into Def 3.1
-  - [ ] Further clarify the linear isomorphisms between `H`, `U`, and `C`.
+  - [X] Further clarify the linear isomorphisms between `H`, `U`, and `C`.
   - [ ] Clarify why these three categories need to be mentioned.
   - [ ] Be clear about the use of pullbacks.
   - [ ] define contraction of generating functions explicitly (especially the
