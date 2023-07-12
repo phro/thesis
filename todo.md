@@ -201,12 +201,12 @@ Explicit examples are missing.
     - [X] tweak Drinfeld element.
     - [X] Move/remove isolated proof.
     - [X] put "distinguished grouplike element" into footnote
-  - [ ] § Upright Tangles
+  - [X] § Upright Tangles
     - [X] Opening paragraph may not be clearest. Tweak.
     - [X] Clean up Definition of framed tangle. Mention framing.
     - [X] Figure Reidemeister 1 needs the word "framed"
     - [X] add missing figure reference
-    - [ ] tweak remark 2.30
+    - [X] tweak remark 2.30
   - [ ] § The meta-algebra structure of...
     - [ ] "We now formally connect…"
     - [ ] Add figure references to thm "tangles form a ribbon meta-Hopf algebra"
