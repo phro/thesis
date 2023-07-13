@@ -256,7 +256,7 @@ Explicit examples are missing.
     perturbed Gaußians.
   - [ ] Should generating functions be distinguished from the original functions
     with bold somehow?
-  - [ ] add references above equations in proofs of Thm 3.6 (meta-Hopf structure of
+  - [X] add references above equations in proofs of Thm 3.6 (meta-Hopf structure of
     U)
   - [ ] § Notational conventions
     - [ ] Remove first parragraph, and clean up next paragraph.
