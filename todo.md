@@ -265,7 +265,7 @@ Explicit examples are missing.
       polynomial" sentence.
 - [ ] § 4: Constructing the trace
   - [X] § 4.1: extending an open tangle …  : clean up name
-  - [ ] clean up first paragraph.
+  - [X] clean up first paragraph.
   - [ ] clean up traced meta-algebra definition
   - [ ] remove coalgebraic compatibility
   - [ ] add commutation with operations on other strands
