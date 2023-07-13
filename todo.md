@@ -259,7 +259,7 @@ Explicit examples are missing.
   - [X] add references above equations in proofs of Thm 3.6 (meta-Hopf structure of
     U)
   - [ ] § Notational conventions
-    - [ ] Remove first parragraph, and clean up next paragraph.
+    - [X] Remove first paragraph, and clean up next paragraph.
     - [ ] Replace out-of-nowhere example with continuation of the example in fig 2.21.
     - [ ] Remove second example. Replace with the general "computes the Alexander
       polynomial" sentence.
