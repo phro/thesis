@@ -324,28 +324,49 @@ Finally, \cref{eq:gen-unit,eq:gen-counit,eq:gen-Rmat,eq:gen-spin,eq:gen-ribbon}
 follow immediately.
 \end{proof}
 
-\subsection{Notational conventions}
-
 Following the convention laid out earlier, we will write a morphism with domain
 $D$, codomain $C$, and generating function $f(ζ_{D}, z_{C})$ as
-$f(ζ_{D}, z_{C})^{D}_{C}$.
+$f(ζ_{D}, z_{C})^{D}_{C}$ (omitting any set if it is empty).
 
-When applied to knots, this invariant computes the Alexander polynomial $Δ$:
+\subsection{Computational example}
+
+Continuing the computation in \cref{eq:trefoil_computation_unreduced}, we now
+have the tools to bring the expression into a reduced form:
+
 \begin{equation}
-        Z(\knot31) &= \pn*{
-                \frac{1}{B_1^{-1} + 1 + B_1^1}
-        }^{\emptyset}_{\set{1}}
-        = \inv{Δ(\knot31)}
+        \pn*{B_4^{1/2}\Exp{
+                        a_5 b_1+a_7 b_3+a_2 b_6
+                        -\frac{\left(B_1-1\right) x_5 y_1}{b_1}
+                        -\frac{\left(B_3-1\right) x_7 y_3}{b_3}
+                        -\frac{\left(B_6-1\right) x_2 y_6}{b_6}
+        }}_{\set{1,\dots,7}}
+        \then\mult^{\set{1,\dots,7}}_1
 \end{equation}
-Here is a second example, where we define $D_i^n \defeq B_i^n + B_i^{-n}$ to
-emphasize the palindromic nature of the Alexander polynomial:
-\begin{equation}
-        Z(\knot[a]{11}{10}) &= \pn*{
-                \frac{1}
-                {2D_1^{3}-11D_1^{2}+25D_1^{1}-31}
-        }^{\emptyset}_{\set{1}}\\
-        &= \inv{Δ(\knot[a]{11}{10})}
+Computing this contraction yields:
+\begin{equation}\label{eq:trefoil_computation_gaussian_premultiplication}
+        \pn*{\exp\pn*{3 a_1 b_1+\frac{x_1 y_1-B_1^3 x_1 y_1}{b_1}}
+        \frac{1}{-B_1^{3/2}+B_1^{5/2}+\sqrt{B_1}}}_{\set{1}}
 \end{equation}
 
-Since each tangle is expressed as an object, the domains in these examples are
-empty.
+To bring this into a more recognizable form, we will also correct for the
+framing by adding twists (that is, ribbon elements $\ribbon$):
+\begin{equation}
+        \eqref{eq:trefoil_computation_gaussian_premultiplication}
+        \cdot
+        \ribbon_2
+        \ribbon_3
+        \ribbon_4
+        \then \mult^{1,2,3,4}_{1}
+        = \pn*{\frac{1}{B_1-1+\inv B_1}}_{\set{1}}
+\end{equation}
+Thus we finish with the observation that $Z$ applied to the (positive) trefoil
+is equal to the reciprocal of the Alexander polynomial $Δ$:
+$Z(\knot31) = \inv{Δ(\knot31)}$
+
+\begin{proposition}[\cite{BV}]
+        Let $K$ be a (framed) upright knot diagram with self-linking number $0$.
+        Then:
+        \begin{equation}
+                Z(K) = \inv{Δ(K)}
+        \end{equation}
+\end{proposition}

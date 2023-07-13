@@ -258,10 +258,10 @@ Explicit examples are missing.
     with bold somehow?
   - [X] add references above equations in proofs of Thm 3.6 (meta-Hopf structure of
     U)
-  - [ ] § Notational conventions
+  - [X] § Notational conventions
     - [X] Remove first paragraph, and clean up next paragraph.
-    - [ ] Replace out-of-nowhere example with continuation of the example in fig 2.21.
-    - [ ] Remove second example. Replace with the general "computes the Alexander
+    - [X] Replace out-of-nowhere example with continuation of the example in fig 2.21.
+    - [X] Remove second example. Replace with the general "computes the Alexander
       polynomial" sentence.
 - [ ] § 4: Constructing the trace
   - [ ] § 4.1: extending an open tangle …  : clean up name
