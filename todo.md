@@ -264,7 +264,7 @@ Explicit examples are missing.
     - [X] Remove second example. Replace with the general "computes the Alexander
       polynomial" sentence.
 - [ ] § 4: Constructing the trace
-  - [ ] § 4.1: extending an open tangle …  : clean up name
+  - [X] § 4.1: extending an open tangle …  : clean up name
   - [ ] clean up first paragraph.
   - [ ] clean up traced meta-algebra definition
   - [ ] remove coalgebraic compatibility
