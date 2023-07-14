@@ -269,8 +269,8 @@ Explicit examples are missing.
   - [X] clean up traced meta-algebra definition
   - [X] remove coalgebraic compatibility
   - [X] add commutation with operations on other strands
-  - [ ] Lemma 4.3 : "as" -> "are"
-    - [ ] tweak proof wording
+  - [X] Lemma 4.3 : "as" -> "are"
+    - [X] tweak proof wording
   - [ ] lemma 4.4
     - [ ] add coinvariants caveat to lemma 4.4 (coinvairants as/are a trace map)
       (vector space, not ideal)
