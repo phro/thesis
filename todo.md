@@ -271,12 +271,12 @@ Explicit examples are missing.
   - [X] add commutation with operations on other strands
   - [X] Lemma 4.3 : "as" -> "are"
     - [X] tweak proof wording
-  - [ ] lemma 4.4
+  - [X] lemma 4.4
     - [X] add coinvariants caveat to lemma 4.4 (coinvairants as/are a trace map)
       (vector space, not ideal)
     - [X] Remove undefined notation from lemma
     - [X] Remove undefined notation from proof
-    - [ ] Add to proof that trace commutes with other operations.
+    - [X] Add to proof that trace commutes with other operations.
   - [ ] § a generating function for the coinvariants
     - [ ] the first paragraph should follow from the previous sections better
     - [ ] add parenthesis.
