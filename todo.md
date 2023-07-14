@@ -278,8 +278,8 @@ Explicit examples are missing.
     - [X] Remove undefined notation from proof
     - [X] Add to proof that trace commutes with other operations.
   - [ ] § a generating function for the coinvariants
-    - [ ] the first paragraph should follow from the previous sections better
-    - [ ] add parenthesis.
+    - [X] the first paragraph should follow from the previous sections better
+    - [X] add parenthesis.
     - [ ] add Remark about formula missing ab term
       - [ ] (then add such a term maybe?)
   - [ ] § Computational examples

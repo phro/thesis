@@ -144,7 +144,7 @@ $\liebk*{\fh}{\uea{\fh}}$. By linearity of $\ad$, we conclude
 $\liebk*{\uea{\fh}}{\uea{\fh}} = \liebk*{\fh}{\uea{\fh}}$.
 \end{proof}
 
-\begin{theorem}
+\begin{theorem}\label{thm:CU_coinvariants_basis}
         The coinvariants of $U$, $U_U$, has basis
         $\set{y^n a^k x^n}_{n, k\ge 0}$.
 \end{theorem}
@@ -195,11 +195,11 @@ allows us to conclude that this set is indeed linearly independent.
 \subsection{A generating function for the coinvariants}
 
 \ProvideDocumentCommand{\COrder}{}{\Order}
-In order to define a generating function, we need to choose an appropriate basis
-for the space of coinvariants. We define an isomorphism from the space of
-coinvariants to a polynomial space, tweaking the earlier-defined basis by scalar
-multiples. Since it plays the role of the ordering map, we also name it
-$\COrder$.
+In order to define a generating function, we need to choose a basis for the
+space of coinvariants. We define an isomorphism from the space of coinvariants
+to a polynomial space, tweaking the basis defined in
+\cref{thm:CU_coinvariants_basis} by scalar multiples. Since it plays the role of
+the ordering map, we also name it $\COrder$.
 \begin{equation}
         \mapdef {\COrder} {\polyring{\Q}{a, z}} [\toiso] {\CU_\CU}
         {a^{n}z^{k}} {\frac{1}{k!}y^{k}a^{n}x^{k} \\
@@ -208,7 +208,7 @@ $\COrder$.
 \end{equation}
 
 This defines a commutative square upon whose bottom edge
-$τ = \Order \then {\trace} \then {\inv{\COrder}}$ we compute the generating
+($τ = \Order \then {\trace} \then {\inv{\COrder}}$) we compute the generating
 function:
 \begin{equation}
 \begin{tikzcd}
