@@ -12,13 +12,15 @@ include closed components.
 % quotient map $\map {\trace} {\CU} {\CU_\CU}$.
 
 \begin{definition}[traced meta-algebra]
-        A \defi{traced meta-algebra} is two things:
+        A \defi{traced meta-algebra} (or \defi{traced meta-monoid}) is two
+        things:
         \begin{enumerate}
-                \item a family of meta-algebras: for each finite set $L$, we
-                        assign one meta-algebra $\set{A_{L,
-                        S}}_S$.\footnote{These sets index the \enquote{strands}
-                        $S$ and the \enquote{loops} $L$.} The multiplication
-                        maps $\mult^{i,j}_k[L]$ then take the form:
+                \item A collection of meta-algebras: for each finite set $L$, we
+                        assign one meta-algebra $\set{A_{S, L}}_S$. \footnote{%
+                                These sets index the \enquote{strands} $S$ and
+                                the \enquote{loops} $L$.%
+                        } The multiplication maps $\mult^{i,j}_k[L]$ then take
+                        the form:
                         \begin{equation}
                                 \map {\mult^{i,j}_k[L][S]}
                                 {A_{\set{i,j}\sqcup S, L}}
@@ -31,7 +33,10 @@ include closed components.
                                 {A_{\set{i}\sqcup S, L}}
                                 {A_{S,\set{i}\sqcup L}}$
                         which governs the compatibility of the families of
-                        meta-algebras in the following way:
+                        meta-algebras in the following way: \footnote{%
+                                This is the \defi{cyclic} property of the
+                                trace.%
+                        }
                         \begin{equation}
                                 \mult^{i,j}_{k}\then\trace^k
                                 =
