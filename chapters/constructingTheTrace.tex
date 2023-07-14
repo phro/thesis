@@ -90,23 +90,23 @@ The first example we give is that of mixed tangles.
         strands are replaced by the same closed loop.
 \end{proof}
 
-\begin{lemma}[coinvariants as a trace map]
+\begin{lemma}[coinvariants are a trace map]
         Let $A$ be an algebra, and denote by $A_A\defeq A/\liebk{A}{A}$ its set
-        of coinvariants. Then define
-        $A_{S, L} \defeq A^{\otimes S} \otimes A_A^{\otimes L}$. Then $A$
+        of coinvariants. \footnote{Here, $\liebk AA =
+        \Span\setbuilder{\liebk{x}{y}}{x, y\in A}$ refers to the vector space of
+        Lie brackets, not the ideal generated thereby. The space $A_A$ does not have an
+        algebra structure in general.%
+        } Then define $A_{S, L} \defeq A_{S} \otimes \pn{A_A}_{L}$. Then $A$
         defines a traced meta-algebra with trace map given by
-        $\map {\trace^i_j} {A_i} {(A_A)_j}$.
+        $\map {\trace^i[S][L]} {A_{S\sqcup\set{i}, L}} {A_{S, L\sqcup\set{i}}}$.
 \end{lemma}
 \begin{proof}
        Observe that for any choice of $L$, extending morphisms by the identity
        yield an isomorphism of traced meta-Hopf algebras:
        \begin{equation}
-               \mapdef {ϕ_L}
-                       {\set[\big]{A^{\otimes S}}_S} [\toiso]
-                       {\set[\big]{A^{\otimes S}\otimes A_A^{\otimes L}}_S}
-                       {A^{\otimes S}}
-                       {A^{\otimes S}\otimes A_A^{\otimes L} \\
-                       f &\mapsto f \otimes \id_{A_A}^{\otimes L}
+               \mapdef {ϕ_L} {\set*{A_{S}}} [\toiso] {\set{A_{S, L}}}
+                       {A_{S}} {A_{S, L} \\
+                       f^{C}_{D} &\mapsto f^{C}_{D} \otimes \id_{(A_A)_L}
                }
        \end{equation}
        Next, we must show that

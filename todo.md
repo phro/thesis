@@ -272,10 +272,10 @@ Explicit examples are missing.
   - [X] Lemma 4.3 : "as" -> "are"
     - [X] tweak proof wording
   - [ ] lemma 4.4
-    - [ ] add coinvariants caveat to lemma 4.4 (coinvairants as/are a trace map)
+    - [X] add coinvariants caveat to lemma 4.4 (coinvairants as/are a trace map)
       (vector space, not ideal)
-    - [ ] Remove undefined notation from lemma
-    - [ ] Remove undefined notation from proof
+    - [X] Remove undefined notation from lemma
+    - [X] Remove undefined notation from proof
     - [ ] Add to proof that trace commutes with other operations.
   - [ ] § a generating function for the coinvariants
     - [ ] the first paragraph should follow from the previous sections better
