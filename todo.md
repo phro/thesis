@@ -280,7 +280,7 @@ Explicit examples are missing.
   - [ ] § a generating function for the coinvariants
     - [X] the first paragraph should follow from the previous sections better
     - [X] add parenthesis.
-    - [ ] add Remark about formula missing ab term
+    - [X] add Remark about formula missing ab term
       - [ ] (then add such a term maybe?)
   - [ ] § Computational examples
     - [ ] Add a picture and more computational details à la fig 2.21 reference in
