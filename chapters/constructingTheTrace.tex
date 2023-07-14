@@ -12,36 +12,39 @@ include closed components.
 % quotient map $\map {\trace} {\CU} {\CU_\CU}$.
 
 \begin{definition}[traced meta-algebra]
-        A \defi{traced meta-algebra} is a family of meta-algebras: for each
-        finite set $L$, we assign one meta-algebra $\set{A_{L,
-        S}}_S$.\footnote{These sets index the \enquote{strands} $S$ and the
-        \enquote{loops} $L$.} The multiplication maps $\mult^{i,j}_k[L]$ then
-        take the form:
-        \begin{equation}
-                \map {\mult^{i,j}_k[L][S]}
-                        {A_{\set{i,j}\sqcup S, L}}
-                        {A_{\set{k}\sqcup S, L}} 
-        \end{equation}
-        for $i$, $j$, $k$ disjoint from both $S$ and $L$.
-
-        There is an additional structure, called a \defi{trace}. The
-        compatibility of the families of meta-algebras is governed this trace in
-        the following way:
-        $\map {\trace^i} {A_{\set{i}\sqcup S, L}} {A_{S,\set{i}\sqcup L}}$ which
-        is universal with respect to the cyclic property:
-        \begin{equation}
-                \mult^{i,j}_{k}\then\trace^k
-                =
-                \mult^{j,i}_{k}\then\trace^k
-        \end{equation}
-        Furthermore, $\trace^i$ is a morphism of meta-coalgebras. That is:
-        \begin{align}
-                \label{eq:tr_comult}
-                \comult^{i}_{jk}\then\trace^j\then\trace^k
-                &= \trace^i \then \comult^{i}_{jk}
-                \\\label{eq:tr_counit}
-                \trace^i \then \counit^i &= \counit^i
-        \end{align}
+        A \defi{traced meta-algebra} is two things:
+        \begin{enumerate}
+                \item a family of meta-algebras: for each finite set $L$, we
+                        assign one meta-algebra $\set{A_{L,
+                        S}}_S$.\footnote{These sets index the \enquote{strands}
+                        $S$ and the \enquote{loops} $L$.} The multiplication
+                        maps $\mult^{i,j}_k[L]$ then take the form:
+                        \begin{equation}
+                                \map {\mult^{i,j}_k[L][S]}
+                                {A_{\set{i,j}\sqcup S, L}}
+                                {A_{\set{k}\sqcup S, L}} 
+                        \end{equation}
+                        for $i$, $j$, $k$ disjoint from both $S$ and $L$.
+                \item For each pair of disjoint finite sets $S$, $L$ and index
+                        $i\notin S\cup L$, a \defi{trace}
+                        $\map {\trace^i}
+                                {A_{\set{i}\sqcup S, L}}
+                                {A_{S,\set{i}\sqcup L}}$
+                        which governs the compatibility of the families of
+                        meta-algebras in the following way:
+                        \begin{equation}
+                                \mult^{i,j}_{k}\then\trace^k
+                                =
+                                \mult^{j,i}_{k}\then\trace^k
+                        \end{equation}
+                        Furthermore, $\trace^i$ commutes with operations which
+                        do not involve the same strands. That is, for any
+                        operation $ϕ^{D}_{C}$ and $i \notin D \cup C$:
+                        \begin{equation}
+                                ϕ^{D}_{C}\then \trace^i
+                                = \trace^i \then ϕ^{D}_{C}
+                        \end{equation}
+        \end{enumerate}
 \end{definition}
 % Dror finds the notation cumbersome; say instead of \mult[L][S], he would write
 % \mult[L, S] which is a meta-algebra with respect to S

@@ -266,9 +266,9 @@ Explicit examples are missing.
 - [ ] § 4: Constructing the trace
   - [X] § 4.1: extending an open tangle …  : clean up name
   - [X] clean up first paragraph.
-  - [ ] clean up traced meta-algebra definition
-  - [ ] remove coalgebraic compatibility
-  - [ ] add commutation with operations on other strands
+  - [X] clean up traced meta-algebra definition
+  - [X] remove coalgebraic compatibility
+  - [X] add commutation with operations on other strands
   - [ ] Lemma 4.3 : "as" -> "are"
     - [ ] tweak proof wording
   - [ ] lemma 4.4
