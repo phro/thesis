@@ -287,7 +287,7 @@ function in (the square root of) $B_i$.
 \ProvideDocumentCommand{\ba}{}{\bar{a}}
 \ProvideDocumentCommand{\bz}{}{\bar{z}}
 
-\begin{theorem}[The trace of a Gaußian]
+\begin{theorem}[The trace of a Gaußian]\label{thm:trace_gaussian}
         With symbols as defined above, let $f(y_i, b_i, a_i, x_i) = P(B_i)
         \Exp{c + α a_i + β b_i + ξ(b_i) x_i + η(b_i)y_i + λ(b_i)x_i y_i}$. Then
 \begin{equation}\begin{aligned}\label{eq:trace_on_gaussian}
@@ -349,41 +349,105 @@ We point out that the outcome of this computation is not guaranteed to be a
 Gaußian. This puts a limitation on the applicability of this formula to links
 with more than two components, explored in \cref{sec:limitations}.
 
-\subsection{Computational examples}
+\subsection{Computational example}
 
-Using the formula given in \cref{eq:trace_on_gaussian}, let us do some
-preliminary examples:
+Using the formula given in \cref{eq:trace_on_gaussian}, let us work through an
+example.
+Consider the Hopf link (\cref{fig:hopf_closed}). In order to compute $\ptr$, we
+first open one of the components, ensuring the rotation number at the endpoints
+is $0$ (\cref{fig:hopf_halfOpen}). We then break open all the closed components
+(here, there is just one), so that an open tangle remains, as in
+\cref{fig:hopf_pre}, which we call $H$.
 
-\begin{align}
-        \trace^i(R_{ij}) &= 1\label{eq:trR}\\
-        \trace^j(R_{ij}) &= \Exp{b_i\ba_j}\label{eq:trR2}\\
-        \begin{split}\label{eq:trHopf}
-                \trace^2\pn[\Big]{\sqrt{B_2}\Exp{
-                                -a_2 b_1-a_1 b_2 +
-                                \frac{(B_1-1) x_2 y_1}{b_1 B_1}+
-                        \frac{(B_2-1) x_1 y_2}{b_2 B_2}}
-                } &= \\
-                \Exp{
-                        \frac{a_1 (\bz_2-B_1 \bz_2)}{B_1}-b_1 \ba_2+
-                        \frac{e^{B_1 \bz_2}
-                        (x_1 y_1 e^{\inv{B_1} \bz_2}-x_1 y_1 e^{\bz_2})}{b_1}+
-                        \frac{1}{2} \inv{B_1} \bz_2-\frac{\bz_2}{2}
-                }&%\\
-        \end{split}
-        % \trace^i(
-                % P\Exp{c + α a_i + β b_i + ξ(b_i) x_i + η(b_i)y_i + λ(b_i)x_i y_i}
-        % )
-\end{align}
+\begin{figure}[ht]
+        \centering
+        \includegraphics{figures/hopf_closed.pdf}
+        \caption{The (positive) Hopf link.}
+        \label{fig:hopf_closed}
+\end{figure}
+\begin{figure}[ht]
+        \begin{subfigure}[b]{0.5\textwidth}
+                \centering
+                \includegraphics{figures/hopf_halfOpen.pdf}
+                \caption{Opening the Hopf link to a tangle with one open
+                component.}
+                \label{fig:hopf_halfOpen}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.5\textwidth}
+                \centering
+                \includegraphics{figures/hopf_pre.pdf}
+                \caption{A tangle $H$ representing the Hopf link with both
+                tangles open.}
+                \label{fig:hopf_pre}
+        \end{subfigure}
+        \label{fig:hopf_decompose}
+        \caption{Opening the strands of the closed Hopf link.}
+\end{figure}
 
-\Cref{eq:trR,eq:trR2} are the values one obtains for the two (virtual)
-one-crossing, two-component link, while \cref{eq:trHopf} is the value of the
-invariant on the Hopf link.
+Computing $Z$ on the open tangle $H$ yields:
+\begin{equation}
+        Z(H) = \Exp{
+                a_2 b_1+a_1 b_2+\frac{(B_1-1) y_1
+                ((B_2-1) x_1-x_2)}{b_1}-\frac{B_1
+                (B_2-1) x_1 y_2}{b_2}
+        }
+        \sqrt{B_2}
+\end{equation}
 
-When computing this on a link, however, it is important to keep track of which
-strands are open, and which are closed. We will extend the notation from the
-previous section to differentiate between open and closed indices. We write a
-morphism with domain $D = D_{\text{o}}\sqcup D_{\text{c}}$, codomain
-$C = C_{\text{o}}\sqcup C_{\text{c}}$ (here $D_{\text{o}}$ denotes domain
-indices which are open, while $D_{\text{c}}$ those which are closed, with the
-same convention for $C$) and generating function $f(ζ_{D}, z_{C})$ as
-$f(ζ_{D}, z_{C})^{(D_{\text{o}},D_{\text{c}})}_{(C_{\text{o}},C_{\text{c}})}$.
+Applying $\trace^2$ then provides us with the invariant corresponding to
+\cref{fig:hopf_halfOpen}:
+\begin{equation}
+        \trace^{2}(Z(H)) = \Exp{
+                a_1 \left(z_2-B_1 z_2\right)+b_1 w_2+\frac{e^{-z_2} \left(x_1
+                y_1 e^{z_2}-x_1 y_1 e^{B_{1} z_2}\right)}{b_1}
+        }
+        \Exp{\frac{1}{2} B_{1} z_2-\frac{z_2}{2}}
+\end{equation}
+
+We repeat this procedure with the other component, opening and straightening
+component $2$, then opening component $1$ without straightening to get an open
+tangle digaram $H'$, then computing $\trace^1(Z(H'))$. The symmetry of the Hopf
+link results in the same computation with indices $1$ and $2$ exchanged:
+\begin{equation}
+        \trace^{1}(Z(H')) = \Exp{
+                a_2 \left(z_1-B_2 z_1\right)+b_2 w_1+\frac{e^{-z_1} \left(x_2
+                y_2 e^{z_1}-x_2 y_2 e^{B_2 z_1}\right)}{b_2}
+        }
+        \Exp{\frac{1}{2} B_2 z_1-\frac{z_1}{2}}
+\end{equation}
+
+Finally, we keep track of which indices correspond to open strands and closed
+strands. We will extend the notation from the previous section to differentiate
+between open and closed indices. We write a morphism with domain
+$D = D_{\text{o}}\sqcup D_{\text{c}}$, codomain
+$C = C_{\text{o}}\sqcup C_{\text{c}}$
+(here $D_{\text{o}}$ denotes domain indices which are open, while $D_{\text{c}}$
+those which are closed, with the same convention for $C$) and generating
+function $f(ζ_{D}, z_{C})$ as $f(ζ_{D},
+z_{C})^{(D_{\text{o}},D_{\text{c}})}_{(C_{\text{o}},C_{\text{c}})}$.
+
+We package these data into a multiset:
+\begin{equation}
+        Z(L_{\text{Hopf}})=
+        \begin{multlined}[t]
+        \pn[\Bigg]{
+                \pn[\bigg]{
+                        \Exp{
+                                a_1 \left(z_2-B_1 z_2\right)+b_1
+                                w_2+\frac{e^{-z_2} \left(x_1
+                                y_1 e^{z_2}-x_1 y_1 e^{B_{1} z_2}\right)}{b_1}
+                        }
+                        \Exp{\frac{1}{2} B_{1} z_2-\frac{z_2}{2}}
+                }_{\set{1},\set{2}}
+                ,\\
+                \pn[\bigg]{
+                        \Exp{
+                                a_2 \left(z_1-B_2 z_1\right)+b_2
+                                w_1+\frac{e^{-z_1} \left(x_2
+                                y_2 e^{z_1}-x_2 y_2 e^{B_2 z_1}\right)}{b_2}
+                        }
+                        \Exp{\frac{1}{2} B_2 z_1-\frac{z_1}{2}}
+                }_{\set{2},\set{1}}
+        }
+\end{multlined}
+\end{equation}

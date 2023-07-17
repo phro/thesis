@@ -282,8 +282,8 @@ Explicit examples are missing.
     - [X] add parenthesis.
     - [X] add Remark about formula missing ab term
       - [ ] (then add such a term maybe?)
-  - [ ] § Computational examples
-    - [ ] Add a picture and more computational details à la fig 2.21 reference in
+  - [X] § Computational examples
+    - [X] Add a picture and more computational details à la fig 2.21 reference in
       § Notational conventions, say of the Hopf Link.
 - [ ] § 5: Conclusions
   - [ ] If mentioning the W-Lambert function, then provide an equation for it.
