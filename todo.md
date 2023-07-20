@@ -292,7 +292,7 @@ Explicit examples are missing.
   - [X] § Further work is missing mention of restricting the universality of
       the trace to (perturbed) Gaußian frameworks.
 - [ ] § A: Code
-  - [ ] Add "Use case" subsub to Mathematica™ code.
+  - [X] Add "Use case" subsub to Mathematica™ code.
   - [ ] be explicit about "former version" -> BN-vdV version.
   - [ ] p.60: We ~~must also~~ define...
   - [ ] p.65: Next are ~~defined~~ functions...

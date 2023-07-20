@@ -1,7 +1,39 @@
 \chapter{Code}
 \section{Implementation of the invariant $Z$}
-% todo: include a link to the source code. Ensure it is all on github (i.e. a
-% stable website not likely to disappear in a few years).
+This is a Mathematica™ implementation by Bar-Natan and van der Veen in
+\cite{BV}, modified by the author. The full source code is available at
+\url{https://github.com/phro/GDO}.
+
+\subsection{Use case}
+For example, to compute the value of $Z$ on the Whitehead link, one need only
+run the following:
+
+\begin{mathematica}
+In[0]:= Z@Knot[5, Alternating, 1]
+\end{mathematica}
+\begin{mathematica}
+Out[0]= GDO["do" -> {}, "dc" -> {}, "co" -> {1, 5}, "cc" -> {}, "PG" -> PG["L" -> 0, "Q" -> -(((-1 + B[1])*(-1 + B[5])*(B[5]*x[5] + B[1]*((-1 + B[5])*x[1] - B[5]*x[5]))*(b[5]*y[1] - b[1]*y[5]))/ (b[1]*b[5]*B[1]*(B[1]*(-1 + B[5]) - B[5])*B[5])), "P" -> Sqrt[B[5]]/(B[1] + B[5] - B[1]*B[5])]]
+\end{mathematica}
+Written in a more readable format, this becomes:
+\begin{equation}
+\left(
+        \frac{\sqrt{B_5}}{-B_5 B_1+B_1+B_5}
+        \Exp{
+                -\frac{
+                        \left(B_1-1\right) \left(B_5-1\right)
+                        \left(b_5 y_1-b_1 y_5\right)
+                        \left(
+                                B_5 x_5+
+                                B_1 \left((B_5-1) x_1 - B_5 x_5\right)
+                        \right)
+                }{
+                        b_1 b_5 B_1 \left(B_1 \left(B_5-1\right)-B_5\right) B_5
+                }
+        }
+\right)_{\set{1,5},\set{}}^{\set{},\set{}} 
+\end{equation}
+
+\subsection{Implementation}
 
 \input{./GDO/src/newVersion.tex}
 
