@@ -285,13 +285,13 @@ Explicit examples are missing.
   - [X] § Computational examples
     - [X] Add a picture and more computational details à la fig 2.21 reference in
       § Notational conventions, say of the Hopf Link.
-- [ ] § 5: Conclusions
+- [X] § 5: Conclusions
   - [X] If mentioning the W-Lambert function, then provide an equation for it.
   - [X] Eq. 5.2 is not an equation! Put its values inline, or make it a pair of
     equations.
   - [X] § Further work is missing mention of restricting the universality of
       the trace to (perturbed) Gaußian frameworks.
-- [ ] § A: Code
+- [X] § A: Code
   - [X] Add "Use case" subsub to Mathematica™ code.
   - [X] be explicit about "former version" -> BN-vdV version.
   - [X] p.60: We ~~must also~~ define...
@@ -300,23 +300,23 @@ Explicit examples are missing.
   - [X] § A.2: Implementation of the trace *and Z^tr*
     - [X] Maybe "See ch 5" -> "see ch 4.2"
     - [X] As described in ?? -> missing reference
-  - [ ] § A.3
+  - [X] § A.3
     - [X] "consider the link *in fig A.1*"
     - [X] "The crossings are absorbed in the order the knot's strand interact with
       them."
     - [X] fig. A.2: front -> line
-    - [ ] § Extending the algorithm
+    - [X] § Extending the algorithm
       - [X] Remove first sentence; redundant
       - [X] Explain Lemma A.1
-    - [ ] § Use Case
+    - [X] § Use Case
       - [X] Adjacent code blocks are possible with the new borders (×2)
       - [X] footnote: "Upright Tangle" -> "upright tangle"
-    - [ ] § Implementation
+    - [X] § Implementation
       - [X] remove blank line before `type Skeleton…`.
       - [X] broken acronym (RVT)
       - [X] remove blank line after `PD`.
       - [X] "Only in this case will the function `toRVT` ~~will then~~ output…"
-- [ ] § B: Table of values
+- [X] § B: Table of values
   - [X] It should be small
   - [X] readable (i.e. fit on the page)
   - [X] link to a table online (say [on github](github.com/phro/GDO))
