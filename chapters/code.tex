@@ -106,7 +106,6 @@ form), one writes:
 \begin{code}
 >>> link 4 True 1
 \end{code}
-to obtain
 \begin{code}
 SX [Loop [1,2,3,4],Loop [5,6,7,8]]
    [Xm 1 6,Xm 3 8,Xm 5 2,Xm 7 4]
@@ -117,7 +116,6 @@ To convert from the \hs{SX} form to an upright tangle form (here written
 \begin{code}
 >>> toRVT . openFirstStrand $ link 4 True 1
 \end{code}
-to obtain
 \begin{code}
 RVT [Strand [1,2,3,4],Loop [5,6,7,8]]
     [Xm 1 6,Xm 3 8,Xm 5 2,Xm 7 4]

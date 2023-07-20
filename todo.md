@@ -309,7 +309,7 @@ Explicit examples are missing.
       - [X] Remove first sentence; redundant
       - [X] Explain Lemma A.1
     - [ ] § Use Case
-      - [ ] Adjacent code blocks are possible with the new borders (×2)
+      - [X] Adjacent code blocks are possible with the new borders (×2)
       - [ ] footnote: "Upright Tangle" -> "upright tangle"
     - [ ] § Implementation
       - [ ] remove blank line before `type Skeleton…`.
