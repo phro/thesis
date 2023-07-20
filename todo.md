@@ -310,7 +310,7 @@ Explicit examples are missing.
       - [X] Explain Lemma A.1
     - [ ] § Use Case
       - [X] Adjacent code blocks are possible with the new borders (×2)
-      - [ ] footnote: "Upright Tangle" -> "upright tangle"
+      - [X] footnote: "Upright Tangle" -> "upright tangle"
     - [ ] § Implementation
       - [ ] remove blank line before `type Skeleton…`.
       - [ ] broken acronym (RVT)
