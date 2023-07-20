@@ -320,7 +320,7 @@ Explicit examples are missing.
   - [X] It should be small
   - [X] readable (i.e. fit on the page)
   - [X] link to a table online (say [on github](github.com/phro/GDO))
-- [ ] § Bibliography: no publisher for Kauffman's book?
+- [X] § Bibliography: no publisher for Kauffman's book?
 - [ ] Ensure table of contents issues are resolved.
   - [ ] "Context" is a poor subtitle
   - [ ] Uniformize the algebra name (U(sl2+0), U, ybax, &c.)
