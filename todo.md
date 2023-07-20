@@ -312,9 +312,9 @@ Explicit examples are missing.
       - [X] Adjacent code blocks are possible with the new borders (×2)
       - [X] footnote: "Upright Tangle" -> "upright tangle"
     - [ ] § Implementation
-      - [ ] remove blank line before `type Skeleton…`.
+      - [X] remove blank line before `type Skeleton…`.
       - [ ] broken acronym (RVT)
-      - [ ] remove blank line after `PD`.
+      - [X] remove blank line after `PD`.
       - [ ] "Only in this case will the function `toRVT` ~~will then~~ output…"
 - [ ] § B: Table of values
   - [ ] It should be small
