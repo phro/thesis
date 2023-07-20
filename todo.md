@@ -304,7 +304,7 @@ Explicit examples are missing.
     - [X] "consider the link *in fig A.1*"
     - [X] "The crossings are absorbed in the order the knot's strand interact with
       them."
-    - [ ] fig. A.2: front -> line
+    - [X] fig. A.2: front -> line
     - [ ] § Extending the algorithm
       - [ ] Remove first sentence; redundant
       - [ ] Explain Lemma A.1
