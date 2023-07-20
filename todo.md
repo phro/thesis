@@ -315,7 +315,7 @@ Explicit examples are missing.
       - [X] remove blank line before `type Skeleton…`.
       - [X] broken acronym (RVT)
       - [X] remove blank line after `PD`.
-      - [ ] "Only in this case will the function `toRVT` ~~will then~~ output…"
+      - [X] "Only in this case will the function `toRVT` ~~will then~~ output…"
 - [ ] § B: Table of values
   - [ ] It should be small
   - [ ] readable (i.e. fit on the page)
