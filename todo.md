@@ -313,7 +313,7 @@ Explicit examples are missing.
       - [X] footnote: "Upright Tangle" -> "upright tangle"
     - [ ] § Implementation
       - [X] remove blank line before `type Skeleton…`.
-      - [ ] broken acronym (RVT)
+      - [X] broken acronym (RVT)
       - [X] remove blank line after `PD`.
       - [ ] "Only in this case will the function `toRVT` ~~will then~~ output…"
 - [ ] § B: Table of values
