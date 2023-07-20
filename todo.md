@@ -322,9 +322,9 @@ Explicit examples are missing.
   - [X] link to a table online (say [on github](github.com/phro/GDO))
 - [X] § Bibliography: no publisher for Kauffman's book?
 - [ ] Ensure table of contents issues are resolved.
-  - [ ] "Context" is a poor subtitle
-  - [ ] Uniformize the algebra name (U(sl2+0), U, ybax, &c.)
-  - [ ] Add sample computations to § Perturbed Gaußians
-  - [ ] Add sample computations to § Constructing the Trace
-  - [ ] Add (small) table of values
+  - [X] "Context" is a poor subtitle
+  - [X] Uniformize the algebra name (U(sl2+0), U, ybax, &c.)
+  - [X] Add sample computations to § Perturbed Gaußians
+  - [X] Add sample computations to § Constructing the Trace
+  - [X] Add (small) table of values
 - [X] Colophon: Add version number.
