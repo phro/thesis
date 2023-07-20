@@ -47,13 +47,21 @@
 \WarningFilter{scrreprt}{Activating an ugly workaround}
 \WarningFilter{titlesec}{Non standard sectioning command}
 
-% You can run this document two ways.
+\RequirePackage{etoolbox}
+\newtoggle{paper}
+
+% Toggle for electronic or paper mode.
+\togglefalse{paper}
+% \toggletrue{paper}
 
 % Option 1: Same margins on both sides and no "open right"
 % This is the best option for the digital version of your thesis.
+\iftoggle{paper}{
+        \PassOptionsToClass{twoside}{scrreprt}
+}{
+        \PassOptionsToClass{oneside}{scrreprt}
+}
 \documentclass[
-        oneside,% digital version
-        % twoside,% print version
         numbers=noenddot,
         headinclude,
         footinclude,
@@ -93,7 +101,11 @@
 
 % Add any chapters here
 \pagestyle{scrheadings}
-\renewcommand{\thepage}{\arabic{page}}
+\iftoggle{paper}{%
+        \pagenumbering{arabic}
+}{%
+        \renewcommand{\thepage}{\arabic{page}}
+}
 \addchapter{chapters/summary.tex}
 \addchapter{chapters/introduction}
 \addchapter{chapters/perturbedGaussians}

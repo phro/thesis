@@ -142,11 +142,15 @@
 \makeatother
 
 % Fine-tune hyperreferences (hyperref should be called last)
+\iftoggle{paper}{%
+        \hypersetup{colorlinks=false, linktocpage=false, pdfborder={0 0 0}}
+}{%
+        \hypersetup{colorlinks=true, linktocpage=true}
+}
 \hypersetup{%
   %draft, % hyperref's draft mode, for printing see below
-  colorlinks=true, linktocpage=true, pdfstartpage=3, pdfstartview=FitV,%
-  % uncomment the following line if you want to have black links (e.g., for printing)
-  %colorlinks=false, linktocpage=false, pdfstartpage=3, pdfstartview=FitV, pdfborder={0 0 0},%
+  pdfstartpage=3, pdfstartview=FitV,%
+  %pdfstartpage=3, pdfstartview=FitV,
   breaklinks=true, pageanchor=true,%
   pdfpagemode=UseNone, %
   % pdfpagemode=UseOutlines,%

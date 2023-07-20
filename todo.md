@@ -139,7 +139,7 @@ Explicit examples are missing.
 ## Printout ##
 - [X] implement abstract comments
 - [X] implement acknowledgements comments
-- [ ] add paper-vs-digital flag to tweak margins, page numbers, and colophon
+- [X] add paper-vs-digital flag to tweak margins, page numbers, and colophon
     simultaneously
 - [X] § Executive summary
   - [X] ~~Understanding~~ knotted objects
