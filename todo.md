@@ -263,7 +263,7 @@ Explicit examples are missing.
     - [X] Replace out-of-nowhere example with continuation of the example in fig 2.21.
     - [X] Remove second example. Replace with the general "computes the Alexander
       polynomial" sentence.
-- [ ] § 4: Constructing the trace
+- [X] § 4: Constructing the trace
   - [X] § 4.1: extending an open tangle …  : clean up name
   - [X] clean up first paragraph.
   - [X] clean up traced meta-algebra definition
@@ -277,11 +277,11 @@ Explicit examples are missing.
     - [X] Remove undefined notation from lemma
     - [X] Remove undefined notation from proof
     - [X] Add to proof that trace commutes with other operations.
-  - [ ] § a generating function for the coinvariants
+  - [X] § a generating function for the coinvariants
     - [X] the first paragraph should follow from the previous sections better
     - [X] add parenthesis.
     - [X] add Remark about formula missing ab term
-      - [ ] (then add such a term maybe?)
+      - [X] (then add such a term maybe?)
   - [X] § Computational examples
     - [X] Add a picture and more computational details à la fig 2.21 reference in
       § Notational conventions, say of the Hopf Link.

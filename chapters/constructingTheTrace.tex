@@ -277,11 +277,12 @@ van der Veen's Contraction Theorem.
 
 A typical value for a tangle invariant that arises is of the form:
 \begin{equation}\label{eq:sample_GDO}
-        P\Exp{c + α a_i + β b_i + ξ(b_i) x_i + η(b_i)y_i + λ(b_i)x_i y_i}
+        P\Exp{c + α a_i + β b_i + μa_ib_i
+        + ξ(b_i) x_i + η(b_i)y_i + λ(b_i)x_i y_i}
 \end{equation}
-Here, $c$, $α$, and $β$ denote constants with respect to the variables $y_i$,
-$b_i$, $a_i$, and $x_i$ (collectively referred to as \enquote{$v_i$}s), while
-$ξ$, $η$, and $λ$ are potentially $b_i$-dependent, and $P$ is a (rational)
+Here, $c$, $α$, $β$, and $μ$ denote constants with respect to the variables
+$y_i$, $b_i$, $a_i$, and $x_i$ (collectively referred to as \enquote{$v_i$}s),
+while $ξ$, $η$, and $λ$ are potentially $b_i$-dependent, and $P$ is a (rational)
 function in (the square root of) $B_i$.
 
 \ProvideDocumentCommand{\ba}{}{\bar{a}}
@@ -289,7 +290,8 @@ function in (the square root of) $B_i$.
 
 \begin{theorem}[The trace of a Gaußian]\label{thm:trace_gaussian}
         With symbols as defined above, let $f(y_i, b_i, a_i, x_i) = P(B_i)
-        \Exp{c + α a_i + β b_i + ξ(b_i) x_i + η(b_i)y_i + λ(b_i)x_i y_i}$. Then
+        \Exp{c + α a_i + β b_i + μa_ib_i
+                + ξ(b_i) x_i + η(b_i)y_i + λ(b_i)x_i y_i}$. Then when $μ=0$,
 \begin{equation}\begin{aligned}\label{eq:trace_on_gaussian}
 \contraction*{ f(y_i, b_i, a_i, x_i) \trace^i }_{v_i}
 &= \frac{P(\Exp{-μ})}
@@ -335,15 +337,29 @@ where $μ\defeq (1-\Exp{-α})\bz_i$.
 \end{proof}
 
 \begin{remark}
-        \Cref{thm:trace_gaussian} requires that the coefficient of the $ab$-term
-        in the exponential is $0$. This restriction allows the computed value to
-        be a composition of elementary functions. Expanding the computation to
-        include more general expressions is not necessary when applying a trace
-        to an open tangle, since the $a_ib_i$-coefficient associated to an open
-        tangle is exactly the self-linking number of component $i$, though when
-        applying \cref{eq:trace_on_gaussian} to a more than open component, the
-        author was not able to find a workable closed form for the trace.
+        \Cref{thm:trace_gaussian} requires that the coefficient $μ$ of the
+        $a_ib_i$-term in the exponential is $0$. This restriction allows the
+        computed value to be a composition of elementary functions. We
+        demonstrate this by considering the case where $c = β = ξ = η = λ =
+        0$. Expanding \cref{eq:trace_on_gaussian} yields the following
+        expression, which we name $S$:
+        \begin{equation}
+                \contraction*{\Exp{β_i(1-\Exp{-α-μb_i})\bz_i}}_{b_i} = S
+        \end{equation}
+        The quantity $S$ satisfies the relation $S = \Exp{-α-μS}$, whose
+        solution is $S = \frac{W(\Exp{-α}μ)}{μ}$ where $W$ denotes the Lambert
+        $W$ function. This expression now lies far outside of the Gaußian
+        framework that $Z$ is computed in.
 \end{remark}
+
+The $a_ib_i$-coefficient associated to an open tangle is exactly the
+self-linking number of component $i$. By adding correcting writhe terms, one can
+ensure this coefficient is $0$.
+
+When applying \cref{eq:trace_on_gaussian} to a tangle with multiple closed
+components, the $a_ib_i$-coefficient no longer has the interpretation of a
+self-linking number, so the writhe-correction technique fails. The author did
+not find a workable closed form for the trace in this case.
 
 We point out that the outcome of this computation is not guaranteed to be a
 Gaußian. This puts a limitation on the applicability of this formula to links
