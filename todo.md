@@ -296,8 +296,8 @@ Explicit examples are missing.
   - [X] be explicit about "former version" -> BN-vdV version.
   - [X] p.60: We ~~must also~~ define...
   - [X] p.65: Next are ~~defined~~ functions...
-  - [ ] p.67: add "These match the quantities given in Thm 3.6."
-  - [ ] § A.2: Implementation of the trace *and Z^tr*
+  - [X] p.67: add "These match the quantities given in Thm 3.6."
+  - [X] § A.2: Implementation of the trace *and Z^tr*
     - [ ] Maybe "See ch 5" -> "see ch 4.2"
     - [ ] As described in ?? -> missing reference
   - [ ] § A.3
