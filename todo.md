@@ -163,7 +163,7 @@ Explicit examples are missing.
     - [X] § Further Study -> make subsection instead of subsub? (match chapter
       outline)
       - [X] Sentence is mentioned which is never elaborated on. Talk more about it!
-- [ ] § Tensor Products and Meta-Objects
+- [X] § Tensor Products and Meta-Objects
   - [X] § Tensor Product Notation
     - [X] Clean up language
     - [X] Add reference to Penrose's book on the same notation.
@@ -221,7 +221,7 @@ Explicit examples are missing.
     - [X] spinner and anti-spinner figures should be subfigures
     - [X] add "visualized in fig..." for quasi-triangular axioms
     - [X] add "to show \tangle is ribbon" to ribbon proof.
-  - [ ] § The ybax meta-algebra
+  - [X] § The ybax meta-algebra
     - [X] Pick a consistent name, or at least provide multiple names consistently.
     - [X] define B = e^-b
     - [X] add "b-adic completion" to ybax / `\CU` definition
@@ -236,7 +236,7 @@ Explicit examples are missing.
     - [X] package ya_commute and xa_commute into lemma.
     - [X] `Exponential commutation relations` doesn't jive with the `b`-adic
         topology. Resolve this issue.
-    - [ ] eq. 2.50 and 2.52 are over wide.
+    - [X] eq. 2.50 and 2.52 are over wide.
     - [X] Reword beginning of § 2.6.
     - [X] morphisms between meta-objects are Capital Greek, e.g. Φ
     - [X] add one more arrow to fig 2.21 (or add the algebraic objects to the
