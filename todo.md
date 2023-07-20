@@ -39,7 +39,7 @@
 - [X] do proofs for the values of the generating functions
 
 #### Chapter: Constructing the trace ####
-- [ ] the trace has more properties; write them out
+- [X] the trace has more properties; write them out
 - [X] explicitly define A_A as A/[A,A]
 - [X] What is a "shape"? The proof of lemma 3.4 is awkward. Clean it up.
 - [X] Here $\sim$ is undefined (equivalent modulo the coinvariants).
