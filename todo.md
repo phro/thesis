@@ -289,7 +289,6 @@ Explicit examples are missing.
   - [X] If mentioning the W-Lambert function, then provide an equation for it.
   - [X] Eq. 5.2 is not an equation! Put its values inline, or make it a pair of
     equations.
-  - [ ] "the trace…" -> "while the trace…"
 - [ ] § A: Code
   - [ ] Add "Use case" subsub to Mathematica™ code.
   - [ ] be explicit about "former version" -> BN-vdV version.
