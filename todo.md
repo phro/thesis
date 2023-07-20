@@ -317,8 +317,8 @@ Explicit examples are missing.
       - [X] remove blank line after `PD`.
       - [X] "Only in this case will the function `toRVT` ~~will then~~ output…"
 - [ ] § B: Table of values
-  - [ ] It should be small
-  - [ ] readable (i.e. fit on the page)
+  - [X] It should be small
+  - [X] readable (i.e. fit on the page)
   - [ ] link to a table online (say [on github](github.com/phro/GDO))
 - [ ] § Bibliography: no publisher for Kauffman's book?
 - [ ] Ensure table of contents issues are resolved.

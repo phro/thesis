@@ -36,6 +36,8 @@
         \newunicodechar{⋯}{\ensuremath\cdots}
         \newunicodechar{⋮}{\ensuremath\vdots}
         \newunicodechar{…}{\ensuremath\dots}
+        \ProvideDocumentCommand{\fracOneLine}{mm}
+                {\pn{#1}\inv{\pn{#2}}}
 
 % Standard number sets.
         \newcommand{\N}{\mbb{N}}   % Natural
