@@ -48,7 +48,7 @@
 The jump from the end of `Constructing the trace` to `Conclusions` is abrupt.
 Explicit examples are missing.
 - Write a chapter in-between these two: `Examples`
-  - [ ] compute the invariant of, say, the Hopf link
+  - [X] compute the invariant of, say, the Hopf link
     - add pictures
     - add more details
   - add pictures
@@ -83,7 +83,7 @@ Explicit examples are missing.
     - [X] p.36 "morphism-valued" is misleading.
     - [X] p.39 Generating functions are not Gaußian in `b`-variables.
 - [ ] *Print* the thesis off to read
-  - [ ] Read over the thesis for a total of one time
+  - [X] Read over the thesis for a total of one time
   - [ ] Read over the thesis for a total of two times
   - [ ] Read over the thesis for a total of three times
   - [ ] Read over the thesis for a total of four times
@@ -141,7 +141,7 @@ Explicit examples are missing.
 - [X] implement acknowledgements comments
 - [ ] add paper-vs-digital flag to tweak margins, page numbers, and colophon
     simultaneously
-- [ ] § Executive summary
+- [X] § Executive summary
   - [X] ~~Understanding~~ knotted objects
   - [X] Make introductory picture more informative
   - [X] "satellite", "ribbon", and "slice" should be introduced more
@@ -155,14 +155,14 @@ Explicit examples are missing.
     - [X] how about § Improving Computation Times
     - [X] Add ref to relevant section.
     - [X] Implement tweaks.
-  - [ ] § Extending The Invariant...
+  - [X] § Extending The Invariant...
     - [X] Simplify title
     - [X] add refs to appropriate sections
     - [X] implement tweaks
     - [X] modify open tangle image to be non-pure.
     - [X] § Further Study -> make subsection instead of subsub? (match chapter
       outline)
-      - [ ] Sentence is mentioned which is never elaborated on. Talk more about it!
+      - [X] Sentence is mentioned which is never elaborated on. Talk more about it!
 - [ ] § Tensor Products and Meta-Objects
   - [X] § Tensor Product Notation
     - [X] Clean up language
