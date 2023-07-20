@@ -321,7 +321,7 @@ Explicit examples are missing.
   - [X] readable (i.e. fit on the page)
   - [X] link to a table online (say [on github](github.com/phro/GDO))
 - [X] § Bibliography: no publisher for Kauffman's book?
-- [ ] Ensure table of contents issues are resolved.
+- [X] Ensure table of contents issues are resolved.
   - [X] "Context" is a poor subtitle
   - [X] Uniformize the algebra name (U(sl2+0), U, ybax, &c.)
   - [X] Add sample computations to § Perturbed Gaußians
