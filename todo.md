@@ -301,7 +301,7 @@ Explicit examples are missing.
     - [X] Maybe "See ch 5" -> "see ch 4.2"
     - [X] As described in ?? -> missing reference
   - [ ] § A.3
-    - [ ] "consider the link *in fig A.1*"
+    - [X] "consider the link *in fig A.1*"
     - [ ] "The crossings are absorbed in the order the knot's strand interact with
       them."
     - [ ] fig. A.2: front -> line
