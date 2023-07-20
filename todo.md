@@ -319,7 +319,7 @@ Explicit examples are missing.
 - [ ] § B: Table of values
   - [X] It should be small
   - [X] readable (i.e. fit on the page)
-  - [ ] link to a table online (say [on github](github.com/phro/GDO))
+  - [X] link to a table online (say [on github](github.com/phro/GDO))
 - [ ] § Bibliography: no publisher for Kauffman's book?
 - [ ] Ensure table of contents issues are resolved.
   - [ ] "Context" is a poor subtitle
