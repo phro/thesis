@@ -299,7 +299,7 @@ Explicit examples are missing.
   - [X] p.67: add "These match the quantities given in Thm 3.6."
   - [X] § A.2: Implementation of the trace *and Z^tr*
     - [X] Maybe "See ch 5" -> "see ch 4.2"
-    - [ ] As described in ?? -> missing reference
+    - [X] As described in ?? -> missing reference
   - [ ] § A.3
     - [ ] "consider the link *in fig A.1*"
     - [ ] "The crossings are absorbed in the order the knot's strand interact with
