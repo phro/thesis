@@ -302,7 +302,7 @@ Explicit examples are missing.
     - [X] As described in ?? -> missing reference
   - [ ] § A.3
     - [X] "consider the link *in fig A.1*"
-    - [ ] "The crossings are absorbed in the order the knot's strand interact with
+    - [X] "The crossings are absorbed in the order the knot's strand interact with
       them."
     - [ ] fig. A.2: front -> line
     - [ ] § Extending the algorithm
