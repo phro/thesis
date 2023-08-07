@@ -328,3 +328,119 @@ Explicit examples are missing.
   - [X] Add sample computations to § Constructing the Trace
   - [X] Add (small) table of values
 - [X] Colophon: Add version number.
+
+### External Feedback ###
+#### Comments and suggestions ####
+- [ ] P.12, Section 2: It would be good to include references for
+    “meta-structures” / “meta-objects”. (I can not see any in this section.)
+- [ ] P.14, l.-2: I think that you should assume the category C to be monoidal.
+    Otherwise, you should explain what {1} and M × M mean.
+- [ ] P.16, Definition 2.4: It should be specified whether the isomorphisms MX
+    ∼= MY (for any two finite sets X, Y ) are part of the structure. If this
+    definition does not give all the relations in its fourth condition (which
+    suggests the use of the words “In particular”), then a reference should be
+    provided.
+- [ ] P.16, Example 2.5: I am not sure that the property to be “symmetric” is
+    required here for C.
+- [ ] P.18, Definition 2.11: Is a “meta-algebra” a “meta-object” in the sense
+    of Definition 2.8? If so, then Definition 2.11 should refer somewhere to
+    this notion of “meta-object”.
+- [ ] P.23, Definition 2.25: This definition of “open tangles” is too
+    restrictive to support the operations that are described in Theorem 2.31
+    (compare with [BNvdVa]). For instance, the left-hand side of Figure 2.9
+    does not show a tangle in the sense of Definition 2.25: an arbitrary
+    topological disk in the plane is not necessarily the “unit disk”.
+- [ ] P.27: The operation ηi does not seem to be well-defined: where is this
+    “new strand” added? This issue seems to be evoked on p.31 in the sentence
+    “(For those worried that this equation depends on the location [...])”,
+    without being resolved there.
+- [ ] P.33, Remark 2.32: What does the adjective “adjacent” mean there?
+    Besides, if one commits oneself “to only apply multiplication when doing so
+    would result in a valid (classical) tangle” as stated here, then the
+    collection {T up X }X does not seem to constitute (strictly speaking) a
+    “meta-Hopf algebra” in the sense of Definition 2.18.
+- [ ] P.34, Definition 2.33: It would be appropriate to give references for
+    this ribbon Hopf algebra U. In particular, it would be nice to specify the
+    exact relation between U and the (ϵ = 0)-reduction of the ribbon Hopf
+    algebra D of [BNvdVa].
+- [ ] P.35, (2.47): Given the way the degree completion U = ˆU(g) has been
+    defined, one needs to assume that ξ belongs to bQ[[b]] for eξx to converge.
+    A similar remark applies to (2.48) and (2.49).
+- [ ] P.36, Lemma 2.37: This lemma follows from the same property for D proved
+    in [BNvdVa], idem for Theorem 3.5 on p.41. Yet I agree that it is better to
+    include direct proofs.
+- [ ] P.37, l.-5: It is not clear why the invariant Z is well-defined by this
+    procedure. One should either refer to the existing works in the literature
+    on the “universal invariants”, or prove that the “ribbon meta-Hopf algebra”
+    T up has the required universal property.
+- [ ] P.40: The exposition could be improved here. Indeed, a category C is
+    introduced at the top of the page, without defining its composition. The
+    composition is only given in Lemma 3.2 at the bottom of the same page.
+- [ ] P.42, l.4: What does “central” mean in Q[zK][[ζK]]?
+- [ ] P.42, proof of Theorem 3.5: Is the proof of (3.14) addressed somewhere?
+- [ ] P.46, Lemma 4.3: How is the closure performed? Does one assume that the
+    two endpoints (of the strand to be closed) are “adjacent” in some sense?
+- [ ] P.48, proof of Theorem 4.6: I do not understand the argument “inspection
+    of the above com- prehensive summary [...] that this set is indeed linearly
+    independent”.
+- [ ] P.50, Theorem 4.9: The notation µ in the formula for f(yi, bi, ai, xi) is
+    in conflict with µ := (1 − e−α)¯zi.
+- [ ] P.50, Remark 4.10: I do not understand where (4.21) comes from, and why
+    the series S satisfies
+S = e−α−µS. This remark should be expanded.
+- [ ] P.51 to p.54: Please explain why this part only considers “long links”
+    and not “round links” by taking the trace along every component. For
+    instance, why the value of tr1,2(Z(H)) for the Hopf link is not considered
+    in §4.3?
+- [ ] P.53, l.-1 & l.-7: Give a reference for the Thistlethwaite link table
+    from which L5a1, L10a43, L7n2 are extracted, or, at least include pictures
+    of those links.
+- [ ] P.53, (5.1): It is surprising that the two partial traces give different
+    values for the Whitehead link, where the two components play symetric
+    roles.
+- [ ] P.55, (A.1): How is the Whitehead link given here as an open tangle? (It
+    seems that there is no symmetry, again, between the two components.)
+
+#### Typos and other minor comments ####
+- [ ] P.8, l.-8: “Each crossing assigned” → “To each crossing is assigned” (?)
+- [ ] P.17, l.4: “Where the last column” → “where the last column”
+- [ ] P.17, l.10: “such as a meta-colagebra” → “such as a meta-coalgebra”
+- [ ] P.17, l.-3: φ[S] = φD C [S] goes the other way round: from AD⊔S to AC⊔S.
+- [ ] P.18, l.4: “two spaces” → “two objects”
+- [ ] P.18, l.6: “CD1⊔D2 → CC1⊔C2” → “AD1⊔D2 → AC1⊔C2”
+- [ ] P.18, l.7: It is written “This is visualized in figure 2.1”, but this is
+    not what I see in Figure 2.1.
+- [ ] P.19, l.-10: “When C = (Vect, ⊗)” → “When C = (k − Vect, ⊗)”
+- [ ] P.19, l.-8: “Then A∅ is a field” → “Then A∅ is the field k”
+- [ ] P.20, l.4: “A meta-colagebra” → “A meta-coalgebra”
+- [ ] P.22, l.-1: A reference seems to be missing in the sentence “The term we
+    use is inspired by ??”.
+- [ ] P.24, l.-4: “An upright tangle diagrams” → “An upright tangle diagram”
+- [ ] P.25, l.8: I think that (to be consistent with the notation TX of the
+    previous page) the notation T up X should refer to equivalence classes of
+    tangles (and not tangle diagrams).
+- [ ] P.26, l.-7: “figures 2.4 to 2.7” → “(figures 2.4 to 2.7)”
+- [ ] P.35, (2.45): “ayr” → “ayr”
+- [ ] P.37, l.-10: “is map” → “is a map”
+- [ ] P.37, l.-9: “ϕX Y ” → “φX Y ”
+- [ ] P.37, l.-5: “a U-valued tangle invariant” → “a U-valued tangle invariant
+    Z”
+- [ ] P.38, (2.57): The contribution of C4 seems to be missing in this
+    computation.
+- [ ] P.39, l.3: One verb to be removed in the proposition “(...) which
+    develops uses (...)”.
+- [ ] P.40, l.6: “Where zX” → “where zX”
+- [ ] P.40, l.-3: “powerseries” → “power series”
+- [ ] P.42, l.3: “z∗” → “ζ” (?)
+- [ ] P.42, (3.12): It seems that the notation AJ has not been introduced yet.
+- [ ] P.42, (3.20): It seems that all the −ξiηj should be changed to +ξiηj.
+- [ ] P.43, (3.21): “+−” → “−” (twice)
+- [ ] P.47, l.11: “adµ(u)” → “adµ(f)”
+- [ ] P.47, l.-12: “The coinvariants of U” → “The space of coinvariants of U”
+- [ ] P.47, l.-12: In this line and in the sequel, the variables a, x should be
+    denoted by a, x.
+- [ ] P.49, l.-3: The choice of the notations α, β, ξ, η is not good since they
+    can be confused with the variables αi, βi, ξi, ηi “dual to” ai, bi, xi, yi.
+- [ ] P.51, (4.23): “b1w2” → “b1a2” (?)
+- [ ] P.51, (4.24): “b2w1” → “b2a1” (?)
+- [ ] P.51, (4.25): Same comment as for (4.23) and (4.24).
