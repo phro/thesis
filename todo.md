@@ -395,7 +395,7 @@ S = e−α−µS. This remark should be expanded.
 - [ ] P.53, l.-1 & l.-7: Give a reference for the Thistlethwaite link table
     from which L5a1, L10a43, L7n2 are extracted, or, at least include pictures
     of those links.
-- [ ] P.53, (5.1): It is surprising that the two partial traces give different
+- [X] P.53, (5.1): It is surprising that the two partial traces give different
     values for the Whitehead link, where the two components play symetric
     roles.
 - [ ] P.55, (A.1): How is the Whitehead link given here as an open tangle? (It
