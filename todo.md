@@ -331,7 +331,7 @@ Explicit examples are missing.
 
 ### External Feedback ###
 #### Comments and suggestions ####
-- [ ] P.12, Section 2: It would be good to include references for
+- [X] P.12, Section 2: It would be good to include references for
     “meta-structures” / “meta-objects”. (I can not see any in this section.)
 - [ ] P.14, l.-2: I think that you should assume the category C to be monoidal.
     Otherwise, you should explain what {1} and M × M mean.
