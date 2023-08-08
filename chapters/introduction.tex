@@ -212,33 +212,32 @@ meta-monoid structure:
                 (Again, the \enquote{$[X]$} is frequently omitted from writing.)
 \end{enumerate}
 This way of packaging the data leads us to the following generalization:
-\begin{definition}\label{def:meta_monoid}
+\begin{definition}[meta-monoid {\cite[§3.3]{BS}}]\label{def:meta_monoid}
 A \defi{meta-monoid} in $\CC$ is the following data:
 \begin{itemize}
         \item A family of objects $M_X\in \CC$, indexed over finite sets $X$,
                 with set bijections $\map {ψ} {X} [\toiso] {Y}$ inducing
-                isomorphisms $M_X \iso M_Y$.
+                isomorphisms $\map{ι_{ψ}} {M_X} [\toiso] {M_Y}$.
         \item A family of morphisms $\map {\mult^{ij}_{k}[X]} {M_{\set{i,j}\sqcup X}}
                 {M_{\set{k}\sqcup X}}$ called \enquote{multiplication}.
         \item A family of \enquote{unit} morphisms
                 $\map {\unit_{i}[X]} {M_X} {M_{\set{i}\sqcup X}}$.
         \item A collection of relations between the morphisms, written as
                 equalities of morphisms between the $M_X$'s. In particular,
-                associativity:
-                \begin{equation}
-                        \begin{tikzcd}[column sep=huge]
+                \begin{itemize}
+                \item associativity:
+                        \begin{equation}\begin{tikzcd}[column sep=huge]
                                 M_{\set{1,2,3}\sqcup X}
                                 \rar["\mult^{1,2}_{1}\bk*{X\sqcup\set{3}}"]
                                 \dar["\mult^{2,3}_{2}\bk*{X\sqcup\set{1}}"']
-                        &M_{\set{1,3}\sqcup X}
-                        \dar["\mult^{1,3}_{1}\bk{X}"] \\
-                        M_{\set{1,2}\sqcup X}
-                        \rar["\mult^{1,2}_{1}\bk{X}"']
-                        &M_{\set{1}\sqcup X}
-                        \end{tikzcd}
-                \end{equation}
-                and the identity:
-                \begin{equation}\label{eq:monoid_unit}
+                                &M_{\set{1,3}\sqcup X}
+                                \dar["\mult^{1,3}_{1}\bk{X}"] \\
+                                M_{\set{1,2}\sqcup X}
+                                \rar["\mult^{1,2}_{1}\bk{X}"']
+                                &M_{\set{1}\sqcup X}
+                        \end{tikzcd}\end{equation}
+                \item the identity:
+                        \begin{equation}\label{eq:monoid_unit}
                         \begin{tikzcd}[column sep=large]
                                 M_{\set{1}\sqcup X}
                                 \rar["\unit_{2}\bk{X}"]
@@ -248,7 +247,21 @@ A \defi{meta-monoid} in $\CC$ is the following data:
                                 \dar["\mult^{2,1}_{1}\bk{X}"', shift right] \\
                                 &M_{\set{1}\sqcup X}
                         \end{tikzcd}
-                \end{equation}
+                        \end{equation}
+                \item index relabelling:
+                        \begin{equation}
+                                \begin{aligned}
+                                        ι_{ψ}\circ
+                                        \mult^{ij}_{k}[X] \circ
+                                        \inv{ι}_{ψ}
+                                        &= \mult^{ψ(i),ψ(j)}_{ψ(k)}[ψ(X)]\\
+                                        ι_{ψ} \circ
+                                        \unit_{i}[X]
+                                        \circ \inv{ι}_{ψ}
+                                        &= \unit_{ψ(i)}[ψ(X)]
+                                \end{aligned}
+                        \end{equation}
+                \end{itemize}
 \end{itemize}
 \end{definition}
 
