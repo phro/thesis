@@ -136,7 +136,7 @@ Explicit examples are missing.
 ### Feedback from Jesse ###
 - [X] The abstract should fit in one page.
 
-## Printout ##
+#### Printout ####
 - [X] implement abstract comments
 - [X] implement acknowledgements comments
 - [X] add paper-vs-digital flag to tweak margins, page numbers, and colophon
@@ -398,7 +398,7 @@ S = e−α−µS. This remark should be expanded.
 - [X] P.53, (5.1): It is surprising that the two partial traces give different
     values for the Whitehead link, where the two components play symetric
     roles.
-- [ ] P.55, (A.1): How is the Whitehead link given here as an open tangle? (It
+- [X] P.55, (A.1): How is the Whitehead link given here as an open tangle? (It
     seems that there is no symmetry, again, between the two components.)
 
 #### Typos and other minor comments ####
