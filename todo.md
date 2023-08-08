@@ -333,7 +333,7 @@ Explicit examples are missing.
 #### Comments and suggestions ####
 - [X] P.12, Section 2: It would be good to include references for
     “meta-structures” / “meta-objects”. (I can not see any in this section.)
-- [ ] P.14, l.-2: I think that you should assume the category C to be monoidal.
+- [X] P.14, l.-2: I think that you should assume the category C to be monoidal.
     Otherwise, you should explain what {1} and M × M mean.
 - [ ] P.16, Definition 2.4: It should be specified whether the isomorphisms MX
     ∼= MY (for any two finite sets X, Y ) are part of the structure. If this

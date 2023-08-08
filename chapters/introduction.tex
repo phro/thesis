@@ -148,24 +148,25 @@ We now go through the process of defining a meta-monoid, which is a
 generalization of a monoid object. Traditionally, the data of a monoid object
 are the following:
 \begin{itemize}
-        \item An object $M$ in a category $\CC$.
-        \item A morphism $\map {\mult} {M\times M} {M}$ called
+        \item An object $M$ in a monoidal category $(\CC, \otimes, \one)$.
+        \item A morphism $\map {\mult} {M\otimes M} {M}$ called
                 the \enquote{multiplication} operation.
         \item A \enquote{unit} morphism
-                $\map {\unit} {\set{1}} {M}$.\footnote{When $\CC = \Set$, we
-                usually write the unit as an element $1=\unit(1)\in M$
+                $\map {\unit} {\one} {M}$.\footnote{When $\CC = \Set$, we
+                usually write the unit as an element $1=\unit(1)\in M$, where
+                $\one = \set{1}$.
         }
         \item A collection of relations between the operations, written as
                 equalities of morphisms between Cartesian powers of $M$. For
                 example, associativity may be written:
                 \begin{equation}\label{eq:cd_assoc}
                 \begin{tikzcd}
-                        M\times M\times M
-                                \rar["\mult \times \id"]
-                                \dar["\id \times\mult"']
-                        &M \times M
+                        M\otimes M\otimes M
+                                \rar["\mult \otimes \id"]
+                                \dar["\id \otimes\mult"']
+                        &M \otimes M
                                 \dar["\mult"] \\
-                        M \times M
+                        M \otimes M
                                 \rar["\mult"']
                         &M
                 \end{tikzcd}
@@ -175,21 +176,21 @@ Further, the data of these relations is extended to higher powers of $M$ by
 acting on other components by the identity:
 \begin{equation}\label{eq:extend_monoid_identity}
 \begin{tikzcd}[column sep=large]
-        M^{n+3}
-                \rar["\mult \times \id^{n+1}"]
-                \dar["\id \times\mult\times \id^{n}"']
-        &M^{n+2}
-                \dar["\mult\times \id^{n}"] \\
-        M^{n+2}
-                \rar["\mult\times \id^{n}"']
-        &M^{n+1}
+        M^{\otimes(n+3)}
+                \rar["\mult \otimes \id^{\otimes(n+1)}"]
+                \dar["\id \otimes\mult\otimes \id^{\otimes n}"']
+        &M^{\otimes(n+2)}
+                \dar["\mult\otimes \id^{\otimes n}"] \\
+        M^{\otimes(n+2)}
+                \rar["\mult\otimes \id^{\otimes n}"']
+        &M^{\otimes(n+1)}
 \end{tikzcd}
 \end{equation}
 
 Let us alter how we package these data so as to maximize the clarity of the
 meta-monoid structure:
 \begin{enumerate}
-        \item Instead of linear orders of factors $M \times \dots \times M$, we
+        \item Instead of linear orders of factors $M \otimes \dots \otimes M$, we
                 will index factors by a finite set $X$, writing it $M_X \defeq
                 \set{\map {f} {X} {M}}$ in the style of
                 \cref{eq:indexed_tensor}.\footnote{Indeed, when $\CC = \Vect$,
@@ -202,7 +203,7 @@ meta-monoid structure:
                 $\map {\mult^{ij}_{k}} {M_{\set{i,j}}} {M_{\set{k}}}$.
         \item Instead of implicitly including extensions of operations to higher
                 powers by the identity, we will parametrize the extension by
-                finite sets by $ϕ^{D}_{C}[X] \defeq ϕ^{D}_{C}\times\Id{X}$.
+                finite sets by $ϕ^{D}_{C}[X] \defeq ϕ^{D}_{C}\otimes\Id{X}$.
                 For example, multiplication $\map {\mult^{ij}_{k}}
                 {M_{\set{i,j}}} {M_{\set{k}}}$ generates a family of maps
                 $\map {\mult^{ij}_k[X]} {M_{\set{i,j}\sqcup X}}
