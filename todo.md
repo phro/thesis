@@ -345,7 +345,7 @@ Explicit examples are missing.
 - [X] P.18, Definition 2.11: Is a “meta-algebra” a “meta-object” in the sense
     of Definition 2.8? If so, then Definition 2.11 should refer somewhere to
     this notion of “meta-object”.
-- [ ] P.23, Definition 2.25: This definition of “open tangles” is too
+- [X] P.23, Definition 2.25: This definition of “open tangles” is too
     restrictive to support the operations that are described in Theorem 2.31
     (compare with [BNvdVa]). For instance, the left-hand side of Figure 2.9
     does not show a tangle in the sense of Definition 2.25: an arbitrary
