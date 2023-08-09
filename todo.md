@@ -342,7 +342,7 @@ Explicit examples are missing.
     provided.
 - [X] P.16, Example 2.5: I am not sure that the property to be “symmetric” is
     required here for C.
-- [ ] P.18, Definition 2.11: Is a “meta-algebra” a “meta-object” in the sense
+- [X] P.18, Definition 2.11: Is a “meta-algebra” a “meta-object” in the sense
     of Definition 2.8? If so, then Definition 2.11 should refer somewhere to
     this notion of “meta-object”.
 - [ ] P.23, Definition 2.25: This definition of “open tangles” is too
