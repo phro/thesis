@@ -340,7 +340,7 @@ Explicit examples are missing.
     definition does not give all the relations in its fourth condition (which
     suggests the use of the words “In particular”), then a reference should be
     provided.
-- [ ] P.16, Example 2.5: I am not sure that the property to be “symmetric” is
+- [X] P.16, Example 2.5: I am not sure that the property to be “symmetric” is
     required here for C.
 - [ ] P.18, Definition 2.11: Is a “meta-algebra” a “meta-object” in the sense
     of Definition 2.8? If so, then Definition 2.11 should refer somewhere to
