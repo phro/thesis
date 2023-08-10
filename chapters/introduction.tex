@@ -1166,8 +1166,8 @@ is resolved in multiple ways:
 
 \section{The meta-algebra $\CU$}\label{sec:algebraic-definitions}
 
-Here we define the ribbon Hopf algebra $\CU = \CUlong[0]$, and point out some of
-its properties.
+Here we define the ribbon Hopf algebra $\CU \iso \CUlong[0]$, and point out some
+of its properties.
 
 \begin{definition}[The ribbon Hopf algebra $\CU$]
 Define the Lie algebra
@@ -1212,6 +1212,22 @@ the spinner $\spin$:
               = \Rmati_{13}\spin_{2} \then \mult^{123}
 \end{align}
 \end{definition}
+
+\begin{remark}
+        The algebra $\CU$ is isomorphic to the algebra $\CUlong[0]$ defined in
+        \cite[§4]{BV23} when $ϵ=0$ under the following change-of-variables:
+        \begin{equation}
+                \begin{aligned}
+                        \mbb{D} &\toiso \CU\\
+                        \yo     &\mapsto \frac{1-\Bo}{\bo}\yo\\
+                        \bo     &\mapsto \bo\\
+                        \ao     &\mapsto \ao\\
+                        \xo     &\mapsto \xo
+                \end{aligned}
+        \end{equation}
+        This change-of-variables was implemented to facilitate the pullback of
+        the $\Rmat$-matrix structure of $QU$, while maintaining cocommutativity.
+\end{remark}
 
 \begin{lemma}[Commutation relations in $\CU$]\label{lem:xay_relations}
         Given $f\in \polyring{\Q}{\ao}$, we have the

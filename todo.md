@@ -359,7 +359,7 @@ Explicit examples are missing.
     would result in a valid (classical) tangle” as stated here, then the
     collection {T up X }X does not seem to constitute (strictly speaking) a
     “meta-Hopf algebra” in the sense of Definition 2.18.
-- [ ] P.34, Definition 2.33: It would be appropriate to give references for
+- [X] P.34, Definition 2.33: It would be appropriate to give references for
     this ribbon Hopf algebra U. In particular, it would be nice to specify the
     exact relation between U and the (ϵ = 0)-reduction of the ribbon Hopf
     algebra D of [BNvdVa].
