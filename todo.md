@@ -354,7 +354,7 @@ Explicit examples are missing.
     “new strand” added? This issue seems to be evoked on p.31 in the sentence
     “(For those worried that this equation depends on the location [...])”,
     without being resolved there.
-- [ ] P.33, Remark 2.32: What does the adjective “adjacent” mean there?
+- [X] P.33, Remark 2.32: What does the adjective “adjacent” mean there?
     Besides, if one commits oneself “to only apply multiplication when doing so
     would result in a valid (classical) tangle” as stated here, then the
     collection {T up X }X does not seem to constitute (strictly speaking) a
