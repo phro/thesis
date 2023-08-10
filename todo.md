@@ -350,7 +350,7 @@ Explicit examples are missing.
     (compare with [BNvdVa]). For instance, the left-hand side of Figure 2.9
     does not show a tangle in the sense of Definition 2.25: an arbitrary
     topological disk in the plane is not necessarily the “unit disk”.
-- [ ] P.27: The operation ηi does not seem to be well-defined: where is this
+- [X] P.27: The operation ηi does not seem to be well-defined: where is this
     “new strand” added? This issue seems to be evoked on p.31 in the sentence
     “(For those worried that this equation depends on the location [...])”,
     without being resolved there.

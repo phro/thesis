@@ -875,12 +875,18 @@ We now formally connect tangle diagrams with meta-algebras.
                         $k$ (\cref{fig:tangle_mult}).\footnote{Strictly
                                 speaking, this operation is only defined when
                                 the end of strand $i$ is adjacent to strand $j$.
-                                See \cref{rem:virtual_caveat} for more details.%
+                                See \cref{rem:virtual_caveat_mult} for more
+                                details.%
                         }
                 \item the unit $\unit_{i}[X]$ takes a tangle diagram with
                         strands $X$ and introduces a new strand $i$ which does
                         not touch any of the other strands
-                        (\cref{fig:tangle_unit}).
+                        (\cref{fig:tangle_unit}).\footnote{In general, there are
+                                multiple choices for the placement of such a new
+                                strand. See \cref{rem:virtual_caveat_unit} for
+                                more
+                                details.%
+                        }
                 \item the comultiplication $\comult^{i}_{jk}[X]$ takes a tangle
                         with strands $X\sqcup \set{i}$ and doubles strand $i$,
                         separating the two strands along the framing of strand
@@ -1037,10 +1043,12 @@ We go through a straightforward verification of the various axioms:
                                 same endpoints and follows the same path.
                         \item To see that the unit axiom (\cref{eq:cd_unit})
                                 holds, observe that adding a non-interacting
-                                strand to a diagram, then stitching it to an
-                                existing strand does not change any of the
-                                combinatorial data, resulting in identical
-                                diagrams.
+                                strand to a diagram , then stitching it to an
+                                existing strand (without loss of generality,
+                                we may assume that the new strand is placed
+                                adjacent to the existing one) does not change
+                                any of the combinatorial data, resulting in
+                                identical diagrams.
                 \end{enumerate}
         \item We show $\tangle X$ is a meta-coalgebra:
                 \begin{enumerate}
@@ -1120,21 +1128,36 @@ We go through a straightforward verification of the various axioms:
         equation, which is one equivalent to the Reidemeister $3$ in this case.
 \end{proof}
 
-\begin{remark}\label{rem:virtual_caveat}
+\begin{remark}\label{rem:virtual_caveat_mult}
 One may object that strand-stitching $\mult^{ij}_k$ is not defined when
 the endpoint of strand $i$ is not adjacent to the starting point of
 strand $j$. This issue is resolved in multiple ways:
 \begin{enumerate}
-        \item Extend the collection of tangles we work with to include
+        \item We may extend the collection of tangles we work with to include
                 \defi{virtual tangles}. This generalization of tangles
                 deals exactly with the issue that multiplication need
                 not produce a planar tangle diagram. In fact, virtual
                 tangles can be thought of as merely non-planar tangle
                 diagrams.
-        \item Commit to only apply multiplication when doing so would
+        \item We may commit to only apply multiplication when doing so would
                 result in a valid (classical) tangle. This is the
                 approach we will take when performing computations on
                 tangles.
+\end{enumerate}
+\end{remark}
+
+\begin{remark}\label{rem:virtual_caveat_unit}
+One may object that inserting a strand $\unit_i$ is not well-defined. This issue
+is resolved in multiple ways:
+\begin{enumerate}
+        \item We may extend the collection of tangles we work with to include
+                \defi{virtual tangles}, which encode only the combinatorial
+                information of a tangle, so the placement of a new strand is not
+                relevant.
+        \item We may commit to place the new strand in one location; the
+                relations above will suffice to define tangles. Moving strands'
+                intersection with the boundary disk does not play a role in
+                deciding the equivalence of two classical links.
 \end{enumerate}
 \end{remark}
 
