@@ -378,7 +378,7 @@ Explicit examples are missing.
     composition is only given in Lemma 3.2 at the bottom of the same page.
 - [X] P.42, l.4: What does “central” mean in Q[zK][[ζK]]?
 - [X] P.42, proof of Theorem 3.5: Is the proof of (3.14) addressed somewhere?
-- [ ] P.46, Lemma 4.3: How is the closure performed? Does one assume that the
+- [X] P.46, Lemma 4.3: How is the closure performed? Does one assume that the
     two endpoints (of the strand to be closed) are “adjacent” in some sense?
 - [ ] P.48, proof of Theorem 4.6: I do not understand the argument “inspection
     of the above com- prehensive summary [...] that this set is indeed linearly
