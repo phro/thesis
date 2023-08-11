@@ -373,7 +373,7 @@ Explicit examples are missing.
     procedure. One should either refer to the existing works in the literature
     on the “universal invariants”, or prove that the “ribbon meta-Hopf algebra”
     T up has the required universal property.
-- [ ] P.40: The exposition could be improved here. Indeed, a category C is
+- [X] P.40: The exposition could be improved here. Indeed, a category C is
     introduced at the top of the page, without defining its composition. The
     composition is only given in Lemma 3.2 at the bottom of the same page.
 - [ ] P.42, l.4: What does “central” mean in Q[zK][[ζK]]?
