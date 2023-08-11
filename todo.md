@@ -369,7 +369,7 @@ Explicit examples are missing.
 - [X] P.36, Lemma 2.37: This lemma follows from the same property for D proved
     in [BNvdVa], idem for Theorem 3.5 on p.41. Yet I agree that it is better to
     include direct proofs.
-- [ ] P.37, l.-5: It is not clear why the invariant Z is well-defined by this
+- [X] P.37, l.-5: It is not clear why the invariant Z is well-defined by this
     procedure. One should either refer to the existing works in the literature
     on the “universal invariants”, or prove that the “ribbon meta-Hopf algebra”
     T up has the required universal property.
