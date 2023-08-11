@@ -376,7 +376,7 @@ Explicit examples are missing.
 - [X] P.40: The exposition could be improved here. Indeed, a category C is
     introduced at the top of the page, without defining its composition. The
     composition is only given in Lemma 3.2 at the bottom of the same page.
-- [ ] P.42, l.4: What does “central” mean in Q[zK][[ζK]]?
+- [X] P.42, l.4: What does “central” mean in Q[zK][[ζK]]?
 - [ ] P.42, proof of Theorem 3.5: Is the proof of (3.14) addressed somewhere?
 - [ ] P.46, Lemma 4.3: How is the closure performed? Does one assume that the
     two endpoints (of the strand to be closed) are “adjacent” in some sense?
