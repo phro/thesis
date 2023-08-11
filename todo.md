@@ -366,7 +366,7 @@ Explicit examples are missing.
 - [X] P.35, (2.47): Given the way the degree completion U = ˆU(g) has been
     defined, one needs to assume that ξ belongs to bQ[[b]] for eξx to converge.
     A similar remark applies to (2.48) and (2.49).
-- [ ] P.36, Lemma 2.37: This lemma follows from the same property for D proved
+- [X] P.36, Lemma 2.37: This lemma follows from the same property for D proved
     in [BNvdVa], idem for Theorem 3.5 on p.41. Yet I agree that it is better to
     include direct proofs.
 - [ ] P.37, l.-5: It is not clear why the invariant Z is well-defined by this
