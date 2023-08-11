@@ -363,7 +363,7 @@ Explicit examples are missing.
     this ribbon Hopf algebra U. In particular, it would be nice to specify the
     exact relation between U and the (ϵ = 0)-reduction of the ribbon Hopf
     algebra D of [BNvdVa].
-- [ ] P.35, (2.47): Given the way the degree completion U = ˆU(g) has been
+- [X] P.35, (2.47): Given the way the degree completion U = ˆU(g) has been
     defined, one needs to assume that ξ belongs to bQ[[b]] for eξx to converge.
     A similar remark applies to (2.48) and (2.49).
 - [ ] P.36, Lemma 2.37: This lemma follows from the same property for D proved
