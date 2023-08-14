@@ -383,7 +383,7 @@ Explicit examples are missing.
 - [X] P.48, proof of Theorem 4.6: I do not understand the argument “inspection
     of the above comprehensive summary [...] that this set is indeed linearly
     independent”.
-- [ ] P.50, Theorem 4.9: The notation µ in the formula for f(yi, bi, ai, xi) is
+- [X] P.50, Theorem 4.9: The notation µ in the formula for f(yi, bi, ai, xi) is
     in conflict with µ := (1 − e−α)¯zi.
 - [ ] P.50, Remark 4.10: I do not understand where (4.21) comes from, and why
     the series S satisfies S = e−α−µS. This remark should be expanded.
