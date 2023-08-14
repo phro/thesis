@@ -391,7 +391,7 @@ Explicit examples are missing.
     and not “round links” by taking the trace along every component. For
     instance, why the value of tr1,2(Z(H)) for the Hopf link is not considered
     in §4.3?
-- [ ] P.53, l.-1 & l.-7: Give a reference for the Thistlethwaite link table
+- [X] P.53, l.-1 & l.-7: Give a reference for the Thistlethwaite link table
     from which L5a1, L10a43, L7n2 are extracted, or, at least include pictures
     of those links.
 - [X] P.53, (5.1): It is surprising that the two partial traces give different
