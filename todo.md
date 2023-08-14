@@ -436,7 +436,7 @@ Explicit examples are missing.
 - [ ] P.43, (3.21): “+−” → “−” (twice)
 - [ ] P.47, l.11: “adµ(u)” → “adµ(f)”
 - [ ] P.47, l.-12: “The coinvariants of U” → “The space of coinvariants of U”
-- [ ] P.47, l.-12: In this line and in the sequel, the variables a, x should be
+- [X] P.47, l.-12: In this line and in the sequel, the variables a, x should be
     denoted by a, x.
 - [ ] P.49, l.-3: The choice of the notations α, β, ξ, η is not good since they
     can be confused with the variables αi, βi, ξi, ηi “dual to” ai, bi, xi, yi.
