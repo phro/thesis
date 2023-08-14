@@ -387,7 +387,7 @@ Explicit examples are missing.
     in conflict with µ := (1 − e−α)¯zi.
 - [X] P.50, Remark 4.10: I do not understand where (4.21) comes from, and why
     the series S satisfies S = e−α−µS. This remark should be expanded.
-- [ ] P.51 to p.54: Please explain why this part only considers “long links”
+- [X] P.51 to p.54: Please explain why this part only considers “long links”
     and not “round links” by taking the trace along every component. For
     instance, why the value of tr1,2(Z(H)) for the Hopf link is not considered
     in §4.3?
