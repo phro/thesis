@@ -195,9 +195,26 @@ Finally, all that remains to show is this set is linearly independent. This is
 equivalent to no two $y^na^kx^n$'s with distinct choices of exponents being
 related under a sequence of relations. Since \cref{lem:coinvLieAlg} allows us to
 only consider sequences of relations of the form $\ad_z$ for $z$ a one-letter
-word in $\set{y, b, a, x}$, inspection of the above comprehensive summary of all
-one-letter relations (in particular, \cref{eq:coinv_reduction} with $m=0$)
-allows us to conclude that this set is indeed linearly independent.
+word in $\set{y, b, a, x}$, we know that $\liebk{\Alg}{\CU} = \ad_y\CU +
+\ad_b\CU + \ad_a\CU + \ad_x\CU = \ad_y\CU + \ad_a\CU$.
+
+Observe:
+\begin{equation}
+        \begin{multlined}[t]
+                {\ad_a\CU} + {\ad_y\CU} = \Span\pn[\Big]{
+                        \setbuilder*{y^nb^ma^lx^r}{n \neq r}
+                        + \\
+                        \setbuilder*{
+                                (n+1)y^nb^ma^kx^n
+                                - y^{n+1}b^{m-1}\pn[\big]{a^k-(a-1)^k}x^{n+1}
+                        }{n \ge 0, b \ge 1}
+                }
+        \end{multlined}
+\end{equation}
+When paired with the observation that for any polynomials $f$ and $g$,
+$\nabla[f] = \nabla[g]$ exactly when $f-g$ is a constant, the uniqueness of
+expressing an element of $\CU_{\Alg}$ as an element of
+$\set{y^na^kx^n}_{n, k\ge 0}$ follows.
 \end{proof}
 
 \subsection{A generating function for the coinvariants}

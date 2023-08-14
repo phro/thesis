@@ -380,8 +380,8 @@ Explicit examples are missing.
 - [X] P.42, proof of Theorem 3.5: Is the proof of (3.14) addressed somewhere?
 - [X] P.46, Lemma 4.3: How is the closure performed? Does one assume that the
     two endpoints (of the strand to be closed) are “adjacent” in some sense?
-- [ ] P.48, proof of Theorem 4.6: I do not understand the argument “inspection
-    of the above com- prehensive summary [...] that this set is indeed linearly
+- [X] P.48, proof of Theorem 4.6: I do not understand the argument “inspection
+    of the above comprehensive summary [...] that this set is indeed linearly
     independent”.
 - [ ] P.50, Theorem 4.9: The notation µ in the formula for f(yi, bi, ai, xi) is
     in conflict with µ := (1 − e−α)¯zi.
