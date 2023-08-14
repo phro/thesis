@@ -385,7 +385,7 @@ Explicit examples are missing.
     independent”.
 - [X] P.50, Theorem 4.9: The notation µ in the formula for f(yi, bi, ai, xi) is
     in conflict with µ := (1 − e−α)¯zi.
-- [ ] P.50, Remark 4.10: I do not understand where (4.21) comes from, and why
+- [X] P.50, Remark 4.10: I do not understand where (4.21) comes from, and why
     the series S satisfies S = e−α−µS. This remark should be expanded.
 - [ ] P.51 to p.54: Please explain why this part only considers “long links”
     and not “round links” by taking the trace along every component. For

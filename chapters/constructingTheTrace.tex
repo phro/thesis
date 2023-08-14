@@ -383,6 +383,19 @@ where $μ\defeq (1-\Exp{-α})\bz_i$.
         $W$ function. This expression now lies far outside of the Gaußian
         framework that $Z$ is computed in.
 \end{remark}
+\begin{proof}[Proof that $S$ satisfies $S = \Exp{-α-σS}$]
+        Denote by $γ_n$ the $b_i$-coefficients of the expression
+        $1-\Exp{-α-σb_i}$, so that $β_i(1-\Exp{-α-σb_i}) =
+        \Sum[n=0][\infty]β_iγ_nb_i^n$. Visualizing the $γ_n$-term as a node of a
+        directed tree with one incoming edge (corresponding to $β_i$) and $n$
+        outgoing edges (corresponding to each of the $b_i$ factors), we get the
+        relation
+        \begin{equation}
+                S = γ_1S + γ_2S^2 + γ_3S^3 + \dots
+        \end{equation}
+        With the observation that $γ_n = \frac{\Exp{-α}(-μ)^m)}{m!}$, we
+        conclude that $S = \Exp{-α-μS}$.
+\end{proof}
 
 The $a_ib_i$-coefficient associated to an open tangle is exactly the
 self-linking number of component $i$. By adding correcting writhe terms, one can
