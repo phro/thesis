@@ -418,7 +418,7 @@ Explicit examples are missing.
 - [X] P.25, l.8: I think that (to be consistent with the notation TX of the
     previous page) the notation T up X should refer to equivalence classes of
     tangles (and not tangle diagrams).
-- [ ] P.26, l.-7: “figures 2.4 to 2.7” → “(figures 2.4 to 2.7)”
+- [X] P.26, l.-7: “figures 2.4 to 2.7” → “(figures 2.4 to 2.7)”
 - [ ] P.35, (2.45): “ayr” → “ayr”
 - [ ] P.37, l.-10: “is map” → “is a map”
 - [ ] P.37, l.-9: “ϕX Y ” → “φX Y ”
