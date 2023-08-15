@@ -402,7 +402,7 @@ Explicit examples are missing.
 
 #### Typos and other minor comments ####
 - [X] P.8, l.-8: “Each crossing assigned” → “To each crossing is assigned” (?)
-- [ ] P.17, l.4: “Where the last column” → “where the last column”
+- [X] P.17, l.4: “Where the last column” → “where the last column”
 - [ ] P.17, l.10: “such as a meta-colagebra” → “such as a meta-coalgebra”
 - [ ] P.17, l.-3: φ[S] = φD C [S] goes the other way round: from AD⊔S to AC⊔S.
 - [ ] P.18, l.4: “two spaces” → “two objects”
