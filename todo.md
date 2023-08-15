@@ -410,7 +410,7 @@ Explicit examples are missing.
 - [X] P.18, l.7: It is written “This is visualized in figure 2.1”, but this is
     not what I see in Figure 2.1.
 - [X] P.19, l.-10: “When C = (Vect, ⊗)” → “When C = (k − Vect, ⊗)”
-- [ ] P.19, l.-8: “Then A∅ is a field” → “Then A∅ is the field k”
+- [X] P.19, l.-8: “Then A∅ is a field” → “Then A∅ is the field k”
 - [ ] P.20, l.4: “A meta-colagebra” → “A meta-coalgebra”
 - [ ] P.22, l.-1: A reference seems to be missing in the sentence “The term we
     use is inspired by ??”.
