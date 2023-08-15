@@ -428,7 +428,7 @@ Explicit examples are missing.
     computation.
 - [X] P.39, l.3: One verb to be removed in the proposition “(...) which
     develops uses (...)”.
-- [ ] P.40, l.6: “Where zX” → “where zX”
+- [X] P.40, l.6: “Where zX” → “where zX”
 - [ ] P.40, l.-3: “powerseries” → “power series”
 - [ ] P.42, l.3: “z∗” → “ζ” (?)
 - [ ] P.42, (3.12): It seems that the notation AJ has not been introduced yet.
