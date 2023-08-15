@@ -414,7 +414,7 @@ Explicit examples are missing.
 - [X] P.20, l.4: “A meta-colagebra” → “A meta-coalgebra”
 - [X] P.22, l.-1: A reference seems to be missing in the sentence “The term we
     use is inspired by ??”.
-- [ ] P.24, l.-4: “An upright tangle diagrams” → “An upright tangle diagram”
+- [X] P.24, l.-4: “An upright tangle diagrams” → “An upright tangle diagram”
 - [ ] P.25, l.8: I think that (to be consistent with the notation TX of the
     previous page) the notation T up X should refer to equivalence classes of
     tangles (and not tangle diagrams).
