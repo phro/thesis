@@ -435,7 +435,7 @@ Explicit examples are missing.
 - [X] P.42, (3.20): It seems that all the −ξiηj should be changed to +ξiηj.
 - [X] P.43, (3.21): “+−” → “−” (twice)
 - [X] P.47, l.11: “adµ(u)” → “adµ(f)”
-- [ ] P.47, l.-12: “The coinvariants of U” → “The space of coinvariants of U”
+- [X] P.47, l.-12: “The coinvariants of U” → “The space of coinvariants of U”
 - [X] P.47, l.-12: In this line and in the sequel, the variables a, x should be
     denoted by a, x.
 - [ ] P.49, l.-3: The choice of the notations α, β, ξ, η is not good since they
