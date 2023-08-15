@@ -424,7 +424,7 @@ Explicit examples are missing.
 - [X] P.37, l.-9: “ϕX Y ” → “φX Y ”
 - [X] P.37, l.-5: “a U-valued tangle invariant” → “a U-valued tangle invariant
     Z”
-- [ ] P.38, (2.57): The contribution of C4 seems to be missing in this
+- [X] P.38, (2.57): The contribution of C4 seems to be missing in this
     computation.
 - [ ] P.39, l.3: One verb to be removed in the proposition “(...) which
     develops uses (...)”.
