@@ -20,7 +20,7 @@
 }{classicthesis}
 
 % Thesis version
-\newcommand{\thesisVersion}{0.3.1} 
+\newcommand{\thesisVersion}{0.3.1}
 
 % Personal data (insert your own data here)
 \newcommand{\myTitle}{Computing the generating function of a coinvariants map\xspace}
@@ -93,19 +93,19 @@
     breakable,
     enhanced,
     minted options = {
-        breaklines=true, 
-        breakbefore=., 
-        fontsize=\footnotesize, 
+        breaklines=true,
+        breakbefore=.,
+        fontsize=\footnotesize,
         numbersep=1mm,
         linenos=true,
-        langlinenos=true, 
+        langlinenos=true,
         firstnumber=last
     },
     overlay={%
         \begin{tcbclipinterior}
             \fill[gray!25] (frame.south west) rectangle ([xshift=5mm]frame.north west);
         \end{tcbclipinterior}
-    }   
+    }
 }
 \newtcblisting{mathematica}{%
     listing engine=minted,
@@ -114,18 +114,18 @@
     breakable,
     enhanced,
     minted options = {
-        breaklines=true, 
-        breakbefore=., 
-        fontsize=\footnotesize, 
+        breaklines=true,
+        breakbefore=.,
+        fontsize=\footnotesize,
         numbersep=1mm,
-        langlinenos=true, 
+        langlinenos=true,
         firstnumber=last
     },
     overlay={%
         \begin{tcbclipinterior}
             \fill[gray!25] (frame.south west) rectangle ([xshift=5mm]frame.north west);
         \end{tcbclipinterior}
-    }   
+    }
 }
 
 \setminted[mathematica]{firstnumber=last}
