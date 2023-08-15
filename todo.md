@@ -411,7 +411,7 @@ Explicit examples are missing.
     not what I see in Figure 2.1.
 - [X] P.19, l.-10: “When C = (Vect, ⊗)” → “When C = (k − Vect, ⊗)”
 - [X] P.19, l.-8: “Then A∅ is a field” → “Then A∅ is the field k”
-- [ ] P.20, l.4: “A meta-colagebra” → “A meta-coalgebra”
+- [X] P.20, l.4: “A meta-colagebra” → “A meta-coalgebra”
 - [ ] P.22, l.-1: A reference seems to be missing in the sentence “The term we
     use is inspired by ??”.
 - [ ] P.24, l.-4: “An upright tangle diagrams” → “An upright tangle diagram”
