@@ -426,7 +426,7 @@ Explicit examples are missing.
     Z”
 - [X] P.38, (2.57): The contribution of C4 seems to be missing in this
     computation.
-- [ ] P.39, l.3: One verb to be removed in the proposition “(...) which
+- [X] P.39, l.3: One verb to be removed in the proposition “(...) which
     develops uses (...)”.
 - [ ] P.40, l.6: “Where zX” → “where zX”
 - [ ] P.40, l.-3: “powerseries” → “power series”
