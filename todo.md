@@ -440,6 +440,6 @@ Explicit examples are missing.
     denoted by a, x.
 - [X] P.49, l.-3: The choice of the notations α, β, ξ, η is not good since they
     can be confused with the variables αi, βi, ξi, ηi “dual to” ai, bi, xi, yi.
-- [ ] P.51, (4.23): “b1w2” → “b1a2” (?)
-- [ ] P.51, (4.24): “b2w1” → “b2a1” (?)
-- [ ] P.51, (4.25): Same comment as for (4.23) and (4.24).
+- [X] P.51, (4.23): “b1w2” → “b1a2” (?)
+- [X] P.51, (4.24): “b2w1” → “b2a1” (?)
+- [X] P.51, (4.25): Same comment as for (4.23) and (4.24).
