@@ -321,13 +321,18 @@ Here we will outline a computation involving the trace by using Bar-Natan and
 van der Veen's Contraction Theorem.
 
 A typical value for a tangle invariant that arises is of the form:
+\newcommand{\cy}{c_y} 
+\newcommand{\cb}{c_b} 
+\newcommand{\ca}{c_a} 
+\newcommand{\cx}{c_x} 
+\newcommand{\cc}{c} 
 \begin{equation}\label{eq:sample_GDO}
-        P\Exp{c + α a_i + β b_i + μa_ib_i
-        + ξ(b_i) x_i + η(b_i)y_i + λ(b_i)x_i y_i}
+        P\Exp{\cc + \ca a_i + \cb b_i + μa_ib_i
+        + \cx(b_i) x_i + \cy(b_i)y_i + λ(b_i)x_i y_i}
 \end{equation}
-Here, $c$, $α$, $β$, and $μ$ denote constants with respect to the variables
+Here, $\cc$, $\ca$, $\cb$, and $μ$ denote constants with respect to the variables
 $y_i$, $b_i$, $a_i$, and $x_i$ (collectively referred to as \enquote{$v_i$}s),
-while $ξ$, $η$, and $λ$ are potentially $b_i$-dependent, and $P$ is a (rational)
+while $\cx$, $\cy$, and $λ$ are potentially $b_i$-dependent, and $P$ is a (rational)
 function in (the square root of) $B_i$.
 
 \ProvideDocumentCommand{\ba}{}{\bar{a}}
@@ -335,14 +340,14 @@ function in (the square root of) $B_i$.
 
 \begin{theorem}[The trace of a Gaußian]\label{thm:trace_gaussian}
         With symbols as defined above, let $f(y_i, b_i, a_i, x_i) = P(B_i)
-        \Exp{c + α a_i + β b_i + σa_ib_i
-                + ξ(b_i) x_i + η(b_i)y_i + λ(b_i)x_i y_i}$. Then when $σ=0$,
+        \Exp{\cc + \ca a_i + \cb b_i + σa_ib_i
+                + \cx(b_i) x_i + \cy(b_i)y_i + λ(b_i)x_i y_i}$. Then when $σ=0$,
 \begin{equation}\begin{aligned}\label{eq:trace_on_gaussian}
 \contraction*{ f(y_i, b_i, a_i, x_i) \trace^i }_{v_i}
 &= \frac{P(\Exp{-μ})}
-        {1-λ(μ)\bz_i}\Exp{c+α\ba_i+βμ+\frac{η(μ)ξ(μ)\bz_i}{1-λ(μ)\bz_i}}
+        {1-λ(μ)\bz_i}\Exp{\cc+\ca\ba_i+\cb μ+\frac{\cy(μ)\cx(μ)\bz_i}{1-λ(μ)\bz_i}}
 \end{aligned}\end{equation}
-where $μ\defeq (1-\Exp{-α})\bz_i$.
+where $μ\defeq (1-\Exp{-\ca})\bz_i$.
 \end{theorem}
 \begin{proof}
         Let us compute the trace of \cref{eq:sample_GDO}. For clarity, we will
@@ -351,33 +356,33 @@ where $μ\defeq (1-\Exp{-α})\bz_i$.
         \begin{equation}\begin{aligned}\label{eq:trace_on_gaussian_computation}
                 &\contraction{
                         P(B_i)
-                        \Exp{c + α a_i + β b_i + ξ(b_i) x_i + η(b_i)y_i + λ(b_i)x_i y_i}
+                        \Exp{\cc + \ca a_i + \cb b_i + \cx(b_i) x_i + \cy(b_i)y_i + λ(b_i)x_i y_i}
                         \trace^i
                 }_{v_i}\\
                 &= \contraction{
                         P(B_i)
-                        \Exp{c + β b_i + ξ(b_i) x_i + η(b_i)y_i + λ(b_i)x_i y_i
+                        \Exp{\cc + \cb b_i + \cx(b_i) x_i + \cy(b_i)y_i + λ(b_i)x_i y_i
                         +η_iξ_i\bz_i+β_i(1-\Exp{-α_i})\bz_i}
-                        \Exp{α a_i + α_i\ba_i}
+                        \Exp{\ca a_i + α_i\ba_i}
                 }_{v_i}\\
-                &= \Exp{α\ba_i}\contraction{
+                &= \Exp{\ca\ba_i}\contraction{
                         P(B_i)
-                        \Exp{c + ξ(b_i) x_i + η(b_i)y_i + λ(b_i)x_i y_i
+                        \Exp{\cc + \cx(b_i) x_i + \cy(b_i)y_i + λ(b_i)x_i y_i
                         +η_iξ_i\bz_i}
-                        \Exp{β b_i +β_i(1-\Exp{-α})\bz_i}
+                        \Exp{\cb b_i +β_i(1-\Exp{-\ca})\bz_i}
                 }_{b_i, x_i, y_i}\\
                 \alignedintertext{
-                        In what follows, we let $μ\defeq (1-\Exp{-α})\bz_i$:
+                        In what follows, we let $μ\defeq (1-\Exp{-\ca})\bz_i$:
                 }
-                &= \Exp{c+α\ba_i+βμ}P(\Exp{-μ})\contraction{
-                        \Exp{η(μ)y_i}
-                        \Exp{(ξ(μ) + λ(μ)y_i)x_i + ξ_iη_i\bz_i}
+                &= \Exp{\cc+\ca\ba_i+\cb μ}P(\Exp{-μ})\contraction{
+                        \Exp{\cy(μ)y_i}
+                        \Exp{(\cx(μ) + λ(μ)y_i)x_i + ξ_iη_i\bz_i}
                 }_{x_i, y_i}\\
-                &= \Exp{c+α\ba_i+βμ}P(\Exp{-μ})\contraction{
-                        \Exp{η(μ)y_i+ξ(μ)\bz_iη_i + λ(μ)\bz_iη_iy_i}
+                &= \Exp{\cc+\ca\ba_i+\cb μ}P(\Exp{-μ})\contraction{
+                        \Exp{\cy(μ)y_i+\cx(μ)\bz_iη_i + λ(μ)\bz_iη_iy_i}
                 }_{y_i}\\
                 &= \frac{P(\Exp{-μ})}
-                {1-λ(μ)\bz_i}\Exp{c+α\ba_i+βμ+\frac{η(μ)ξ(μ)\bz_i}{1-λ(μ)\bz_i}}
+                {1-λ(μ)\bz_i}\Exp{\cc+\ca\ba_i+\cb μ+\frac{\cy(μ)\cx(μ)\bz_i}{1-λ(μ)\bz_i}}
         \end{aligned}\end{equation}
 \end{proof}
 
@@ -385,20 +390,20 @@ where $μ\defeq (1-\Exp{-α})\bz_i$.
         \Cref{thm:trace_gaussian} requires that the coefficient $σ$ of the
         $a_ib_i$-term in the exponential is $0$. This restriction allows the
         computed value to be a composition of elementary functions. We
-        demonstrate this by considering the case where $c = β = ξ = η = λ =
+        demonstrate this by considering the case where $\cc = \cb = \cx = \cy = λ =
         0$. Expanding \cref{eq:trace_on_gaussian} yields the following
         expression, which we name $S$:
         \begin{equation}
-                \contraction*{\Exp{β_i(1-\Exp{-α-σb_i})\bz_i}}_{b_i} = S
+                \contraction*{\Exp{β_i(1-\Exp{-\ca-σb_i})\bz_i}}_{b_i} = S
         \end{equation}
-        The quantity $S$ satisfies the relation $S = \Exp{-α-σS}$, whose
-        solution is $S = \frac{W(\Exp{-α}σ)}{σ}$ where $W$ denotes the Lambert
+        The quantity $S$ satisfies the relation $S = \Exp{-\ca-σS}$, whose
+        solution is $S = \frac{W(\Exp{-\ca}σ)}{σ}$ where $W$ denotes the Lambert
         $W$ function. This expression now lies far outside of the Gaußian
         framework that $Z$ is computed in.
 \end{remark}
-\begin{proof}[Proof that $S$ satisfies $S = \Exp{-α-σS}$]
+\begin{proof}[Proof that $S$ satisfies $S = \Exp{-\ca-σS}$]
         Denote by $γ_n$ the $b_i$-coefficients of the expression
-        $1-\Exp{-α-σb_i}$, so that $β_i(1-\Exp{-α-σb_i}) =
+        $1-\Exp{-\ca-σb_i}$, so that $β_i(1-\Exp{-\ca-σb_i}) =
         \Sum[n=0][\infty]β_iγ_nb_i^n$. Visualizing the $γ_n$-term as a node of a
         directed tree with one incoming edge (corresponding to $β_i$) and $n$
         outgoing edges (corresponding to each of the $b_i$ factors), we get the
@@ -406,8 +411,8 @@ where $μ\defeq (1-\Exp{-α})\bz_i$.
         \begin{equation}
                 S = γ_1S + γ_2S^2 + γ_3S^3 + \dots
         \end{equation}
-        With the observation that $γ_n = \frac{\Exp{-α}(-μ)^m)}{m!}$, we
-        conclude that $S = \Exp{-α-μS}$.
+        With the observation that $γ_n = \frac{\Exp{-\ca}(-μ)^m)}{m!}$, we
+        conclude that $S = \Exp{-\ca-μS}$.
 \end{proof}
 
 The $a_ib_i$-coefficient associated to an open tangle is exactly the

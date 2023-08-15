@@ -438,7 +438,7 @@ Explicit examples are missing.
 - [X] P.47, l.-12: “The coinvariants of U” → “The space of coinvariants of U”
 - [X] P.47, l.-12: In this line and in the sequel, the variables a, x should be
     denoted by a, x.
-- [ ] P.49, l.-3: The choice of the notations α, β, ξ, η is not good since they
+- [X] P.49, l.-3: The choice of the notations α, β, ξ, η is not good since they
     can be confused with the variables αi, βi, ξi, ηi “dual to” ai, bi, xi, yi.
 - [ ] P.51, (4.23): “b1w2” → “b1a2” (?)
 - [ ] P.51, (4.24): “b2w1” → “b2a1” (?)
