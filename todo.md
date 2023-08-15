@@ -429,7 +429,7 @@ Explicit examples are missing.
 - [X] P.39, l.3: One verb to be removed in the proposition “(...) which
     develops uses (...)”.
 - [X] P.40, l.6: “Where zX” → “where zX”
-- [ ] P.40, l.-3: “powerseries” → “power series”
+- [X] P.40, l.-3: “powerseries” → “power series”
 - [ ] P.42, l.3: “z∗” → “ζ” (?)
 - [ ] P.42, (3.12): It seems that the notation AJ has not been introduced yet.
 - [ ] P.42, (3.20): It seems that all the −ξiηj should be changed to +ξiηj.
