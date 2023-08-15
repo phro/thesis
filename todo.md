@@ -433,7 +433,7 @@ Explicit examples are missing.
 - [X] P.42, l.3: “z∗” → “ζ” (?)
 - [X] P.42, (3.12): It seems that the notation AJ has not been introduced yet.
 - [X] P.42, (3.20): It seems that all the −ξiηj should be changed to +ξiηj.
-- [ ] P.43, (3.21): “+−” → “−” (twice)
+- [X] P.43, (3.21): “+−” → “−” (twice)
 - [ ] P.47, l.11: “adµ(u)” → “adµ(f)”
 - [ ] P.47, l.-12: “The coinvariants of U” → “The space of coinvariants of U”
 - [X] P.47, l.-12: In this line and in the sequel, the variables a, x should be
