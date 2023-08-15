@@ -415,7 +415,7 @@ Explicit examples are missing.
 - [X] P.22, l.-1: A reference seems to be missing in the sentence “The term we
     use is inspired by ??”.
 - [X] P.24, l.-4: “An upright tangle diagrams” → “An upright tangle diagram”
-- [ ] P.25, l.8: I think that (to be consistent with the notation TX of the
+- [X] P.25, l.8: I think that (to be consistent with the notation TX of the
     previous page) the notation T up X should refer to equivalence classes of
     tangles (and not tangle diagrams).
 - [ ] P.26, l.-7: “figures 2.4 to 2.7” → “(figures 2.4 to 2.7)”
