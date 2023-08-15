@@ -194,32 +194,45 @@ where $\sim$ refers to equivalence in the set of coinvariants. Observing when
 $f$ is a monomial in \cref{eq:coinv_reduction}, we see $\CU_{\Alg}$ is spanned
 by $\set{\yo^n \ao^k \xo^n}_{n, k \ge 0}$.
 
-Finally, all that remains to show is this set is linearly independent. This is
-equivalent to no two $\yo^n \ao^k \xo^n$'s with distinct choices of exponents
-being related under a sequence of relations. Since \cref{lem:coinvLieAlg} allows
-us to only consider sequences of relations of the form $\ad_\zo$ for $\zo$ a
-one-letter word in $\set{\yo, \bo, \ao, \xo}$, we know that
-$\liebk{\Alg}{\CU}
-= \ad_{\yo}\CU + \ad_{\bo}\CU + \ad_{\ao}\CU + \ad_{\xo}\CU
-= \ad_{\yo}\CU + \ad_{\ao}\CU$.
-
-Observe:
+Finally, all that remains to show is this set is linearly independent. We do so
+by defining the trace map
 \begin{equation}
-        \begin{multlined}[t]
-                {\ad_{\ao}\CU} + {\ad_{\yo}\CU} = \Span\pn[\Big]{
-                        \setbuilder*{\yo^n \bo^m \ao^l \xo^r}{n \neq r}
-                        + \\
-                        \setbuilder*{
-                                (n+1)\yo^n \bo^m \ao^k \xo^n
-                                - \yo^{n+1}\bo^{m-1}\pn[\big]{\ao^k-(\ao-1)^k}\xo^{n+1}
-                        }{n \ge 0, m \ge 1}
-                }
-        \end{multlined}
+        \mapdef {\trace} {\CU} {\CU_{\CU}}
+                {\yo^n \bo^m f(\ao) \xo^k}
+                {δ_{nk}\frac{n!}{(n+m)!}\yo^{n+m}\nabla^m[f](\ao)\xo^{n+m}}
 \end{equation}
-When paired with the observation that for any polynomials $f$ and $g$,
-$\nabla[f] = \nabla[g]$ exactly when $f-g$ is a constant, the uniqueness of
-expressing an element of $\CU_{\Alg}$ as an element of
-$\set{\yo^n \ao^k \xo^n}_{n, k\ge 0}$ follows.
+We will now show that the trace sends each relation defined in
+\cref{eq:ada_rel,eq:adx_rel,eq:ady_rel} to $0$. For the relations coming from
+$\ad_{\ao}$, notice that:
+\begin{equation}
+        \trace\pn*{\ad_{\ao}(\yo^n \bo^m f(\ao) \xo^k)}
+        = \trace\pn*{
+                (n-k)δ_{nk}\frac{n!}{(n+m)!}\yo^{n+m}\nabla^m[f](\ao)\xo^{n+m}
+        }
+        = 0
+\end{equation}
+For the relations from $\ad_{\yo}$, observe:
+\begin{equation}
+        \begin{aligned}
+                &\trace\pn*{\ad_{\yo}\pn*{\yo^n \bo^{m-1} f(\ao) \xo^{k+1}}}
+                \\&=
+                \trace\pn[\big]{
+                        - (k+1)\yo^n \bo^m f(\ao) \xo^k
+                        + \yo^{n+1} \bo^{m-1} \nabla[f](\ao)\xo^{k+1}
+                }
+                \\&=
+                \begin{multlined}[t]
+                -(k+1)δ_{nk}\frac{n!}{(n+m)!}\yo^{n+m}\nabla^m[f](\ao)\xo^{n+m}
+                \\
+                        + δ_{n+1,k+1}\frac{(n+1)!}{(n+1+m-1)!}
+                        \yo^{n+m}\nabla^{m-1}[\nabla f](\ao)\xo^{n+m}
+                \end{multlined}
+                \\&=0
+\end{aligned}
+\end{equation}
+The relations from $\ad_{\xo}$ follow almost identically as those of
+$\ad_{\yo}$. As $\bo$ is central, $\ad_{\bo}$ generates no more relations, so
+linear independence is established.
 \end{proof}
 
 \subsection{A generating function for the coinvariants}
