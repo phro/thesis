@@ -405,7 +405,7 @@ Explicit examples are missing.
 - [X] P.17, l.4: “Where the last column” → “where the last column”
 - [X] P.17, l.10: “such as a meta-colagebra” → “such as a meta-coalgebra”
 - [X] P.17, l.-3: φ[S] = φD C [S] goes the other way round: from AD⊔S to AC⊔S.
-- [ ] P.18, l.4: “two spaces” → “two objects”
+- [X] P.18, l.4: “two spaces” → “two objects”
 - [ ] P.18, l.6: “CD1⊔D2 → CC1⊔C2” → “AD1⊔D2 → AC1⊔C2”
 - [ ] P.18, l.7: It is written “This is visualized in figure 2.1”, but this is
     not what I see in Figure 2.1.
