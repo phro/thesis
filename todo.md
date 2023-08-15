@@ -421,7 +421,7 @@ Explicit examples are missing.
 - [X] P.26, l.-7: “figures 2.4 to 2.7” → “(figures 2.4 to 2.7)”
 - [X] P.35, (2.45): “ayr” → “ayr”
 - [X] P.37, l.-10: “is map” → “is a map”
-- [ ] P.37, l.-9: “ϕX Y ” → “φX Y ”
+- [X] P.37, l.-9: “ϕX Y ” → “φX Y ”
 - [ ] P.37, l.-5: “a U-valued tangle invariant” → “a U-valued tangle invariant
     Z”
 - [ ] P.38, (2.57): The contribution of C4 seems to be missing in this
