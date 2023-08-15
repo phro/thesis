@@ -407,7 +407,7 @@ Explicit examples are missing.
 - [X] P.17, l.-3: φ[S] = φD C [S] goes the other way round: from AD⊔S to AC⊔S.
 - [X] P.18, l.4: “two spaces” → “two objects”
 - [X] P.18, l.6: “CD1⊔D2 → CC1⊔C2” → “AD1⊔D2 → AC1⊔C2”
-- [ ] P.18, l.7: It is written “This is visualized in figure 2.1”, but this is
+- [X] P.18, l.7: It is written “This is visualized in figure 2.1”, but this is
     not what I see in Figure 2.1.
 - [ ] P.19, l.-10: “When C = (Vect, ⊗)” → “When C = (k − Vect, ⊗)”
 - [ ] P.19, l.-8: “Then A∅ is a field” → “Then A∅ is the field k”
