@@ -114,6 +114,44 @@ with the following notation:
         \end{columns}
 \end{frame}
 
+\begin{frame}
+        \begin{definition}[meta-coalgebra]
+                A \defi{meta-coalgebra} (or \defi{meta-comonoid}) is a meta-object
+                $\set{C_X}_X$ with operations a \defi{comultiplication}
+                $\map {\comult^{i}_{jk}} {C_{\set{i}}} {C_{\set{j,k}}}$ which is
+                \defi{coassociative} and a \defi{counit}, which is a
+                map $\map {\counit^{i}} {A_{i}} {A_{\emptyset}}$.
+        \end{definition}
+        \begin{columns}
+                \column{0.5\textwidth}
+        \begin{equation}\label{eq:cd_comult}
+        \begin{tikzcd}[ampersand replacement=\&]
+                C_{\set{1,2,3}}
+                \&C_{\set{2,3}}
+                        \lar["\comult^{1}_{{1,2}}"'] \\
+                C_{\set{1,2}}
+                        \uar["\comult^{2}_{2,3}"]
+                \&C_{\set{1}}
+                        \lar["\comult^{1}_{1,2}"]
+                        \uar["\comult^{1}_{1,3}"']
+        \end{tikzcd}
+        \end{equation}
+        \column{0.5\textwidth}
+        \begin{equation}\label{eq:cd_counit}
+        \begin{tikzcd}[ampersand replacement=\&]
+                C_{\set{1}}
+                \&C_{\set{1,2}}
+                        \lar["\counit^{2}"']\\
+                \&C_{\set{1}}
+                        \ular["\id", shift left]
+                        \uar["\comult^{1}_{1,2}", shift left]
+                        \uar["\comult^{1}_{2,1}"', shift right] \\
+        \end{tikzcd}
+        \end{equation}
+        \end{columns}
+\end{frame}
+
+%------------------------------------------------
 %------------------------------------------------
 \begin{frame}
         \centering
