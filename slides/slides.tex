@@ -84,7 +84,6 @@ with the following notation:
                 {A_{\set{k}}}$  and a unit
                 $\map{\unit_{i}}{A_{\emptyset}}{A_{\set{i}}}$.
         \end{definition}
-        
         \begin{columns}
                 \column{0.5\textwidth}
                 \begin{equation*}\label{eq:cd_mult}
@@ -151,6 +150,75 @@ with the following notation:
         \end{columns}
 \end{frame}
 
+\begin{frame}
+        \begin{definition}[meta-bialgebra]
+                A \defi{meta-bialgebra} (or \defi{meta-bimonoid}) is a
+                meta-algebra $(B,\mult,\unit)$ and a meta-coalgebra
+                $(B,\comult,\counit)$, such that $\comult$ and $\counit$ are
+                meta-algebra morphisms.
+        \end{definition}
+\end{frame}
+\begin{frame}
+        \frametitle{Bialgebra diagrams}
+        \begin{columns}
+        \column{0.45\linewidth}
+        \onslide<1,2,4>
+        \begin{equation*}\label{eq:cd_mult_comult}
+        \begin{tikzcd}[ampersand replacement=\&,column sep=large]
+                B_{\set{1,2}}
+                        \rar["\mult^{1,2}_{1}"]
+                        \dar["\comult^{1}_{1,3}\then\comult^{2}_{2,4}"]
+                \&B_{\set{1}}
+                        \dar["\comult^{1}_{1,2}"] \\
+                B_{\set{1,2,3,4}}
+                        \rar["\mult^{1,2}_{1}\then\mult^{3,4}_{2}"']
+                \&B_{\set{1,2}}
+        \end{tikzcd}
+        \end{equation*}
+        \onslide<2,3>\hline
+        \onslide<1,2,5>
+        \begin{equation*}\label{eq:cd_unit_comult}
+        \begin{tikzcd}[ampersand replacement=\&,row sep=tiny]
+                \&B_{\set{1}}
+                        \ar[dd,"\comult^{1}_{1,2}"] \\
+                B_{\emptyset}
+                        \urar["\unit_{1}"]
+                        \drar["\unit_{1}\then\unit_{2}"',near end]\\
+                \&B_{\set{1,2}}
+        \end{tikzcd}
+        \end{equation*}
+        \column{0.1\linewidth}
+        \onslide<4,5>\rule{0.1mm}{0.7\textheight}
+        \column{0.45\linewidth}
+        \onslide<1,3,4>
+        \begin{equation*}\label{eq:cd_mult_counit}
+        \begin{tikzcd}[ampersand replacement=\&,column sep=tiny]
+                B_{\set{1,2}}
+                        \ar[rr,"\mult^{1,2}_{1}"]
+                        \drar["\counit^{1}\then\counit^{2}"']
+                \&\&B_{\set{1}}
+                        \dlar["\counit^{1}"] \\
+                \&B_{\emptyset}
+        \end{tikzcd}
+        \end{equation*}
+        \onslide<2,3>\hline
+        \onslide<1,3,5>
+        \begin{equation*}\label{eq:cd_unit_counit}
+        \begin{tikzcd}[ampersand replacement=\&]
+                B_{\emptyset}
+                        \rar["\unit_{1}"]
+                        \drar["\id"']
+                \&B_{\set{1}}
+                        \dar["\counit^{1}"] \\
+                \&B_{\emptyset}
+        \end{tikzcd}
+        \end{equation*}
+        \end{columns}
+\end{frame}
+
+%------------------------------------------------
+
+%------------------------------------------------
 %------------------------------------------------
 %------------------------------------------------
 \begin{frame}
