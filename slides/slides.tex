@@ -227,6 +227,33 @@ with the following notation:
 \end{frame}
 
 \begin{frame}
+        \begin{definition}[meta-Hopf algebra]
+        A \defi{meta-Hopf algebra} (or \defi{meta-Hopf monoid}) is a
+        meta-bialgebra $H$ together with a map $\map {\antipode} {H} {H}$ called
+        the \defi{antipode}, which satisfies
+        $\comult^{1}_{1,2}\then \antipode^1_1 \then \mult^{1,2}_1 =
+        \counit^{1}\then\unit_{1} =
+        \comult^{1}_{1,2}\then \antipode^2_2 \then \mult^{1,2}_1$.
+        \end{definition}
+        \begin{equation*}
+        \begin{tikzcd}[ampersand replacement=\&,column sep=tiny]
+                \label{eq:cd_antipode}
+                H_{\set{1}}
+                        \arrow[rr, "\counit^{1}"] \arrow[rd, "\comult^{1}_{1,2}"']
+                \&\& H_{\emptyset}
+                        \arrow[rr, "\unit_{1}"]
+                \&\& H_{\set{1}} \\
+                \& H_{\set{1,2}}
+                        \arrow[rr, "\antipode^{2}_{2}", shift left]
+                        \arrow[rr, "\antipode^{1}_{1}"', shift right]
+                \&\& H_{\set{1,2}} \arrow[ru, "\mult^{1,2}_{1}"']
+        \end{tikzcd}
+        \end{equation*}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
         \centering
         \Huge Thank you!
 \end{frame}
