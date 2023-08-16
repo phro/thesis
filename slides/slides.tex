@@ -252,6 +252,25 @@ with the following notation:
 \end{frame}
 
 \begin{frame}
+        \begin{definition}[quasitriangular meta-Hopf algebra]
+        A \defi{quasitriangular meta-Hopf algebra} (or \defi{quasitriangular meta-Hopf
+        monoid}) is a meta-Hopf algebra $H$, together with an invertible element
+        $\Rmat_{i,j} \in H_{i,j}$, called the \defi{$\Rmat$-matrix}, which satisfies the
+        following properties: (we will denote the inverse by $\Rmati$)
+        \begin{align}
+                \label{eq:Rmat_understrand}
+                \Rmat_{13}\then\comult^{1}_{12}&=\Rmat_{13}\Rmat_{24}\then\mult^{34}_3\\
+                \label{eq:Rmat_overstrand}
+                \Rmat_{13}\then\comult^{3}_{23}&=\Rmat_{13}\Rmat_{42}\then\mult^{14}_1\\
+                \label{eq:Rmat_comult}
+                \comult^{1}_{21} &=
+                        \comult^{1}_{12} \Rmat_{a_1,a_2}\Rmati_{p_1,p_2}\then
+                        \mult^{a_1,1,p_1}_{1}\then \mult^{a_2,2,p_2}_{2}
+        \end{align}
+        \end{definition}
+\end{frame}
+
+\begin{frame}
         \centering
         \Huge Thank you!
 \end{frame}
