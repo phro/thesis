@@ -1,0 +1,82 @@
+\documentclass{beamer}
+
+\usetheme{Berlin}
+
+\usepackage{mathtools}
+\usepackage{newunicodechar}
+\input{../versionData}
+\input{../macros}
+
+\title{\myTitle}
+\author{\myName}
+\date{\myTime}
+\institute{\myUni\\\myDepartment}
+
+\begin{document}
+\begin{frame}
+        \titlepage
+\end{frame}
+\begin{frame}
+        \frametitle{Outline}
+        \tableofcontents
+\end{frame}
+\section{Introduction}
+\subsection{Knots, links, and tangles}
+\begin{frame}
+\begin{figure}
+        \centering
+        \includegraphics[height=0.8\textheight]{../figures/tangle_example.pdf}
+        \caption{An example of a tangle}
+        \label{fig:tangle_example}
+\end{figure}
+\end{frame}
+\begin{frame}
+\begin{figure}
+        \centering
+        \includegraphics[width=0.9\textwidth]{../figures/tangle_intro.pdf}
+        \caption{Can you arrange the left-hand side to look like the right?}
+        \label{fig:tangle_intro}
+\end{figure}
+\end{frame}
+\begin{frame}
+\begin{figure}
+        \centering
+        \includegraphics[width=0.9\textwidth]{../figures/tangle_comult.pdf}
+        \caption{Doubling strand $i$ into two strands $j$ and $k$}
+        \label{fig:tangle_comult}
+\end{figure}
+\end{frame}
+\section{Quantum invariants}
+\begin{frame}
+\begin{figure}
+        \centering
+        \includegraphics[height=0.8\textheight]{../figures/invariant_example.pdf}
+        \caption{The first step in constructing an invariant}
+        \label{fig:}
+\end{figure}
+\end{frame}
+\begin{frame}
+        \begin{definition}[indexed tensor powers]\label{def:indexed_tensor_powers}
+        Let $V$ be a vector space and $S = \set{s_1,…, s_n}$ be a finite
+        set. We define the \defi{indexed tensor power} of $V$ to be the
+        collection of formal linear combinations of functions from $S$ to $V$
+        \begin{equation}\label{eq:indexed_tensor}
+                V_S \defeq V^{\otimes S} \defeq \Span\set{\map {f} {S} {V}}/\sim
+        \end{equation}
+        subject to multi-additivity and the factoring of scalars.
+\end{definition}
+\pause
+We will write such functions $\map {f} {S} {V}$ with $f(s_i) = v_i$
+with the following notation:
+\begin{equation}\label{eq:product_notation}
+        \pn{v_{1}}_{s_1}
+        \pn{v_{2}}_{s_2} ⋯
+        \pn{v_{n}}_{s_n}
+        \defeq f
+\end{equation}
+\end{frame}
+\begin{frame}
+        \centering
+        \Huge Thank you!
+\end{frame}
+\end{document}
