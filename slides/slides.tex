@@ -4,6 +4,7 @@
 
 \usepackage{mathtools}
 \usepackage{newunicodechar}
+\usepackage{unicode-math}
 \usepackage{tikz-cd}
 \input{../versionData}
 \input{../macros}
@@ -289,6 +290,24 @@ with the following notation:
                 inverse will be denoted
                 $\invb\monodromy_{12} =
                 \Rmati_{12}\Rmati_{34}\then\mult^{14}_{1}\then\mult^{23}_{2}$.
+        \end{definition}
+\end{frame}
+
+\begin{frame}
+        \begin{definition}[ribbon meta-Hopf algebra]
+                A quasitriangular meta-Hopf algebra $H$ is called \defi{ribbon}
+                if it has an element $\ribbon\in \centre(H)$ such that:
+                \begin{align}
+                        \ribbon_1\ribbon_2\then\mult^{12}
+                &= \dfe_1 \dfe_2 \then \antipode^{2}_{2} \then \mult^{12}\\
+                \ribbon_1 \then \comult^1_{12}
+                &=      \ribbon_1\ribbon_2
+                \then\invb\monodromy_{34}
+                \then\mult^{13}_{1}
+                \then\mult^{24}_{2} \\
+                        \ribbon \then \antipode &= \ribbon\\
+                        \ribbon \then \counit &= \unit \then \counit = 1
+                \end{align}
         \end{definition}
 \end{frame}
 
