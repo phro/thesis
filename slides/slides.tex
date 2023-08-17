@@ -548,6 +548,8 @@ with the following notation:
 
 \section{The ribbon Hopf algebra $\CU$}
 
+\subsection{Defining $\CU$}
+
 \begin{frame}
         \begin{definition}[The algebra structure of $\CU$]
         Define the Lie algebra
@@ -601,6 +603,8 @@ with the following notation:
         \end{definition}
 \end{frame}
 
+\subsection{Commutation relations in $\CU$}
+
 \begin{frame}
         \begin{lemma}[Commutation relations in $\CU$]\label{lem:xay_relations}
                 Given $f\in \polyring{\Q}{\ao}$,
@@ -613,10 +617,24 @@ with the following notation:
         \end{lemma}
         \pause
         \begin{lemma}[Weyl canonical commutation relation]
-                In the ring $\powerseries{\CU}{ξ, η}$, we have the following relation:
+                In $\powerseries{\CU}{ξ, η}$:
                 \begin{equation}\label{eq:weyl_relation}
                         \Exp{ξ\xo}\Exp{η\yo} = \Exp{ξη\bo}\Exp{η\yo}\Exp{ξ\xo}
                 \end{equation}
+        \end{lemma}
+\end{frame}
+
+\begin{frame}
+        \begin{lemma}[Exponential commutation relations in $\CU$]
+                \label{lem:exp_xay_relations}
+                In the ring $\powerseries{\CU}{α, η, ξ}$, let $\A\defeq \Exp{α}$.
+                Then:
+                \begin{align}
+                        \label{eq:ay_commutation}
+                        \Exp{α\ao}\Exp{η\yo} &= \Exp{\frac{η}{\A}\yo}\Exp{α\ao}\\
+                        \label{eq:ax_commutation}
+                        \Exp{ξ\xo}\Exp{α\ao} &= \Exp{α\ao}\Exp{\frac{ξ}{\A}\xo}
+                \end{align}
         \end{lemma}
 \end{frame}
 
