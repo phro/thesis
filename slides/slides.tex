@@ -863,6 +863,24 @@ with the following notation:
 \end{frame}
 
 \begin{frame}
+        Linear maps and their generating functions play well together.
+        \pause
+        \begin{lemma}[composition of generating functions]
+        Given $ϕ ∈ \Hom{\polyring{\Q}{z_J}}{\polyring{\Q}{z_K}}$ and
+        $ψ ∈ \Hom{\polyring{\Q}{z_K}}{\polyring{\Q}{z_L}}$, we have
+        \begin{equation}
+                \Gen{ϕ\then ψ}
+                = \restrict[\bigg]{
+                        \pn*{
+                                \restrict[\big]{\Gen{ϕ}}[z_K\mapsto ∂_{ζ_K}]
+                                \Gen{ψ}
+                        }
+                }[ζ_K=0]
+        \end{equation}
+        \end{lemma}
+\end{frame}
+
+\begin{frame}
         \centering
         \Huge Thank you
 \end{frame}
