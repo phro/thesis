@@ -7,6 +7,7 @@
 \usepackage{unicode-math}
 \usepackage{tikz-cd}
 \usepackage{subcaption}
+\usepackage{graphicx}
 \input{../versionData}
 \input{../macros}
 \RenewDocumentCommand{\defi}{}{\emph}
@@ -333,6 +334,8 @@
         \end{figure}
 \end{frame}
 
+\subsection{Ribbon meta-Hopf algebras}
+
 \begin{frame}
         \begin{definition}[Drinfeld element]
                 In a quasitriangular meta-Hopf algebra $H$, the \defi{Drinfeld
@@ -341,6 +344,20 @@
                         \dfe \defeq \Rmat_{21}\then\antipode^1_1 \then \mult^{12}
                 \end{equation}
         \end{definition}
+\end{frame}
+
+\begin{frame}
+        \begin{figure}
+                \centering
+                \includegraphics[
+                        width=0.8\textwidth,
+                        height=0.8\textheight,
+                        keepaspectratio,
+                ]{../figures/tangle_drinfeld.pdf}
+                \caption{The Drinfeld element $\dfe_i$ in the meta-Hopf algebra of
+                tangles.}
+                \label{fig:tangle_drinfeld}
+        \end{figure}
 \end{frame}
 
 \begin{frame}
