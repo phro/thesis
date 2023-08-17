@@ -14,6 +14,9 @@
 \input{../macros}
 \RenewDocumentCommand{\defi}{}{\emph}
 
+\theoremstyle{theorem}
+\newtheorem{proposition}{Proposition}
+
 \title{\myTitle}
 \author{\myName}
 \date{\myTime}
@@ -1036,6 +1039,15 @@ With generating functions!
 This is the Alexander polynomial!
 \end{frame}
 
+\begin{frame}
+        \begin{proposition}[Bar-Natan, van der Veen]
+                Let $K$ be a (framed) upright knot diagram with self-linking number $0$.
+                Then:
+                \begin{equation*}
+                        Z(K) = \inv{Δ(K)}
+                \end{equation*}
+        \end{proposition}
+\end{frame}
 \begin{frame}
         \centering
         \Huge Thank you
