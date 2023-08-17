@@ -1098,6 +1098,24 @@ This is the Alexander polynomial!
 \end{frame}
 
 \begin{frame}
+        \begin{lemma}[coinvariants are a trace map]
+                Let $A$ be an algebra, and let $A_A\defeq A/\liebk{A}{A}$ be its
+                set of coinvariants.\footnote{Here, $\liebk AA =
+                \Span\setbuilder{\liebk{x}{y}}{x, y\in A}$ is the vector space of
+                Lie brackets, not the ideal.%
+                }
+                \pause
+                With $A_{S, L} \defeq A_{S} \otimes \pn{A_A}_{L}$, then $A$
+                defines a traced meta-algebra with trace map given by:
+                \begin{equation*}
+                        \map {\trace^i[S][L]}
+                                {A_{S\sqcup\set{i}, L}}
+                                {A_{S, L\sqcup\set{i}}}
+                \end{equation*}
+        \end{lemma}
+\end{frame}
+
+\begin{frame}
         \centering
         \Huge Thank you
 \end{frame}
