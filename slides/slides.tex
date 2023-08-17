@@ -881,6 +881,32 @@ with the following notation:
 \end{frame}
 
 \begin{frame}
+        \begin{definition}[contraction]\label{def:contraction}
+        Let $f\in\powerseries{\K}{r, s}$ be a power series. The
+        \defi{contraction} of $f = \Sum[k, l]{c_{k, l}r^{k}s^{l}}$ along the
+        pair $(r, s)$ is:
+        \begin{equation*}
+                \contraction{f}[(r, s)]
+                \defeq \Sum[k] c_{k, k}k!
+                = \restrict[\bigg]{\Sum[k, l]{c_{k, l} \partial_{s}^{k}s^{l}}}[s=0]
+        \end{equation*}
+        \pause
+        Repeated contraction works too: For
+        $f\in \powerseries{\K}{r_i, s_i}_{i≤n}$,
+        \begin{equation*}
+                \contraction{f}[\pn*{(r_i)_i, (s_i)_i}]
+                \defeq
+                \contraction*{
+                        \contraction*{
+                                \contraction{f}[(r_1, s_1)]
+                        }[(r_2, s_2)]
+                        \cdots
+                }[(r_n, s_n)]
+        \end{equation*}
+        \end{definition}
+\end{frame}
+
+\begin{frame}
         \centering
         \Huge Thank you
 \end{frame}
