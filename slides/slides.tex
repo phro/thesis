@@ -545,6 +545,61 @@ with the following notation:
 \end{figure}
 \end{frame}
 
+\section{The ribbon Hopf algebra $\CU$}
+
+\begin{frame}
+        \begin{definition}[The algebra structure of $\CU$]
+        Define the Lie algebra
+        \begin{equation*}
+        \fg \defeq \Span_{\Q}\setbuilder[\Big]{\yo, \bo, \ao, \xo}{
+                \liebk{\ao}{\xo} = \xo,
+                \liebk{\ao}{\yo} = -\yo,
+                \liebk{\xo}{\yo} = \bo,
+                \liebk{\bo}{ } = 0
+        }
+        \end{equation*}
+        We put a grading on $\fg$ by $\deg(y) = \deg(b) = 1$ and
+        $\deg(a) = \deg(x) = 0$. Then $\CU=\uea*{\fg}$ is the graded completion
+        of the universal enveloping algebra of $\fg$.
+        \end{definition}
+\end{frame}
+
+\begin{frame}
+        \begin{definition}[The bialgebra structure of $\CU$]
+                With $\Bo \defeq \Exp{-\bo}$, let:
+                \begin{equation}\begin{aligned}
+                        \comult_{i,j}(\yo) &=
+                        \frac{\bo_i+\bo_j}{1-\Bo_i\Bo_j} \pn*{
+                                \Bo_j\frac{1-\Bo_i}{\bo_i}\yo_i+
+                                \frac{1-\Bo_j}{\bo_j}\yo_j
+                        }\\
+                        \comult_{i,j}(\bo) &= \bo_i + \bo_j\\
+                        \comult_{i,j}(\ao) &= \ao_i + \ao_j\\
+                        \comult_{i,j}(\xo) &= \xo_i + \xo_j\\
+                \end{aligned}\end{equation}
+                For $\zo\in\set{\yo, \bo, \ao, \xo}$, set $\counit(\zo)=0$.
+        \end{definition}
+\end{frame}
+
+\begin{frame}
+        \begin{definition}[The Hopf algebra structure of $\CU$]
+                Let $\antipode(\zo) \defeq -\zo$ for each
+                $\zo\in\set{\yo, \bo, \ao, \xo}$, extended antimultiplicatively.
+        \end{definition}
+
+        \begin{definition}[The ribbon structure of $\CU$]
+                \begin{align}
+                        \Rmat_{i,j}
+                        &\defeq \exp\pn*{\bo_i\ao_j}
+                        \exp\pn*{\frac{1-\Bo_i}{\bo_i}\yo_i\xo_j}\\
+                        \spin &\defeq \sqrt{\Bo}\\
+                        \ribbon
+                              &\defeq \Rmati_{31}\spini_{2} \then \mult^{123}
+                              = \Rmati_{13}\spin_{2} \then \mult^{123}
+                \end{align}
+        \end{definition}
+\end{frame}
+
 \begin{frame}
         \centering
         \Huge Thank you!
