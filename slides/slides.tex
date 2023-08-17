@@ -843,6 +843,25 @@ with the following notation:
         \end{example}
 \end{frame}
 
+\ProvideDocumentCommand{\TMap}{}{\mcl T}
+\ProvideDocumentCommand{\SMap}{}{\mcl S}
+
+\begin{frame}
+        \begin{definition}[composition of generating functions]
+                Let $\TMap\in\Hom[\GenFunc]JK$ and $\SMap\in\Hom[\GenFunc]KL$ be
+                generating functions. Then:
+                \begin{equation*}\label{eq:compose_genFunc}
+                        \onslide<2>{\SMap\circ \TMap = }
+                        \TMap\then \SMap
+                        \defeq \restrict[\bigg]{
+                                \pn*{
+                                        \restrict[\big]{\TMap}[z_K\mapsto ∂_{ζ_K}] \SMap
+                                }
+                        }[ζ_K=0]
+                \end{equation*}
+        \end{definition}
+\end{frame}
+
 \begin{frame}
         \centering
         \Huge Thank you
