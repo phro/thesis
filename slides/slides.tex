@@ -9,6 +9,7 @@
 \usepackage{subcaption}
 \usepackage{graphicx}
 \usepackage{cleveref}
+\usepackage{stmaryrd}
 \input{../versionData}
 \input{../macros}
 \RenewDocumentCommand{\defi}{}{\emph}
@@ -598,6 +599,25 @@ with the following notation:
                               = \Rmati_{13}\spin_{2} \then \mult^{123}
                 \end{align}
         \end{definition}
+\end{frame}
+
+\begin{frame}
+        \begin{lemma}[Commutation relations in $\CU$]\label{lem:xay_relations}
+                Given $f\in \polyring{\Q}{\ao}$,
+                \begin{align}\label{eq:xay_relations}
+                        f(\ao)\yo^r &= \yo^rf(\ao-r) &
+                        \xo^rf(\ao) &= f(\ao-r)\xo^r
+                \end{align}
+                \pause
+                Also true for $f(a, b)\in \powerseries{\polyring{\Q}{\ao}}{\bo}$.
+        \end{lemma}
+        \pause
+        \begin{lemma}[Weyl canonical commutation relation]
+                In the ring $\powerseries{\CU}{ξ, η}$, we have the following relation:
+                \begin{equation}\label{eq:weyl_relation}
+                        \Exp{ξ\xo}\Exp{η\yo} = \Exp{ξη\bo}\Exp{η\yo}\Exp{ξ\xo}
+                \end{equation}
+        \end{lemma}
 \end{frame}
 
 \begin{frame}
