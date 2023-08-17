@@ -1116,6 +1116,43 @@ This is the Alexander polynomial!
 \end{frame}
 
 \begin{frame}
+        \begin{theorem}\label{thm:CU_coinvariants_basis}
+                The space of coinvariants of $U$, $U_U$, has basis
+                $\set{\yo^n \ao^k \xo^n}_{n, k\ge 0}$.
+        \end{theorem}
+        \pause
+        \begin{theorem}[Generating function for the trace of $\CU$]
+        \begin{equation*}\label{eq:trace_formula}
+                \Gen\trace = \exp\pn[\Big]{αa+\pn[\big]{ηξ+β(1-\Exp{-α})}z}
+        \end{equation*}
+        \end{theorem}
+\end{frame}
+
+\newcommand{\cy}{c_y}
+\newcommand{\cb}{c_b}
+\newcommand{\ca}{c_a}
+\newcommand{\cx}{c_x}
+\newcommand{\cc}{c}
+
+\begin{frame}
+        \begin{theorem}[the trace of a Gaußian]\label{thm:trace_gaussian}
+        Let $f(y_i, b_i, a_i, x_i)
+                = P(B_i) \Exp{\cc + \ca a_i + \cb b_i + σa_ib_i
+                + \cx(b_i) x_i + \cy(b_i)y_i + λ(b_i)x_i y_i}$.
+        Then when $σ=0$,
+        \begin{equation}\begin{aligned}\label{eq:trace_on_gaussian}
+        \contraction*{ f(y_i, b_i, a_i, x_i) \trace^i }_{v_i}
+        &= \frac{P(\Exp{-μ})}
+                {1-λ(μ)\bz_i}\Exp{\cc+\ca\ba_i+\cb μ+\frac{\cy(μ)\cx(μ)\bz_i}{1-λ(μ)\bz_i}}
+        \end{aligned}\end{equation}
+        where $μ\defeq (1-\Exp{-\ca})\bz_i$, $\cc$, $\ca$, $\cb$, and $σ$ denote constants with respect to the
+        variables
+        $y_i$, $b_i$, $a_i$, and $x_i$ (collectively referred to as \enquote{$v_i$}s),
+        while $\cx$, $\cy$, and $λ$ are potentially $b_i$-dependent, and $P$ is a (rational)
+        function in (the square root of) $B_i$.
+        \end{theorem}
+\end{frame}
+\begin{frame}
         \centering
         \Huge Thank you
 \end{frame}
