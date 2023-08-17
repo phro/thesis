@@ -1048,6 +1048,55 @@ This is the Alexander polynomial!
                 \end{equation*}
         \end{proposition}
 \end{frame}
+
+\section{Extending the framework to links}
+
+\begin{frame}
+        Our algebraic framework describes tangles with no closed components.
+        Let us extend to closed components.
+\end{frame}
+
+\begin{frame}
+        \begin{definition}[traced meta-algebra]
+        A \defi{traced meta-algebra} (or \defi{traced meta-monoid}) is two
+        things:
+        \pause
+        \begin{enumerate}
+                \item For each $L$, a meta-algebra $\set{A_{S, L}}_S$ with
+                        multiplication
+                        $\mult^{i,j}_k[L]$ taking the form:
+                        \begin{equation*}
+                                \map {\mult^{i,j}_k[L][S]}
+                                {A_{\set{i,j}\sqcup S, L}}
+                                {A_{\set{k}\sqcup S, L}}
+                        \end{equation*}
+                        for $i$, $j$, $k$ disjoint from both $S$ and $L$.
+                \pause
+                \item For each disjoint pair $S$, $L$ and $i\notin S\cup L$, a
+                        \defi{trace}
+                        $\map {\trace^i}
+                                {A_{\set{i}\sqcup S, L}}
+                                {A_{S,\set{i}\sqcup L}}$
+                        satisfying:
+                        \begin{align*}
+                                \mult^{i,j}_{k}\then\trace^k
+                                &=
+                                \mult^{j,i}_{k}\then\trace^k\\
+                                ϕ^{D}_{C}\then \trace^i
+                                &= \trace^i \then ϕ^{D}_{C}
+                        \end{align*}
+                        for each operation $ϕ^{D}_{C}$ and $i \notin D \cup C$.
+        \end{enumerate}
+\end{definition}
+\end{frame}
+
+\begin{frame}
+        \begin{definition}[mixed upright tangles]
+                Let $\tangleMix{L}{S}$ be the set of upright tangles with open
+                strands indexed by $S$ and closed strands indexed by $L$.
+        \end{definition}
+\end{frame}
+
 \begin{frame}
         \centering
         \Huge Thank you
