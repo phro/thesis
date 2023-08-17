@@ -381,6 +381,28 @@
 \end{frame}
 
 \begin{frame}
+        \begin{definition}[spinner]
+                A \defi{spinner} in a ribbon meta-Hopf algebra $H$ is an
+                invertible element $\spin\in H$ (with inverse $\invb\spin$) such
+                that for all $x\in H$:
+                \begin{align}
+                        \label{eq:spinner_ribbon}
+                        \spin_1\ribbon_2\spin_3 \then \antipode^2_2 \then \mult^{123} &=
+                        \ribbon\\
+                        \label{eq:spinner_comult}
+                        \spin_1\then\comult^{1}_{12} &=\spin_1\spin_2\\
+                        \label{eq:spinner_antipode}
+                        \spin \then\antipode &= \invb\spin\\
+                        \label{eq:spinner_conjugate}
+                        \spin_{1}x_2\invb\spin_{3}\then\mult^{123} &=
+                        x \then \antipode \then \antipode\\
+                        \label{eq:spinner_counit}
+                        \spin \then \counit &= \unit \then \counit = 1
+                \end{align}
+        \end{definition}
+\end{frame}
+
+\begin{frame}
         \begin{definition}[ribbon meta-Hopf algebra]
                 A quasitriangular meta-Hopf algebra $H$ is called \defi{ribbon}
                 if it has an element $\ribbon\in \centre(H)$ such that:
@@ -398,26 +420,6 @@
         \end{definition}
 \end{frame}
 
-\begin{frame}
-        \begin{definition}[spinner]
-        A \defi{spinner} in a ribbon meta-Hopf algebra $H$ is an invertible element
-        $\spin\in H$ (with inverse $\invb\spin$) such that for all $x\in H$:
-        \begin{align}
-                \label{eq:spinner_ribbon}
-                \spin_1\ribbon_2\spin_3 \then \antipode^2_2 \then \mult^{123} &=
-                \ribbon\\
-                \label{eq:spinner_comult}
-                \spin_1\then\comult^{1}_{12} &=\spin_1\spin_2\\
-                \label{eq:spinner_antipode}
-                \spin \then\antipode &= \invb\spin\\
-                \label{eq:spinner_conjugate}
-                \spin_{1}x_2\invb\spin_{3}\then\mult^{123} &=
-                x \then \antipode \then \antipode\\
-                \label{eq:spinner_counit}
-                \spin \then \counit &= \unit \then \counit = 1
-        \end{align}
-\end{definition}
-\end{frame}
 \section{Knots, links, and tangles}
 
 \begin{frame}
