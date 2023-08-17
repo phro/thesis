@@ -1121,6 +1121,27 @@ This is the Alexander polynomial!
                 $\set{\yo^n \ao^k \xo^n}_{n, k\ge 0}$.
         \end{theorem}
         \pause
+        For $f$ a polynomial,
+        \begin{equation*}
+                \mapdef {\trace} {\CU} {\CU_{\CU}}
+                        {\yo^n \bo^m f(\ao) \xo^k}
+                        {δ_{nk}\frac{n!}{(n+m)!}\yo^{n+m}\nabla^m[f](\ao)\xo^{n+m}}
+        \end{equation*}
+\end{frame}
+
+\ProvideDocumentCommand{\COrder}{}{\Order}
+\begin{frame}
+        Choosing a basis for $\CU_{\CU}$ defines an isomorphism with a
+        polynomial ring:
+        \begin{equation*}
+                \mapdef {\COrder} {\polyring{\Q}{a, z}} [\toiso] {\CU_\CU}
+                {a^{n}z^{k}}
+                {\frac{1}{k!}\yo^{k}\ao^{n}\xo^{k} \\
+                        k!\nabla^m[f](a)z^{k+m} &\mapsfrom
+                        \yo^k \bo^mf(\ao)\xo^k
+                }
+        \end{equation*}
+        \pause
         \begin{theorem}[Generating function for the trace of $\CU$]
         \begin{equation*}\label{eq:trace_formula}
                 \Gen\trace = \exp\pn[\Big]{αa+\pn[\big]{ηξ+β(1-\Exp{-α})}z}
