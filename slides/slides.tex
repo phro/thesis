@@ -6,6 +6,7 @@
 \usepackage{newunicodechar}
 \usepackage{unicode-math}
 \usepackage{tikz-cd}
+\usepackage{subcaption}
 \input{../versionData}
 \input{../macros}
 \RenewDocumentCommand{\defi}{}{\emph}
@@ -290,6 +291,8 @@
 \end{figure}
 \end{frame}
 
+\subsection{Quasitriangular meta-Hopf algebras}
+
 \begin{frame}
         \begin{definition}[quasitriangular meta-Hopf algebra]
         A \defi{quasitriangular meta-Hopf algebra} (or \defi{quasitriangular meta-Hopf
@@ -307,6 +310,27 @@
                         \mult^{a_1,1,p_1}_{1}\then \mult^{a_2,2,p_2}_{2}
         \end{align}
         \end{definition}
+\end{frame}
+
+\begin{frame}
+        \begin{figure}
+                \centering
+                \begin{subfigure}[b]{0.4\textwidth}
+                        \centering
+                        \includegraphics{../figures/tangle_rmat.pdf}
+                        \caption{A positive crossing, represented by $\Rmat_{ij}$}
+                        \label{fig:tangle_rmat}
+                \end{subfigure}
+                \begin{subfigure}[b]{0.4\textwidth}
+                        \centering
+                        \includegraphics{../figures/tangle_rmati.pdf}
+                        \caption{A negative crossing, represented by $\Rmati_{ij}$}
+                        \label{fig:tangle_rmati}
+                \end{subfigure}
+                \caption{The $\Rmat$-matrix and its inverse represent a tangle with a
+                single crossing.}
+                \label{fig:tangle_rmats}
+        \end{figure}
 \end{frame}
 
 \begin{frame}
