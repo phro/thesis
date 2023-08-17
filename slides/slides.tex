@@ -1190,6 +1190,58 @@ This is the Alexander polynomial!
 \end{frame}
 
 \begin{frame}
+        Computing $Z$ on the open tangle $H$ yields:
+        \begin{equation*}
+                Z(H) = \Exp{
+                        a_2 b_1+a_1 b_2+\frac{(B_1-1) y_1
+                        ((B_2-1) x_1-x_2)}{b_1}-\frac{B_1
+                        (B_2-1) x_1 y_2}{b_2}
+                }
+                \sqrt{B_2}
+        \end{equation*}
+        Applying $\trace^2$ then provides us with the invariant corresponding to
+        the half-open Hopf link:
+        \begin{equation*}
+                \trace^{2}(Z(H)) = \Exp{
+                        a_1 \left(z_2-B_1 z_2\right)+b_1 a_2+\frac{e^{-z_2} \left(x_1
+                        y_1 e^{z_2}-x_1 y_1 e^{B_{1} z_2}\right)}{b_1}
+                }
+                \Exp{\frac{1}{2} B_{1} z_2-\frac{z_2}{2}}
+        \end{equation*}
+        \pause
+        We must go through this procedure for each component.
+\end{frame}
+
+\begin{frame}
+        Finally, we package each strand's computation into a multiset:
+        \begin{equation*}
+                \begin{aligned}
+                        &Z(L_{\text{Hopf}})=
+                      \\&\begin{multlined}[t]
+                        \pn[\Bigg]{
+                        \pn[\bigg]{
+                                \Exp{
+                                        a_1 \left(z_2-B_1 z_2\right)+b_1
+                                        a_2+\frac{e^{-z_2} \left(x_1
+                                        y_1 e^{z_2}-x_1 y_1 e^{B_{1} z_2}\right)}{b_1}
+                                }
+                                \Exp{\frac{1}{2} B_{1} z_2-\frac{z_2}{2}}
+                        }_{\set{1},\set{2}}
+                        ,\\
+                \pn[\bigg]{
+                        \Exp{
+                                a_2 \left(z_1-B_2 z_1\right)+b_2
+                                a_1+\frac{e^{-z_1} \left(x_2
+                                y_2 e^{z_1}-x_2 y_2 e^{B_2 z_1}\right)}{b_2}
+                        }
+                        \Exp{\frac{1}{2} B_2 z_1-\frac{z_1}{2}}
+                }_{\set{2},\set{1}}
+        }
+\end{multlined}\end{aligned}
+        \end{equation*}
+\end{frame}
+
+\begin{frame}
         \centering
         \Huge Thank you
 \end{frame}
