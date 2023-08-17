@@ -922,6 +922,72 @@ with the following notation:
 \end{frame}
 
 \begin{frame}
+        \begin{theorem}[the ribbon meta-Hopf structure of $\CU$ is Gaußian]
+                \label{thm:CU_gaussian}
+                The generating function of each ribbon meta-Hopf algebra
+                operation for $\CU$ all have the form of a perturbed Gaußian.
+                \pause
+                With $B = \Exp{-b}$ and $\A = \Exp{α}$:
+                \begin{align}
+                        \label{eq:gen-mult}
+                        \Gen*{\mult^{ij}_{k}} &=
+                        \begin{multlined}[t]
+                        \exp\biggl(
+                        (α_i + α_j)a_k +
+                                (β_i + β_j + ξ_iη_j)b_k \\
+                        +\pn*{\frac{ξ_i}{\A_j} + ξ_j} x_k+
+                        \pn*{\frac{η_j}{\A_i}+ η_i }y_k
+                        \biggr)
+                        \end{multlined}
+                        \\ \Gen*{\unit_{i}} &=1\label{eq:gen-unit}
+                        \\                \end{align}
+        \end{theorem}
+\end{frame}
+
+\begin{frame}
+        \begin{theorem}[continued]
+                \begin{align}
+                        \Gen*{\comult^{i}_{jk}} &=
+                        \begin{multlined}[t]
+                                \exp\biggl(
+                                        η_i \frac{b_j+b_k}{1-B_jB_k} \pn*{
+                                                B_k\frac{1-B_j}{b_j}y_j+
+                                                \frac{1-B_k}{b_k}y_k
+                                        } \\+
+                                        β_i(b_j + b_k) +
+                                        α_i(a_j + a_k)+
+                                        ξ_i(x_j + x_k)
+                                \biggr)
+                        \end{multlined}
+                        \label{eq:gen-comult}
+                        \\\Gen*{\counit^{i}} &=1\label{eq:gen-counit}
+                        \\\Gen*{\antipode^{i}_{i}} &=\exp\pn*
+                        {
+                                - η_i\A_iy_i
+                                - β_ib_i
+                                + η_i\A_iξ_ib_i
+                                - a_iα_i
+                                - \A_iξ_ix_i
+                        }
+                        \label{eq:gen-antipode}
+                \end{align}
+        \end{theorem}
+\end{frame}
+\begin{frame}
+        \begin{theorem}[continued]
+                \begin{align}
+                        \Gen*{\Rmat_{ij}} &=\exp\pn*{
+                                a_j b_i + \frac{1-B_i}{b_i} y_i x_j
+                        }\label{eq:gen-Rmat}
+                        \\\Gen*{\spin_{i}} &=\sqrt{B_i}\label{eq:gen-spin}
+                        \\\Gen*{\ribbon_{i}} &=\sqrt{B_i}\exp\pn*{
+                                a_i b_i + \frac{1-B_i}{b_i}x_iy_i
+                        }\label{eq:gen-ribbon}
+                \end{align}
+        \end{theorem}
+\end{frame}
+
+\begin{frame}
         \centering
         \Huge Thank you
 \end{frame}
