@@ -906,6 +906,21 @@ with the following notation:
         \end{definition}
 \end{frame}
 
+\newcommand{\Wt}{\tilde{W}}
+\begin{frame}
+        \begin{theorem}[contraction theorem {[Bar-Natan, van der Veen]}]
+                In the ring
+                $R_n = \powerseries{
+                        \polyring{\Q}{r_j, g_j}
+                }{s_j, W_{ij}, f_j \SetSymbol[\big] 1 ≤ i, j ≤ n}$,
+                \begin{equation}
+                        \contraction{\Exp{gs + rf + rWs}}[r, s]
+                        = \det(\Wt)\Exp{g\Wt f}
+                \end{equation}
+                where $\Wt = \inv{(1-W)}$.
+        \end{theorem}
+\end{frame}
+
 \begin{frame}
         \centering
         \Huge Thank you
