@@ -815,22 +815,22 @@ with the following notation:
 
 \begin{frame}
         \begin{definition}[exponential generating function]
-        The \defi{exponential generating function} of a linear map
-        $\map {Φ} {\polyring{\Q}{z_A}} {\polyring{\Q}{z_B}}$ is:
-        \begin{equation}\label{eq:genfunc}
-                \Gen{Φ} \defeq
-                \Sum[\nn\in\N^A] \frac{Φ(z_A^\nn)}{\nn!}ζ_A^\nn
-                \in \powerseries{\polyring{\Q}{z_B}}{ζ_A}
-        \end{equation}
-        \pause
-        By extending $Φ$ from $\polyring{\Q}{z_A}$ to
-        $\powerseries{\polyring{\Q}{z_A}}{ζ_A}$, we also get:
-        \begin{equation}
-                \Gen{Φ}
-                = Φ\pn*{\Sum[\nn\in\N^A] \frac{(z_Aζ_A)^\nn}{\nn!}}
-                = Φ\pn*{\Gen[\big]{\id_{\polyring{\Q}{z_A}}}}
-        \end{equation}
-\end{definition}
+                The \defi{exponential generating function} of a linear map
+                $\map {Φ} {\polyring{\Q}{z_A}} {\polyring{\Q}{z_B}}$ is:
+                \begin{equation}\label{eq:genfunc}
+                        \Gen{Φ} \defeq
+                        \Sum[\nn\in\N^A] \frac{Φ(z_A^\nn)}{\nn!}ζ_A^\nn
+                        \in \powerseries{\polyring{\Q}{z_B}}{ζ_A}
+                \end{equation}
+                \pause
+                By extending $Φ$ from $\polyring{\Q}{z_A}$ to
+                $\powerseries{\polyring{\Q}{z_A}}{ζ_A}$, we also get:
+                \begin{equation}
+                        \Gen{Φ}
+                        = Φ\pn*{\Sum[\nn\in\N^A] \frac{(z_Aζ_A)^\nn}{\nn!}}
+                        = Φ\pn*{\Gen[\big]{\id_{\polyring{\Q}{z_A}}}}
+                \end{equation}
+        \end{definition}
 \end{frame}
 
 \begin{frame}
