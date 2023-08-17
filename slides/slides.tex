@@ -87,6 +87,8 @@
 
 \section{Algebraic structures}
 
+\subsection{Index notation}
+
 \begin{frame}
         \begin{definition}[indexed tensor powers]\label{def:indexed_tensor_powers}
         Let $V$ be a vector space and $S = \set{s_1,…, s_n}$ be a finite
@@ -106,6 +108,26 @@ with the following notation:
         \pn{v_{n}}_{s_n}
         \defeq f
 \end{equation}
+\end{frame}
+
+\begin{frame}
+        Let $D$ and $C$ be finite sets, and
+        $\map {T} {V_{D}} {V_{C}}$.
+
+        We will write $T$ alternatively as $T^{D}_{C}$.
+\end{frame}
+
+\begin{frame}
+        \begin{example}
+                Let $V = \R^3$, and $\map {T} {V_{\set{a, b}}} {V_{\set{c}}}$
+                with
+                $T^{a, b}_{c}\pn*{\vec v_a\vec w_b} = (\vec v \times \vec w)_c$
+                be the cross product. Stating that the cross product is
+                antisymmetric becomes:
+                \begin{equation}
+                        T^{a, b}_{c} = -T^{b, a}_{c}
+                \end{equation}
+        \end{example}
 \end{frame}
 
 \subsection{Meta-algebras}
