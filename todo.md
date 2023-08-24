@@ -455,10 +455,10 @@ Explicit examples are missing.
 - [X] p.14 (4th par.) : Is reminding what concatenation means useful when you just defined it last paragraph?
 - [X] p.17 (2nd par.) : "Where the last column and row..." (Shouldn't w be lower-cased? As it's continuing the sentence.)
 - [X] p.19 (3rd par.) : "It is more common <to> think of the unit as an element 1 \in V."
-- [ ] p.20 (Def 2.14) : "meta-colagebra"
-- [ ] p.22 (Def 2.23) : One parenthesis too many?
-- [ ] p.22 (end)	: You have a missing reference.
-- [ ] p.23 (end)	: I don't know about you, but I hate have a line change in an equation like "D x [-1,1]", let alone a page change.
+- [X] p.20 (Def 2.14) : "meta-colagebra"
+- [X] p.22 (Def 2.23) : One parenthesis too many?
+- [X] p.22 (end)	: You have a missing reference.
+- [X] p.23 (end)	: I don't know about you, but I hate have a line change in an equation like "D x [-1,1]", let alone a page change.
 - [ ] p.24 (start)	: "Two open tangles are considered equivalent if there exists an isotopy of the embedding<s> ..."
 - [ ] p.24 (2nd par.) : "... which one may thin<k> of as open tangles with ..."
 - [ ] p.28 (end)	: The sentence starting with "Associativity (equation (2.17)) holds, ..." feels like it's missing something.
