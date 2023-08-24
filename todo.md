@@ -453,7 +453,7 @@ Explicit examples are missing.
 - [X] p.11 (3rd par.) : Sentence starting with "Second is the challenge", kind of a long sentence?
 - [X] p.12 (3rd par.) : "u_iv_jw_k=v_ju_iw_k=w_ku_ju_i" (Shouldn't one of the last two u's be a v?)
 - [X] p.14 (4th par.) : Is reminding what concatenation means useful when you just defined it last paragraph?
-- [ ] p.17 (2nd par.) : "Where the last column and row..." (Shouldn't w be lower-cased? As it's continuing the sentence.)
+- [X] p.17 (2nd par.) : "Where the last column and row..." (Shouldn't w be lower-cased? As it's continuing the sentence.)
 - [ ] p.19 (3rd par.) : "It is more common <to> think of the unit as an element 1 \in V."
 - [ ] p.20 (Def 2.14) : "meta-colagebra"
 - [ ] p.22 (Def 2.23) : One parenthesis too many?
