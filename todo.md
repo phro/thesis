@@ -471,7 +471,7 @@ Explicit examples are missing.
 - [X] p.47 (eq. 4.5)	: This might just be me, but I usually put a period at the end of my equations if it ends a sentence. This happens before (like with equation 4.4) but it's the first one I noticed.
 - [X] p.47 (3rd par.) : "We start with a result which simplifies working with coinvariants:" (This is SUPER subjective, but I don't like this sentence. WAY too many w's. I'd replace "which" with "that".)
 - [X] p.47 (Thm 4.6)	: "The coinvariants of U, U_U, has basis ..." (I know U_U is one thing, but grammatically, your subject is plural here. I think you need either to change "has" by have, or write something like "The space of coinvariants...")
-- [ ] p.48 (1st par.) : "Observing when f is a monomial in equation (4.12),..." (Is "Observing" the right word here?)
+- [X] p.48 (1st par.) : "Observing when f is a monomial in equation (4.12),..." (Is "Observing" the right word here?)
 - [ ] p.48 (2nd par.) : "Finally, all that remains to show is <that> this set is linearly independent." (Sounds better? Something like that?)
 - [ ] p.53 (start)	: Sentence starting with "For some inputs to the trace," (Feels like a verb is missing?)
 - [ ] p.54 (3rd par.) : "... the form in equation (4.16) does not <have/need> to conform to the same structure."
