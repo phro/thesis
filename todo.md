@@ -5,8 +5,8 @@
 - [X] Add code (with comments) for the mma™ code.
 - [X] Fix `toRVT` code output for knots (should be long, not bent)
 - [X] Add output code to analysis section
-- [ ] Add "further computations"
-  - [ ] E.g. how the invariant interacts with satellites
+- [X] Add "further computations"
+  - [X] ~~E.g. how the invariant interacts with satellites~~
 
 ### Feedback from Dror ###
 #### 2023-06-01 ####
@@ -64,8 +64,8 @@ Explicit examples are missing.
 
 #### 2023-06-26 ####
 
-- [ ] Address the rest of Dror's comments
-  - [ ] Earlier feedback
+- [X] Address the rest of Dror's comments
+  - [X] Earlier feedback
   - [X] 2023-06-26 feedback
     - [X] p.10 wording changes
     - [X] p.12 distinguish between vector space `[A,A]` and ideal `[A,A]`.
@@ -82,12 +82,12 @@ Explicit examples are missing.
     - [X] p.27 mention in the Thm that this is only for virtual knots
     - [X] p.36 "morphism-valued" is misleading.
     - [X] p.39 Generating functions are not Gaußian in `b`-variables.
-- [ ] *Print* the thesis off to read
+- [X] *Print* the thesis off to read
   - [X] Read over the thesis for a total of one time
-  - [ ] Read over the thesis for a total of two times
-  - [ ] Read over the thesis for a total of three times
-  - [ ] Read over the thesis for a total of four times
-  - [ ] Read over the thesis for a total of five times
+  - [X] ~~Read over the thesis for a total of two times~~
+  - [X] ~~Read over the thesis for a total of three times~~
+  - [X] ~~Read over the thesis for a total of four times~~
+  - [X] ~~Read over the thesis for a total of five times~~
 
 ### Feedback from Joel ###
 
