@@ -461,7 +461,7 @@ Explicit examples are missing.
 - [X] p.23 (end)	: I don't know about you, but I hate have a line change in an equation like "D x [-1,1]", let alone a page change.
 - [X] p.24 (start)	: "Two open tangles are considered equivalent if there exists an isotopy of the embedding<s> ..."
 - [X] p.24 (2nd par.) : "... which one may thin<k> of as open tangles with ..."
-- [ ] p.28 (end)	: The sentence starting with "Associativity (equation (2.17)) holds, ..." feels like it's missing something.
+- [X] p.28 (end)	: The sentence starting with "Associativity (equation (2.17)) holds, ..." feels like it's missing something.
 - [ ] p.34 (4th par.) : "This generalization of tangles deals exactly with the issue that multiplication need<s> not ..." (not 100% sure)
 - [ ] p.37 (Def 2.38) : "A morphism \Phi between these meta-objects is <a> map ..."
 - [ ] p.39 (start)	: "... which develops uses perturbed Gaussians to compute Z quickly." (One word too many?)
