@@ -450,7 +450,7 @@ Explicit examples are missing.
 - [X] p.8  (3rd par.) : "Each crossing <is> assigned an element of AxA."
 - [X] p.9  (2nd par.) : "the value of Z on tables always take<s> the form of"
 - [X] p.11 (3rd par.) : "Firstly, determining what the relationship between ..." (something missing or extra?)
-- [ ] p.11 (3rd par.) : Sentence starting with "Second is the challenge", kind of a long sentence?
+- [X] p.11 (3rd par.) : Sentence starting with "Second is the challenge", kind of a long sentence?
 - [ ] p.12 (3rd par.) : "u_iv_jw_k=v_ju_iw_k=w_ku_ju_i" (Shouldn't one of the last two u's be a v?)
 - [ ] p.14 (4th par.) : Is reminding what concatenation means useful when you just defined it last paragraph?
 - [ ] p.17 (2nd par.) : "Where the last column and row..." (Shouldn't w be lower-cased? As it's continuing the sentence.)
