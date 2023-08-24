@@ -443,3 +443,38 @@ Explicit examples are missing.
 - [X] P.51, (4.23): “b1w2” → “b1a2” (?)
 - [X] P.51, (4.24): “b2w1” → “b2a1” (?)
 - [X] P.51, (4.25): Same comment as for (4.23) and (4.24).
+
+### Feedback from Vincent ###
+- [ ] p.iv (end)	: "fiancée" -> wife (Congratulations again <3 )
+- [ ] p.7  (end)      : "one longer one)." -> a longer one). (Sounds better?)
+- [ ] p.8  (3rd par.) : "Each crossing <is> assigned an element of AxA."
+- [ ] p.9  (2nd par.) : "the value of Z on tables always take<s> the form of"
+- [ ] p.11 (3rd par.) : "Firstly, determining what the relationship between ..." (something missing or extra?)
+- [ ] p.11 (3rd par.) : Sentence starting with "Second is the challenge", kind of a long sentence?
+- [ ] p.12 (3rd par.) : "u_iv_jw_k=v_ju_iw_k=w_ku_ju_i" (Shouldn't one of the last two u's be a v?)
+- [ ] p.14 (4th par.) : Is reminding what concatenation means useful when you just defined it last paragraph?
+- [ ] p.17 (2nd par.) : "Where the last column and row..." (Shouldn't w be lower-cased? As it's continuing the sentence.)
+- [ ] p.19 (3rd par.) : "It is more common <to> think of the unit as an element 1 \in V."
+- [ ] p.20 (Def 2.14) : "meta-colagebra"
+- [ ] p.22 (Def 2.23) : One parenthesis too many?
+- [ ] p.22 (end)	: You have a missing reference.
+- [ ] p.23 (end)	: I don't know about you, but I hate have a line change in an equation like "D x [-1,1]", let alone a page change.
+- [ ] p.24 (start)	: "Two open tangles are considered equivalent if there exists an isotopy of the embedding<s> ..."
+- [ ] p.24 (2nd par.) : "... which one may thin<k> of as open tangles with ..."
+- [ ] p.28 (end)	: The sentence starting with "Associativity (equation (2.17)) holds, ..." feels like it's missing something.
+- [ ] p.34 (4th par.) : "This generalization of tangles deals exactly with the issue that multiplication need<s> not ..." (not 100% sure)
+- [ ] p.37 (Def 2.38) : "A morphism \Phi between these meta-objects is <a> map ..."
+- [ ] p.39 (start)	: "... which develops uses perturbed Gaussians to compute Z quickly." (One word too many?)
+- [ ] p.40 (start)	: "... we define categoris U, H, and C with objects finite sets and morphisms:" (I get what you mean, and it's not grammatically wrong, but it's confusing. Maybe something like "where objects are finite sets, and morphisms are:"?)
+- [ ] p.46 (Lem 4.4)	: "Then define A_{S,L} := A_S x (A_A)_L." (Since the next sentence starts with "Then" too, I'd drop it for this one. Also, it might prevent the equation from being cut off at the end of the line.)
+- [ ] p.47 (1st par.) : Since an operation \phi^D_C manipulates on a disjoint set of tensor factors than tr^i, ..." (First, I think "operations \phi^D_C manipulate" sounds better, but that's subjective. Second, the sentence doesn't feel right. Maybe something like "\phi^D_C and tr^i manipulate disjoint sets of tensor factors,"?)
+- [ ] p.47 (eq. 4.5)	: This might just be me, but I usually put a period at the end of my equations if it ends a sentence. This happens before (like with equation 4.4) but it's the first one I noticed.
+- [ ] p.47 (3rd par.) : "We start with a result which simplifies working with coinvariants:" (This is SUPER subjective, but I don't like this sentence. WAY too many w's. I'd replace "which" with "that".)
+- [ ] p.47 (Thm 4.6)	: "The coinvariants of U, U_U, has basis ..." (I know U_U is one thing, but grammatically, your subject is plural here. I think you need either to change "has" by have, or write something like "The space of coinvariants...")
+- [ ] p.48 (1st par.) : "Observing when f is a monomial in equation (4.12),..." (Is "Observing" the right word here?)
+- [ ] p.48 (2nd par.) : "Finally, all that remains to show is <that> this set is linearly independent." (Sounds better? Something like that?)
+- [ ] p.53 (start)	: Sentence starting with "For some inputs to the trace," (Feels like a verb is missing?)
+- [ ] p.54 (3rd par.) : "... the form in equation (4.16) does not <have/need> to conform to the same structure."
+
+I really like your drawings <3
+Out of curiosity, why the refusal to contract any words?
