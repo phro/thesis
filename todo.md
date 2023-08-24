@@ -448,7 +448,7 @@ Explicit examples are missing.
 - [X] p.iv (end)	: "fiancée" -> wife (Congratulations again <3 )
 - [X] ~~p.7  (end)      : "one longer one)." -> a longer one). (Sounds better?)~~
 - [X] p.8  (3rd par.) : "Each crossing <is> assigned an element of AxA."
-- [X] p.9  (2nd par.) : "the value of Z on tables always take<s> the form of"
+- [X] p.9  (2nd par.) : "the value of Z on tables always take\<s> the form of"
 - [X] p.11 (3rd par.) : "Firstly, determining what the relationship between ..." (something missing or extra?)
 - [X] p.11 (3rd par.) : Sentence starting with "Second is the challenge", kind of a long sentence?
 - [X] p.12 (3rd par.) : "u_iv_jw_k=v_ju_iw_k=w_ku_ju_i" (Shouldn't one of the last two u's be a v?)
@@ -459,10 +459,10 @@ Explicit examples are missing.
 - [X] p.22 (Def 2.23) : One parenthesis too many?
 - [X] p.22 (end)	: You have a missing reference.
 - [X] p.23 (end)	: I don't know about you, but I hate have a line change in an equation like "D x [-1,1]", let alone a page change.
-- [X] p.24 (start)	: "Two open tangles are considered equivalent if there exists an isotopy of the embedding<s> ..."
+- [X] p.24 (start)	: "Two open tangles are considered equivalent if there exists an isotopy of the embedding\<s> ..."
 - [X] p.24 (2nd par.) : "... which one may thin<k> of as open tangles with ..."
 - [X] p.28 (end)	: The sentence starting with "Associativity (equation (2.17)) holds, ..." feels like it's missing something.
-- [X] ~~p.34 (4th par.) : "This generalization of tangles deals exactly with the issue that multiplication need<s> not ..." (not 100% sure)~~
+- [X] ~~p.34 (4th par.) : "This generalization of tangles deals exactly with the issue that multiplication need\<s> not ..." (not 100% sure)~~
 - [X] p.37 (Def 2.38) : "A morphism \Phi between these meta-objects is <a> map ..."
 - [X] p.39 (start)	: "... which develops uses perturbed Gaussians to compute Z quickly." (One word too many?)
 - [X] p.40 (start)	: "... we define categoris U, H, and C with objects finite sets and morphisms:" (I get what you mean, and it's not grammatically wrong, but it's confusing. Maybe something like "where objects are finite sets, and morphisms are:"?)
