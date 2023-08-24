@@ -463,8 +463,8 @@ Explicit examples are missing.
 - [X] p.24 (2nd par.) : "... which one may thin<k> of as open tangles with ..."
 - [X] p.28 (end)	: The sentence starting with "Associativity (equation (2.17)) holds, ..." feels like it's missing something.
 - [X] ~~p.34 (4th par.) : "This generalization of tangles deals exactly with the issue that multiplication need<s> not ..." (not 100% sure)~~
-- [ ] p.37 (Def 2.38) : "A morphism \Phi between these meta-objects is <a> map ..."
-- [ ] p.39 (start)	: "... which develops uses perturbed Gaussians to compute Z quickly." (One word too many?)
+- [X] p.37 (Def 2.38) : "A morphism \Phi between these meta-objects is <a> map ..."
+- [X] p.39 (start)	: "... which develops uses perturbed Gaussians to compute Z quickly." (One word too many?)
 - [ ] p.40 (start)	: "... we define categoris U, H, and C with objects finite sets and morphisms:" (I get what you mean, and it's not grammatically wrong, but it's confusing. Maybe something like "where objects are finite sets, and morphisms are:"?)
 - [ ] p.46 (Lem 4.4)	: "Then define A_{S,L} := A_S x (A_A)_L." (Since the next sentence starts with "Then" too, I'd drop it for this one. Also, it might prevent the equation from being cut off at the end of the line.)
 - [ ] p.47 (1st par.) : Since an operation \phi^D_C manipulates on a disjoint set of tensor factors than tr^i, ..." (First, I think "operations \phi^D_C manipulate" sounds better, but that's subjective. Second, the sentence doesn't feel right. Maybe something like "\phi^D_C and tr^i manipulate disjoint sets of tensor factors,"?)
