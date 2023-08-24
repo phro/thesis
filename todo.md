@@ -474,7 +474,7 @@ Explicit examples are missing.
 - [X] p.48 (1st par.) : "Observing when f is a monomial in equation (4.12),..." (Is "Observing" the right word here?)
 - [X] p.48 (2nd par.) : "Finally, all that remains to show is <that> this set is linearly independent." (Sounds better? Something like that?)
 - [X] p.53 (start)	: Sentence starting with "For some inputs to the trace," (Feels like a verb is missing?)
-- [ ] p.54 (3rd par.) : "... the form in equation (4.16) does not <have/need> to conform to the same structure."
+- [X] p.54 (3rd par.) : "... the form in equation (4.16) does not <have/need> to conform to the same structure."
 
 I really like your drawings <3
 Out of curiosity, why the refusal to contract any words?
