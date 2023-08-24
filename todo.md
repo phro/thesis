@@ -466,7 +466,7 @@ Explicit examples are missing.
 - [X] p.37 (Def 2.38) : "A morphism \Phi between these meta-objects is <a> map ..."
 - [X] p.39 (start)	: "... which develops uses perturbed Gaussians to compute Z quickly." (One word too many?)
 - [X] p.40 (start)	: "... we define categoris U, H, and C with objects finite sets and morphisms:" (I get what you mean, and it's not grammatically wrong, but it's confusing. Maybe something like "where objects are finite sets, and morphisms are:"?)
-- [ ] p.46 (Lem 4.4)	: "Then define A_{S,L} := A_S x (A_A)_L." (Since the next sentence starts with "Then" too, I'd drop it for this one. Also, it might prevent the equation from being cut off at the end of the line.)
+- [X] p.46 (Lem 4.4)	: "Then define A_{S,L} := A_S x (A_A)_L." (Since the next sentence starts with "Then" too, I'd drop it for this one. Also, it might prevent the equation from being cut off at the end of the line.)
 - [ ] p.47 (1st par.) : Since an operation \phi^D_C manipulates on a disjoint set of tensor factors than tr^i, ..." (First, I think "operations \phi^D_C manipulate" sounds better, but that's subjective. Second, the sentence doesn't feel right. Maybe something like "\phi^D_C and tr^i manipulate disjoint sets of tensor factors,"?)
 - [ ] p.47 (eq. 4.5)	: This might just be me, but I usually put a period at the end of my equations if it ends a sentence. This happens before (like with equation 4.4) but it's the first one I noticed.
 - [ ] p.47 (3rd par.) : "We start with a result which simplifies working with coinvariants:" (This is SUPER subjective, but I don't like this sentence. WAY too many w's. I'd replace "which" with "that".)
