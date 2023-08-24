@@ -445,7 +445,7 @@ Explicit examples are missing.
 - [X] P.51, (4.25): Same comment as for (4.23) and (4.24).
 
 ### Feedback from Vincent ###
-- [ ] p.iv (end)	: "fiancée" -> wife (Congratulations again <3 )
+- [X] p.iv (end)	: "fiancée" -> wife (Congratulations again <3 )
 - [ ] p.7  (end)      : "one longer one)." -> a longer one). (Sounds better?)
 - [ ] p.8  (3rd par.) : "Each crossing <is> assigned an element of AxA."
 - [ ] p.9  (2nd par.) : "the value of Z on tables always take<s> the form of"
